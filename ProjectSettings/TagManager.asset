@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MovingPlatform
+  - Interactive
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Floor
+  - Player
+  - FogDetect
+  - CloudActiveArea
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1139581471
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Pillar
+    uniqueID: 2395005485
+    locked: 0
+  - name: Box
+    uniqueID: 2219023207
+    locked: 0
+  - name: Player
+    uniqueID: 1489229143
+    locked: 0
+  - name: Vita
+    uniqueID: 1021863969
+    locked: 0
+  - name: Explosion
+    uniqueID: 2864934111
+    locked: 0

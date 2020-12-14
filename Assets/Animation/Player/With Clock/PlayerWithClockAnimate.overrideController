@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerWithClockAnimate
+  m_Controller: {fileID: 9100000, guid: 985b92927d483db40ac3191c295dc666, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8ea803d193fb6704e91169d8d61d3a22, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f0523ca5ba5ab6498be052b8991dd76, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a3f2d9059d7b0264d94727a4d68e71cb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8061ecf86625eff4baeb3b8f882dced5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e2236a81b73145141a2f4fff322f85c0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e2236a81b73145141a2f4fff322f85c0, type: 2}

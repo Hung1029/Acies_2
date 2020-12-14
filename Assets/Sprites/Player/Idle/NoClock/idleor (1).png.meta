@@ -1,0 +1,2984 @@
+fileFormatVersion: 2
+guid: 598daafd7aa3e644b93bb988f7dc1281
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5753226151357109582
+    second: idleor (1)_0
+  - first:
+      213: 1917920644995625547
+    second: idleor (1)_1
+  - first:
+      213: 2316702508032555401
+    second: idleor (1)_2
+  - first:
+      213: -1995195821606098183
+    second: idleor (1)_3
+  - first:
+      213: -5488383359655185522
+    second: idleor (1)_4
+  - first:
+      213: -6846517690797832585
+    second: idleor (1)_5
+  - first:
+      213: -2322062621576173796
+    second: idleor (1)_6
+  - first:
+      213: -6430644327709500459
+    second: idleor (1)_7
+  - first:
+      213: -1765849887734741371
+    second: idleor (1)_8
+  - first:
+      213: -618494996439942258
+    second: idleor (1)_9
+  - first:
+      213: -2672187503008509110
+    second: idleor (1)_10
+  - first:
+      213: -6337858282702705972
+    second: idleor (1)_11
+  - first:
+      213: 8231315776547881241
+    second: idleor (1)_12
+  - first:
+      213: -5059770989605404358
+    second: idleor (1)_13
+  - first:
+      213: 7815247437431075961
+    second: idleor (1)_14
+  - first:
+      213: -3260271404118938343
+    second: idleor (1)_15
+  - first:
+      213: 8264431928429082001
+    second: idleor (1)_16
+  - first:
+      213: -1544139477108404105
+    second: idleor (1)_17
+  - first:
+      213: -6625853898572322660
+    second: idleor (1)_18
+  - first:
+      213: -5376510236112045934
+    second: idleor (1)_19
+  - first:
+      213: -4754131902551562459
+    second: idleor (1)_20
+  - first:
+      213: 221683699718669161
+    second: idleor (1)_21
+  - first:
+      213: -4089887275756195351
+    second: idleor (1)_22
+  - first:
+      213: -8855930012027934423
+    second: idleor (1)_23
+  - first:
+      213: 5122372977284815687
+    second: idleor (1)_24
+  - first:
+      213: -8717549124439140360
+    second: idleor (1)_25
+  - first:
+      213: 2538984809780537270
+    second: idleor (1)_26
+  - first:
+      213: -247217586509522897
+    second: idleor (1)_27
+  - first:
+      213: 96957028604464676
+    second: idleor (1)_28
+  - first:
+      213: -4834451013674640389
+    second: idleor (1)_29
+  - first:
+      213: 8967906276599011370
+    second: idleor (1)_30
+  - first:
+      213: -969499847964471527
+    second: idleor (1)_31
+  - first:
+      213: 5349813973270481180
+    second: idleor (1)_32
+  - first:
+      213: 385827319210720147
+    second: idleor (1)_33
+  - first:
+      213: 855652711563864605
+    second: idleor (1)_34
+  - first:
+      213: -5269872575815120697
+    second: idleor (1)_35
+  - first:
+      213: 5719188395838943752
+    second: idleor (1)_36
+  - first:
+      213: -8970832689628504545
+    second: idleor (1)_37
+  - first:
+      213: -3457465570950441032
+    second: idleor (1)_38
+  - first:
+      213: -626342660462110080
+    second: idleor (1)_39
+  - first:
+      213: 4347097218161127569
+    second: idleor (1)_40
+  - first:
+      213: 1061228354215529343
+    second: idleor (1)_41
+  - first:
+      213: -7630968108416919689
+    second: idleor (1)_42
+  - first:
+      213: 3695331822690005726
+    second: idleor (1)_43
+  - first:
+      213: -3634448038627888658
+    second: idleor (1)_44
+  - first:
+      213: -2850069269780821935
+    second: idleor (1)_45
+  - first:
+      213: -3438126711077897138
+    second: idleor (1)_46
+  - first:
+      213: 1949286691924249523
+    second: idleor (1)_47
+  - first:
+      213: -4207460541926627444
+    second: idleor (1)_48
+  - first:
+      213: -78559358760584914
+    second: idleor (1)_49
+  - first:
+      213: 4745930213667100798
+    second: idleor (1)_50
+  - first:
+      213: -7553795790698624371
+    second: idleor (1)_51
+  - first:
+      213: -5401919979639303324
+    second: idleor (1)_52
+  - first:
+      213: -3125674268239539286
+    second: idleor (1)_53
+  - first:
+      213: -4692857892438037729
+    second: idleor (1)_54
+  - first:
+      213: 7312681115693449733
+    second: idleor (1)_55
+  - first:
+      213: 6395541969509265323
+    second: idleor (1)_56
+  - first:
+      213: -8609774406895460268
+    second: idleor (1)_57
+  - first:
+      213: 7450128856021256908
+    second: idleor (1)_58
+  - first:
+      213: 8961383359828377535
+    second: idleor (1)_59
+  - first:
+      213: 4891877363375119407
+    second: idleor (1)_60
+  - first:
+      213: 4196419487061587758
+    second: idleor (1)_61
+  - first:
+      213: 4624938865818201002
+    second: idleor (1)_62
+  - first:
+      213: -1171780873809467306
+    second: idleor (1)_63
+  - first:
+      213: -2143290686763952805
+    second: idleor (1)_64
+  - first:
+      213: -2208805358108647556
+    second: idleor (1)_65
+  - first:
+      213: -2936352917006739410
+    second: idleor (1)_66
+  - first:
+      213: -7198490838289324114
+    second: idleor (1)_67
+  - first:
+      213: 715725227086211399
+    second: idleor (1)_68
+  - first:
+      213: -1535142659043330150
+    second: idleor (1)_69
+  - first:
+      213: 8267715901822283381
+    second: idleor (1)_70
+  - first:
+      213: -1370560259208104579
+    second: idleor (1)_71
+  - first:
+      213: 7515426311817568820
+    second: idleor (1)_72
+  - first:
+      213: -4966009975424555515
+    second: idleor (1)_73
+  - first:
+      213: 1100058061103364371
+    second: idleor (1)_74
+  - first:
+      213: 5796638377886772845
+    second: idleor (1)_75
+  - first:
+      213: 1510689807874986294
+    second: idleor (1)_76
+  - first:
+      213: -5022263745539669328
+    second: idleor (1)_77
+  - first:
+      213: 6221203383668944714
+    second: idleor (1)_78
+  - first:
+      213: -6466381657510340531
+    second: idleor (1)_79
+  - first:
+      213: 8370708072816096783
+    second: idleor (1)_80
+  - first:
+      213: 305217516788420068
+    second: idleor (1)_81
+  - first:
+      213: 3335747059595345531
+    second: idleor (1)_82
+  - first:
+      213: -4203335102523379004
+    second: idleor (1)_83
+  - first:
+      213: 4994868738364031929
+    second: idleor (1)_84
+  - first:
+      213: -4478507135850053550
+    second: idleor (1)_85
+  - first:
+      213: -3151788511264547393
+    second: idleor (1)_86
+  - first:
+      213: -352588389022496265
+    second: idleor (1)_87
+  - first:
+      213: -5593956968364906413
+    second: idleor (1)_88
+  - first:
+      213: 6336864793405675817
+    second: idleor (1)_89
+  - first:
+      213: 9184628182740657060
+    second: idleor (1)_90
+  - first:
+      213: -1196642884621530728
+    second: idleor (1)_91
+  - first:
+      213: 1830141512734444589
+    second: idleor (1)_92
+  - first:
+      213: -7827359934345055550
+    second: idleor (1)_93
+  - first:
+      213: 2981124762308527171
+    second: idleor (1)_94
+  - first:
+      213: -1979691213792781326
+    second: idleor (1)_95
+  - first:
+      213: 1059349874584774974
+    second: idleor (1)_96
+  - first:
+      213: -1238185928744289503
+    second: idleor (1)_97
+  - first:
+      213: 7522261563579896034
+    second: idleor (1)_98
+  - first:
+      213: -5127758163976890488
+    second: idleor (1)_99
+  - first:
+      213: 3034330660848605667
+    second: idleor (1)_100
+  - first:
+      213: -8921452828856411202
+    second: idleor (1)_101
+  - first:
+      213: -2603920772406754695
+    second: idleor (1)_102
+  - first:
+      213: 4573383484926142602
+    second: idleor (1)_103
+  - first:
+      213: 5961810873297532079
+    second: idleor (1)_104
+  - first:
+      213: 2541269480600191249
+    second: idleor (1)_105
+  - first:
+      213: 5333625196063710138
+    second: idleor (1)_106
+  - first:
+      213: 5225886511237262074
+    second: idleor (1)_107
+  - first:
+      213: -7511426766790522707
+    second: idleor (1)_108
+  - first:
+      213: 4190712352838137996
+    second: idleor (1)_109
+  - first:
+      213: -3282209556877074742
+    second: idleor (1)_110
+  - first:
+      213: -2197979071204435520
+    second: idleor (1)_111
+  - first:
+      213: -3987195795472510746
+    second: idleor (1)_112
+  - first:
+      213: -7736356997605560302
+    second: idleor (1)_113
+  - first:
+      213: 3952089756590387050
+    second: idleor (1)_114
+  - first:
+      213: 7021501300548788007
+    second: idleor (1)_115
+  - first:
+      213: -2494775743121622115
+    second: idleor (1)_116
+  - first:
+      213: -5646345294880702285
+    second: idleor (1)_117
+  - first:
+      213: -237331928231427897
+    second: idleor (1)_118
+  - first:
+      213: 984293448022372154
+    second: idleor (1)_119
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idleor (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8717
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45d028e3b097df40800000000000000
+      internalID: 5753226151357109582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 8717
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b423a504aa2dd9a10800000000000000
+      internalID: 1917920644995625547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_2
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 8717
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989798918a4962020800000000000000
+      internalID: 2316702508032555401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_3
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 8717
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa23d3a8f3af44e0800000000000000
+      internalID: -1995195821606098183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_4
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 8717
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e837690c96855d3b0800000000000000
+      internalID: -5488383359655185522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8338
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77641934f684cf0a0800000000000000
+      internalID: -6846517690797832585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_6
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 8338
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c176db6395066cfd0800000000000000
+      internalID: -2322062621576173796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_7
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 8338
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db9ef11e03c1c6a0800000000000000
+      internalID: -6430644327709500459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_8
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 8338
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58648ea02e07e77e0800000000000000
+      internalID: -1765849887734741371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_9
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 8338
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b37d1e31aaa67f0800000000000000
+      internalID: -618494996439942258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7959
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4390f5bf9b7aead0800000000000000
+      internalID: -2672187503008509110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_11
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 7959
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccaecb6a8776b08a0800000000000000
+      internalID: -6337858282702705972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_12
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 7959
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911843f56128b3270800000000000000
+      internalID: 8231315776547881241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_13
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 7959
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a314ebfb71518c9b0800000000000000
+      internalID: -5059770989605404358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_14
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 7959
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9747cdb2326557c60800000000000000
+      internalID: 7815247437431075961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7580
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d602e7e6031c2d0800000000000000
+      internalID: -3260271404118938343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_16
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 7580
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19579645d0921b270800000000000000
+      internalID: 8264431928429082001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_17
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 7580
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770db47a35d129ae0800000000000000
+      internalID: -1544139477108404105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_18
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 7580
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98a5f90cfc3c04a0800000000000000
+      internalID: -6625853898572322660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_19
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 7580
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2983a4d1d6cc265b0800000000000000
+      internalID: -5376510236112045934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7201
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527ef0d193ee50eb0800000000000000
+      internalID: -4754131902551562459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_21
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 7201
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963c93e7624931300800000000000000
+      internalID: 221683699718669161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_22
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 7201
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1792d113dcd37c0800000000000000
+      internalID: -4089887275756195351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_23
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 7201
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929aa55239a691580800000000000000
+      internalID: -8855930012027934423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_24
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 7201
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b1f165513561740800000000000000
+      internalID: 5122372977284815687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6822
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f799c5424b050780800000000000000
+      internalID: -8717549124439140360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_26
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 6822
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7e41d7b394c3320800000000000000
+      internalID: 2538984809780537270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_27
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 6822
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28ded53ae4b19cf0800000000000000
+      internalID: -247217586509522897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_28
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 6822
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e427067e5785100800000000000000
+      internalID: 96957028604464676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_29
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 6822
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb55e5ca6498ecb0800000000000000
+      internalID: -4834451013674640389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6443
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a281eab9e37647c70800000000000000
+      internalID: 8967906276599011370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_31
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 6443
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f48406605ab82f0800000000000000
+      internalID: -969499847964471527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_32
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 6443
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c194533d67b5e3a40800000000000000
+      internalID: 5349813973270481180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_33
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 6443
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b323217ebba5500800000000000000
+      internalID: 385827319210720147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_34
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 6443
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a2dd39b93efdb00800000000000000
+      internalID: 855652711563864605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6064
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c887f230d6add6b0800000000000000
+      internalID: -5269872575815120697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_36
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 6064
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80234816b83ae5f40800000000000000
+      internalID: 5719188395838943752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_37
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 6064
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e1b33c233318380800000000000000
+      internalID: -8970832689628504545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_38
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 6064
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b71b54b16d9400d0800000000000000
+      internalID: -3457465570950441032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_39
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 6064
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a9b773ba8ce47f0800000000000000
+      internalID: -626342660462110080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5685
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190359453edf35c30800000000000000
+      internalID: 4347097218161127569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_41
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 5685
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bc696c09d3abe00800000000000000
+      internalID: 1061228354215529343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_42
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 5685
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777997d9fea591690800000000000000
+      internalID: -7630968108416919689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_43
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 5685
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed272aac6b4784330800000000000000
+      internalID: 3695331822690005726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_44
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 5685
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee138f6d3c8df8dc0800000000000000
+      internalID: -3634448038627888658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5306
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158057579158278d0800000000000000
+      internalID: -2850069269780821935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_46
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 5306
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c7b65e8f15940d0800000000000000
+      internalID: -3438126711077897138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_47
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 5306
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb8a852be14d0b10800000000000000
+      internalID: 1949286691924249523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_48
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 5306
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87adffdde81c95c0800000000000000
+      internalID: -4207460541926627444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_49
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 5306
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29fa4feda6e8eef0800000000000000
+      internalID: -78559358760584914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4927
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78db62626eecd140800000000000000
+      internalID: 4745930213667100798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_51
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 4927
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a419500c68b2790800000000000000
+      internalID: -7553795790698624371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_52
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 4927
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463938c26668805b0800000000000000
+      internalID: -5401919979639303324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_53
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 4927
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3d00640df5f94d0800000000000000
+      internalID: -3125674268239539286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_54
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 4927
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ba7d35c9e9fdeb0800000000000000
+      internalID: -4692857892438037729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4548
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5028d900bbcdb7560800000000000000
+      internalID: 7312681115693449733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_56
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 4548
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafa3b6498781c850800000000000000
+      internalID: 6395541969509265323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_57
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 4548
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4502fb02bcfe38880800000000000000
+      internalID: -8609774406895460268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_58
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 4548
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccac80ad8bc246760800000000000000
+      internalID: 7450128856021256908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_59
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 4548
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfbaa2bfaa3d5c70800000000000000
+      internalID: 8961383359828377535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4169
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c9fb03b8073e340800000000000000
+      internalID: 4891877363375119407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_61
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 4169
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2735d63a4dac3a30800000000000000
+      internalID: 4196419487061587758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_62
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 4169
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabedfcf4651f2040800000000000000
+      internalID: 4624938865818201002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_63
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 4169
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6586dfde08ffcbfe0800000000000000
+      internalID: -1171780873809467306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_64
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 4169
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55180dd9708142e0800000000000000
+      internalID: -2143290686763952805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3790
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f54f3ca3fb851e0800000000000000
+      internalID: -2208805358108647556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_66
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 3790
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2891a6549aff37d0800000000000000
+      internalID: -2936352917006739410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_67
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3790
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea76cd8c8b2d91c90800000000000000
+      internalID: -7198490838289324114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_68
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 3790
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749624d4d44cee900800000000000000
+      internalID: 715725227086211399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_69
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3790
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a977c2892e312bae0800000000000000
+      internalID: -1535142659043330150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3411
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e27f7fec3dcb270800000000000000
+      internalID: 8267715901822283381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_71
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 3411
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7532aea4bacafce0800000000000000
+      internalID: -1370560259208104579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_72
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3411
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432a28389682c4860800000000000000
+      internalID: 7515426311817568820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_73
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 3411
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506e5c70d30351bb0800000000000000
+      internalID: -4966009975424555515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_74
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3411
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319fe5c6af0344f00800000000000000
+      internalID: 1100058061103364371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3032
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e665d84ebc17050800000000000000
+      internalID: 5796638377886772845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_76
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 3032
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6311134506c07f410800000000000000
+      internalID: 1510689807874986294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_77
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3032
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b209c68bb55d4ab0800000000000000
+      internalID: -5022263745539669328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_78
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 3032
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fab0f1487265650800000000000000
+      internalID: 6221203383668944714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_79
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3032
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d489ef1942cc246a0800000000000000
+      internalID: -6466381657510340531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2653
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06b2be64aaba2470800000000000000
+      internalID: 8370708072816096783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_81
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 2653
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed8663e6b95c3400800000000000000
+      internalID: 305217516788420068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_82
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 2653
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7efbb3f644fa4e20800000000000000
+      internalID: 3335747059595345531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_83
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2653
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2f9269ef0caa5c0800000000000000
+      internalID: -4203335102523379004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_84
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 2653
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b344e157a6515540800000000000000
+      internalID: 4994868738364031929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2274
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2500b93fc7529d1c0800000000000000
+      internalID: -4478507135850053550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_86
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 2274
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd5be24c099244d0800000000000000
+      internalID: -3151788511264547393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_87
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 2274
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f903607aba5b1bf0800000000000000
+      internalID: -352588389022496265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_88
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2274
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358e9cb76c54e52b0800000000000000
+      internalID: -5593956968364906413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_89
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 2274
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929df9894f011f750800000000000000
+      internalID: 6336864793405675817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1895
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a36c428baa567f70800000000000000
+      internalID: 9184628182740657060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_91
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1895
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8998223f2aba46fe0800000000000000
+      internalID: -1196642884621530728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_92
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1895
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c8b336208f56910800000000000000
+      internalID: 1830141512734444589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_93
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1895
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2fc306c91af5390800000000000000
+      internalID: -7827359934345055550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_94
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1895
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34445883d251f5920800000000000000
+      internalID: 2981124762308527171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1516
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb5be47459b684e0800000000000000
+      internalID: -1979691213792781326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_96
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1516
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39ea77291193be00800000000000000
+      internalID: 1059349874584774974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_97
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1516
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b3f4f357411dee0800000000000000
+      internalID: -1238185928744289503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_98
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1516
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e011c49901746860800000000000000
+      internalID: 7522261563579896034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_99
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1516
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8875c0e2e1b86d8b0800000000000000
+      internalID: -5127758163976890488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1137
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e915f2d8ab1c1a20800000000000000
+      internalID: 3034330660848605667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_101
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1137
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb1c978be1a03480800000000000000
+      internalID: -8921452828856411202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_102
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1137
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9724f698ad30ddbd0800000000000000
+      internalID: -2603920772406754695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_103
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1137
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8829a87c0ce77f30800000000000000
+      internalID: 4573383484926142602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_104
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1137
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4f5f8f66b9cb250800000000000000
+      internalID: 5961810873297532079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 758
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11147bdd027644320800000000000000
+      internalID: 2541269480600191249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_106
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 758
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb53786bd7d40a40800000000000000
+      internalID: 5333625196063710138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_107
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 758
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa6dc21814168840800000000000000
+      internalID: 5225886511237262074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_108
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 758
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da80711272d02c790800000000000000
+      internalID: -7511426766790522707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_109
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 758
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8832ca7ea6682a30800000000000000
+      internalID: 4190712352838137996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 379
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace13f34ccf3372d0800000000000000
+      internalID: -3282209556877074742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_111
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 379
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9dd1d1ea53f71e0800000000000000
+      internalID: -2197979071204435520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_112
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 379
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e01ee09c82aaa8c0800000000000000
+      internalID: -3987195795472510746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_113
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 379
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210fc16bc40f2a490800000000000000
+      internalID: -7736356997605560302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_114
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 379
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fa70ec1b4a8d630800000000000000
+      internalID: 3952089756590387050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_115
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f57293b32617160800000000000000
+      internalID: 7021501300548788007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_116
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b79f4fda6c06dd0800000000000000
+      internalID: -2494775743121622115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_117
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b00073bed624a1b0800000000000000
+      internalID: -5646345294880702285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_118
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c048e36ed3d4bcf0800000000000000
+      internalID: -237331928231427897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleor (1)_119
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 0
+        width: 174
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f2e1c0da9e8ad00800000000000000
+      internalID: 984293448022372154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

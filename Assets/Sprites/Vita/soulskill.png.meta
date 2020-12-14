@@ -1,0 +1,3704 @@
+fileFormatVersion: 2
+guid: dcb5a76d37c45a642bd366e3801b3a77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6142370530576938033
+    second: soulskill_0
+  - first:
+      213: 8747346824166792809
+    second: soulskill_1
+  - first:
+      213: 8379334605663559538
+    second: soulskill_2
+  - first:
+      213: 3505603612135933331
+    second: soulskill_3
+  - first:
+      213: -7962154278198071683
+    second: soulskill_4
+  - first:
+      213: -3277494649956250912
+    second: soulskill_5
+  - first:
+      213: 3571180732976320283
+    second: soulskill_6
+  - first:
+      213: 5237500983484157418
+    second: soulskill_7
+  - first:
+      213: 1031800240267117041
+    second: soulskill_8
+  - first:
+      213: 7810354821001530652
+    second: soulskill_9
+  - first:
+      213: -2159877424873735698
+    second: soulskill_10
+  - first:
+      213: -5941740452130422623
+    second: soulskill_11
+  - first:
+      213: -3321149302946272335
+    second: soulskill_12
+  - first:
+      213: -4521240080941662364
+    second: soulskill_13
+  - first:
+      213: 7953191483797174091
+    second: soulskill_14
+  - first:
+      213: -6336353587184116948
+    second: soulskill_15
+  - first:
+      213: 5738559093820933055
+    second: soulskill_16
+  - first:
+      213: 5560461434264875252
+    second: soulskill_17
+  - first:
+      213: 4558355806870209924
+    second: soulskill_18
+  - first:
+      213: 6282014520345183794
+    second: soulskill_19
+  - first:
+      213: -5432183398887018500
+    second: soulskill_20
+  - first:
+      213: 5970430797236037101
+    second: soulskill_21
+  - first:
+      213: 8819441959624829219
+    second: soulskill_22
+  - first:
+      213: 6832802866015031017
+    second: soulskill_23
+  - first:
+      213: 5858444874439561785
+    second: soulskill_24
+  - first:
+      213: -532748926587177468
+    second: soulskill_25
+  - first:
+      213: -6127005247330597306
+    second: soulskill_26
+  - first:
+      213: -6932599605250023053
+    second: soulskill_27
+  - first:
+      213: -4660041979516742741
+    second: soulskill_28
+  - first:
+      213: -7633781030022364405
+    second: soulskill_29
+  - first:
+      213: 3529777130698668339
+    second: soulskill_30
+  - first:
+      213: 6421139339055080734
+    second: soulskill_31
+  - first:
+      213: -4847912939795713012
+    second: soulskill_32
+  - first:
+      213: -6009016225212874621
+    second: soulskill_33
+  - first:
+      213: 4062898040827339422
+    second: soulskill_34
+  - first:
+      213: 3379456742344706874
+    second: soulskill_35
+  - first:
+      213: 2722312492147638355
+    second: soulskill_36
+  - first:
+      213: -8739335775727688752
+    second: soulskill_37
+  - first:
+      213: -442504762948979776
+    second: soulskill_38
+  - first:
+      213: 1107173050611370903
+    second: soulskill_39
+  - first:
+      213: -4563095921172451635
+    second: soulskill_40
+  - first:
+      213: 3077864321503312603
+    second: soulskill_41
+  - first:
+      213: 3436138330473951700
+    second: soulskill_42
+  - first:
+      213: -3338690525201584317
+    second: soulskill_43
+  - first:
+      213: -7191399177482886667
+    second: soulskill_44
+  - first:
+      213: -7153293571641827118
+    second: soulskill_45
+  - first:
+      213: -4709854223061676080
+    second: soulskill_46
+  - first:
+      213: 3042097623308116410
+    second: soulskill_47
+  - first:
+      213: -7320355606453495785
+    second: soulskill_48
+  - first:
+      213: -5072373518791944023
+    second: soulskill_49
+  - first:
+      213: 1700855729360625957
+    second: soulskill_50
+  - first:
+      213: -5853659634213120468
+    second: soulskill_51
+  - first:
+      213: -2172574009595617487
+    second: soulskill_52
+  - first:
+      213: 5677443639564795561
+    second: soulskill_53
+  - first:
+      213: -3661883271877171771
+    second: soulskill_54
+  - first:
+      213: 1046624462456142695
+    second: soulskill_55
+  - first:
+      213: 196812777818360720
+    second: soulskill_56
+  - first:
+      213: -8234993015400499865
+    second: soulskill_57
+  - first:
+      213: -470270511783161870
+    second: soulskill_58
+  - first:
+      213: -5859289622488133357
+    second: soulskill_59
+  - first:
+      213: 411417658986218134
+    second: soulskill_60
+  - first:
+      213: 2320065456764378628
+    second: soulskill_61
+  - first:
+      213: 5253413625720868723
+    second: soulskill_62
+  - first:
+      213: 6592114217219992448
+    second: soulskill_63
+  - first:
+      213: -4287408378268775517
+    second: soulskill_64
+  - first:
+      213: 3189283316058414382
+    second: soulskill_65
+  - first:
+      213: 2284169468444134284
+    second: soulskill_66
+  - first:
+      213: 3929785802762756174
+    second: soulskill_67
+  - first:
+      213: -8171080161414762125
+    second: soulskill_68
+  - first:
+      213: 4702123526168508068
+    second: soulskill_69
+  - first:
+      213: 3111264319504663956
+    second: soulskill_70
+  - first:
+      213: -1541747986746375741
+    second: soulskill_71
+  - first:
+      213: -1828057374779231640
+    second: soulskill_72
+  - first:
+      213: 770341831447157278
+    second: soulskill_73
+  - first:
+      213: 4280080389011410918
+    second: soulskill_74
+  - first:
+      213: 4636674839739120894
+    second: soulskill_75
+  - first:
+      213: 920508862419521910
+    second: soulskill_76
+  - first:
+      213: -2930445035163683603
+    second: soulskill_77
+  - first:
+      213: -7832401692682238435
+    second: soulskill_78
+  - first:
+      213: 6198099521564475773
+    second: soulskill_79
+  - first:
+      213: -922649003470710189
+    second: soulskill_80
+  - first:
+      213: 8033429240692409106
+    second: soulskill_81
+  - first:
+      213: 3642616366280733563
+    second: soulskill_82
+  - first:
+      213: -2255569205397973231
+    second: soulskill_83
+  - first:
+      213: 9041888015360247670
+    second: soulskill_84
+  - first:
+      213: 404817854891792434
+    second: soulskill_85
+  - first:
+      213: 5750085707705749806
+    second: soulskill_86
+  - first:
+      213: -821046123995678714
+    second: soulskill_87
+  - first:
+      213: -4943289400471483461
+    second: soulskill_88
+  - first:
+      213: -1867310220893929405
+    second: soulskill_89
+  - first:
+      213: -4038727539322669137
+    second: soulskill_90
+  - first:
+      213: -8503786560335011500
+    second: soulskill_91
+  - first:
+      213: 4994251592422002968
+    second: soulskill_92
+  - first:
+      213: 1793879135166838500
+    second: soulskill_93
+  - first:
+      213: 5184149880398577470
+    second: soulskill_94
+  - first:
+      213: 3463195280761418538
+    second: soulskill_95
+  - first:
+      213: 8249974476351631006
+    second: soulskill_96
+  - first:
+      213: 4048917600525075754
+    second: soulskill_97
+  - first:
+      213: -7429057487249153314
+    second: soulskill_98
+  - first:
+      213: -6110501208005753561
+    second: soulskill_99
+  - first:
+      213: -1265628216985693399
+    second: soulskill_100
+  - first:
+      213: 1544585289546401428
+    second: soulskill_101
+  - first:
+      213: 7765869864263504482
+    second: soulskill_102
+  - first:
+      213: 2435767533241009590
+    second: soulskill_103
+  - first:
+      213: -1628762503730166714
+    second: soulskill_104
+  - first:
+      213: -3075278241807074891
+    second: soulskill_105
+  - first:
+      213: 4012972921374357573
+    second: soulskill_106
+  - first:
+      213: 1748203278615557949
+    second: soulskill_107
+  - first:
+      213: 5328894568786370740
+    second: soulskill_108
+  - first:
+      213: -7334407655074973870
+    second: soulskill_109
+  - first:
+      213: 7900660436392094924
+    second: soulskill_110
+  - first:
+      213: -8764900713882869768
+    second: soulskill_111
+  - first:
+      213: 5906081886019235227
+    second: soulskill_112
+  - first:
+      213: 5196294950801360410
+    second: soulskill_113
+  - first:
+      213: 7397677407824297012
+    second: soulskill_114
+  - first:
+      213: -8470720245719775493
+    second: soulskill_115
+  - first:
+      213: -7684105110798960177
+    second: soulskill_116
+  - first:
+      213: 1214107967013665204
+    second: soulskill_117
+  - first:
+      213: -519702360902641710
+    second: soulskill_118
+  - first:
+      213: 4231918307833424627
+    second: soulskill_119
+  - first:
+      213: 3141703649686493213
+    second: soulskill_120
+  - first:
+      213: 9085667201233079386
+    second: soulskill_121
+  - first:
+      213: -8716420671799567569
+    second: soulskill_122
+  - first:
+      213: 601184237010467738
+    second: soulskill_123
+  - first:
+      213: 6224585866246598541
+    second: soulskill_124
+  - first:
+      213: -3644908276352188289
+    second: soulskill_125
+  - first:
+      213: 4879027045022236274
+    second: soulskill_126
+  - first:
+      213: 6103514833939145683
+    second: soulskill_127
+  - first:
+      213: -5346099354748186261
+    second: soulskill_128
+  - first:
+      213: 3744187978123788444
+    second: soulskill_129
+  - first:
+      213: 6384625316381488625
+    second: soulskill_130
+  - first:
+      213: -8932650279815084628
+    second: soulskill_131
+  - first:
+      213: -6171192264682828334
+    second: soulskill_132
+  - first:
+      213: 8942079652048122606
+    second: soulskill_133
+  - first:
+      213: 2194181337242808157
+    second: soulskill_134
+  - first:
+      213: -4480643190458639738
+    second: soulskill_135
+  - first:
+      213: 216086708153403969
+    second: soulskill_136
+  - first:
+      213: 8185118220755593267
+    second: soulskill_137
+  - first:
+      213: 5871487156928161041
+    second: soulskill_138
+  - first:
+      213: 1329977060364279248
+    second: soulskill_139
+  - first:
+      213: 8409479871866960159
+    second: soulskill_140
+  - first:
+      213: 8932306777309885159
+    second: soulskill_141
+  - first:
+      213: -1651988439772210157
+    second: soulskill_142
+  - first:
+      213: -8065332798612212477
+    second: soulskill_143
+  - first:
+      213: -4372168891436215353
+    second: soulskill_144
+  - first:
+      213: -7002109013380053393
+    second: soulskill_145
+  - first:
+      213: 5985761606172744122
+    second: soulskill_146
+  - first:
+      213: -6963526498019619283
+    second: soulskill_147
+  - first:
+      213: -1119172059718242436
+    second: soulskill_148
+  - first:
+      213: -5243195189054045144
+    second: soulskill_149
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soulskill_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134bdd134751e3550800000000000000
+      internalID: 6142370530576938033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_1
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e5a955791d46970800000000000000
+      internalID: 8747346824166792809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_2
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fd6b0ad60694470800000000000000
+      internalID: 8379334605663559538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_3
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39540b869e766a030800000000000000
+      internalID: 3505603612135933331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_4
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ea5298edeb08190800000000000000
+      internalID: -7962154278198071683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea4d141bfff382d0800000000000000
+      internalID: -3277494649956250912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_6
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fc5c9a4f16f8130800000000000000
+      internalID: 3571180732976320283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_7
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed055f15675fa840800000000000000
+      internalID: 5237500983484157418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_8
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1c8401ad0b15e00800000000000000
+      internalID: 1031800240267117041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_9
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d4e832454f36c60800000000000000
+      internalID: 7810354821001530652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9f304fce29602e0800000000000000
+      internalID: -2159877424873735698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_11
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0823b1a82ba8da0800000000000000
+      internalID: -5941740452130422623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_12
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbe9df1e48e8e1d0800000000000000
+      internalID: -3321149302946272335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_13
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fb637d9145141c0800000000000000
+      internalID: -4521240080941662364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_14
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47746644896f5e60800000000000000
+      internalID: 7953191483797174091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b5e90ebffb018a0800000000000000
+      internalID: -6336353587184116948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_16
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3c8c5771573af40800000000000000
+      internalID: 5738559093820933055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_17
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0fd90c63aba2d40800000000000000
+      internalID: 5560461434264875252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_18
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48586548478824f30800000000000000
+      internalID: 4558355806870209924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_19
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23645073ce23e2750800000000000000
+      internalID: 6282014520345183794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffa09acaf10d94b0800000000000000
+      internalID: -5432183398887018500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_21
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de56e496d2b3bd250800000000000000
+      internalID: 5970430797236037101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_22
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329ec902cb3f46a70800000000000000
+      internalID: 8819441959624829219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_23
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eec811410ef2de50800000000000000
+      internalID: 6832802866015031017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_24
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9329d2de2906d4150800000000000000
+      internalID: 5858444874439561785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406fc448cab4b98f0800000000000000
+      internalID: -532748926587177468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_26
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646c7e7903188faa0800000000000000
+      internalID: -6127005247330597306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_27
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3712f07b3657acf90800000000000000
+      internalID: -6932599605250023053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_28
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba31f747284345fb0800000000000000
+      internalID: -4660041979516742741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_29
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03c664499c5f0690800000000000000
+      internalID: -7633781030022364405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339779b49994cf030800000000000000
+      internalID: 3529777130698668339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_31
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e152aad45387c1950800000000000000
+      internalID: 6421139339055080734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_32
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04f479ddd0c8bcb0800000000000000
+      internalID: -4847912939795713012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_33
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380c0ae849fab9ca0800000000000000
+      internalID: -6009016225212874621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_34
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92e422fd30526830800000000000000
+      internalID: 4062898040827339422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b4145800e36ee20800000000000000
+      internalID: 3379456742344706874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_36
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3508116c9c897c520800000000000000
+      internalID: 2722312492147638355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_37
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d363ea3a64a7b680800000000000000
+      internalID: -8739335775727688752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_38
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3f1093348ebd9f0800000000000000
+      internalID: -442504762948979776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_39
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b839206087d5f00800000000000000
+      internalID: 1107173050611370903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce6b7e9f60aca0c0800000000000000
+      internalID: -4563095921172451635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_41
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdabd0e0b45c6ba20800000000000000
+      internalID: 3077864321503312603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_42
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1f00b2b9d9faf20800000000000000
+      internalID: 3436138330473951700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_43
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fa56e08a69aa1d0800000000000000
+      internalID: -3338690525201584317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_44
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1a81cbc84033c90800000000000000
+      internalID: -7191399177482886667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0243875656abc90800000000000000
+      internalID: -7153293571641827118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_46
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df098ab98c33aeb0800000000000000
+      internalID: -4709854223061676080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_47
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab12751bba3b73a20800000000000000
+      internalID: 3042097623308116410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_48
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718dccf5c5fd86a90800000000000000
+      internalID: -7320355606453495785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_49
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8de44c82f4b99b0800000000000000
+      internalID: -5072373518791944023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5216aba3647aa9710800000000000000
+      internalID: 1700855729360625957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_51
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c261fa2a39f93cea0800000000000000
+      internalID: -5853659634213120468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_52
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f9ec5f27779d1e0800000000000000
+      internalID: -2172574009595617487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_53
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae7f88e8e45ace40800000000000000
+      internalID: 5677443639564795561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_54
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c5e0d2d0906e2dc0800000000000000
+      internalID: -3661883271877171771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bbee1476b568e00800000000000000
+      internalID: 1046624462456142695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_56
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b0f1dbd283bb200800000000000000
+      internalID: 196812777818360720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_57
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765fa3dbb7d67bd80800000000000000
+      internalID: -8234993015400499865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_58
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffc2dc06734979f0800000000000000
+      internalID: -470270511783161870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_59
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3115677d12f9faea0800000000000000
+      internalID: -5859289622488133357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692423a5e26a5b500800000000000000
+      internalID: 411417658986218134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_61
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e581e9d37823020800000000000000
+      internalID: 2320065456764378628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_62
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f0a4bdbdfd7e840800000000000000
+      internalID: 5253413625720868723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_63
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b233c34f4eb7b50800000000000000
+      internalID: 6592114217219992448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_64
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab814eabc01084c0800000000000000
+      internalID: -4287408378268775517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dddb5474c924c20800000000000000
+      internalID: 3189283316058414382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_66
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bc76d870003bf10800000000000000
+      internalID: 2284169468444134284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_67
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e402c01ed57698630800000000000000
+      internalID: 3929785802762756174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_68
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371b1aba2ed7a9e80800000000000000
+      internalID: -8171080161414762125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_69
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6f7432f6c414140800000000000000
+      internalID: 4702123526168508068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4954c661a6e6d2b20800000000000000
+      internalID: 3111264319504663956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_71
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c10fc4ef5c9a9ae0800000000000000
+      internalID: -1541747986746375741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_72
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862304bc08f61a6e0800000000000000
+      internalID: -1828057374779231640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_73
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a180370ddc0ba00800000000000000
+      internalID: 770341831447157278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_74
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef042ddf66e56b30800000000000000
+      internalID: 4280080389011410918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc34a95337c85040800000000000000
+      internalID: 4636674839739120894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_76
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6715d1deeed46cc00800000000000000
+      internalID: 920508862419521910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_77
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4f24544c7f457d0800000000000000
+      internalID: -2930445035163683603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_78
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16c1898828bd4390800000000000000
+      internalID: -7832401692682238435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_79
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d718e590da2140650800000000000000
+      internalID: 6198099521564475773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a92c7ae971233f0800000000000000
+      internalID: -922649003470710189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_81
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21305bbd4597c7f60800000000000000
+      internalID: 8033429240692409106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_82
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73ff25294c2d8230800000000000000
+      internalID: 3642616366280733563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_83
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11791f912cb92b0e0800000000000000
+      internalID: -2255569205397973231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_84
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677c8667e3d3b7d70800000000000000
+      internalID: 9041888015360247670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2389f87b1b33e9500800000000000000
+      internalID: 404817854891792434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_86
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e211ad36c786ccf40800000000000000
+      internalID: 5750085707705749806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_87
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608b60b76ee0b94f0800000000000000
+      internalID: -821046123995678714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_88
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb81fe1b78e56bb0800000000000000
+      internalID: -4943289400471483461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_89
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340492e5f3bf516e0800000000000000
+      internalID: -1867310220893929405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7b51a73be83f7c0800000000000000
+      internalID: -4038727539322669137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_91
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451ad79ad2b7cf980800000000000000
+      internalID: -8503786560335011500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_92
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8111e35dc552f4540800000000000000
+      internalID: 4994251592422002968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_93
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6ba9da19325e810800000000000000
+      internalID: 1793879135166838500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_94
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f7a8379dcc1f740800000000000000
+      internalID: 5184149880398577470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23f79152cdbf0030800000000000000
+      internalID: 3463195280761418538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_96
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e6af4731ccd7270800000000000000
+      internalID: 8249974476351631006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_97
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25cf180b15a03830800000000000000
+      internalID: 4048917600525075754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_98
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2ee80839fa6e890800000000000000
+      internalID: -7429057487249153314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_99
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725c831b683233ba0800000000000000
+      internalID: -6110501208005753561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9235bdc97d59f6ee0800000000000000
+      internalID: -1265628216985693399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_101
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49605b423287f6510800000000000000
+      internalID: 1544585289546401428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_102
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26256570f79e5cb60800000000000000
+      internalID: 7765869864263504482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_103
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5824e8aa59dc120800000000000000
+      internalID: 2435767533241009590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_104
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64400b5e1297569e0800000000000000
+      internalID: -1628762503730166714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9f99b8bba6255d0800000000000000
+      internalID: -3075278241807074891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_106
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548b7cf3c91f0b730800000000000000
+      internalID: 4012972921374357573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_107
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37bd099e9dd24810800000000000000
+      internalID: 1748203278615557949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_108
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0250a606904f940800000000000000
+      internalID: 5328894568786370740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_109
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257b959d813f63a90800000000000000
+      internalID: -7334407655074973870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc2222bec8c4ad60800000000000000
+      internalID: 7900660436392094924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_111
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff91793d31dc5680800000000000000
+      internalID: -8764900713882869768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_112
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9dab8efe2e96f150800000000000000
+      internalID: 5906081886019235227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_113
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16cba20ab2fc1840800000000000000
+      internalID: 5196294950801360410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_114
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cbc486864d9a660800000000000000
+      internalID: 7397677407824297012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_115
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6c92af0d4f17a80800000000000000
+      internalID: -8470720245719775493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_116
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc970162d139c5590800000000000000
+      internalID: -7684105110798960177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_117
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b932dc63c069d010800000000000000
+      internalID: 1214107967013665204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_118
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7577dc475a9c8f0800000000000000
+      internalID: -519702360902641710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_119
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa22e0874bcaba30800000000000000
+      internalID: 4231918307833424627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d189c1de2d2999b20800000000000000
+      internalID: 3141703649686493213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_121
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c4aec7e26c61e70800000000000000
+      internalID: 9085667201233079386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_122
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bd380a49d090780800000000000000
+      internalID: -8716420671799567569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_123
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bb29bd0e5d75800800000000000000
+      internalID: 601184237010467738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_124
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fab87bddb226650800000000000000
+      internalID: 6224585866246598541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f708525fb3faa6dc0800000000000000
+      internalID: -3644908276352188289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_126
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ef21c4f39c5b340800000000000000
+      internalID: 4879027045022236274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_127
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d32546576a04b450800000000000000
+      internalID: 6103514833939145683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_128
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b611a4236f6dec5b0800000000000000
+      internalID: -5346099354748186261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_129
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c904b58e02706f330800000000000000
+      internalID: 3744187978123788444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f572e6e5eeba9850800000000000000
+      internalID: 6384625316381488625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_131
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca504d0d5e9d80480800000000000000
+      internalID: -8932650279815084628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_132
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd01f6e4558b5aa0800000000000000
+      internalID: -6171192264682828334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_133
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2b39df016a81c70800000000000000
+      internalID: 8942079652048122606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_134
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f262b0d4c437e10800000000000000
+      internalID: 2194181337242808157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a907bf1ce81d1c0800000000000000
+      internalID: -4480643190458639738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_136
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aca2857b1bff200800000000000000
+      internalID: 216086708153403969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_137
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338e6b8b7a1679170800000000000000
+      internalID: 8185118220755593267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_138
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115a8f3f576bb7150800000000000000
+      internalID: 5871487156928161041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_139
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd5e620717057210800000000000000
+      internalID: 1329977060364279248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f197d6c536974b470800000000000000
+      internalID: 8409479871866960159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_141
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2be5640bde5fb70800000000000000
+      internalID: 8932306777309885159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_142
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c53524445f219e0800000000000000
+      internalID: -1651988439772210157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_143
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30579673d8e221090800000000000000
+      internalID: -8065332798612212477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_144
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c35ee7de8fe253c0800000000000000
+      internalID: -4372168891436215353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_145
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66cbea73f283de90800000000000000
+      internalID: -7002109013380053393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_146
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab919168772b11350800000000000000
+      internalID: 5985761606172744122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_147
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e458d5b859c5f90800000000000000
+      internalID: -6963526498019619283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_148
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fa3f9f0f6e770f0800000000000000
+      internalID: -1119172059718242436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulskill_149
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824856451cd6c37b0800000000000000
+      internalID: -5243195189054045144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
