@@ -10,6 +10,12 @@ public class WaterWheel : MonoBehaviour
     [System.NonSerialized]
     public bool _bIsRotate = false;
 
+    [System.NonSerialized]
+    public bool _bLightBlowEnable = true;
+
+    public GameObject Target;
+    public float i;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,10 +36,20 @@ public class WaterWheel : MonoBehaviour
         }
     }
 
+   
 
-
-
-
+    void Update()
+    {
+        // set light color
+        float t = Mathf.PingPong(Time.time, 1.0f) / 1.0f;
+        if (_bLightBlowEnable == true)
+        {
+           Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
+        }
+        else {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 4;
+        }
+    }
 
     ////water wheel rotate
 
@@ -56,7 +72,9 @@ public class WaterWheel : MonoBehaviour
              }
          }
         _bIsRotate = false;
-        
+        _bLightBlowEnable = false;
+
+
     }
 
    ////
