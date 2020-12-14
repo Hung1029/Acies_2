@@ -19,7 +19,7 @@ public class BoatMove : MonoBehaviour
     {
         _bIsMove = true;
 
-        if (this.transform.position.x <53.64)
+        if (this.transform.position.x < 55.15003)
             rb.velocity = new Vector2(1.0f, rb.velocity.y);
         else
         {

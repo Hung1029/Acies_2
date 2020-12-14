@@ -6,7 +6,7 @@ public class Plant : MonoBehaviour
 {
     //Animator
     private Animator animator;
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,21 +24,13 @@ public class Plant : MonoBehaviour
     {
         
         animator.SetTrigger("tGrowUp");
-        //StartCoroutine("GrowUpIEnumerator");
-        
+
+        this.GetComponent<EdgeCollider2D>().enabled = true;
+
+
     }
 
 
-    //GrowUp IEnumerator
-     IEnumerator GrowUpIEnumerator()
-    {
-        for(float y = transform.position.y; y < -0.73; y+=0.05f)
-        {
-            transform.position = new Vector2(transform.position.x, y);
-            yield return new WaitForSeconds(0.05f);
-        }
-       
-    }
 
 
 

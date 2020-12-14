@@ -328,7 +328,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9133d6c51379e46be6b04b7491ddcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerLifeUIImageArray: []
+  PlayerLifeUIImageArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &390821686556835503
 Animator:
   serializedVersion: 3

@@ -41,6 +41,8 @@ public class PlayerHealth : MonoBehaviour
     // can call one time or many time
     public void Hurt()
     {
+        
+
         if (fCanHurtTimer > 1.0f && PlayerHealthCount > 0) // 1s hurt interval and have life
         {
             //stop counting hurt interval timer
