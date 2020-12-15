@@ -40,11 +40,10 @@ public class testCloud : MonoBehaviour
 
     void OnParticleTrigger()
     {
-        if(PlayerSkill.CURRENTSKILL == 1)
+        numInside = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
+        numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        if (PlayerSkill.CURRENTSKILL == 1)
         {
-            numInside = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
-            numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
-
             ////////////////////////////////////////////////////////////////////////Vita can fade out fog
             // iterate through the particles which inside the trigger 
             for (int i = 0; i < numInside ; i++)
@@ -114,15 +113,13 @@ public class testCloud : MonoBehaviour
 
             }
         }
-       
-        
+
+
 
         ////////////////////////////////////////////////////////////////////////Dectect Player hurt by fog
 
-
         if (PlayerSkill.CURRENTSKILL == 0 && numInside + numEnter> 0 && fPlayerHurtTimer > 1.0f && bExplo==false)
         {
-            Debug.Log("in");
             GameObject.Find("Player").GetComponent<PlayerHealth>().Hurt();
         }
     }

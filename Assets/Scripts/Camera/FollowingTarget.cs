@@ -31,42 +31,80 @@ public class FollowingTarget : MonoBehaviour
     public bool XMinEnabled = false;
     public float XMinValue = 0;
 
+    //Camera focus On different object
+    bool bCameraFocusOtherObj = false;
+
 
     void FixedUpdate()
     {
-        //target position
-        Vector3 targetPos = target.position;
+        if (bCameraFocusOtherObj == false)
+        {
+            //target position
+            Vector3 targetPos = target.position;
 
 
-        //vertical
-         if(YMinEnabled && YMaxEnabled)      
-             targetPos.y = Mathf.Clamp(target.position.y, YMinValue, YMaxValue);       
+            //vertical
+            if (YMinEnabled && YMaxEnabled)
+                targetPos.y = Mathf.Clamp(target.position.y, YMinValue, YMaxValue);
 
-         else if(YMinEnabled)
-             targetPos.y = Mathf.Clamp(target.position.y, YMinValue, target.position.y);
+            else if (YMinEnabled)
+                targetPos.y = Mathf.Clamp(target.position.y, YMinValue, target.position.y);
 
-         else if (YMaxEnabled)
-             targetPos.y = Mathf.Clamp(target.position.y, target.position.y, YMaxValue);
-             
-        //horizontal
-        if (XMinEnabled && XMaxEnabled)
-            targetPos.x = Mathf.Clamp(target.position.x, XMinValue, XMaxValue);
+            else if (YMaxEnabled)
+                targetPos.y = Mathf.Clamp(target.position.y, target.position.y, YMaxValue);
 
-        else if (XMinEnabled)
-            targetPos.x = Mathf.Clamp(target.position.x, XMinValue, target.position.x);
+            //horizontal
+            if (XMinEnabled && XMaxEnabled)
+                targetPos.x = Mathf.Clamp(target.position.x, XMinValue, XMaxValue);
 
-        else if (XMaxEnabled)
-            targetPos.x = Mathf.Clamp(target.position.x, target.position.x, XMaxValue);
+            else if (XMinEnabled)
+                targetPos.x = Mathf.Clamp(target.position.x, XMinValue, target.position.x);
 
-       
+            else if (XMaxEnabled)
+                targetPos.x = Mathf.Clamp(target.position.x, target.position.x, XMaxValue);
 
 
-      
-        //align the camera and the targets z position
-        targetPos.z = transform.position.z;
 
-        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
+
+
+            //align the camera and the targets z position
+            targetPos.z = transform.position.z;
+
+            transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
+        }
+        
 
     }
+
+
+
+
+    public void ShortFollowing(float time , Vector3 ObjPosition)
+    {
+        bCameraFocusOtherObj = true;
+        StartCoroutine(ShortFollowingIEnumerator(time,ObjPosition));
+
+
+    }
+
+    IEnumerator ShortFollowingIEnumerator(float time, Vector3 ObjPosition)
+    {
+        ObjPosition.z = transform.position.z;
+
+        //go to object position 
+        while (Vector3.Distance(transform.position , ObjPosition) >= 1.0f )
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, ObjPosition, ref velocity, 0.5f);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+
+
+        yield return new WaitForSeconds(time);
+
+        //reset Camera bool 
+        bCameraFocusOtherObj = false;
+    }
+
+
 
 }

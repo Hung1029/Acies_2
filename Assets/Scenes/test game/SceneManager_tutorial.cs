@@ -5,13 +5,20 @@ using UnityEngine.UI;
 
 public class SceneManager_tutorial : MonoBehaviour
 {
+    [SerializeField]
+    private Camera MainCamera;
 
     [SerializeField]
     private GameObject VitaSoul;
     private VitaSoul_particle VitaParticleScript;
     private GazeMovement VitaParticleGazeScript;
 
-
+    //Pop Skill Direction UI
+    [SerializeField]
+    private ReadSkillDirection DetectDirectionUICollider;
+    [SerializeField]
+    private SkillDirection SkillDirectionUI;
+    bool bRead = false;
 
     //water wheel
     [SerializeField]
@@ -71,6 +78,37 @@ public class SceneManager_tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ////Skill Direction UI fade in
+        if (DetectDirectionUICollider.bPlayerTouch && bRead == false)
+        {
+            SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
+            
+            //reset UI collider bool
+            DetectDirectionUICollider.bPlayerTouch = false;
+
+            //player can't move
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+
+            bRead = true;
+        }
+
+        //skill Directio UI fade out when pressA Key
+        else if (bRead && Input.GetKeyDown(KeyCode.A))
+        {
+            SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeOutTextMainTitleIEnumerator());
+
+            //player can move
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+
+            //reset Reading bool if need to  read again
+            //bRead = false;
+
+        }
+
+
+        //
+
         if (!VitaParticleGazeScript.bVitaSoulCanGaze)
         {
             VitaParticleScript.FollowObj();
@@ -84,6 +122,11 @@ public class SceneManager_tutorial : MonoBehaviour
             Splash.Play();
             WaterWheelScript.PlayWaterWheelRotate();
             PlantScript.GrowUp();
+
+            //set camera 
+            MainCamera.GetComponent<FollowingTarget>().ShortFollowing(2.0f, new Vector3(16.6f, -0.66f, 0.0f));
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+
         }
 
         ///

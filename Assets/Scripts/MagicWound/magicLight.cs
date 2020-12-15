@@ -18,17 +18,21 @@ public class magicLight : MonoBehaviour
     Color color_skillTwo = new Color(0.0f, 0.94f, 1.0f);
 
     //light
+    [System.NonSerialized]
     public Light2D magicLt;
 
     
     //bool conneted with VitaSoul
+    [System.NonSerialized]
     public bool LightUpVita = false;
 
 
     //Sister Soul Light management
+    [System.NonSerialized]
     public bool canLightUpVita = false;
 
     //Skill time
+    [System.NonSerialized]
     public float fRaiseHand = 0.8f;
 
 
