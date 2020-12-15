@@ -9,11 +9,23 @@ public class Ropeway : MonoBehaviour
     [System.NonSerialized]
     public bool _bRopewayMoving = false;
 
+    [System.NonSerialized]
+    public bool _bLightBlowEnable = true;
 
+    public GameObject Target;
 
     void Update()
     {
-      
+        // set light color
+        float t = Mathf.PingPong(Time.time, 1.0f) / 1.0f;
+        if (_bLightBlowEnable == true)
+        {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
+        }
+        else
+        {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;
+        }
     }
 
 
@@ -28,6 +40,7 @@ public class Ropeway : MonoBehaviour
     {
        
         _bRopewayMoving = true;
+        _bLightBlowEnable = false;
         for (float y = transform.position.y; y > -2.89f; y -= 0.0125f)
         {
             transform.position = new Vector2(transform.position.x,y);

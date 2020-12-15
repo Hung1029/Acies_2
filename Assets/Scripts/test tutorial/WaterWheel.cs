@@ -14,7 +14,7 @@ public class WaterWheel : MonoBehaviour
     public bool _bLightBlowEnable = true;
 
     public GameObject Target;
-    public float i;
+    
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,7 +45,6 @@ public class WaterWheel : MonoBehaviour
         if (_bLightBlowEnable == true)
         {
            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
-            Debug.Log(Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity);
         }
         else {
             Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;

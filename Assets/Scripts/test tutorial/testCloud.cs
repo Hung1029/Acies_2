@@ -23,10 +23,31 @@ public class testCloud : MonoBehaviour
     int numInside;
     int numEnter;
 
+    [System.NonSerialized]
+    public bool _bLightBlowEnable = true;
+
+    public GameObject Target;
+    public GameObject Target2;
+
 
     void Start()
     {
         ps = this.gameObject.GetComponent<ParticleSystem>();
+        Target2.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = false;
+    }
+    void Update()
+    {
+        // set light color
+        float t = Mathf.PingPong(Time.time, 1.0f) / 1.0f;
+        if (_bLightBlowEnable == true)
+        {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
+        }
+        else
+        {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;
+            Target2.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = true;
+        }
     }
 
     void InitializeIfNeeded()
@@ -133,6 +154,7 @@ public class testCloud : MonoBehaviour
     IEnumerator FadeOutAndDestoryIEnumerator(Vector3 vCandlePosition)
     {
         bExplo = true;
+        _bLightBlowEnable = false;
 
         ps.Stop();
         InitializeIfNeeded();
