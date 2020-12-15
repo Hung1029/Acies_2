@@ -52,6 +52,12 @@ TagManager:
   - name: Box
     uniqueID: 2219023207
     locked: 0
+  - name: item
+    uniqueID: 3522062455
+    locked: 0
+  - name: ground
+    uniqueID: 2535439509
+    locked: 0
   - name: Player
     uniqueID: 1489229143
     locked: 0
