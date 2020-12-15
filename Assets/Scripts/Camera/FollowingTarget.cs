@@ -72,7 +72,11 @@ public class FollowingTarget : MonoBehaviour
 
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
         }
-        
+        else
+        {
+            //when Camera focuse player can't move
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        }
 
     }
 
@@ -95,16 +99,40 @@ public class FollowingTarget : MonoBehaviour
         while (Vector3.Distance(transform.position , ObjPosition) >= 1.0f )
         {
             transform.position = Vector3.SmoothDamp(transform.position, ObjPosition, ref velocity, 0.5f);
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return null;
         }
 
+        StartCoroutine(Shake(1.5f,0.08f));
 
         yield return new WaitForSeconds(time);
 
         //reset Camera bool 
         bCameraFocusOtherObj = false;
+
+        //reset Player move bool
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
     }
 
+    IEnumerator Shake(float duration, float magnitude) // during time and strength of shake
+    {
+        Vector3 originalPos = transform.localPosition;
 
+        float elapsed = 0.0f; //timer
+
+        while (elapsed<duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null; //before another IEnumerator loop, wait for next frame drawed
+        }
+
+        transform.localPosition = originalPos;
+    }
 
 }

@@ -196,16 +196,17 @@ public class VitaSoul_particle : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
 
 
-        //change Scale
-        if ((moveInput > 0 && transform.localScale.x < 0.0f) || (moveInput < 0 && transform.localScale.x > 0.0f))
+        if (GameObject.Find("Player").GetComponent<PlayerMovement>().canMove)
         {
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-            bChangeFace = true;
+            //change Scale
+            if ((moveInput > 0 && transform.localScale.x < 0.0f) || (moveInput < 0 && transform.localScale.x > 0.0f))
+            {
+                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                bChangeFace = true;
 
+            }
         }
-
         
-
         //change X
         if (bChangeFace || Mathf.Abs(transform.position.x - target.position.x) > stoppingDistance)
         {

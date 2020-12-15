@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -151,7 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ac893c81863644c9b6ba09614e5d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
   VitaSoul: {fileID: 526091148}
+  DetectDirectionUICollider: {fileID: 0}
+  SkillDirectionUI: {fileID: 0}
   WaterWheel: {fileID: 314351013}
   Splash: {fileID: 882888969}
   PlantScript: {fileID: 1819697699}
@@ -7552,8 +7555,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1139581471
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bdad589232fab664bad5f6eacc5032be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8890,6 +8893,16 @@ PrefabInstance:
       propertyPath: PlayerLifeUIImageArray.Array.data[4]
       value: 
       objectReference: {fileID: 533667362402307994}
+    - target: {fileID: 7584363807494691634, guid: 9e56e09a5a82432499cf830867041bba,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584363807494691634, guid: 9e56e09a5a82432499cf830867041bba,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: 1139581471
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e56e09a5a82432499cf830867041bba, type: 3}
 --- !u!1 &1886365766

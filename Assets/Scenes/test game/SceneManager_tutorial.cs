@@ -101,7 +101,7 @@ public class SceneManager_tutorial : MonoBehaviour
             //player can move
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
 
-            //reset Reading bool if need to  read again
+            //reset Reading bool if need to read again
             //bRead = false;
 
         }
@@ -125,9 +125,9 @@ public class SceneManager_tutorial : MonoBehaviour
 
             //set camera 
             MainCamera.GetComponent<FollowingTarget>().ShortFollowing(2.0f, new Vector3(16.6f, -0.66f, 0.0f));
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
 
         }
+
 
         ///
 
