@@ -2214,7 +2214,6 @@ GameObject:
   m_Component:
   - component: {fileID: 515584618}
   - component: {fileID: 515584619}
-  - component: {fileID: 515584620}
   m_Layer: 8
   m_Name: water
   m_TagString: Untagged
@@ -2261,25 +2260,6 @@ MonoBehaviour:
   damping: 0.1
   spread: 0.1
   collisionVelocityFactor: 0.04
---- !u!253 &515584620
-BuoyancyEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515584617}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_SurfaceLevel: -0.5
-  m_Density: 5
-  m_LinearDrag: 5
-  m_AngularDrag: 180
-  m_FlowAngle: 180
-  m_FlowMagnitude: 5
-  m_FlowVariation: 10
 --- !u!1 &526091148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1152251819275936743, guid: 4680912b686d8134b8407d9b6318149f,
@@ -10543,6 +10523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416894859}
   - component: {fileID: 1416894860}
+  - component: {fileID: 1416894861}
   m_Layer: 0
   m_Name: deco
   m_TagString: Untagged
@@ -10558,7 +10539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416894858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.037, y: 0.064, z: 0}
+  m_LocalPosition: {x: 0.029, y: 0.0862, z: 0}
   m_LocalScale: {x: 0.08764466, y: 0.08764466, z: 0.08764466}
   m_Children:
   - {fileID: 1254390765}
@@ -10605,7 +10586,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 972475ca7916a3549b7d9258ad6637a7, type: 3}
-  m_Color: {r: 0.015129937, g: 0.13327064, b: 0.3207547, a: 0.45882353}
+  m_Color: {r: 0.08926666, g: 0.2720473, b: 0.5566038, a: 0.45882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10615,6 +10596,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1416894861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416894858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b328c929d7ada046b493fb92983f44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bLightTrigger: 0
+  _bLightIntensity: 0
 --- !u!1 &1417779734
 GameObject:
   m_ObjectHideFlags: 0
@@ -13157,17 +13152,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 8
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 390821686556835490, guid: 9e56e09a5a82432499cf830867041bba,
-        type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 390821686556835490, guid: 9e56e09a5a82432499cf830867041bba,
-        type: 3}
-      propertyPath: m_Mass
-      value: 4.5
-=======
     - target: {fileID: 390821686556835492, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: feetPos1
@@ -13182,7 +13166,6 @@ PrefabInstance:
         type: 3}
       propertyPath: checkRadius
       value: 0.3
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835493, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
