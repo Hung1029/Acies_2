@@ -164,7 +164,6 @@ MonoBehaviour:
   TriggerCandleScript: {fileID: 831652896}
   RopewayTriggerScript: {fileID: 1886365770}
   RopewayScript: {fileID: 765160630}
-  CloudToDestroy2: {fileID: 0}
   CloudToDestroy2: {fileID: 318337154}
   TriggerCandleScript2: {fileID: 964477503}
 --- !u!4 &38984723
