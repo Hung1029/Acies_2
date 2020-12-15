@@ -45,6 +45,7 @@ public class WaterWheel : MonoBehaviour
         if (_bLightBlowEnable == true)
         {
            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
+            Debug.Log(Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity);
         }
         else {
             Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;
@@ -61,6 +62,7 @@ public class WaterWheel : MonoBehaviour
     IEnumerator WaterWheelRotateIEnumerator()
     {
         _bIsRotate = true;
+        _bLightBlowEnable = false;
         //how many circle
         for (int circle = 0; circle < 1; circle++)
          {
@@ -72,7 +74,7 @@ public class WaterWheel : MonoBehaviour
              }
          }
         _bIsRotate = false;
-        _bLightBlowEnable = false;
+       
 
 
     }
