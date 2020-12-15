@@ -104,6 +104,7 @@ namespace ilhamhe {
 		private void SetBoxCollider2D () {
 			BoxCollider2D col = gameObject.AddComponent<BoxCollider2D> ();
 			col.isTrigger = true;
+            col.usedByEffector = true;
 		}
 
 		private void Update () {

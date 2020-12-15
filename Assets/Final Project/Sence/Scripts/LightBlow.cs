@@ -17,6 +17,7 @@ public class LightBlow : MonoBehaviour
     }
     private void Update()
     {
+        
         GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = _bLightTrigger;
         GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = _bLightIntensity;
     }

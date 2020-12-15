@@ -47,7 +47,7 @@ public class WaterWheel : MonoBehaviour
            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
         }
         else {
-            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 4;
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;
         }
     }
 
