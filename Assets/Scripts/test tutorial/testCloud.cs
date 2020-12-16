@@ -42,6 +42,7 @@ public class testCloud : MonoBehaviour
         if (_bLightBlowEnable == true)
         {
             Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
+            
         }
         else
         {
