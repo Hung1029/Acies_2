@@ -15352,6 +15352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572040579}
   - component: {fileID: 572040578}
+  - component: {fileID: 572040580}
   m_Layer: 0
   m_Name: BG-mid
   m_TagString: Untagged
@@ -15423,6 +15424,20 @@ Transform:
   m_Father: {fileID: 1686921144}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572040580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572040577}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917e0a42e46dabe4aa9fc1071d02a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.3, y: 0}
+  CamaraTransform: {fileID: 1769021816}
 --- !u!1 &577972575
 GameObject:
   m_ObjectHideFlags: 0
@@ -15900,6 +15915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589707088}
   - component: {fileID: 589707089}
+  - component: {fileID: 589707090}
   m_Layer: 0
   m_Name: BG-tree-front3
   m_TagString: Untagged
@@ -15971,6 +15987,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &589707090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589707087}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917e0a42e46dabe4aa9fc1071d02a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.2, y: 0}
+  CamaraTransform: {fileID: 1769021816}
 --- !u!1 &589784197
 GameObject:
   m_ObjectHideFlags: 0
@@ -17204,6 +17234,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &643736816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643736819}
+  - component: {fileID: 643736818}
+  - component: {fileID: 643736817}
+  m_Layer: 0
+  m_Name: Camera Check Point1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &643736817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643736816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099c565c43c23df42b32653db30dadb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &643736818
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643736816}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.5788527}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 43.012283}
+  m_EdgeRadius: 0
+--- !u!4 &643736819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643736816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.4, y: 5.8, z: -6.786843}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645133548
 GameObject:
   m_ObjectHideFlags: 0
@@ -21136,6 +21236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799072742}
   - component: {fileID: 799072743}
+  - component: {fileID: 799072744}
   m_Layer: 0
   m_Name: BG-tree-mid2
   m_TagString: Untagged
@@ -21207,6 +21308,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &799072744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799072741}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917e0a42e46dabe4aa9fc1071d02a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.3, y: 0}
+  CamaraTransform: {fileID: 1769021816}
 --- !u!1 &799360725
 GameObject:
   m_ObjectHideFlags: 0
@@ -22488,12 +22603,12 @@ PrefabInstance:
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.36
+      value: -8.560005
       objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.41
+      value: -1.3700004
       objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
@@ -24005,6 +24120,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &903553383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903553386}
+  - component: {fileID: 903553385}
+  - component: {fileID: 903553384}
+  m_Layer: 0
+  m_Name: Camera Check Point3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &903553384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903553383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099c565c43c23df42b32653db30dadb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &903553385
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903553383}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.5788527}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 43.012283}
+  m_EdgeRadius: 0
+--- !u!4 &903553386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903553383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 120.5, y: 5.8, z: -6.786843}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909567440
 GameObject:
   m_ObjectHideFlags: 0
@@ -27185,6 +27370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038090265}
   - component: {fileID: 1038090264}
+  - component: {fileID: 1038090266}
   m_Layer: 0
   m_Name: BG-front
   m_TagString: Untagged
@@ -27256,6 +27442,20 @@ Transform:
   m_Father: {fileID: 1686921144}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038090266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038090263}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917e0a42e46dabe4aa9fc1071d02a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.2, y: 0}
+  CamaraTransform: {fileID: 1769021816}
 --- !u!1 &1040802655
 GameObject:
   m_ObjectHideFlags: 0
@@ -31023,6 +31223,76 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176251733}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1177585864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177585867}
+  - component: {fileID: 1177585866}
+  - component: {fileID: 1177585865}
+  m_Layer: 0
+  m_Name: Camera Check Point2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1177585865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177585864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099c565c43c23df42b32653db30dadb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1177585866
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177585864}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.5788527}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 43.012283}
+  m_EdgeRadius: 0
+--- !u!4 &1177585867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177585864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.3, y: 5.8, z: -6.786843}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181235563
 GameObject:
   m_ObjectHideFlags: 0
@@ -33132,6 +33402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250168812}
   - component: {fileID: 1250168813}
+  - component: {fileID: 1250168814}
   m_Layer: 0
   m_Name: BG-tree-front4
   m_TagString: Untagged
@@ -33203,6 +33474,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1250168814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250168811}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917e0a42e46dabe4aa9fc1071d02a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.2, y: 0}
+  CamaraTransform: {fileID: 1769021816}
 --- !u!1 &1251523808
 GameObject:
   m_ObjectHideFlags: 0
@@ -43301,6 +43586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1643324270}
   - component: {fileID: 1643324269}
+  - component: {fileID: 1643324271}
   m_Layer: 0
   m_Name: BG-back
   m_TagString: Untagged
@@ -43372,6 +43658,20 @@ Transform:
   m_Father: {fileID: 1686921144}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643324271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643324268}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917e0a42e46dabe4aa9fc1071d02a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.4, y: 0}
+  CamaraTransform: {fileID: 1769021816}
 --- !u!1 &1645738570
 GameObject:
   m_ObjectHideFlags: 0
@@ -44198,12 +44498,12 @@ PrefabInstance:
     - target: {fileID: 2353517208301033257, guid: f34e2aba8b67636468fff8ba85bf4ba8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2353517208301033257, guid: f34e2aba8b67636468fff8ba85bf4ba8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 2353517208301033257, guid: f34e2aba8b67636468fff8ba85bf4ba8,
         type: 3}
@@ -44264,6 +44564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: XMinValue
       value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397865474129221063, guid: f34e2aba8b67636468fff8ba85bf4ba8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34e2aba8b67636468fff8ba85bf4ba8, type: 3}
@@ -45692,12 +45997,12 @@ PrefabInstance:
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.199996
+      value: -7.4
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3899994
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
@@ -50964,6 +51269,7 @@ GameObject:
   - component: {fileID: 2002183760}
   - component: {fileID: 2002183759}
   - component: {fileID: 2002183761}
+  - component: {fileID: 2002183762}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51042,6 +51348,77 @@ MonoBehaviour:
   Trap1: {fileID: 0}
   Trap2: {fileID: 0}
   Plant: {fileID: 647874081}
+--- !u!114 &2002183762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002183758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc362ae6809554d9a80c45a5e1c8b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTransform: {fileID: 1920543543}
+  MainCameraPosition: {fileID: 1769021816}
+  smoothTime: 0.15
+  Info:
+  - CheckPointEnabled: 0
+    CheckPointTriggerScript: {fileID: 0}
+    YMaxEnabled: 0
+    YMaxValue: 0
+    YMinEnabled: 1
+    YMinValue: -0.3
+    XMaxEnabled: 0
+    XMaxValue: 0
+    XMinEnabled: 1
+    XMinValue: -0.4
+    ParallaxSprite:
+    - {fileID: 799360728}
+    - {fileID: 1555082852}
+    - {fileID: 1385986634}
+  - CheckPointEnabled: 1
+    CheckPointTriggerScript: {fileID: 643736817}
+    YMaxEnabled: 0
+    YMaxValue: 0
+    YMinEnabled: 1
+    YMinValue: -0.3
+    XMaxEnabled: 0
+    XMaxValue: 0
+    XMinEnabled: 1
+    XMinValue: -0.4
+    ParallaxSprite:
+    - {fileID: 799360728}
+    - {fileID: 589707090}
+  - CheckPointEnabled: 1
+    CheckPointTriggerScript: {fileID: 1177585865}
+    YMaxEnabled: 0
+    YMaxValue: 0
+    YMinEnabled: 1
+    YMinValue: -0.3
+    XMaxEnabled: 0
+    XMaxValue: 0
+    XMinEnabled: 1
+    XMinValue: -0.4
+    ParallaxSprite:
+    - {fileID: 799360728}
+    - {fileID: 799072744}
+    - {fileID: 1250168814}
+  - CheckPointEnabled: 1
+    CheckPointTriggerScript: {fileID: 903553384}
+    YMaxEnabled: 0
+    YMaxValue: 0
+    YMinEnabled: 1
+    YMinValue: 1.87
+    XMaxEnabled: 1
+    XMaxValue: 247.7955
+    XMinEnabled: 0
+    XMinValue: 0
+    ParallaxSprite:
+    - {fileID: 1643324271}
+    - {fileID: 572040580}
+    - {fileID: 1038090266}
 --- !u!1 &2007000939
 GameObject:
   m_ObjectHideFlags: 0
