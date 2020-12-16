@@ -31,9 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private int extraJumps;
     int JumpState = 0;
 
-    //Vita Soul
-    public GameObject VitaSoul;
-
     private Vector3 originalScale;
 
 

@@ -7,11 +7,10 @@ public class ParallaxBackground : MonoBehaviour
     [SerializeField]
     private  Vector2 parallaxEffectMultiplier;
 
-    private Transform CamaraTransform;
+    public Transform CamaraTransform;
     private Vector3 lastCamaraPosition;
     private void Start()
     {
-        CamaraTransform = Camera.main.transform;
         lastCamaraPosition = CamaraTransform.position;
     }
 
