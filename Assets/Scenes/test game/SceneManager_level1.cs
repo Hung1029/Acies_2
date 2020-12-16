@@ -61,6 +61,11 @@ public class SceneManager_level1 : MonoBehaviour
     //water destory detect
     public GameObject WaterParticles;
 
+    //Short camera following
+    public CameraParallaxManager_Level1 CameraParallaxManager;
+
+
+
     //water destory detect
     public GameObject Trap1;
     public GameObject Trap2;
@@ -94,15 +99,16 @@ public class SceneManager_level1 : MonoBehaviour
 
         ////Candle
 
-        if (TriggerCandleScript1._bSkillOneTrigger && isCloudDestory == false)
+        
+        if (TriggerCandleScript1._bSkillOneTrigger && isCloudDestory == false && PlayerSkill.CURRENTSKILL == 1)
         {
-            StartCoroutine(ChangeCloudColorIEnumerator(CloudToDestroy));
+            CloudToDestroy.GetComponentInChildren<testCloud>().FadeOutAndDestory(TriggerCandleScript1.GetComponent<Transform>().position);
             isCloudDestory = true;
         }
 
-        if (TriggerCandleScript3._bSkillOneTrigger && isCloudDestory3 == false)
+        if (TriggerCandleScript3._bSkillOneTrigger && isCloudDestory3 == false && PlayerSkill.CURRENTSKILL == 1)
         {
-            StartCoroutine(ChangeCloudColorIEnumerator(CloudToDestroy3));
+            CloudToDestroy3.GetComponentInChildren<testCloud>().FadeOutAndDestory(TriggerCandleScript3.GetComponent<Transform>().position);
             isCloudDestory3 = true;
         }
 
@@ -118,7 +124,7 @@ public class SceneManager_level1 : MonoBehaviour
         ///
 
 
-        //Dectect Buddha level start 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////Dectect Buddha level start 
         bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
         bool bCandle2 = StartCandle[1].GetComponent<BuddhaCandle>().DetectCandleFinish();
         if (bCandle1 && bCandle2 && iBuddhaLevel == 0)
@@ -262,13 +268,19 @@ public class SceneManager_level1 : MonoBehaviour
             Finish.color = new Color(Finish.color.r, Finish.color.g, Finish.color.b, 1.0f);
             iBuddhaLevel += 1;
             Stair.SetActive(true);
-
+            CameraParallaxManager.ShortFollowing( 2.0f , Stair.GetComponent<Transform>().position);
 
         }
-        //
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            iBuddhaLevel = 7;
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //spread fog candle
-        if (FogGateCandleScript != null)
+        if (FogGateCandleScript != null && PlayerSkill.CURRENTSKILL == 1)
         {
             if (FogGateCandleScript._bSkillOneTrigger)
             {
@@ -278,16 +290,17 @@ public class SceneManager_level1 : MonoBehaviour
         }
 
         //BearGate
-        if (BearGateCandleScript._bSkillOneTrigger && !BearGateAnimate)
+        if (BearGateCandleScript._bSkillOneTrigger && !BearGateAnimate && PlayerSkill.CURRENTSKILL == 1)
         {
             BearGateAnimate = true;
             StartCoroutine(BearGateDown());
         }
 
         //spread water
-        if (WaterGateCandleScript != null)
+        if (WaterGateCandleScript != null )
         {
-            if (WaterGateCandleScript._bSkillOneTrigger)
+            Debug.Log("in");
+            if (WaterGateCandleScript._bSkillOneTrigger && PlayerSkill.CURRENTSKILL == 1)
             {
                 Destroy(WaterGate);
                 StartCoroutine(TrapGrowing());

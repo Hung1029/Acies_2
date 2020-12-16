@@ -51,9 +51,17 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     //Player On Which Part of Game
     int currentPlayerArea = 0;
 
+    int lastPlayerArea = 0;
+
+    //Camera focus On different object
+    bool bCameraFocusOtherObj = false;
+
     // Start is called before the first frame update
     void Start()
     {
+       
+
+        
 
     }
 
@@ -62,57 +70,52 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     void Update()
     {
 
-        //check all collider
-        for (int i = 0; i < Info.Length; i++)
+        //check where player stand
+        if (PlayerTransform.position.x < Info[1].CheckPointTriggerScript.GetComponentInParent<Transform>().position.x)
         {
-            if (Info[i].CheckPointEnabled)
+            currentPlayerArea = 0;
+        }
+        else
+        {
+            for (int i = 1; i < Info.Length-1; i++)
             {
-                //if Player touch collider
-                if (Info[i].CheckPointTriggerScript.bTouchPlayer)
+                if (PlayerTransform.position.x > Info[i].CheckPointTriggerScript.GetComponentInParent<Transform>().position.x && PlayerTransform.position.x < Info[i + 1].CheckPointTriggerScript.GetComponentInParent<Transform>().position.x)
                 {
-                    //Player face lefts => go to left area
-                    if (PlayerTransform.localScale.x > 0.0f)
-                    {
-                        
-
-                        //disable last enable parallax script
-                        for (int j = 0; j < Info[currentPlayerArea].ParallaxSprite.Length; j++)
-                        {
-                            Info[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = false;
-                        }
-
-                        currentPlayerArea--;
-
-                        //enable parallax script
-                        for (int j = 0; j < Info[currentPlayerArea].ParallaxSprite.Length; j++)
-                        {
-                            Info[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = true;
-                        }
-
-                    }
-                    //Player face Right => go to right area                    
-                    else
-                    {
-                        //disable last enable parallax script
-                        for (int j = 0; j < Info[currentPlayerArea].ParallaxSprite.Length; j++)
-                        {
-                            Info[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = false;
-                        }
-
-                        currentPlayerArea++;
-
-                        //enable parallax script
-                        for (int j = 0; j < Info[currentPlayerArea].ParallaxSprite.Length; j++)
-                        {
-                            Info[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = true;
-                        }
-                    }
-
-                    //reset check point bool
-                    Info[i].CheckPointTriggerScript.bTouchPlayer = false;
+                    currentPlayerArea = i;
+                    break;
+                }
+                else if(i == 2)
+                {
+                    currentPlayerArea = 3;
+                    break;
                 }
             }
         }
+
+        
+
+        //if change area
+        if (lastPlayerArea !=  currentPlayerArea)
+        {
+            //disable last enable parallax script
+            for (int j = 0; j < Info[lastPlayerArea].ParallaxSprite.Length; j++)
+            {
+                Info[lastPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = false;
+            }
+
+            //enable parallax script
+            for (int j = 0; j < Info[currentPlayerArea].ParallaxSprite.Length; j++)
+            {
+                Info[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = true;
+            }
+
+
+        }
+
+        //update last player area
+        lastPlayerArea = currentPlayerArea;
+
+
     }
 
 
@@ -120,37 +123,99 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //PlayerTransform position
-        Vector3 PlayerTransformPos = PlayerTransform.position;
+        if (bCameraFocusOtherObj == false)
+        {
+            //PlayerTransform position
+            Vector3 PlayerTransformPos = PlayerTransform.position;
 
 
-        //vertical
-        if (Info[currentPlayerArea].YMinEnabled && Info[currentPlayerArea].YMaxEnabled)
-            PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, Info[currentPlayerArea].YMinValue, Info[currentPlayerArea].YMaxValue);
+            //vertical
+            if (Info[currentPlayerArea].YMinEnabled && Info[currentPlayerArea].YMaxEnabled)
+                PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, Info[currentPlayerArea].YMinValue, Info[currentPlayerArea].YMaxValue);
 
-        else if (Info[currentPlayerArea].YMinEnabled)
-            PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, Info[currentPlayerArea].YMinValue, PlayerTransform.position.y);
+            else if (Info[currentPlayerArea].YMinEnabled)
+                PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, Info[currentPlayerArea].YMinValue, PlayerTransform.position.y);
 
-        else if (Info[currentPlayerArea].YMaxEnabled)
-            PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, PlayerTransform.position.y, Info[currentPlayerArea].YMaxValue);
+            else if (Info[currentPlayerArea].YMaxEnabled)
+                PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, PlayerTransform.position.y, Info[currentPlayerArea].YMaxValue);
 
-        //horizontal
-        if (Info[currentPlayerArea].XMinEnabled && Info[currentPlayerArea].XMaxEnabled)
-            PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, Info[currentPlayerArea].XMinValue, Info[currentPlayerArea].XMaxValue);
+            //horizontal
+            if (Info[currentPlayerArea].XMinEnabled && Info[currentPlayerArea].XMaxEnabled)
+                PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, Info[currentPlayerArea].XMinValue, Info[currentPlayerArea].XMaxValue);
 
-        else if (Info[currentPlayerArea].XMinEnabled)
-            PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, Info[currentPlayerArea].XMinValue, PlayerTransform.position.x);
+            else if (Info[currentPlayerArea].XMinEnabled)
+                PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, Info[currentPlayerArea].XMinValue, PlayerTransform.position.x);
 
-        else if (Info[currentPlayerArea].XMaxEnabled)
-            PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, PlayerTransform.position.x, Info[currentPlayerArea].XMaxValue);
+            else if (Info[currentPlayerArea].XMaxEnabled)
+                PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, PlayerTransform.position.x, Info[currentPlayerArea].XMaxValue);
 
 
 
-        //align the camera and the PlayerTransforms z position
-        PlayerTransformPos.z = MainCameraPosition.transform.position.z;
+            //align the camera and the PlayerTransforms z position
+            PlayerTransformPos.z = MainCameraPosition.transform.position.z;
 
-        MainCameraPosition.transform.position = Vector3.SmoothDamp(MainCameraPosition.transform.position, PlayerTransformPos, ref velocity, smoothTime);
+            MainCameraPosition.transform.position = Vector3.SmoothDamp(MainCameraPosition.transform.position, PlayerTransformPos, ref velocity, smoothTime);
+        }
+
+        else
+        {
+            //when Camera focuse player can't move
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        }
     }
 
-    
+
+    public void ShortFollowing(float time, Vector3 ObjPosition)
+    {
+        bCameraFocusOtherObj = true;
+        StartCoroutine(ShortFollowingIEnumerator(time, ObjPosition));
+
+
+    }
+
+    IEnumerator ShortFollowingIEnumerator(float time, Vector3 ObjPosition)
+    {
+        ObjPosition.z = MainCameraPosition.position.z;
+
+        //go to object position 
+        while (Vector3.Distance(MainCameraPosition.position, ObjPosition) >= 1.0f)
+        {
+            MainCameraPosition.position = Vector3.SmoothDamp(MainCameraPosition.position, ObjPosition, ref velocity, 0.5f);
+            yield return null;
+        }
+
+        //StartCoroutine(Shake(1.5f, 0.08f));
+
+        yield return new WaitForSeconds(time);
+
+        //reset Camera bool 
+        bCameraFocusOtherObj = false;
+
+        //reset Player move bool
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+    }
+
+    public IEnumerator Shake(float duration, float magnitude) // during time and strength of shake
+    {
+        Vector3 originalPos = MainCameraPosition.localPosition;
+
+        float elapsed = 0.0f; //timer
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            MainCameraPosition.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null; //before another IEnumerator loop, wait for next frame drawed
+        }
+
+        MainCameraPosition.localPosition = originalPos;
+    }
+
+
 }

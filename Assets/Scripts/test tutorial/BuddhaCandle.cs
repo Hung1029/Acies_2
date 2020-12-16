@@ -13,6 +13,9 @@ public class BuddhaCandle : MonoBehaviour
     bool bChangeColorFinish = false;
     int iAddColorTimeCounter = 0;
 
+    float fGameGatheringTime = 1.0f;
+
+
     void Start()
     {
         CandleRenderer = GetComponent<SpriteRenderer>();
@@ -27,7 +30,7 @@ public class BuddhaCandle : MonoBehaviour
     {
         if (bChangeColorFinish == false)
         {
-            if (_bSkillOneTrigger && bChangeColor == false)
+            if (_bSkillOneTrigger && bChangeColor == false && PlayerSkill.CURRENTSKILL == 1)
             {
 
                 StopCoroutine("ChangeBackCandleColorIEnumerator");
@@ -78,7 +81,7 @@ public class BuddhaCandle : MonoBehaviour
             CandleRenderer.color = new Color(CandleRenderer.color.r , CandleRenderer.color.g + fg, CandleRenderer.color.b, CandleRenderer.color.a);         
             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b + fb, CandleRenderer.color.a);           
             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a + fa);          
-            yield return new WaitForSeconds(3f/20f); 
+            yield return new WaitForSeconds(fGameGatheringTime / 20f); 
         }
         bChangeColorFinish = true;
     }
@@ -107,7 +110,7 @@ public class BuddhaCandle : MonoBehaviour
             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g - fg, CandleRenderer.color.b, CandleRenderer.color.a);
             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b - fb, CandleRenderer.color.a);
             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a - fa);
-            yield return new WaitForSeconds(3f / 20f);
+            yield return new WaitForSeconds(fGameGatheringTime / 20f);
         }
     }
 
