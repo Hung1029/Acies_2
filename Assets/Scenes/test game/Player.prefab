@@ -220,7 +220,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1489229143
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -4959174798029761698, guid: 4dd74e9914dd18548afa2172a0dc0495,
     type: 3}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feetPos: {fileID: 390821687252961176}
-  checkRadius: 0.25
+  checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -469,10 +469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ddd6a70f085f749b5f04cc88d0beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magicLt: {fileID: 0}
-  LightUpVita: 0
-  canLightUpVita: 0
-  fRaiseHand: 0.8
 --- !u!58 &7584363807494691644
 CircleCollider2D:
   m_ObjectHideFlags: 0

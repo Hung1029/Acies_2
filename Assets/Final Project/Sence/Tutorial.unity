@@ -10909,6 +10909,7 @@ GameObject:
   - component: {fileID: 1466201767}
   - component: {fileID: 1466201768}
   - component: {fileID: 1466201772}
+  - component: {fileID: 1466201771}
   m_Layer: 8
   m_Name: Boat
   m_TagString: MovingPlatform
@@ -10946,10 +10947,10 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -2.0290859, y: -0.98103374}
-  - {x: -1.2999214, y: -1.3537172}
-  - {x: -0.49951226, y: -1.3963767}
-  - {x: 0.9891982, y: -1.3271986}
-  - {x: 1.6191144, y: -1.182172}
+  - {x: -1.1944438, y: -1.2443141}
+  - {x: -0.49958125, y: -1.314396}
+  - {x: 0.9363644, y: -1.2725924}
+  - {x: 1.5267135, y: -1.1549286}
   - {x: 1.9980102, y: -0.83629125}
 --- !u!212 &1466201769
 SpriteRenderer:
@@ -11017,6 +11018,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1466201771
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466201766}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 3abb29b50f049d44a869efe28e6c3167, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1466201772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11331,6 +11353,7 @@ Transform:
   - {fileID: 1031416545}
   - {fileID: 72442823}
   - {fileID: 1638018008}
+  - {fileID: 1589495074}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11793,7 +11816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553040330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -0.66, z: -10}
+  m_LocalPosition: {x: 27.44, y: 4.43, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11985,6 +12008,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1589495072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1589495074}
+  - component: {fileID: 1589495073}
+  - component: {fileID: 1589495075}
+  m_Layer: 12
+  m_Name: BoatWaterCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1589495073
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589495072}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.5299377, y: -1.8231552}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.182083, y: 1.5325713}
+  m_EdgeRadius: 0
+--- !u!4 &1589495074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589495072}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.910023, y: -8.531406, z: 300.71884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1505696103}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1589495075
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589495072}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1637355670
 GameObject:
   m_ObjectHideFlags: 0
@@ -12785,12 +12887,12 @@ PrefabInstance:
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.42
+      value: 26.304693
       objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 5.521635
       objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
@@ -12942,17 +13044,17 @@ PrefabInstance:
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.375308
+      value: 27.26
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1983645
+      value: 5.18
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.163
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
@@ -13023,11 +13125,6 @@ PrefabInstance:
         type: 3}
       propertyPath: feetPos2
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 390821686556835492, guid: 9e56e09a5a82432499cf830867041bba,
-        type: 3}
-      propertyPath: checkRadius
-      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835493, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
@@ -14141,6 +14238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fog Object 1_Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964891984014269734, guid: 138bac52659d7b24da000c651a4ab571,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8597354994742356448, guid: 138bac52659d7b24da000c651a4ab571,
         type: 3}
