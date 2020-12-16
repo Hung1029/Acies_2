@@ -113,7 +113,7 @@ public class FollowingTarget : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
     }
 
-    IEnumerator Shake(float duration, float magnitude) // during time and strength of shake
+    public IEnumerator Shake(float duration, float magnitude) // during time and strength of shake
     {
         Vector3 originalPos = transform.localPosition;
 
