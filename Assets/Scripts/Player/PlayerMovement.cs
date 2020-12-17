@@ -46,6 +46,10 @@ public class PlayerMovement : MonoBehaviour
         //set original scale
         originalScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
+
+        //reset jump force
+        jumpForce = Mathf.Abs(jumpForce * transform.localScale.x / 0.4f) ;
+
     }
 
  

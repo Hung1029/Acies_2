@@ -64,6 +64,10 @@ public class SceneManager_level1 : MonoBehaviour
     //Short camera following
     public CameraParallaxManager_Level1 CameraParallaxManager;
 
+    //bear
+    public GameObject Bear;
+    public GameObject BearMovementCheckPoint;
+    public Vector2[] BearCheckPointTransform;
 
 
     //water destory detect
@@ -85,6 +89,25 @@ public class SceneManager_level1 : MonoBehaviour
         BearGateCandleScript = BearGate.GetComponentInChildren<TriggerCandle>();
 
         WaterGateCandleScript = WaterGate.GetComponentInChildren<TriggerCandle>();
+
+        //Bear check point position
+
+        Debug.Log(BearMovementCheckPoint.transform.childCount);
+        /*for (int i = 0; i < BearMovementCheckPoint.transform.childCount; i++)
+        {
+
+            //BearCheckPointTransform[i] = BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position;
+
+            //Vector2 v = BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position;
+            //BearCheckPointTransform[i].position = BearMovementCheckPoint.transform.TransformPoint(BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position);
+            //BearCheckPointTransform[i].position = v;
+            Debug.Log(BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position);
+        }*/
+        Debug.Log(BearMovementCheckPoint.transform.GetChild(0).GetComponent<Transform>().position);
+        Debug.Log(BearMovementCheckPoint.transform.GetChild(1).GetComponent<Transform>().position);
+
+
+
 
     }
 
@@ -257,8 +280,6 @@ public class SceneManager_level1 : MonoBehaviour
             }
 
 
-
-
         }
 
         //finish
@@ -267,15 +288,13 @@ public class SceneManager_level1 : MonoBehaviour
             Go.color = new Color(Go.color.r, Go.color.g, Go.color.b, 0.0f);
             Finish.color = new Color(Finish.color.r, Finish.color.g, Finish.color.b, 1.0f);
             iBuddhaLevel += 1;
-            Stair.SetActive(true);
+
+            //raise rock stair up
+            StartCoroutine(RaiseGameObjectUp(Stair,2.5f));
             CameraParallaxManager.ShortFollowing( 2.0f , Stair.GetComponent<Transform>().position);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            iBuddhaLevel = 7;
-        }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -299,7 +318,6 @@ public class SceneManager_level1 : MonoBehaviour
         //spread water
         if (WaterGateCandleScript != null )
         {
-            Debug.Log("in");
             if (WaterGateCandleScript._bSkillOneTrigger && PlayerSkill.CURRENTSKILL == 1)
             {
                 Destroy(WaterGate);
@@ -407,6 +425,19 @@ public class SceneManager_level1 : MonoBehaviour
             Plant.transform.position = new Vector2(Plant.transform.position.x, Plant.transform.position.y + 0.02f);
             yield return new WaitForSeconds(0.003f);
         }
+    }
+
+    IEnumerator RaiseGameObjectUp(GameObject gameObject, float heightDegree)
+    {
+        float targetY = gameObject.transform.position.y + heightDegree;
+        
+        while (gameObject.transform.position.y < targetY)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.03f);
+            yield return new WaitForSeconds(0.003f);
+        }
+        
+
     }
 
 }

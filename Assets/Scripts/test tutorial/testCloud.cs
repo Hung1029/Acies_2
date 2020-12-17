@@ -26,7 +26,9 @@ public class testCloud : MonoBehaviour
     [System.NonSerialized]
     public bool _bLightBlowEnable = true;
 
+    [System.NonSerialized]
     public GameObject Target;
+    [System.NonSerialized]
     public GameObject Target2;
 
 

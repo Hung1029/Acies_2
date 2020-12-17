@@ -177,6 +177,13 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     {
         ObjPosition.z = MainCameraPosition.position.z;
 
+
+        //avoid camera lower then restriced range
+        if (ObjPosition.y < Info[currentPlayerArea].YMinValue )
+        {
+            ObjPosition.y = Info[currentPlayerArea].YMinValue;
+        }
+
         //go to object position 
         while (Vector3.Distance(MainCameraPosition.position, ObjPosition) >= 1.0f)
         {
