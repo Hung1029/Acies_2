@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: bf646c2ef5b0d244b991ddb3d1255ec4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6851167038130955738
+    second: waterfall_gluit_0
+  - first:
+      213: 4255586395480761761
+    second: waterfall_gluit_1
+  - first:
+      213: 4451207622758693908
+    second: waterfall_gluit_2
+  - first:
+      213: -7060632727995547211
+    second: waterfall_gluit_3
+  - first:
+      213: 8860131996894384549
+    second: waterfall_gluit_4
+  - first:
+      213: -5309582269831889584
+    second: waterfall_gluit_5
+  - first:
+      213: -9161765279321417535
+    second: waterfall_gluit_6
+  - first:
+      213: -5931432325576309782
+    second: waterfall_gluit_7
+  - first:
+      213: 688016286559246052
+    second: waterfall_gluit_8
+  - first:
+      213: 1359220952565644538
+    second: waterfall_gluit_9
+  - first:
+      213: -8205461175890436701
+    second: waterfall_gluit_10
+  - first:
+      213: 1320228969714648288
+    second: waterfall_gluit_11
+  - first:
+      213: -8942476404701064290
+    second: waterfall_gluit_12
+  - first:
+      213: -7309198059282172805
+    second: waterfall_gluit_13
+  - first:
+      213: -3448855531159176693
+    second: waterfall_gluit_14
+  - first:
+      213: 2805981944551630551
+    second: waterfall_gluit_15
+  - first:
+      213: -6088311960741397742
+    second: waterfall_gluit_16
+  - first:
+      213: -1050884975214203501
+    second: waterfall_gluit_17
+  - first:
+      213: -6074682257422740091
+    second: waterfall_gluit_18
+  - first:
+      213: 6465435559427047532
+    second: waterfall_gluit_19
+  - first:
+      213: -5348300390746812052
+    second: waterfall_gluit_20
+  - first:
+      213: 9212355092697706399
+    second: waterfall_gluit_21
+  - first:
+      213: 1348125489397901825
+    second: waterfall_gluit_22
+  - first:
+      213: 8377148554988488986
+    second: waterfall_gluit_23
+  - first:
+      213: 6207266929528025785
+    second: waterfall_gluit_24
+  - first:
+      213: -7767755868316841189
+    second: waterfall_gluit_25
+  - first:
+      213: 3160940178854458443
+    second: waterfall_gluit_26
+  - first:
+      213: 7438816133958980207
+    second: waterfall_gluit_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: waterfall_gluit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ad65bb0e3cbe0a0800000000000000
+      internalID: -6851167038130955738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1300
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5ad959741ee0b30800000000000000
+      internalID: 4255586395480761761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_2
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1300
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cfa08dfbdd5cd30800000000000000
+      internalID: 4451207622758693908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_3
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 1300
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1045651f7930e90800000000000000
+      internalID: -7060632727995547211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_4
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1300
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a156f1bb1385fa70800000000000000
+      internalID: 8860131996894384549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d35f49e039056b0800000000000000
+      internalID: -5309582269831889584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_6
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1040
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c81a82050fdad080800000000000000
+      internalID: -9161765279321417535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_7
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1040
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae341c8d9b15fada0800000000000000
+      internalID: -5931432325576309782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_8
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 1040
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e61c08da235c8900800000000000000
+      internalID: 688016286559246052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_9
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1040
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc71f0414cecd210800000000000000
+      internalID: 1359220952565644538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad9ac0f888502e80800000000000000
+      internalID: -8205461175890436701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_11
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 780
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4850ac045625210800000000000000
+      internalID: 1320228969714648288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_12
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 780
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e931b75d611f5e380800000000000000
+      internalID: -8942476404701064290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_13
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 780
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74f2834713809a90800000000000000
+      internalID: -7309198059282172805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_14
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 780
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0abd9fca243320d0800000000000000
+      internalID: -3448855531159176693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6e82b36b9d0f620800000000000000
+      internalID: 2805981944551630551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_16
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 520
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b3f3a6788f18ba0800000000000000
+      internalID: -6088311960741397742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_17
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 520
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39def80dea18a61f0800000000000000
+      internalID: -1050884975214203501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_18
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 520
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58513f20ca462bba0800000000000000
+      internalID: -6074682257422740091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_19
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 520
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6004ddc267d9b950800000000000000
+      internalID: 6465435559427047532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c611471912507c5b0800000000000000
+      internalID: -5348300390746812052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 260
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fe10dc52cd8df70800000000000000
+      internalID: 9212355092697706399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_22
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 260
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a263c6df085b210800000000000000
+      internalID: 1348125489397901825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_23
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 260
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1904ca0a3c914470800000000000000
+      internalID: 8377148554988488986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_24
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 260
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b23c888264a42650800000000000000
+      internalID: 6207266929528025785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bc40f6133633490800000000000000
+      internalID: -7767755868316841189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_26
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 0
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4431e4685aeddb20800000000000000
+      internalID: 3160940178854458443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_gluit_27
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 0
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62d11e7cdbfb3760800000000000000
+      internalID: 7438816133958980207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
