@@ -72,7 +72,7 @@ public class SceneManager_tutorial : MonoBehaviour
 
         WaterWheelScript = WaterWheel.GetComponent<WaterWheel>();
 
-        Splash.Stop();
+        //Splash.Stop();
     }
 
     // Update is called once per frame

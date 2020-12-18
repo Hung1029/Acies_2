@@ -74,7 +74,10 @@ public class SceneManager_level1 : MonoBehaviour
     {
         DetectPlayer = 1,
         BearRoar = 3,
-        FogBlow = 4 
+        FogBlow = 5,
+        Run = 7,
+        WaitForJump ,
+        Jump 
 
     }
     BearMovementStage BearStage = BearMovementStage.DetectPlayer;
@@ -350,39 +353,101 @@ public class SceneManager_level1 : MonoBehaviour
         //Player run to check point
         if (GameObject.Find("Player").GetComponent<Transform>().position.x >= BearCheckPointTransform[0].position.x && BearStage == BearMovementStage.DetectPlayer)
         {
-            Debug.Log("in");
             //Camera 
-            CameraParallaxManager.ShortFollowing(4.0f , Bear.transform.position);
-
-            //Set Camera Shaking
-            //StartCoroutine(CameraParallaxManager.Shake(2.0f , 1.5f , 0.15f));
-
+            CameraParallaxManager.ShortFollowing(4.5f, Bear.transform.position);
 
             //Wait for 1.0f second turn to "BearRoar" stage
             StartCoroutine(BearNextStageWait(1.0f));
 
             BearStage++;
 
-
         }
-        
+
         else if (BearStage == BearMovementStage.BearRoar)
         {
+            //Bear fade out color
+            StartCoroutine(BearColorFadeOut());
+
+            //Bear start Roar
             Bear.GetComponent<BearMovement>().Howl();
 
+            //turn Bear color
+
+            //Set Camera Shaking
+            StartCoroutine(CameraParallaxManager.Shake(0.5f, 1.5f, 0.15f));
 
             //Wait for 1.0f second turn to "Fog blow" stage
-            //StartCoroutine(BearNextStageWait(1.0f));
+            StartCoroutine(BearNextStageWait(1.0f));
 
             BearStage++;
         }
-        //Fog blow out
-        /*else if (BearStage == BearMovementStage.FogBlow)
-        {
-            //Fog blow out
-            BearFog.GetComponent<testCloud>().FadeOutAndDestory(Bear.transform.position);
-        }*/
 
+        //Fog blow out
+        else if (BearStage == BearMovementStage.FogBlow)
+        {
+            //Fog blow out from ripple position
+            BearFog.GetComponent<testCloud>().FadeOutAndDestory(Bear.transform.GetChild(0).position);
+
+            BearStage++;
+
+            //Wait for 1.0f second turn to "Run" stage
+            StartCoroutine(BearNextStageWait(3.0f));
+        }
+
+
+
+        //Run
+        else if (BearStage == BearMovementStage.Run)
+        {
+            //Debug
+            //Bear.GetComponent<Animator>().SetTrigger("tRun");
+            Bear.GetComponent<SpriteRenderer>().color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+            //Debug
+
+
+            Debug.Log("in");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
+
+            //if touch Jump check point
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[1].position.x)
+            {
+                BearStage++;
+            }
+        }
+        else if (BearStage == BearMovementStage.WaitForJump)
+        {
+            //減速
+            Debug.Log("減速");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(7.0f, 0.0f);
+
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[2].position.x)
+            {
+                BearStage++;
+            }
+
+        }
+        else if (BearStage == BearMovementStage.Jump)
+        {
+            //抬頭
+            Debug.Log("抬頭");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8f, 0.0f);
+            Bear.GetComponent<Transform>().Rotate(0.0f, 0.0f, 3.0f);
+
+
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[3].position.x)
+            {
+                BearStage++;
+            }
+
+        }
+
+        else if (BearStage == BearMovementStage.Jump + 1)
+        {
+            Debug.Log("結束下牆");
+            Bear.GetComponent<Rigidbody2D>().gravityScale = 50;
+            Bear.GetComponent<Rigidbody2D>().angularVelocity = 50;
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
+        }
 
 
     }
@@ -396,32 +461,6 @@ public class SceneManager_level1 : MonoBehaviour
         GameCandle[2].GetComponent<BuddhaCandle>().ResetCandle(); 
         GameCandle[3].GetComponent<BuddhaCandle>().ResetCandle(); 
     }
-
-
-
-    ///
-
-
-
-    ////Cloud
-
-    IEnumerator ChangeCloudColorIEnumerator(GameObject Cloud)
-    {
-        SpriteRenderer[] childrenCloud = Cloud.GetComponentsInChildren<SpriteRenderer>();
-
-        for (float a = childrenCloud[0].color.a; a > 0.0f; a -= 0.05f)
-        {
-            foreach (SpriteRenderer sprite in childrenCloud)
-            {
-                sprite.color = new Vector4(sprite.color.r, sprite.color.g, sprite.color.b, a);
-            }
-
-            yield return new WaitForSeconds(0.05f);
-        }
-
-        Destroy(Cloud);
-    }
-
 
     ////
 
@@ -483,6 +522,46 @@ public class SceneManager_level1 : MonoBehaviour
         yield return new WaitForSeconds(time);
         BearStage++;
 
+    }
+
+    IEnumerator BearColorFadeOut()
+    {
+        SpriteRenderer BearSprite = Bear.GetComponent<SpriteRenderer>();
+
+        while (BearSprite.color.a < 1.0f || BearSprite.color.r < 1.0f || BearSprite.color.g < 1.0f || BearSprite.color.b < 1.0f)
+        {
+            //r
+            if (BearSprite.color.r < 1.0f)
+            {
+                BearSprite.color = new Vector4(BearSprite.color.r + 0.03f, BearSprite.color.g, BearSprite.color.b, BearSprite.color.a);
+            }
+            //g
+            if (BearSprite.color.g < 1.0f)
+            {
+                BearSprite.color = new Vector4(BearSprite.color.r , BearSprite.color.g+ 0.03f, BearSprite.color.b, BearSprite.color.a);
+            }
+            //b
+            if (BearSprite.color.b < 1.0f)
+            {
+                BearSprite.color = new Vector4(BearSprite.color.r , BearSprite.color.g, BearSprite.color.b+ 0.03f, BearSprite.color.a);
+            }
+            //a
+            if (BearSprite.color.a < 1.0f)
+            {
+                BearSprite.color = new Vector4(BearSprite.color.r , BearSprite.color.g, BearSprite.color.b, BearSprite.color.a + 0.03f);
+            }
+            yield return new WaitForSeconds(0.03f);
+        }
+        BearSprite.color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+    }
+
+    private static float WrapAngle(float angle)
+    {
+        angle %= 360;
+        if (angle > 180)
+            return angle - 360;
+
+        return angle;
     }
 
 
