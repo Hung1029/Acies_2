@@ -76,8 +76,10 @@ public class SceneManager_level1 : MonoBehaviour
         BearRoar = 3,
         FogBlow = 5,
         Run = 7,
-        WaitForJump ,
-        Jump 
+        StopBearMove = 8,
+        Run2 = 10,
+        WaitForJump = 11 ,
+        Jump = 12
 
     }
     BearMovementStage BearStage = BearMovementStage.DetectPlayer;
@@ -350,6 +352,7 @@ public class SceneManager_level1 : MonoBehaviour
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////Bear Movement
+        ///
         //Player run to check point
         if (GameObject.Find("Player").GetComponent<Transform>().position.x >= BearCheckPointTransform[0].position.x && BearStage == BearMovementStage.DetectPlayer)
         {
@@ -404,8 +407,6 @@ public class SceneManager_level1 : MonoBehaviour
             Bear.GetComponent<SpriteRenderer>().color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
             //Debug
 
-
-            Debug.Log("in");
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
 
             //if touch Jump check point
@@ -414,11 +415,44 @@ public class SceneManager_level1 : MonoBehaviour
                 BearStage++;
             }
         }
+
+        //stop bear move and back to original position
+        else if (BearStage == BearMovementStage.StopBearMove)
+        {
+            //back to original position
+            Bear.GetComponent<Transform>().position = new Vector3(142.457f, 13.225f, 0f);
+            Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f,0f,0f);
+
+            //stop move
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
+
+            BearStage++;
+
+            //Wait for 1.0f second turn to "Run" stage
+            StartCoroutine(BearNextStageWait(3.0f));
+        }
+
+        //Run
+        else if (BearStage == BearMovementStage.Run2)
+        {
+            Debug.Log("in");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
+
+
+            Debug.Log(Bear.GetComponent<Rigidbody2D>().position);
+            //if touch Jump check point
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[1].position.x)
+            {
+                BearStage++;
+            }
+        }
+
+        //
         else if (BearStage == BearMovementStage.WaitForJump)
         {
             //減速
             Debug.Log("減速");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(7.0f, 0.0f);
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(5.0f, 0.0f);
 
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[2].position.x)
             {
@@ -426,12 +460,13 @@ public class SceneManager_level1 : MonoBehaviour
             }
 
         }
+
         else if (BearStage == BearMovementStage.Jump)
         {
             //抬頭
             Debug.Log("抬頭");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8f, 0.0f);
-            Bear.GetComponent<Transform>().Rotate(0.0f, 0.0f, 3.0f);
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(9f, 0.0f);
+            Bear.GetComponent<Transform>().Rotate(0f,0f,8f);
 
 
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[3].position.x)
@@ -444,11 +479,11 @@ public class SceneManager_level1 : MonoBehaviour
         else if (BearStage == BearMovementStage.Jump + 1)
         {
             Debug.Log("結束下牆");
-            Bear.GetComponent<Rigidbody2D>().gravityScale = 50;
-            Bear.GetComponent<Rigidbody2D>().angularVelocity = 50;
+            //Bear.GetComponent<Rigidbody2D>().gravityScale = 50;
+           // Bear.GetComponent<Rigidbody2D>().angularVelocity = 50;
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
         }
-
+        //Debug.Log((int)BearStage);
 
     }
 
