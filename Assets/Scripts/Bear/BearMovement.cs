@@ -24,7 +24,7 @@ public class BearMovement : MonoBehaviour
       
     }
 
-    void Howl()
+    public void Howl()
     {
         animator.SetTrigger("tHowl");
 

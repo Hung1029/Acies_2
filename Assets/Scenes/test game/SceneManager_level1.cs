@@ -66,9 +66,18 @@ public class SceneManager_level1 : MonoBehaviour
 
     //bear
     public GameObject Bear;
-    public GameObject BearMovementCheckPoint;
-    public Vector2[] BearCheckPointTransform;
+    public GameObject BearMovementStageCheckPoint;
+    Transform[] BearCheckPointTransform;
+    public GameObject BearFog;
 
+    enum BearMovementStage
+    {
+        DetectPlayer = 1,
+        BearRoar = 3,
+        FogBlow = 4 
+
+    }
+    BearMovementStage BearStage = BearMovementStage.DetectPlayer;
 
     //water destory detect
     public GameObject Trap1;
@@ -91,22 +100,11 @@ public class SceneManager_level1 : MonoBehaviour
         WaterGateCandleScript = WaterGate.GetComponentInChildren<TriggerCandle>();
 
         //Bear check point position
-
-        Debug.Log(BearMovementCheckPoint.transform.childCount);
-        /*for (int i = 0; i < BearMovementCheckPoint.transform.childCount; i++)
+        BearCheckPointTransform = new Transform[BearMovementStageCheckPoint.transform.childCount];
+        for (int i = 0; i < BearMovementStageCheckPoint.transform.childCount; i++)
         {
-
-            //BearCheckPointTransform[i] = BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position;
-
-            //Vector2 v = BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position;
-            //BearCheckPointTransform[i].position = BearMovementCheckPoint.transform.TransformPoint(BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position);
-            //BearCheckPointTransform[i].position = v;
-            Debug.Log(BearMovementCheckPoint.transform.GetChild(i).GetComponent<Transform>().position);
-        }*/
-        Debug.Log(BearMovementCheckPoint.transform.GetChild(0).GetComponent<Transform>().position);
-        Debug.Log(BearMovementCheckPoint.transform.GetChild(1).GetComponent<Transform>().position);
-
-
+            BearCheckPointTransform[i] = BearMovementStageCheckPoint.transform.GetChild(i).GetComponent<Transform>();
+        }
 
 
     }
@@ -348,6 +346,45 @@ public class SceneManager_level1 : MonoBehaviour
         }
 
 
+        ///////////////////////////////////////////////////////////////////////////////////////////Bear Movement
+        //Player run to check point
+        if (GameObject.Find("Player").GetComponent<Transform>().position.x >= BearCheckPointTransform[0].position.x && BearStage == BearMovementStage.DetectPlayer)
+        {
+            Debug.Log("in");
+            //Camera 
+            CameraParallaxManager.ShortFollowing(4.0f , Bear.transform.position);
+
+            //Set Camera Shaking
+            //StartCoroutine(CameraParallaxManager.Shake(2.0f , 1.5f , 0.15f));
+
+
+            //Wait for 1.0f second turn to "BearRoar" stage
+            StartCoroutine(BearNextStageWait(1.0f));
+
+            BearStage++;
+
+
+        }
+        
+        else if (BearStage == BearMovementStage.BearRoar)
+        {
+            Bear.GetComponent<BearMovement>().Howl();
+
+
+            //Wait for 1.0f second turn to "Fog blow" stage
+            //StartCoroutine(BearNextStageWait(1.0f));
+
+            BearStage++;
+        }
+        //Fog blow out
+        /*else if (BearStage == BearMovementStage.FogBlow)
+        {
+            //Fog blow out
+            BearFog.GetComponent<testCloud>().FadeOutAndDestory(Bear.transform.position);
+        }*/
+
+
+
     }
 
 
@@ -439,5 +476,15 @@ public class SceneManager_level1 : MonoBehaviour
         
 
     }
+
+    //Wait for a time to next stage
+    IEnumerator BearNextStageWait(float time)
+    {
+        yield return new WaitForSeconds(time);
+        BearStage++;
+
+    }
+
+
 
 }

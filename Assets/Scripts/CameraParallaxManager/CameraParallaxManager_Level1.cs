@@ -167,6 +167,10 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
 
     public void ShortFollowing(float time, Vector3 ObjPosition)
     {
+        //set Player can't
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false ;
+        GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
+
         bCameraFocusOtherObj = true;
         StartCoroutine(ShortFollowingIEnumerator(time, ObjPosition));
 
@@ -191,8 +195,6 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
             yield return null;
         }
 
-        //StartCoroutine(Shake(1.5f, 0.08f));
-
         yield return new WaitForSeconds(time);
 
         //reset Camera bool 
@@ -202,8 +204,11 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
     }
 
-    public IEnumerator Shake(float duration, float magnitude) // during time and strength of shake
+    public IEnumerator Shake(float fPreWaitTime ,float duration, float magnitude) // during time and strength of shake
     {
+        yield return new WaitForSeconds(fPreWaitTime);
+
+
         Vector3 originalPos = MainCameraPosition.localPosition;
 
         float elapsed = 0.0f; //timer
