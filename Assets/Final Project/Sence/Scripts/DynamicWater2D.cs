@@ -105,6 +105,7 @@ namespace ilhamhe {
 
 		private void SetBoxCollider2D () {
 			BoxCollider2D col = gameObject.AddComponent<BoxCollider2D> ();
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Floor"), false);
 			col.isTrigger = true;
             col.usedByEffector = true;
 		}
@@ -138,14 +139,19 @@ namespace ilhamhe {
 		}
 
 		private void OnTriggerEnter2D(Collider2D col) {
+            if (col.gameObject.tag == "vita")
+            {
+                Debug.Log("None");
+            }
+            else { 
 			Rigidbody2D rb = col.GetComponent<Rigidbody2D>();
-			Splash(col, rb.velocity.y * collisionVelocityFactor);
+			Splash(col, rb.velocity.y * collisionVelocityFactor);}
 		}
 
 		public void Splash (Collider2D col, float force) {
 			timer = 3f;
 			float radius = col.bounds.max.x - col.bounds.min.x;
-			Vector2 center = new Vector2(col.bounds.center.x, bound.top) ;
+			Vector2 center = new Vector2(col.bounds.center.x, bound.top+0.5f) ;
 			// instantiate splash particle
 			GameObject splashGO = Instantiate(splash, new Vector3(center.x, center.y, 0), Quaternion.Euler(0,0,60));
 			Destroy(splashGO, 2f);

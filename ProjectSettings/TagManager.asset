@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MovingPlatform
   - Interactive
+  - vita
   layers:
   - Default
   - TransparentFX
