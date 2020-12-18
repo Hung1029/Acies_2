@@ -3503,7 +3503,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: df6cc3aa
+  m_ApplyToSortingLayers: df6cc3aa57d5c358
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -6537,7 +6537,7 @@ MonoBehaviour:
   m_Color: {r: 0.4433962, g: 0.64192224, b: 0.8867924, a: 1}
   m_Intensity: 4.45
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000007768eed1
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -7451,6 +7451,33 @@ Transform:
   m_Father: {fileID: 1210812724}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &865955260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7705433592185446781, guid: 138bac52659d7b24da000c651a4ab571,
+    type: 3}
+  m_PrefabInstance: {fileID: 2088500514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &865955261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865955260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32a7cff3a71cb42959fdff9d627487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 865955263}
+  Target: {fileID: 372542123}
+  Target2: {fileID: 753321388}
+--- !u!198 &865955263 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3514744648551884366, guid: 138bac52659d7b24da000c651a4ab571,
+    type: 3}
+  m_PrefabInstance: {fileID: 2088500514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &872451935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026326211794136202, guid: bee2b727dc2f5c249ac65e521a243d36,
@@ -28840,7 +28867,7 @@ PrefabInstance:
     - target: {fileID: 5122960761173558402, guid: 138bac52659d7b24da000c651a4ab571,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5964891984014269734, guid: 138bac52659d7b24da000c651a4ab571,
         type: 3}
@@ -28927,7 +28954,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8597354994742356448, guid: 138bac52659d7b24da000c651a4ab571, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 138bac52659d7b24da000c651a4ab571, type: 3}
 --- !u!1 &2100509167
 GameObject:
