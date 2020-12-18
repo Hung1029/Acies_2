@@ -438,8 +438,6 @@ public class SceneManager_level1 : MonoBehaviour
             Debug.Log("in");
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
 
-
-            Debug.Log(Bear.GetComponent<Rigidbody2D>().position);
             //if touch Jump check point
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[1].position.x)
             {
@@ -479,11 +477,18 @@ public class SceneManager_level1 : MonoBehaviour
         else if (BearStage == BearMovementStage.Jump + 1)
         {
             Debug.Log("結束下牆");
-            //Bear.GetComponent<Rigidbody2D>().gravityScale = 50;
-           // Bear.GetComponent<Rigidbody2D>().angularVelocity = 50;
+           
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
         }
-        //Debug.Log((int)BearStage);
+
+        /////////////////////////////////////////////////Bear Hurt
+        if (GameObject.Find("Bear").GetComponent<Transform>().position.y <2.8f && FogGateCandleScript == null) 
+        {
+            //hurt animation
+        }
+
+
+
 
     }
 
