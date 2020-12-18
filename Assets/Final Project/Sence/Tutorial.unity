@@ -330,7 +330,7 @@ MonoBehaviour:
   DetectDirectionUICollider: {fileID: 1031416547}
   SkillDirectionUI: {fileID: 583177351}
   WaterWheel: {fileID: 314351013}
-  Splash: {fileID: 882888969}
+  Splash: {fileID: 1457769247}
   PlantScript: {fileID: 220952885}
   BoatTriggerScript: {fileID: 980545280}
   BoatMoveScript: {fileID: 1466201767}
@@ -16792,7 +16792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409565849}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.38, y: -4.82, z: -7.770833}
+  m_LocalPosition: {x: 10.38, y: -4.82, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 882888967}
@@ -17423,7 +17423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457769244}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1999998, y: 17.929169, z: 0.3900032}
+  m_LocalPosition: {x: -1.1999998, y: -4.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1409565850}
