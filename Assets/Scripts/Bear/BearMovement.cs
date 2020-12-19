@@ -8,8 +8,13 @@ public class BearMovement : MonoBehaviour
     ParticleSystem ps;
 
     [System.NonSerialized]
-    public float fBearHurtTime = 4.01f;
+    public float fBearHurtTime = 4.0f;
 
+    [System.NonSerialized]
+    public float fBearHowlTime = 4.1f;
+
+    [System.NonSerialized]
+    public float fBearAttackTime = 2f;
 
     //Camera camera;
 
@@ -54,6 +59,9 @@ public class BearMovement : MonoBehaviour
 
     public void Hurt()
     {
+
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+
         this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.1f, 0.1f);
         animator.SetTrigger("tHurt");
 
@@ -67,6 +75,18 @@ public class BearMovement : MonoBehaviour
 
     }
 
+    public void Attack(ParticleSystem DamageParticle, GameObject DestoryGameObject)
+    {
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+        StartCoroutine(AttackIEnumerator( DamageParticle,  DestoryGameObject));
+    }
 
+    IEnumerator AttackIEnumerator(ParticleSystem DamageParticle, GameObject DestoryGameObject)
+    {
+        this.gameObject.GetComponent<Animator>().SetTrigger("tAttack");
+        yield return new WaitForSeconds(0.9f);
+        DamageParticle.Play();
+        Destroy(DestoryGameObject);
 
+    }
 }
