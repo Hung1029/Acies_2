@@ -124,8 +124,8 @@ public class SceneManager_tutorial : MonoBehaviour
             PlantScript.GrowUp();
 
             //set camera 
-            MainCamera.GetComponent<FollowingTarget>().ShortFollowing(2.0f, new Vector3(16.6f, -0.66f, 0.0f));
-
+            this.gameObject.GetComponent<CameraParallaxManager_Level1>().ShortFollowing(2.0f, new Vector3(16.6f, -0.66f, 0.0f));
+            StartCoroutine(this.gameObject.GetComponent<CameraParallaxManager_Level1>().Shake(1.0f,1.5f, 0.08f));
         }
 
 
@@ -146,7 +146,7 @@ public class SceneManager_tutorial : MonoBehaviour
 
         if (TriggerCandleScript._bSkillOneTrigger && isCloudDestory ==false && PlayerSkill.CURRENTSKILL == 1)
         {
-            CloudToDestroy.GetComponentInChildren<testCloud>().FadeOutAndDestory(TriggerCandleScript.GetComponent<Transform>().position);
+            CloudToDestroy.GetComponentInChildren<testCloud2>().FadeOutAndDestory(TriggerCandleScript.GetComponent<Transform>().position);
             isCloudDestory = true;
         }
 

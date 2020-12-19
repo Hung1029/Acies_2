@@ -59,9 +59,8 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-
         
+
 
     }
 
@@ -84,15 +83,15 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
                     currentPlayerArea = i;
                     break;
                 }
-                else if(i == 2)
+                else if(i == Info.Length - 2)
                 {
-                    currentPlayerArea = 3;
+                    currentPlayerArea = Info.Length - 1;
                     break;
                 }
             }
         }
+        Debug.Log(currentPlayerArea);
 
-        
 
         //if change area
         if (lastPlayerArea !=  currentPlayerArea)
