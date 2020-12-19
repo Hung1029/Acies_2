@@ -59,6 +59,9 @@ TagManager:
   - name: skill
     uniqueID: 2131975331
     locked: 0
+  - name: Bear
+    uniqueID: 4208811235
+    locked: 0
   - name: Player
     uniqueID: 1489229143
     locked: 0

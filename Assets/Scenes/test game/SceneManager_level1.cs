@@ -69,6 +69,11 @@ public class SceneManager_level1 : MonoBehaviour
     public GameObject BearMovementStageCheckPoint;
     Transform[] BearCheckPointTransform;
     public GameObject BearFog;
+    bool bHurting = false;
+    public GameObject RockDamage;
+    public ParticleSystem RockDamageParticle;
+    public GameObject AvoidBearFallDownTrigger;
+    bool bAvoid = false;
 
     enum BearMovementStage
     {
@@ -79,7 +84,14 @@ public class SceneManager_level1 : MonoBehaviour
         StopBearMove = 8,
         Run2 = 10,
         WaitForJump = 11 ,
-        Jump = 12
+        Jump = 12,
+        FinishClimbingDown = 13,
+        BearStartRunAgain = 15,
+        BearTouchRock = 16,
+        RockDamage = 18,
+        Run3 = 20,
+        HurtAgain = 21,
+        IdleWaitForClimbTree = 23
 
     }
     BearMovementStage BearStage = BearMovementStage.DetectPlayer;
@@ -356,6 +368,7 @@ public class SceneManager_level1 : MonoBehaviour
         //Player run to check point
         if (GameObject.Find("Player").GetComponent<Transform>().position.x >= BearCheckPointTransform[0].position.x && BearStage == BearMovementStage.DetectPlayer)
         {
+
             //Camera 
             CameraParallaxManager.ShortFollowing(4.5f, Bear.transform.position);
 
@@ -402,10 +415,8 @@ public class SceneManager_level1 : MonoBehaviour
         //Run
         else if (BearStage == BearMovementStage.Run)
         {
-            //Debug
-            //Bear.GetComponent<Animator>().SetTrigger("tRun");
             Bear.GetComponent<SpriteRenderer>().color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-            //Debug
+
 
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
 
@@ -421,7 +432,7 @@ public class SceneManager_level1 : MonoBehaviour
         {
             //back to original position
             Bear.GetComponent<Transform>().position = new Vector3(142.457f, 13.225f, 0f);
-            Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f,0f,0f);
+            Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, 0f);
 
             //stop move
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
@@ -429,13 +440,12 @@ public class SceneManager_level1 : MonoBehaviour
             BearStage++;
 
             //Wait for 1.0f second turn to "Run" stage
-            StartCoroutine(BearNextStageWait(3.0f));
+            StartCoroutine(BearNextStageWait(0.5f));
         }
 
         //Run
         else if (BearStage == BearMovementStage.Run2)
         {
-            Debug.Log("in");
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
 
             //if touch Jump check point
@@ -463,8 +473,10 @@ public class SceneManager_level1 : MonoBehaviour
         {
             //抬頭
             Debug.Log("抬頭");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(9f, 0.0f);
-            Bear.GetComponent<Transform>().Rotate(0f,0f,8f);
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(5f, 0.0f);
+
+            //盡量讓他轉一次就好減少bug
+            Bear.GetComponent<Transform>().Rotate(0f, 0f, 3.0f);
 
 
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[3].position.x)
@@ -474,22 +486,105 @@ public class SceneManager_level1 : MonoBehaviour
 
         }
 
-        else if (BearStage == BearMovementStage.Jump + 1)
+        else if (BearStage == BearMovementStage.FinishClimbingDown)
         {
             Debug.Log("結束下牆");
-           
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
+
+            //Avoid Bear Fall Down rotation
+            if (AvoidBearFallDownTrigger.GetComponent<AvoidFallDownTrigger>()._bSkillOneTrigger && bAvoid == false)
+            {
+                Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, -10f);
+                bAvoid = true;
+            }
+
         }
 
         /////////////////////////////////////////////////Bear Hurt
-        if (GameObject.Find("Bear").GetComponent<Transform>().position.y <2.8f && FogGateCandleScript == null) 
+        if (Bear.GetComponent<Transform>().position.y <2.8f && FogGateCandleScript == null && bHurting == false) 
         {
+            //stop run, stop last stage
+            BearStage++;
+
             //hurt animation
+            Bear.GetComponent<BearMovement>().Hurt();
+
+            //hurt animation switch
+            bHurting = true;
+
+            //start next stage 
+            StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHurtTime));
         }
 
+        /////////////////////////////////////////////////Bear Run
+        if (BearStage == BearMovementStage.BearStartRunAgain)
+        {
+            Debug.Log("StartRunAgain");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
 
+        }
 
+        //Bear touch rock, stop run
+        if (RockDamage != null && BearStage < BearMovementStage.BearTouchRock)
+        {
+            if (RockDamage.GetComponent<RockBearDamage_Level2>()._bSkillOneTrigger)
+            {
+                Bear.GetComponent<Animator>().SetTrigger("tAttack");
+                BearStage = BearMovementStage.BearTouchRock;
+            }
+        }
+        
 
+        //Bear Damage Rock 
+        if (BearStage == BearMovementStage.BearTouchRock)
+        {
+            //start next stage 
+            StartCoroutine(BearNextStageWait(0.9f));           
+            BearStage++;
+
+        }
+
+        //Bear Damage Rock 
+        if (BearStage == BearMovementStage.RockDamage)
+        {
+            RockDamageParticle.Play();
+            Destroy(RockDamage);
+
+            //start next stage 
+            StartCoroutine(BearNextStageWait(1.1f));
+            BearStage++;
+        }
+
+        if (BearStage == BearMovementStage.Run3)
+        {
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[4].position.x)
+            {
+                BearStage++;
+            }
+        }
+
+        if(BearStage == BearMovementStage.HurtAgain)
+        {
+            //stop run, stop last stage
+            BearStage++;
+
+            //hurt animation
+            Bear.GetComponent<BearMovement>().Hurt();
+
+            //hurt animation switch
+            bHurting = true;
+
+            //start next stage 
+            StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHurtTime));
+        }
+        
+
+        if(BearStage == BearMovementStage.IdleWaitForClimbTree)
+        {
+            Bear.GetComponent<Animator>().Play("Bear_Idle");
+            BearStage++;
+        }
     }
 
 
@@ -562,6 +657,7 @@ public class SceneManager_level1 : MonoBehaviour
         yield return new WaitForSeconds(time);
         BearStage++;
 
+
     }
 
     IEnumerator BearColorFadeOut()
@@ -595,15 +691,7 @@ public class SceneManager_level1 : MonoBehaviour
         BearSprite.color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
-    private static float WrapAngle(float angle)
-    {
-        angle %= 360;
-        if (angle > 180)
-            return angle - 360;
-
-        return angle;
-    }
-
+   
 
 
 }

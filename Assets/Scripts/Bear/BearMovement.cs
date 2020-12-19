@@ -7,6 +7,10 @@ public class BearMovement : MonoBehaviour
     Animator animator;
     ParticleSystem ps;
 
+    [System.NonSerialized]
+    public float fBearHurtTime = 4.01f;
+
+
     //Camera camera;
 
     // Start is called before the first frame update
@@ -45,9 +49,24 @@ public class BearMovement : MonoBehaviour
 
     public void Run()
     {
-        animator.SetTrigger("tRun");
+        
+    }
+
+    public void Hurt()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.1f, 0.1f);
+        animator.SetTrigger("tHurt");
+
+        StartCoroutine(resetHurtIEnumerator());
+    }
+
+    IEnumerator resetHurtIEnumerator()
+    {
+        yield return new WaitForSeconds(fBearHurtTime);
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f);
+
     }
 
 
 
-    }
+}
