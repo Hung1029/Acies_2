@@ -108,7 +108,7 @@ public class SceneManager_level1 : MonoBehaviour
         FinalRun = 30,
 
     }
-    BearMovementStage BearStage = BearMovementStage.Run2;
+    BearMovementStage BearStage = BearMovementStage.DetectPlayer;
 
     //water destory detect
     public GameObject Trap1;
@@ -517,7 +517,7 @@ public class SceneManager_level1 : MonoBehaviour
             }
 
             /////////////////////////////////////////////////Bear Hurt
-            else if (Bear.GetComponent<Transform>().position.y < 2.8f && FogGateCandleScript == null && bHurting == false)
+            if (Bear.GetComponent<Transform>().position.y < 2.8f && FogGateCandleScript /**/ && bHurting == false)
             {
                 //stop run, stop last stage
                 BearStage++;
@@ -541,7 +541,7 @@ public class SceneManager_level1 : MonoBehaviour
             }
 
             //Bear touch rock, stop run
-            if (RockDamage != null && BearStage < BearMovementStage.BearTouchRock)
+            if(RockDamage != null && BearStage < BearMovementStage.BearTouchRock)
             {
                 if (RockDamage.GetComponent<RockBearDamage_Level2>()._bSkillOneTrigger)
                 {
@@ -681,6 +681,8 @@ public class SceneManager_level1 : MonoBehaviour
             {
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
             }
+
+            Debug.Log((int)BearStage);
         }
         
 

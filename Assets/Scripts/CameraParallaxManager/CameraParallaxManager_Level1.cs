@@ -90,8 +90,6 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
                 }
             }
         }
-        Debug.Log(currentPlayerArea);
-
 
         //if change area
         if (lastPlayerArea !=  currentPlayerArea)
