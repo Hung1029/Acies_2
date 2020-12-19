@@ -23,7 +23,7 @@ Material:
   m_Name: Water
   m_Shader: {fileID: -6465566751694194690, guid: 8f7c74bac6aeea54ca7e30f8cf469ea4,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_3ABD3B8C:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 49595a12d869363468e47b75bdec43a3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:

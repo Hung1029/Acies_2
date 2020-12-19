@@ -88,7 +88,7 @@ namespace ilhamhe {
 			// generate mesh
 			MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer> ();
             meshRenderer.sortingLayerName = "ground";
-            meshRenderer.sortingOrder = 1;
+            meshRenderer.sortingOrder = 2;
 			if (waterMaterial) meshRenderer.sharedMaterial = waterMaterial;
 
 			MeshFilter meshFilter = gameObject.AddComponent<MeshFilter> ();
