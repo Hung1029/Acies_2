@@ -45,10 +45,8 @@ public class BearMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
 
-        //ps.Play();
+        ps.Play();
 
-        //StopCoroutine(camera.GetComponent<FollowingTarget>().Shake(3.0f, 0.08f));
-        //StartCoroutine(camera.GetComponent<FollowingTarget>().Shake(3.0f, 0.08f));
 
     }
 
