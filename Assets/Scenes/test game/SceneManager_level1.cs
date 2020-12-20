@@ -108,7 +108,7 @@ public class SceneManager_level1 : MonoBehaviour
         HitFloor2 = 27,
         FinalRun = 29,
     }
-    BearMovementStage BearStage = BearMovementStage.DetectPlayer;
+    BearMovementStage BearStage = 0;
 
     //water destory detect
     public GameObject Trap1;
