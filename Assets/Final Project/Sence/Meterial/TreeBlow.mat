@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_14D8EE53: {r: 6.9552565, g: 5.680733, b: 0.7282991, a: 0}
+    - Color_14D8EE53: {r: 0, g: 1.427016, b: 2.433572, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
