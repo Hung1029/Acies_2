@@ -12,19 +12,18 @@ public class Box_Level2 : MonoBehaviour
     [System.NonSerialized]
     public bool _bTakeSkill = false;
 
-    //skill mark
-    //[SerializeField]
-    //private GameObject SkillMark;
-    //private SpriteRenderer SkillMarkSprite;
+
+    public SpriteRenderer SpriteToSwitch;
 
 
     private SpriteRenderer BoxSprite;
+
+    private GameObject[] ChildGameObject;
     // Start is called before the first frame update
     void Start()
     {
         BoxSprite = GetComponent<SpriteRenderer>();
 
-        //SkillMarkSprite = SkillMark.GetComponent<SpriteRenderer>();
     }
 
     
@@ -44,28 +43,18 @@ public class Box_Level2 : MonoBehaviour
 
     public void FadeOutBox()
     {
-        StartCoroutine(FadeOutBoxIEnumerator());
-    }
+        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
 
-    IEnumerator FadeOutBoxIEnumerator()
-    {
-        for (float i = 255; i > 0; i -= 10)
+        //enable childrens gameobject
+        for (int i = 0; i < this.gameObject.transform.childCount; i++)
         {
-            BoxSprite.color = new Color(BoxSprite.color.r, BoxSprite.color.g, BoxSprite.color.b, (float)i / 225);
-            yield return new WaitForSeconds(0.005f);
+            this.gameObject.transform.GetChild(i).gameObject.SetActive(true);
         }
-        BoxSprite.color = new Color(BoxSprite.color.r, BoxSprite.color.g, BoxSprite.color.b, 0.0f);
 
-        //skill mark fade out
-        yield return new WaitForSeconds(2.0f);
 
-        /*for (float i = 255; i > 0; i -= 10)
-        {
-            SkillMarkSprite.color = new Color(SkillMarkSprite.color.r, SkillMarkSprite.color.g, SkillMarkSprite.color.b, (float)i / 225);
-            yield return new WaitForSeconds(0.005f);
-        }*/
-        //Destroy(SkillMark);
-        Destroy(this.gameObject);
+
     }
+
+
 }

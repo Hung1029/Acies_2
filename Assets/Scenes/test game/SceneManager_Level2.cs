@@ -21,7 +21,14 @@ public class SceneManager_Level2 : MonoBehaviour
 
     //plant
     [SerializeField]
-    private Plant PlantScript;
+    private GameObject Plant;
+    bool bPlantGrow = false;
+
+    //Pop Skill Direction UI
+    [SerializeField]
+    private SkillDirection SkillDirectionUI;
+    bool bRead = false;
+
 
 
     // Start is called before the first frame update
@@ -37,6 +44,7 @@ public class SceneManager_Level2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!VitaParticleGazeScript.bVitaSoulCanGaze)
         {
             VitaParticleScript.FollowObj();
@@ -44,7 +52,7 @@ public class SceneManager_Level2 : MonoBehaviour
 
 
         ///take key
-        if(GameObject.Find("Key"))
+        if(KeyScript)
             if (KeyScript._bTouchKey && KeyScript._bTakeKey == false)
             {
                 KeyScript.FadeOutKey();
@@ -52,19 +60,47 @@ public class SceneManager_Level2 : MonoBehaviour
             }
 
         ///take skill 
-        if (GameObject.Find("Box"))
+        if (BoxScript)
             if (BoxScript._bTouchBox && KeyScript._bTakeKey  && BoxScript._bTakeSkill == false)
             {
                 BoxScript.FadeOutBox();
                 BoxScript._bTakeSkill = true;
+
+
+                ////Skill Direction UI fade in
+                SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
+
+                //player can't move
+                GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+                GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+
+                bRead = true;
             }
+
+        
+        //skill Directio UI fade out when pressA Key
+        if (bRead && Input.GetKeyDown(KeyCode.A))
+        {
+            SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeOutTextMainTitleIEnumerator());
+
+            //player can move
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+
+            //reset Reading bool if need to read again
+            //bRead = false;
+
+        }
+
 
 
         //clear rock -> water drop -> plant grow
-        if (!GameObject.Find("Rock3"))
+        if (!GameObject.Find("item-rock2-1") && !bPlantGrow)
         {
-            Splash.Play();
-            PlantScript.GrowUp();
+            //Splash.Play();
+            Plant.GetComponent<Animator>().SetTrigger("tGrowUp");
+            Plant.GetComponent<EdgeCollider2D>().enabled = true;
+
+            bPlantGrow = true;
         }
 
 

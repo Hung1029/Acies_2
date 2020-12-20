@@ -16,10 +16,16 @@ public class Rock_Level2 : MonoBehaviour
 
     private SpriteRenderer RockSprite;
 
+    private SpriteRenderer ChildSprite;
+
+
     // Start is called before the first frame update
     void Start()
     {
         RockSprite = GetComponent<SpriteRenderer>();
+        
+        if(this.gameObject.transform.childCount > 0)
+            ChildSprite = this.gameObject.transform.GetChild(0).GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -58,6 +64,8 @@ public class Rock_Level2 : MonoBehaviour
     {
         for (float i = 255; i > 0; i -= 10)
         {
+            if (this.gameObject.transform.childCount > 0)
+                ChildSprite.color = new Color(ChildSprite.color.r, ChildSprite.color.g, ChildSprite.color.b, (float)i / 225);
             RockSprite.color = new Color(RockSprite.color.r, RockSprite.color.g, RockSprite.color.b, (float)i / 225);
             yield return new WaitForSeconds(0.005f);
         }

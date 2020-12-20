@@ -319,15 +319,19 @@ public class SkillManager : MonoBehaviour
             //skill 2  
             if (PlayerSkill.CURRENTSKILL == 2)
             {
+               
                 //check which rock is trigger
                 if (Skill2Stage == Skill2StageNUM.DetectRockTrigger)
                 {
+                    
                     for (int i = 0; i < RockScript.Length ; i++)
                     {
+                        
                         if (RockScript[i]._bTrigger)
                         {
                             Skill2Stage++;
                             iCurrentRockNum = i + 1; //start index with 1
+                            
                         }
 
                     }
