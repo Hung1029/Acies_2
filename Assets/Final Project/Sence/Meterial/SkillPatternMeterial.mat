@@ -50,7 +50,7 @@ Material:
     - _EnableExternalAlpha: 0
     m_Colors:
     - Color_180B36E: {r: 0.37975582, g: 0.8935431, b: 4.2666683, a: 0}
-    - Color_7D2D2255: {r: 4.0021825, g: 9.057571, b: 40.232468, a: 0}
+    - Color_7D2D2255: {r: 0.77443844, g: 4.4845395, b: 27.363483, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
