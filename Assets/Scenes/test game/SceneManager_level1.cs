@@ -101,11 +101,11 @@ public class SceneManager_level1 : MonoBehaviour
         RockDamage = 17,
         Run3 = 19,
         GoThroughtDogGate = 20,
-        OverGate = 21,
-        HitFloor1 = 22,
-        Run4 = 24,
-        HitFloor2 = 25,
-        FinalRun = 27,
+        OverGate = 22,
+        HitFloor1 = 23,
+        Run4 = 25,
+        HitFloor2 = 26,
+        FinalRun = 28,
     }
     BearMovementStage BearStage = BearMovementStage.DetectPlayer;
 
@@ -555,22 +555,28 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.GoThroughtDogGate)
             {
                 //Gate Down
-                if (BearGateAnimate)
+                //if (BearGateAnimate)
+                if (!BearGateAnimate)
                 {
+                    Bear.GetComponent<Animator>().SetTrigger("tClimb");
 
-                    //Climb tree
+                    //start next stage 
+                    StartCoroutine(BearNextStageWait(3.08f));
+                    BearStage++;
+
+                    /*//Climb tree
                     Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 13.0f);
 
                     if (Bear.GetComponent<Transform>().position.y >= 15.5)
                     {
                         Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(13.0f, 0.0f);
 
-                    }
+                    }*/
 
                 }
 
                 //Gate doesn't get down
-                else
+                /*else
                 {
                     Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
                 }
@@ -578,13 +584,14 @@ public class SceneManager_level1 : MonoBehaviour
                 if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[5].position.x)
                 {
                     BearStage++;
-                }
+                }*/
+               
 
             }
 
             else if (BearStage == BearMovementStage.OverGate)
             {
-                Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, 0f);
+                /*Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, 0f);
 
                 //if Bear On the floor
                 if (Bear.GetComponent<Transform>().position.y < 5.0f)
@@ -596,11 +603,16 @@ public class SceneManager_level1 : MonoBehaviour
                     {
                         BearStage++;
                     }
-                }
+                }*/
+
+                Bear.transform.position = new Vector2(192.34f, 4.2259f);
+
+                Debug.Log("in");
+                BearStage++;
 
             }
 
-            else if (BearStage == BearMovementStage.HitFloor1)
+            /*else if (BearStage == BearMovementStage.HitFloor1)
             {
                 //start bear animation
                 Bear.GetComponent<Animator>().SetTrigger("tAttack");
@@ -636,14 +648,14 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.FinalRun)
             {
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
-            }
+            }*/
 
 
         }
 
 
         //Fog Gate Open Hurt
-        if (FogGateCandleScript == null && bCanDetectHurt && bFogHurt == false)
+        /*if (FogGateCandleScript == null && bCanDetectHurt && bFogHurt == false)
             if (Bear.GetComponent<Transform>().position.y < 2.8f   && bBearHurting == false )
             {
                 //set bool
@@ -680,7 +692,7 @@ public class SceneManager_level1 : MonoBehaviour
                 Bear.GetComponent<BearMovement>().Hurt();
                 StartCoroutine(BearHurtCount(Bear.GetComponent<BearMovement>().fBearHurtTime));
 
-            }
+            }*/
 
     }
 

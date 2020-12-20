@@ -30517,7 +30517,7 @@ GameObject:
   - component: {fileID: 1075496598}
   - component: {fileID: 1075496599}
   m_Layer: 0
-  m_Name: BearHurtAgain
+  m_Name: BearJumpOverGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30531,7 +30531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075496597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.9, y: 1.52, z: 0}
+  m_LocalPosition: {x: 24.199982, y: 1.5200005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 391051732}
@@ -34130,8 +34130,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.860634, y: -4.8534985}
-  - {x: -5.5122375, y: -3.411512}
+  - {x: -7.249016, y: -4.8280277}
+  - {x: -5.206421, y: -3.5643356}
   - {x: 1.9436035, y: -3.2281623}
   - {x: 7.0036774, y: -3.408876}
   - {x: 10.635666, y: -3.369238}
