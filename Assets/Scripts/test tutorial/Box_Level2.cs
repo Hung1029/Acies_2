@@ -13,9 +13,9 @@ public class Box_Level2 : MonoBehaviour
     public bool _bTakeSkill = false;
 
     //skill mark
-    [SerializeField]
-    private GameObject SkillMark;
-    private SpriteRenderer SkillMarkSprite;
+    //[SerializeField]
+    //private GameObject SkillMark;
+    //private SpriteRenderer SkillMarkSprite;
 
 
     private SpriteRenderer BoxSprite;
@@ -24,7 +24,7 @@ public class Box_Level2 : MonoBehaviour
     {
         BoxSprite = GetComponent<SpriteRenderer>();
 
-        SkillMarkSprite = SkillMark.GetComponent<SpriteRenderer>();
+        //SkillMarkSprite = SkillMark.GetComponent<SpriteRenderer>();
     }
 
     
@@ -60,12 +60,12 @@ public class Box_Level2 : MonoBehaviour
         //skill mark fade out
         yield return new WaitForSeconds(2.0f);
 
-        for (float i = 255; i > 0; i -= 10)
+        /*for (float i = 255; i > 0; i -= 10)
         {
             SkillMarkSprite.color = new Color(SkillMarkSprite.color.r, SkillMarkSprite.color.g, SkillMarkSprite.color.b, (float)i / 225);
             yield return new WaitForSeconds(0.005f);
-        }
-        Destroy(SkillMark);
+        }*/
+        //Destroy(SkillMark);
         Destroy(this.gameObject);
     }
 }
