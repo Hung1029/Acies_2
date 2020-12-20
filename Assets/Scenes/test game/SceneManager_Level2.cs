@@ -30,6 +30,9 @@ public class SceneManager_Level2 : MonoBehaviour
     bool bRead = false;
 
 
+    //Drop
+    public ParticleSystem Drop;
+
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +92,9 @@ public class SceneManager_Level2 : MonoBehaviour
             //reset Reading bool if need to read again
             //bRead = false;
 
+            //can use skill 2
+            GameObject.Find("Player").GetComponent<PlayerSkill>().CanUseSkill2 = true;
+
         }
 
 
@@ -96,16 +102,26 @@ public class SceneManager_Level2 : MonoBehaviour
         //clear rock -> water drop -> plant grow
         if (!GameObject.Find("item-rock2-1") && !bPlantGrow)
         {
-            //Splash.Play();
-            Plant.GetComponent<Animator>().SetTrigger("tGrowUp");
+            StartCoroutine(DelayPlantGrow());
             Plant.GetComponent<EdgeCollider2D>().enabled = true;
+
+            Drop.Play();
 
             bPlantGrow = true;
         }
 
+        IEnumerator DelayPlantGrow(){
+
+            yield return new WaitForSeconds(2.0f);
+            Plant.GetComponent<Animator>().SetTrigger("tGrowUp");
+
+        }
 
 
         ///
+
+
+
 
 
     }

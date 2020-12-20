@@ -23,6 +23,10 @@ public class PlayerSkill : MonoBehaviour
 
     //Skill
     public static int CURRENTSKILL = 0;
+
+    //Skill 2 
+    [System.NonSerialized]
+    public bool CanUseSkill2 = false;
     
 
 
@@ -61,7 +65,7 @@ public class PlayerSkill : MonoBehaviour
             //CURRENTSKILL = 1;
             SkillNUM = 1;
         }
-        else if (Input.GetButtonDown("skillTwo"))
+        else if (Input.GetButtonDown("skillTwo") && CanUseSkill2)
         {
             //CURRENTSKILL = 2;
             SkillNUM = 2;
