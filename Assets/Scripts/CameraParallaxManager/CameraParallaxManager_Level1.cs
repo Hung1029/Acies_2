@@ -7,6 +7,11 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     //what we are following
     public Transform PlayerTransform;
 
+    //TargetTransform and adjustment
+    Vector2 TargetTransform;
+    float TargetTransformAdjust_X = 0;
+    float TargetTransformAdjust_Y = 0;
+
     public Transform MainCameraPosition;
 
     //zeros out the velocity
@@ -15,6 +20,12 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
 
     //time to follow PlayerTransform
     public float smoothTime = 0.15f;
+
+    //follow player which axis
+    [System.NonSerialized]
+    public bool Follow_X = true;
+    [System.NonSerialized]
+    public bool Follow_Y = true;
 
 
     [System.Serializable]
@@ -49,7 +60,8 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     public CheckPointInformation[] Info;
 
     //Player On Which Part of Game
-    int currentPlayerArea = 0;
+    [System.NonSerialized]
+    public int currentPlayerArea = 0;
 
     int lastPlayerArea = 0;
 
@@ -68,6 +80,10 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     //check if Trigger Camera check point
     void Update()
     {
+
+        //Adjust target position
+        TargetTransform = PlayerTransform.position;
+        TargetTransform = new Vector2(TargetTransform.x + TargetTransformAdjust_X, TargetTransform.y + TargetTransformAdjust_Y);
 
         //check where player stand
         if (PlayerTransform.position.x < Info[1].CheckPointTriggerScript.GetComponentInParent<Transform>().position.x)
@@ -120,33 +136,51 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Adjust target position
+        TargetTransform = PlayerTransform.position;
+        TargetTransform = new Vector2(TargetTransform.x + TargetTransformAdjust_X, TargetTransform.y + TargetTransformAdjust_Y);
+
+
         if (bCameraFocusOtherObj == false)
         {
             //PlayerTransform position
-            Vector3 PlayerTransformPos = PlayerTransform.position;
+            Vector3 PlayerTransformPos = TargetTransform;
 
-
+           
             //vertical
             if (Info[currentPlayerArea].YMinEnabled && Info[currentPlayerArea].YMaxEnabled)
-                PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, Info[currentPlayerArea].YMinValue, Info[currentPlayerArea].YMaxValue);
+                PlayerTransformPos.y = Mathf.Clamp(TargetTransform.y, Info[currentPlayerArea].YMinValue, Info[currentPlayerArea].YMaxValue);
 
             else if (Info[currentPlayerArea].YMinEnabled)
-                PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, Info[currentPlayerArea].YMinValue, PlayerTransform.position.y);
+                PlayerTransformPos.y = Mathf.Clamp(TargetTransform.y, Info[currentPlayerArea].YMinValue, TargetTransform.y);
 
             else if (Info[currentPlayerArea].YMaxEnabled)
-                PlayerTransformPos.y = Mathf.Clamp(PlayerTransform.position.y, PlayerTransform.position.y, Info[currentPlayerArea].YMaxValue);
+                PlayerTransformPos.y = Mathf.Clamp(TargetTransform.y, TargetTransform.y, Info[currentPlayerArea].YMaxValue);
 
             //horizontal
             if (Info[currentPlayerArea].XMinEnabled && Info[currentPlayerArea].XMaxEnabled)
-                PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, Info[currentPlayerArea].XMinValue, Info[currentPlayerArea].XMaxValue);
+                PlayerTransformPos.x = Mathf.Clamp(TargetTransform.x, Info[currentPlayerArea].XMinValue, Info[currentPlayerArea].XMaxValue);
 
             else if (Info[currentPlayerArea].XMinEnabled)
-                PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, Info[currentPlayerArea].XMinValue, PlayerTransform.position.x);
+                PlayerTransformPos.x = Mathf.Clamp(TargetTransform.x, Info[currentPlayerArea].XMinValue, TargetTransform.x);
 
             else if (Info[currentPlayerArea].XMaxEnabled)
-                PlayerTransformPos.x = Mathf.Clamp(PlayerTransform.position.x, PlayerTransform.position.x, Info[currentPlayerArea].XMaxValue);
+                PlayerTransformPos.x = Mathf.Clamp(TargetTransform.x, TargetTransform.x, Info[currentPlayerArea].XMaxValue);
 
 
+            //Not following Player X
+            if (!Follow_X)
+            {
+                //reset x position
+                PlayerTransformPos.x = MainCameraPosition.transform.position.x;
+            }
+
+            //Not following Player Y
+            if (!Follow_Y)
+            {
+                //reset y position
+                PlayerTransformPos.y = MainCameraPosition.transform.position.y;
+            }
 
             //align the camera and the PlayerTransforms z position
             PlayerTransformPos.z = MainCameraPosition.transform.position.z;
@@ -159,6 +193,53 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
             //when Camera focuse player can't move
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
         }
+    }
+
+    public void ChangeCameraProjectionSize( Camera MainCamera , float fSizeValue, float fTransformTime )
+    {
+        StartCoroutine(ChangeCameraProjectionSizeIEnumerator(MainCamera, fSizeValue, fTransformTime));    
+
+    }
+
+    IEnumerator ChangeCameraProjectionSizeIEnumerator(Camera MainCamera, float fSizeValue, float fTransformTime)
+    {
+
+      
+        float fTranformValue = 0.05f;
+        while (MainCamera.orthographicSize <= fSizeValue)
+        {
+            MainCamera.orthographicSize +=  fTranformValue;
+            
+            yield return new WaitForSeconds(fTransformTime / (fSizeValue / fTranformValue));
+        }
+
+    }
+
+
+
+    public void ChangeCamraFollowingTargetPosition(float x, float y, float fTransformTime, bool KeepXFollow = true, bool KeepYFollow = true)
+    {
+        StartCoroutine(ChangeCamraFollowingTargetPositionIEnumerator(x, y, fTransformTime, KeepXFollow, KeepYFollow));
+    }
+
+    IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow = true, bool KeepYFollow = true)
+    {
+
+        float fTranformValueX = (x - TargetTransformAdjust_X) / (fTransformTime / 0.03f);
+        float fTranformValueY = (y - TargetTransformAdjust_Y) / (fTransformTime / 0.03f);
+
+        while (Mathf.Abs(TargetTransformAdjust_X - x) >= 0.5f || Mathf.Abs(TargetTransformAdjust_Y - y) >= 0.5f)
+        {
+            TargetTransformAdjust_X += fTranformValueX;
+            TargetTransformAdjust_Y += fTranformValueY;
+
+            yield return new WaitForSeconds(0.03f);
+        }
+
+        Follow_X = KeepXFollow;
+        Follow_Y = KeepYFollow;
+
+
     }
 
 

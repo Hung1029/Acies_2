@@ -115,6 +115,9 @@ public class SceneManager_level1 : MonoBehaviour
     public GameObject Trap2;
     public GameObject Plant;
 
+    //camera
+    public Camera FinalCamera;
+
 
     // Start is called before the first frame update
     void Start()
@@ -321,7 +324,7 @@ public class SceneManager_level1 : MonoBehaviour
             //raise rock stair up
             StartCoroutine(RaiseGameObjectUp(Stair,2.5f));
             CameraParallaxManager.ShortFollowing( 2.0f , Stair.GetComponent<Transform>().position);
-
+            
         }
 
 
@@ -416,19 +419,28 @@ public class SceneManager_level1 : MonoBehaviour
             //Back to Start position
             else if (BearStage == BearMovementStage.ResetBear)
             {
+                //Bear start Roar again
+                Bear.GetComponent<BearMovement>().Howl();
+
                 //back to original position
                 Bear.GetComponent<Transform>().position = new Vector3(142.457f, 13.225f, 0f);
                 Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, 0f);
 
+
+                //set camera projection
+                CameraParallaxManager.ChangeCameraProjectionSize(FinalCamera , 7.5f , 2.0f);
+                CameraParallaxManager.ChangeCamraFollowingTargetPosition(-6.0f, 5f, 0.8f, true, false);
+                
                 BearStage++;
 
                 //Wait for 1.0f second turn to "Run" stage
-                StartCoroutine(BearNextStageWait(5.0f));
+                StartCoroutine(BearNextStageWait(4.0f));
             }
 
             //Run 
             else if (BearStage == BearMovementStage.Run2)
             {
+              
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
 
                 //camera back to player
@@ -485,7 +497,7 @@ public class SceneManager_level1 : MonoBehaviour
                 //Avoid Bear Fall Down rotation
                 if (AvoidBearFallDownTrigger.GetComponent<AvoidFallDownTrigger>()._bSkillOneTrigger && bAvoid == false)
                 {
-                    Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, -10f);
+                    Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, 0f);
                     bAvoid = true;
                 }
 
@@ -562,6 +574,7 @@ public class SceneManager_level1 : MonoBehaviour
             //Finish Climb change rigibody position
             else if (BearStage == BearMovementStage.ClimbFinish)
             {
+                
                 //change position
                 Bear.transform.position = new Vector2(192.34f, 4.2259f);
 
@@ -624,7 +637,6 @@ public class SceneManager_level1 : MonoBehaviour
 
         }
 
-
         //Fog Gate Open Hurt
         if (FogGateCandleScript == null && bCanDetectHurt && bFogHurt == false)
             if (Bear.GetComponent<Transform>().position.y < 2.8f   && bBearHurting == false )
@@ -676,9 +688,6 @@ public class SceneManager_level1 : MonoBehaviour
         bCanDetectHurt = true;
     }
 
-
-
-
     ///
 
 
@@ -721,8 +730,12 @@ public class SceneManager_level1 : MonoBehaviour
 
         yield return new WaitForSeconds(2.0f);
 
-        Plant.GetComponent<Animator>().SetTrigger("tGrowUp");
-        Plant.GetComponent<EdgeCollider2D>().enabled = true;
+        if (Plant)
+        {
+            Plant.GetComponent<Animator>().SetTrigger("tGrowUp");
+            Plant.GetComponent<EdgeCollider2D>().enabled = true;
+        }
+            
         for (float f = 0; f < 1.6; f += 0.03f)
         {
             Trap1.transform.localScale = new Vector2(Trap1.transform.localScale.x + 0.03f, Trap1.transform.localScale.y + 0.03f);

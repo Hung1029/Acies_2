@@ -23847,12 +23847,12 @@ PrefabInstance:
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 190.3
+      value: 157.33
       objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.209999
+      value: 3.48
       objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936767, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
@@ -35481,10 +35481,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -12.807787, y: -6.161005, z: 0}
-  - {x: 9.9944725, y: -6.3249373, z: 0}
-  - {x: 7.4058385, y: 9.640905, z: 0}
-  - {x: -9.510283, y: 8.881049, z: 0}
+  - {x: -15.702975, y: -17.139214, z: 0}
+  - {x: 40.774837, y: -14.40612, z: 0}
+  - {x: 33.462494, y: 19.39931, z: 0}
+  - {x: -5.700821, y: 24.433512, z: 0}
 --- !u!1 &1242827137
 GameObject:
   m_ObjectHideFlags: 0
@@ -37168,7 +37168,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3502655, y: -2.0872688}
+  m_Offset: {x: 4.548523, y: -1.6668754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -37179,7 +37179,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.7278137, y: 0.20623398}
+  m_Size: {x: 16.52539, y: 0.45847034}
   m_EdgeRadius: 0
 --- !u!4 &1311905019
 Transform:
@@ -46309,6 +46309,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!20 &1461820077 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2353517207640878222, guid: f34e2aba8b67636468fff8ba85bf4ba8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1672096412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1463610650
 GameObject:
   m_ObjectHideFlags: 0
@@ -58186,12 +58192,12 @@ PrefabInstance:
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 191.7
+      value: 158.73
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.31
+      value: 2.5800009
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
@@ -73866,6 +73872,7 @@ MonoBehaviour:
   Trap1: {fileID: 1995371258}
   Trap2: {fileID: 1752459290}
   Plant: {fileID: 2091414079}
+  FinalCamera: {fileID: 1461820077}
 --- !u!114 &2002183762
 MonoBehaviour:
   m_ObjectHideFlags: 0
