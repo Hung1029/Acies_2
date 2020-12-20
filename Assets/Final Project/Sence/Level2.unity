@@ -922,6 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!58 &51801253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17108,6 +17109,7 @@ Transform:
   m_LocalPosition: {x: -0.12000275, y: -3.1799996, z: 0}
   m_LocalScale: {x: 0.107220314, y: 0.107220314, z: 0.107220314}
   m_Children:
+  - {fileID: 578191359}
   - {fileID: 685359958}
   m_Father: {fileID: 1583704508}
   m_RootOrder: 1
@@ -17126,6 +17128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 578191358}
 --- !u!61 &269981136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17170,7 +17173,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 4d0011319a7df864787af087af5719d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17188,11 +17191,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1759527787
-  m_SortingLayer: 7
+  m_SortingLayerID: 2131975331
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 972475ca7916a3549b7d9258ad6637a7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23921569, g: 0.28235295, b: 0.5764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -28724,6 +28727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!61 &452458614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39123,6 +39127,91 @@ Transform:
   m_Father: {fileID: 995849719}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &578191358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578191359}
+  - component: {fileID: 578191361}
+  - component: {fileID: 578191360}
+  m_Layer: 0
+  m_Name: Point Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &578191359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578191358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.16, y: -0.48, z: 0}
+  m_LocalScale: {x: 9.326591, y: 9.326591, z: 9.326591}
+  m_Children: []
+  m_Father: {fileID: 269981134}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578191360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578191358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b328c929d7ada046b493fb92983f44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &578191361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578191358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.7
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: a35c137f
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &579968965
 GameObject:
   m_ObjectHideFlags: 0
@@ -40311,7 +40400,7 @@ Transform:
   m_LocalScale: {x: 11.495709, y: 11.495709, z: 11.495709}
   m_Children: []
   m_Father: {fileID: 269981134}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &685359959
 SpriteRenderer:
@@ -47098,6 +47187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!58 &960457107
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -52791,6 +52881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!1 &1039917994
 GameObject:
   m_ObjectHideFlags: 0
@@ -53355,6 +53446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!58 &1100895661
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -57467,6 +57559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!58 &1458513953
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -96815,13 +96908,13 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1759527787
-  m_SortingLayer: 7
-  m_SortingOrder: 5
-  m_RenderMode: 1
+  m_SortingLayerID: -772904841
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0.2
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -96849,8 +96942,8 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001105815}
   serializedVersion: 6
-  lengthInSec: 2
-  simulationSpeed: 0.5
+  lengthInSec: 5
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -96924,7 +97017,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 15
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -96977,7 +97070,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.02
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -97031,7 +97124,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.089235835, g: 0.034709856, b: 0.3679245, a: 0.38039216}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -97093,7 +97186,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -97468,7 +97561,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -97476,7 +97569,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 6.6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -97555,7 +97648,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.37
+      value: 1
       mode: 0
       spread: 0
       speed:
@@ -97674,7 +97767,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0.5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -98112,33 +98205,33 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 0.8117647}
-        key2: {r: 0, g: 0, b: 0, a: 0.9647059}
+        key0: {r: 0.252314, g: 0.94789255, b: 0.990566, a: 0.12156863}
+        key1: {r: 0.3529412, g: 0.8941177, b: 0.92549026, a: 0.8117647}
+        key2: {r: 1, g: 1, b: 1, a: 0.08627451}
         key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 1}
+        key5: {r: 0, g: 0, b: 0, a: 1}
+        key6: {r: 0, g: 0, b: 0, a: 0.5176471}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime0: 13300
+        ctime1: 46646
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 19082
-        atime2: 20624
-        atime3: 65535
-        atime4: 0
-        atime5: 0
-        atime6: 0
+        atime1: 13107
+        atime2: 24287
+        atime3: 27371
+        atime4: 38936
+        atime5: 44718
+        atime6: 61680
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 4
+        m_NumColorKeys: 3
+        m_NumAlphaKeys: 7
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -98293,7 +98386,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -101507,7 +101600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001105815}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 23.58, y: -0.7, z: -0}
+  m_LocalPosition: {x: 24.99, y: -0.66, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106754,6 +106847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 1
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!1 &2060326030
 GameObject:
   m_ObjectHideFlags: 0
@@ -108124,6 +108218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iGraphicNum: 0
   _SkillManagerScript: {fileID: 1712299151}
+  Target: {fileID: 0}
 --- !u!58 &2140491037
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -108206,12 +108301,12 @@ PrefabInstance:
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.41901
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.4080005
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 390821686556835488, guid: 9e56e09a5a82432499cf830867041bba,
         type: 3}

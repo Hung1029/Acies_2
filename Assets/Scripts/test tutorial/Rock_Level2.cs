@@ -18,6 +18,11 @@ public class Rock_Level2 : MonoBehaviour
 
     private SpriteRenderer ChildSprite;
 
+    [System.NonSerialized]
+    public bool _bLightBlowEnable = true;
+
+    public GameObject Target;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +36,16 @@ public class Rock_Level2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        // set light color
+        float t = Mathf.PingPong(Time.time, 1.0f) / 1.0f;
+        if (_bLightBlowEnable == true)
+        {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
+        }
+        else
+        {
+            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -62,6 +76,7 @@ public class Rock_Level2 : MonoBehaviour
 
     IEnumerator DestroyRockIEnumerator()
     {
+        _bLightBlowEnable = false;
         for (float i = 255; i > 0; i -= 10)
         {
             if (this.gameObject.transform.childCount > 0)
