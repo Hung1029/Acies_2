@@ -101,11 +101,12 @@ public class SceneManager_level1 : MonoBehaviour
         RockDamage = 17,
         Run3 = 19,
         GoThroughtDogGate = 20,
-        OverGate = 22,
-        HitFloor1 = 23,
-        Run4 = 25,
-        HitFloor2 = 26,
-        FinalRun = 28,
+        ClimbFinish = 22,
+        OverGate = 23,
+        HitFloor1 = 24,
+        Run4 = 26,
+        HitFloor2 = 27,
+        FinalRun = 29,
     }
     BearMovementStage BearStage = BearMovementStage.DetectPlayer;
 
@@ -354,27 +355,6 @@ public class SceneManager_level1 : MonoBehaviour
 
         }
 
-        //water fall detect
-        if(WaterParticles != null)
-        {
-            GameObject particle;
-            for (int i = 0;i < 174 ; i++)
-            {
-                particle = WaterParticles.transform.GetChild(i).gameObject;
-                if (particle == null)
-                {
-                    break;
-                }
-
-                if (particle.transform.position.y < -6)
-                {
-                    Destroy(particle);
-                }
-            }
-
-
-        }
-
 
         ///////////////////////////////////////////////////////////////////////////////////////////Bear on mountain
         ///
@@ -443,7 +423,7 @@ public class SceneManager_level1 : MonoBehaviour
                 BearStage++;
 
                 //Wait for 1.0f second turn to "Run" stage
-                StartCoroutine(BearNextStageWait(0.5f));
+                StartCoroutine(BearNextStageWait(5.0f));
             }
 
             //Run 
@@ -555,8 +535,7 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.GoThroughtDogGate)
             {
                 //Gate Down
-                //if (BearGateAnimate)
-                if (!BearGateAnimate)
+                if (BearGateAnimate)
                 {
                     Bear.GetComponent<Animator>().SetTrigger("tClimb");
 
@@ -564,55 +543,47 @@ public class SceneManager_level1 : MonoBehaviour
                     StartCoroutine(BearNextStageWait(3.08f));
                     BearStage++;
 
-                    /*//Climb tree
-                    Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 13.0f);
-
-                    if (Bear.GetComponent<Transform>().position.y >= 15.5)
-                    {
-                        Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(13.0f, 0.0f);
-
-                    }*/
-
                 }
 
                 //Gate doesn't get down
-                /*else
+                else
                 {
                     Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
                 }
 
                 if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[5].position.x)
                 {
-                    BearStage++;
-                }*/
+                    BearStage = BearMovementStage.OverGate;
+                }
                
+
+            }
+
+            //Finish Climb change rigibody position
+            else if (BearStage == BearMovementStage.ClimbFinish)
+            {
+                //change position
+                Bear.transform.position = new Vector2(192.34f, 4.2259f);
+
+                BearStage++;
 
             }
 
             else if (BearStage == BearMovementStage.OverGate)
             {
-                /*Bear.GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, 0f);
 
-                //if Bear On the floor
-                if (Bear.GetComponent<Transform>().position.y < 5.0f)
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
+
+
+                //Bear hit floor
+                if (FloorDetectScript1._bSkillOneTrigger)
                 {
-                    Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
-
-                    //Bear hit floor
-                    if (FloorDetectScript1._bSkillOneTrigger)
-                    {
-                        BearStage++;
-                    }
-                }*/
-
-                Bear.transform.position = new Vector2(192.34f, 4.2259f);
-
-                Debug.Log("in");
-                BearStage++;
+                    BearStage++;
+                }
 
             }
 
-            /*else if (BearStage == BearMovementStage.HitFloor1)
+            else if (BearStage == BearMovementStage.HitFloor1)
             {
                 //start bear animation
                 Bear.GetComponent<Animator>().SetTrigger("tAttack");
@@ -648,14 +619,14 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.FinalRun)
             {
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
-            }*/
+            }
 
 
         }
 
 
         //Fog Gate Open Hurt
-        /*if (FogGateCandleScript == null && bCanDetectHurt && bFogHurt == false)
+        if (FogGateCandleScript == null && bCanDetectHurt && bFogHurt == false)
             if (Bear.GetComponent<Transform>().position.y < 2.8f   && bBearHurting == false )
             {
                 //set bool
@@ -670,7 +641,7 @@ public class SceneManager_level1 : MonoBehaviour
             }
 
 
-        if (Trap1 && bCanDetectHurt && bTrap1Hurt == false)
+        if (bCanDetectHurt && bTrap1Hurt == false && !WaterGateCandleScript )
             if (Trap1.GetComponent<DetectBearTrigger>()._bSkillOneTrigger && bBearHurting == false)
             {
                 bBearHurting = true;
@@ -682,7 +653,7 @@ public class SceneManager_level1 : MonoBehaviour
             
             }
 
-        if(Trap2 && bCanDetectHurt && bTrap2Hurt == false)
+        if(bCanDetectHurt && bTrap2Hurt == false && !WaterGateCandleScript)
             if (Trap2.GetComponent<DetectBearTrigger>()._bSkillOneTrigger && bBearHurting == false)
             {
                 bBearHurting = true;
@@ -692,7 +663,7 @@ public class SceneManager_level1 : MonoBehaviour
                 Bear.GetComponent<BearMovement>().Hurt();
                 StartCoroutine(BearHurtCount(Bear.GetComponent<BearMovement>().fBearHurtTime));
 
-            }*/
+            }
 
     }
 
