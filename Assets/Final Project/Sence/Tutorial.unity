@@ -3222,7 +3222,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f5d55acd6b2dcbf4aa2c9ebbc6c12793, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7019608, g: 0.3882353, b: 0.27058825, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13302,7 +13302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b1ad8ec9d90ac4682995c50fb33385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
+  Target: {fileID: 1119812782}
 --- !u!61 &964477504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13387,7 +13387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964477502}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 93.07, y: -2.67, z: 0}
+  m_LocalPosition: {x: 87.94, y: -2.67, z: 0}
   m_LocalScale: {x: 0.013392648, y: 0.0463548, z: 0.017824063}
   m_Children:
   - {fileID: 816761081}
@@ -13591,7 +13591,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 972475ca7916a3549b7d9258ad6637a7, type: 3}
-  m_Color: {r: 0.032306876, g: 0.14016102, b: 0.31132078, a: 0.45882353}
+  m_Color: {r: 0.2, g: 0.39607844, b: 0.7019608, a: 0.45882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14534,6 +14534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119812783}
   - component: {fileID: 1119812784}
+  - component: {fileID: 1119812785}
   m_Layer: 0
   m_Name: SkillLight4
   m_TagString: Untagged
@@ -14573,7 +14574,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 57d5c358
+  m_ApplyToSortingLayers: a35c137f
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -14596,6 +14597,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1119812785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119812782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b328c929d7ada046b493fb92983f44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1137049083
 GameObject:
   m_ObjectHideFlags: 0
@@ -25690,7 +25703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b1ad8ec9d90ac4682995c50fb33385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
+  Target: {fileID: 1119812782}
 --- !u!61 &1649116636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25757,7 +25770,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 972475ca7916a3549b7d9258ad6637a7, type: 3}
-  m_Color: {r: 0.15294118, g: 0.2, b: 0.6431373, a: 1}
+  m_Color: {r: 0.34122464, g: 0.35737276, b: 0.509434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27344,6 +27357,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1152251819275936742, guid: 4680912b686d8134b8407d9b6318149f,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1152251819275936743, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}
       propertyPath: m_Name
@@ -28117,7 +28135,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 972475ca7916a3549b7d9258ad6637a7, type: 3}
-  m_Color: {r: 0.032306876, g: 0.14016102, b: 0.31132078, a: 0.45882353}
+  m_Color: {r: 0.42352942, g: 0.63529414, b: 0.9529412, a: 0.45882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
