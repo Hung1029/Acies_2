@@ -85,7 +85,7 @@ public class SceneManager_Level2 : MonoBehaviour
 
         
         //skill Directio UI fade out when pressA Key
-        if (bRead && Input.GetKeyDown(KeyCode.A))
+        if (bRead && Input.GetButtonDown("NPC_trigger"))
         {
             SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeOutTextMainTitleIEnumerator());
 
