@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1419,33 +1419,6 @@ Transform:
   m_Father: {fileID: 501497628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &139786001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7090289327633791956, guid: 57a7037b6fb3d35499aa2af1881e1a29,
-    type: 3}
-  m_PrefabInstance: {fileID: 1920545375}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &139786005 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8705159422567325897, guid: 57a7037b6fb3d35499aa2af1881e1a29,
-    type: 3}
-  m_PrefabInstance: {fileID: 1920545375}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &139786006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139786001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e32a7cff3a71cb42959fdff9d627487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ps: {fileID: 139786005}
-  Target: {fileID: 1119812782}
-  Target2: {fileID: 1494859631}
 --- !u!1 &162107427
 GameObject:
   m_ObjectHideFlags: 0
@@ -7728,33 +7701,6 @@ Transform:
   m_Father: {fileID: 1210812724}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &865955260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7705433592185446781, guid: 138bac52659d7b24da000c651a4ab571,
-    type: 3}
-  m_PrefabInstance: {fileID: 2088500514}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &865955261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865955260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e32a7cff3a71cb42959fdff9d627487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ps: {fileID: 865955263}
-  Target: {fileID: 372542123}
-  Target2: {fileID: 753321388}
---- !u!198 &865955263 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3514744648551884366, guid: 138bac52659d7b24da000c651a4ab571,
-    type: 3}
-  m_PrefabInstance: {fileID: 2088500514}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &872451935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026326211794136202, guid: bee2b727dc2f5c249ac65e521a243d36,
@@ -28492,7 +28438,7 @@ PrefabInstance:
     - target: {fileID: 5836887250886851462, guid: 57a7037b6fb3d35499aa2af1881e1a29,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6832585543543647128, guid: 57a7037b6fb3d35499aa2af1881e1a29,
         type: 3}
@@ -29852,8 +29798,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8597354994742356448, guid: 138bac52659d7b24da000c651a4ab571, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138bac52659d7b24da000c651a4ab571, type: 3}
 --- !u!1 &2100509167
 GameObject:

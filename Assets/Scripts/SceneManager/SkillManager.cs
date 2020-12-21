@@ -48,7 +48,8 @@ public class SkillManager : MonoBehaviour
     //SkillStage
     SkillStageNUM SkillStage = SkillStageNUM.DetectSkillButton;
     int SkillNUM;
-    int CurrentSkillNUM;
+
+    public static int CurrentSkillNUM;
 
     //Skill time
     float fLightUpTime = 5.0f;

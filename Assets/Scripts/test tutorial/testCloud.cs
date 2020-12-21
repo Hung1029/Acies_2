@@ -142,7 +142,7 @@ public class testCloud : MonoBehaviour
 
         ////////////////////////////////////////////////////////////////////////Dectect Player hurt by fog
 
-        if (PlayerSkill.CURRENTSKILL == 0 && numInside + numEnter> 0 && fPlayerHurtTimer > 1.0f && bExplo==false)
+        if (SkillManager.CurrentSkillNUM == 0 && numInside + numEnter> 0 && fPlayerHurtTimer > 1.0f && bExplo==false)
         {
             GameObject.Find("Player").GetComponent<PlayerHealth>().Hurt();
         }
