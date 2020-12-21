@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     float fCanHurtTimer = 2.0f;
     bool bHurrting = false;
 
-    //bool bCanHurt = true;
+    bool bCanHurt = true;
 
     [SerializeField]
     private GameObject[] PlayerLifeUIImageArray;
@@ -27,10 +27,11 @@ public class PlayerHealth : MonoBehaviour
         if(bHurrting == false)
             fCanHurtTimer += Time.deltaTime;
 
-        /*if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
+            Debug.Log("stop hurt");
             bCanHurt = !bCanHurt;
-        }*/
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -45,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
     {
 
       
-        if (fCanHurtTimer > 1.0f && PlayerHealthCount > 0 /*&& bCanHurt*/) // 1s hurt interval and have life
+        if (fCanHurtTimer > 1.0f && PlayerHealthCount > 0 &&  bCanHurt) // 1s hurt interval and have life
         {
             //stop counting hurt interval timer
             bHurrting = true;
