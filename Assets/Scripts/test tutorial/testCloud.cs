@@ -35,7 +35,7 @@ public class testCloud : MonoBehaviour
     void Start()
     {
         ps = this.gameObject.GetComponent<ParticleSystem>();
-        //Target2.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = false;
+        Target2.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = false;
     }
     void Update()
     {

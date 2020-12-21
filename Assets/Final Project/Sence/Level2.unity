@@ -52455,7 +52455,7 @@ MonoBehaviour:
     left: -3
   quality: 400
   waterMaterial: {fileID: 2100000, guid: c07f7ea444a0eb64ab9b07554a09c5f7, type: 2}
-  splash: {fileID: 0}
+  splash: {fileID: 1458402465880904, guid: b200bbe7ea404e9489650f74c4e5c51f, type: 3}
   springconstant: 0.02
   damping: 0.09
   spread: 0.3
