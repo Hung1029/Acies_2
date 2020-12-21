@@ -174,7 +174,7 @@ public class SceneManager_tutorial : MonoBehaviour
 
         if (TriggerCandleScript2._bSkillOneTrigger && isCloudDestory2 == false && PlayerSkill.CURRENTSKILL == 1)
         {
-            CloudToDestroy2.GetComponentInChildren<testCloud>().FadeOutAndDestory(TriggerCandleScript2.GetComponent<Transform>().position);
+            CloudToDestroy2.GetComponentInChildren<testCloud2>().FadeOutAndDestory(TriggerCandleScript2.GetComponent<Transform>().position);
             isCloudDestory2 = true;
         }
 

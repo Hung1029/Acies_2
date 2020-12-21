@@ -26,16 +26,16 @@ public class testCloud : MonoBehaviour
     [System.NonSerialized]
     public bool _bLightBlowEnable = true;
 
-    [System.NonSerialized]
+    //[System.NonSerialized]
     public GameObject Target;
-    [System.NonSerialized]
+    //[System.NonSerialized]
     public GameObject Target2;
 
 
     void Start()
     {
         ps = this.gameObject.GetComponent<ParticleSystem>();
-        Target2.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = false;
+        //Target2.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().enabled = false;
     }
     void Update()
     {
@@ -157,7 +157,7 @@ public class testCloud : MonoBehaviour
     IEnumerator FadeOutAndDestoryIEnumerator(Vector3 vCandlePosition)
     {
         bExplo = true;
-        _bLightBlowEnable = false;
+        //_bLightBlowEnable = false;
 
         ps.Stop();
         InitializeIfNeeded();

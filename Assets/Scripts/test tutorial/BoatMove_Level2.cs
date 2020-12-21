@@ -33,7 +33,7 @@ public class BoatMove_Level2 : MonoBehaviour
     //Boat floating
     public void BoatFloating()
     {
-        rb.velocity = new Vector2( 1.0f, rb.velocity.y);
+        rb.velocity = new Vector2( 2.5f, rb.velocity.y);
 
     }
 
