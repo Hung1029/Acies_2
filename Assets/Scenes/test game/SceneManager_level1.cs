@@ -474,6 +474,7 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.WaitForTouchGround && AvoidBearFallDownTrigger.GetComponent<AvoidFallDownTrigger>()._bSkillOneTrigger)
             {
                 Debug.Log("in");
+                Bear.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
                 Bear.GetComponent<Rigidbody2D>().gravityScale = 35;
                 BearStage++;
             }
