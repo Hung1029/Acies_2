@@ -71,7 +71,8 @@ public class SceneManager_Level2 : MonoBehaviour
 
 
                 ////Skill Direction UI fade in
-                SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
+                SkillDirectionUI.GetComponent<Animator>().SetTrigger("tStart");
+                //SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
 
                 //player can't move
                 GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;

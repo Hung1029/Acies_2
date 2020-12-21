@@ -81,8 +81,10 @@ public class SceneManager_tutorial : MonoBehaviour
         ////Skill Direction UI fade in
         if (DetectDirectionUICollider.bPlayerTouch && bRead == false)
         {
-            SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
-            
+            //SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
+            Debug.Log("in direction");
+            SkillDirectionUI.GetComponent<Animator>().SetTrigger("tStart");
+
             //reset UI collider bool
             DetectDirectionUICollider.bPlayerTouch = false;
 

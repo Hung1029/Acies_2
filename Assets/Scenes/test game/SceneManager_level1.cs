@@ -84,6 +84,7 @@ public class SceneManager_level1 : MonoBehaviour
     bool bFogHurt = false;
     bool bTrap1Hurt = false;
     bool bTrap2Hurt = false;
+    
 
 
     enum BearMovementStage
@@ -92,27 +93,28 @@ public class SceneManager_level1 : MonoBehaviour
         BearRoar = 3,
         FogBlow = 5,
         Howl = 7,
-        Jump = 9,
+        Howl2 = 9,
+        Jump = 11,
         /*Run = 7,
         ResetBear = 8,*/
-        WaitForTouchGround = 10,
-        Run2 = 11,
-        DecreaseSpeed = 12,
-        HeadUp = 13,
-        FinishClimbingDown = 14,
-        BearTouchRock = 16,
-        RockDamage = 18,
-        Run3 = 20,
-        GoThroughtDogGate = 21,
-        ClimbFinish = 23,
-        OverGate = 24,
-        HitFloor1 = 25,
-        Run4 = 27,
-        HitFloor2 = 28,
-        FinalRun = 30,
-        InWall = 31,
+        WaitForTouchGround = 12,
+        Run2 = 13,
+        DecreaseSpeed = 14,
+        HeadUp = 15,
+        FinishClimbingDown = 16,
+        BearTouchRock = 18,
+        RockDamage = 20,
+        Run3 = 22,
+        GoThroughtDogGate = 23,
+        ClimbFinish = 25,
+        OverGate = 26,
+        HitFloor1 = 27,
+        Run4 = 29,
+        HitFloor2 = 30,
+        FinalRun = 32,
+        InWall = 33,
     }
-    BearMovementStage BearStage = BearMovementStage.Jump;
+    BearMovementStage BearStage = BearMovementStage.DetectPlayer;
 
     //water destory detect
     public GameObject Trap1;
@@ -122,6 +124,8 @@ public class SceneManager_level1 : MonoBehaviour
     //camera
     public Camera FinalCamera;
 
+    ///Bear Collider
+    public GameObject BearButton;
 
     // Start is called before the first frame update
     void Start()
@@ -143,8 +147,8 @@ public class SceneManager_level1 : MonoBehaviour
         {
             BearCheckPointTransform[i] = BearMovementStageCheckPoint.transform.GetChild(i).GetComponent<Transform>();
         }
-
-
+        /*BearGateAnimate = true;
+        StartCoroutine(BearGateDown());*/
     }
 
     // Update is called once per frame
@@ -417,11 +421,28 @@ public class SceneManager_level1 : MonoBehaviour
                 Bear.GetComponent<BearMovement>().Howl();
 
                 //shaking
-                StartCoroutine(CameraParallaxManager.Shake(1.0f, 2.5f, 0.15f));
+                //StartCoroutine(CameraParallaxManager.Shake(1.0f, 2.5f, 0.15f));
 
                 //set camera projection
                 CameraParallaxManager.ChangeCameraProjectionSize(FinalCamera, 7.5f, 2.0f);
                 CameraParallaxManager.ChangeCamraFollowingTargetPosition(-6.0f, 5f, 0.8f, true, false);
+
+                //Wait for next stage
+                StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHowlTime - 1));
+                BearStage++;
+            }
+
+            //Keep Howl
+            else if (BearStage == BearMovementStage.Howl2)
+            {
+
+
+                //Bear start Roar
+                Bear.GetComponent<BearMovement>().Howl();
+
+                //shaking
+                //StartCoroutine(CameraParallaxManager.Shake(1.0f, 2.5f, 0.15f));
+
 
                 //Wait for next stage
                 StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHowlTime - 1));
@@ -505,7 +526,7 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.GoThroughtDogGate)
             {
                 //Gate Down
-                if (!BearGateAnimate)
+                if (BearGateAnimate)
                 {
                     Bear.GetComponent<Animator>().SetTrigger("tClimb");
 
@@ -533,6 +554,8 @@ public class SceneManager_level1 : MonoBehaviour
             else if (BearStage == BearMovementStage.ClimbFinish)
             {
 
+                Bear.GetComponent<Animator>().Play("Bear_Run");
+
                 //change position
                 Bear.transform.position = new Vector2(192.34f, 4.2259f);
 
@@ -544,7 +567,7 @@ public class SceneManager_level1 : MonoBehaviour
             {
 
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
-
+                
 
                 //Bear hit floor
                 if (FloorDetectScript1._bSkillOneTrigger)
@@ -604,9 +627,15 @@ public class SceneManager_level1 : MonoBehaviour
             {
                 Debug.Log("in");
                 Bear.GetComponent<Animator>().SetTrigger("tInWall");
+
+                StartCoroutine(BearNextStageWait(4.0f));
                 BearStage++;
+
+                BearButton.SetActive(true);
             }
-            
+
+
+
 
 
         }
@@ -690,11 +719,13 @@ public class SceneManager_level1 : MonoBehaviour
     ////Bear Gate
     IEnumerator BearGateDown()
     {
-        for (float f = 0; f < 3; f+= 0.03f)
+
+        while (BearGate.transform.position.y > 9.8f)
         {
-            BearGate.transform.position = new Vector2(BearGate.transform.position.x, BearGate.transform.position.y - 0.03f );
-            yield return new WaitForSeconds(0.003f);
+            BearGate.transform.position = new Vector2(BearGate.transform.position.x, BearGate.transform.position.y - 0.2f);
+            yield return new WaitForSeconds(0.001f);
         }
+
     }
 
 
