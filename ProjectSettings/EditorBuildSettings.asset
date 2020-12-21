@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutDoor.unity
     guid: ebe61f85d0c0e1348bc1f4c575932a57
+  - enabled: 1
+    path: Assets/Final Project/Sence/Tutorial.unity
+    guid: 175a3f4ddebb5fc4591f69f70cbc5c3e
+  - enabled: 1
+    path: Assets/Final Project/Sence/Level1-1.unity
+    guid: 052864e5d56092b4598e267ba748bfbb
+  - enabled: 1
+    path: Assets/Final Project/Sence/Level2.unity
+    guid: a49287d6e654aee43ae648f9b50145b9
   m_configObjects: {}

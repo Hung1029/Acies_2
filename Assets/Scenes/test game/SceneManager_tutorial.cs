@@ -61,6 +61,13 @@ public class SceneManager_tutorial : MonoBehaviour
     private TriggerCandle TriggerCandleScript2;
     bool isCloudDestory2 = false;
 
+    //levelloader script
+    [SerializeField]
+    private LevelLoader levelLoaderScript;
+    [SerializeField]
+    private BoxCollider2D ChangeSceneCollider;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -170,6 +177,16 @@ public class SceneManager_tutorial : MonoBehaviour
             CloudToDestroy2.GetComponentInChildren<testCloud>().FadeOutAndDestory(TriggerCandleScript2.GetComponent<Transform>().position);
             isCloudDestory2 = true;
         }
+
+
+
+        //change scene
+        if (ChangeSceneCollider.GetComponent<PlayerTriggerDetect>().bTrigger)
+        {
+            levelLoaderScript.LoadNextLevel("Level1-1");
+        }
+
+
 
     }
 

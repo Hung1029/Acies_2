@@ -84,7 +84,13 @@ public class SceneManager_level1 : MonoBehaviour
     bool bFogHurt = false;
     bool bTrap1Hurt = false;
     bool bTrap2Hurt = false;
-    
+
+
+    //levelloader script
+    [SerializeField]
+    private LevelLoader levelLoaderScript;
+    [SerializeField]
+    private BoxCollider2D ChangeSceneCollider;
 
 
     enum BearMovementStage
@@ -679,6 +685,16 @@ public class SceneManager_level1 : MonoBehaviour
                 StartCoroutine(BearHurtCount(Bear.GetComponent<BearMovement>().fBearHurtTime));
 
             }
+
+
+
+        //change scene
+        //change scene
+        if (ChangeSceneCollider.GetComponent<PlayerTriggerDetect>().bTrigger)
+        {
+            levelLoaderScript.LoadNextLevel("Level2");
+        }
+
 
     }
 

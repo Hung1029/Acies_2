@@ -34,6 +34,8 @@ public class SceneManager_Level2 : MonoBehaviour
     public ParticleSystem Drop;
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
