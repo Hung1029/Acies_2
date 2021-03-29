@@ -71,8 +71,7 @@ public class VitaSoul_particle : MonoBehaviour
         //set Skill
         if (PlayerSkill.CURRENTSKILL == 1)
             canDriveOut = true;
-
-   
+        
 
     }
 

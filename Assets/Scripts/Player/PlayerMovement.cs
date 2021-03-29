@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform feetPos; //detector position
     public float checkRadius; //detect range
     public LayerMask whatIsGround; //which ground will trigger
-    private float jumpForce = 13.0f;
+    private float jumpForce = 8.0f;
 
     //can move or not
     public bool canMove = true;
@@ -27,9 +27,9 @@ public class PlayerMovement : MonoBehaviour
 
     //jump
     bool isGrounded = false;
-    public int extraJumpsValue = 2;
+    int extraJumpsValue = 1;
     private int extraJumps;
-    int JumpState = 0;
+    int JumpState = -1;
 
     private Vector3 originalScale;
 
@@ -48,8 +48,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         //reset jump force
-        jumpForce = Mathf.Abs(jumpForce * transform.localScale.x / 0.4f) ;
+        jumpForce = Mathf.Abs(jumpForce * transform.localScale.y / 0.5f) ;
 
+        //reset speed
+        speed = Mathf.Abs(speed * transform.localScale.y / 0.5f);
     }
 
  
@@ -105,12 +107,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement_y()
     {
-      
+        Debug.Log(extraJumps);
         //press jump
-        if (isGrounded && Input.GetButtonDown("Jump") && canMove)
+        if (isGrounded && Input.GetButtonDown("Jump") && canMove && (JumpState == -1 || JumpState == 3))
         {
 
-            JumpState = 0;
+            JumpState = -1;
+            JumpState++;
 
             animator.SetBool("FinishJump", false);
 
@@ -136,29 +139,20 @@ public class PlayerMovement : MonoBehaviour
         //double jump
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && !isGrounded)
         {
-            JumpState = 0;
-
-            WaitJumpState(0.15f);
+            JumpState = 1;
 
             animator.Play("ReadyJump");
-
 
             extraJumps--;
         }
 
-        //detect "FinishJump" animate start 
+        // finish jump 
         if (JumpState == 2 && isGrounded)
         {
             JumpState++;
-            WaitJumpState(0.25f);
             
         }
 
-        //close "FinishJump" animate
-        if (JumpState == 4)
-        {
-            animator.SetBool("FinishJump", true);
-        }
 
     }
 
@@ -179,6 +173,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    //wait for animation
     private void WaitJumpState(float time)
     {
         
