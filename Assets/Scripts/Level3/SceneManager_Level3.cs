@@ -6,6 +6,11 @@ public class SceneManager_Level3 : MonoBehaviour
 {
     public VitaTriggerDetect movePlatformTrigger;
 
+    public GameObject Vita;
+
+    public MovingPlatform MovingPlatform;
+
+    private GazeMovement VitaParticleGazeScript;
 
 
 
@@ -15,14 +20,19 @@ public class SceneManager_Level3 : MonoBehaviour
         
     }
 
+    private void FixedUpdate()
+    {   
+        Vita.GetComponent<VitaSoul_particle>().FollowObj();       
+    }
+
+
     // Update is called once per frame
     void Update()
     {
 
-        //if move platform is trigger
-        if (movePlatformTrigger._bSkillTrigger) { 
-            
+        //if  move platform is trigger
+        if (movePlatformTrigger._bSkillTrigger)
+            MovingPlatform._bCanMove = true;
         
-        }
     }
 }

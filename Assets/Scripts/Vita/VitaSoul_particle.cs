@@ -34,16 +34,28 @@ public class VitaSoul_particle : MonoBehaviour
 
     //Follow Player
     private Transform target;
-    private float stoppingDistance = 1.2f;
+    private float stoppingDistance_x = 1.2f;
+    private float stoppingDistance_y = 0.57f;
 
     private Rigidbody2D rb;
 
     [System.NonSerialized]
     public bool bPromptExist = false;
 
+    [System.NonSerialized]
+    public bool bCanFollow = true;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        //rescale stopping distance x
+        stoppingDistance_x =  Mathf.Abs(stoppingDistance_x * transform.localScale.y / 0.1472596f);
+
+        //rescale stopping distance y
+        stoppingDistance_y = Mathf.Abs(stoppingDistance_y * transform.localScale.y / 0.1472596f);
+
+
         OuterParticleSys = OuterParticleObj.GetComponent<ParticleSystem>();
 
 
@@ -192,55 +204,54 @@ public class VitaSoul_particle : MonoBehaviour
 
     public void FollowObj()
     {
-        float moveInput = Input.GetAxis("Horizontal");
-
-
-        if (GameObject.Find("Player").GetComponent<PlayerMovement>().canMove)
+        if (bCanFollow)
         {
-            //change Scale
-            if ((moveInput > 0 && transform.localScale.x < 0.0f) || (moveInput < 0 && transform.localScale.x > 0.0f))
-            {
-                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-                bChangeFace = true;
+            float moveInput = Input.GetAxis("Horizontal");
 
+            if (GameObject.Find("Player").GetComponent<PlayerMovement>().canMove)
+            {
+                //change Scale
+                if ((moveInput > 0 && transform.localScale.x < 0.0f) || (moveInput < 0 && transform.localScale.x > 0.0f))
+                {
+                    transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                    bChangeFace = true;
+
+                }
+            }
+
+            //change X
+            if (bChangeFace || Mathf.Abs(transform.position.x - target.position.x) > stoppingDistance_x)
+            {
+                //change vita soul position
+                if (transform.localScale.x > 0) // face left
+                {
+                    if (transform.position.x != target.position.x - stoppingDistance_x)
+                        transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x - stoppingDistance_x, transform.position.y), 10.0f * Time.deltaTime);
+                    else
+                        bChangeFace = false;
+                }
+                else // face right
+                {
+                    if (transform.position.x != target.position.x + stoppingDistance_x)
+                        transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x + stoppingDistance_x, transform.position.y), 10.0f * Time.deltaTime);
+                    else
+                        bChangeFace = false;
+                }
+            }
+            else if (Mathf.Abs(transform.position.x - target.position.x) > stoppingDistance_x) // vita move with player
+            {
+                rb.velocity = new Vector2(moveInput * 5.0f, rb.velocity.y);
+            }
+
+
+
+
+            //change Y
+            if (target.position.y + stoppingDistance_y != transform.position.y)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, target.position.y + stoppingDistance_y), 10.0f * Time.deltaTime); //only move x
             }
         }
-        
-        //change X
-        if (bChangeFace || Mathf.Abs(transform.position.x - target.position.x) > stoppingDistance)
-        {
-            //change vita soul position
-            if (transform.localScale.x > 0) // face left
-            {
-                if (transform.position.x != target.position.x - stoppingDistance)
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x - stoppingDistance, transform.position.y), 10.0f * Time.deltaTime);
-                else
-                    bChangeFace = false;
-            }
-            else // face right
-            {
-                if (transform.position.x != target.position.x + stoppingDistance) 
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x + stoppingDistance, transform.position.y), 10.0f * Time.deltaTime);
-                else
-                    bChangeFace = false;
-            }
-        }
-        else if(Mathf.Abs(transform.position.x - target.position.x) > stoppingDistance) // vita move with player
-        {
-            rb.velocity = new Vector2(moveInput * 5.0f, rb.velocity.y);
-        }
-       
-
-
-
-        //change Y
-        if (target.position.y + 0.57 != transform.position.y)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, target.position.y + 0.57f), 10.0f * Time.deltaTime); //only move x
-        }
-        
-
-
     }
 
 

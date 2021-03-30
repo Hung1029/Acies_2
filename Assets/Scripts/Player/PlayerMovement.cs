@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpForce = 8.0f;
 
     //can move or not
+    [System.NonSerialized]
     public bool canMove = true;
 
     //Animator
@@ -107,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement_y()
     {
-        Debug.Log(extraJumps);
         //press jump
         if (isGrounded && Input.GetButtonDown("Jump") && canMove && (JumpState == -1 || JumpState == 3))
         {

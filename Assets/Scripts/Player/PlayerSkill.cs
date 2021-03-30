@@ -62,12 +62,10 @@ public class PlayerSkill : MonoBehaviour
         int SkillNUM = 0;
         if (Input.GetButtonDown("skillOne"))
         {
-            //CURRENTSKILL = 1;
             SkillNUM = 1;
         }
         else if (Input.GetButtonDown("skillTwo") && CanUseSkill2)
         {
-            //CURRENTSKILL = 2;
             SkillNUM = 2;
         }
 
