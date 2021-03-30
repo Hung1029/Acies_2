@@ -28,6 +28,10 @@ public class VitaSoul_particle : MonoBehaviour
     [System.NonSerialized]
     public int SkillNUM = 0;
 
+    [System.NonSerialized]
+    //time for skill one need to gathering
+    public float fSkillOneGatheringTime = 3.0f; 
+
 
 
     public Animator animator;
