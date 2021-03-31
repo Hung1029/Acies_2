@@ -131,6 +131,7 @@ public class SkillManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         ///////////////////////////////////////////////////////////////////////////////////Detect Skill Button
 
         SkillNUM = SkillScript.DetectSkillKeyDown(); //Detecting Key Down

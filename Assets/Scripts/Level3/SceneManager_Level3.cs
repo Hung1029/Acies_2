@@ -18,6 +18,9 @@ public class SceneManager_Level3 : MonoBehaviour
     private float ftimer_moving  = 0.0f;
     private float ftimer_water = 0.0f;
 
+    //player
+    private PlayerSkill playerSkillScript;
+
     //water wheel
     [SerializeField]
     private GameObject WaterWheel;
@@ -42,7 +45,11 @@ public class SceneManager_Level3 : MonoBehaviour
     int iBuddhaLevel = 0;
     int[] array = new int[3]; //set candle number
     int[] ilightUpArray = new int[3]; //set  candle light up number
-    
+
+    //Trigger skill 2 token
+    public GameObject TriggerSkill;
+
+
 
 
     // Start is called before the first frame update
@@ -53,6 +60,8 @@ public class SceneManager_Level3 : MonoBehaviour
         MovingPlatformTriggerColorChange = MovingPlatform.GetComponentInChildren<ColorChange>();
 
         WaterWheelScript = WaterWheel.GetComponent<WaterWheel>();
+
+        playerSkillScript = GameObject.Find("Player").GetComponent<PlayerSkill>();
     }
 
     private void FixedUpdate()
@@ -64,7 +73,6 @@ public class SceneManager_Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //move platform
         if (MovingPlatform._bCanMove == false)
         {
@@ -277,6 +285,15 @@ public class SceneManager_Level3 : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+        //get skill 2
+        if(TriggerSkill)
+            if (TriggerSkill.GetComponent<PlayerTrigger>()._bPlayerTrigger)
+            {
+                playerSkillScript.CanUseSkill2 = true;
+                Destroy(TriggerSkill);
+            }
+       
 
     }
 

@@ -31,7 +31,8 @@ public class SkillManager_v2 : MonoBehaviour
     //Skill time
     float fLightUpTime = 5.0f;
     float fNeedGatheringTime = 2.0f;
-    float fCanGazeTime;
+    float fCanGathingTime;
+    float fCanGazeTime = 7.0f;
 
     //gaze
     Vector3 gazeOnScreen;
@@ -46,6 +47,11 @@ public class SkillManager_v2 : MonoBehaviour
     private IEnumerator FadeOutUI;
     private IEnumerator FadeInUI;
 
+
+    //Skill 2 
+    Skill2Moveable[] ObjectsMoveable;
+    private int iPickUpIndex = -1;
+    private int iCurrentLookIndex = -1;
 
     enum SkillStageNUM
     {
@@ -81,10 +87,13 @@ public class SkillManager_v2 : MonoBehaviour
 
         SkillScript = Player.GetComponent<PlayerSkill>();
 
-        fCanGazeTime = magicLightScript.fRaiseHand + fLightUpTime;
+        fCanGathingTime = magicLightScript.fRaiseHand + fLightUpTime;
 
-        
-        
+        //skill2
+        //if it is moveable object give it outline
+        ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];
+
+
 
     }
 
@@ -97,7 +106,6 @@ public class SkillManager_v2 : MonoBehaviour
 
     void Update()
     {
-
         ///////////////////////////////////////////////////////////////////////////////////Detect Skill Button
         SkillNUM = SkillScript.DetectSkillKeyDown();
 
@@ -198,7 +206,7 @@ public class SkillManager_v2 : MonoBehaviour
             }
 
             //if gathering are interrupted
-            if ((PlayerMovementScript.bPlayerMove || VitaSoulCanGazeTimer >= fCanGazeTime || (SkillNUM != 0 && VitaSoulCanGazeTimer > 0.5f)) )
+            if ((PlayerMovementScript.bPlayerMove || VitaSoulCanGazeTimer >= fCanGathingTime || (SkillNUM != 0 && VitaSoulCanGazeTimer > 0.5f)) )
             {
                 //stop vita move coroutine
                 StopCoroutine(ObjMoveTo);
@@ -241,56 +249,148 @@ public class SkillManager_v2 : MonoBehaviour
         if(SkillStage == SkillStageNUM.FinishLLghtUpVita)
         {
             VitaSoulCanGazeTimer += Time.deltaTime;
-            if (VitaSoulCanGazeTimer > 7.0f || SkillNUM != 0) 
+
+            //skill 2 detect
+            if (PlayerSkill.CURRENTSKILL == 2)
             {
-                //Finish skill 1
-                if (PlayerSkill.CURRENTSKILL == 1)
+                //still no object pick
+                if (iPickUpIndex < 0)
                 {
-                    
-                    //reset UI
-                    StopCoroutine(FadeInUI);
-                    FadeOutUI = FadeOutSkillIconIEnumerator();
-                    StartCoroutine(FadeOutUI);
+                    for (int i = 0; i < ObjectsMoveable.Length; i++)
+                    {
+                        if (ObjectsMoveable[i].transform.GetComponent<VitaTriggerDetect>()._bSkillTrigger)
+                        {
+                            ObjectsMoveable[i].PickUp();
+                            iCurrentLookIndex = i;
+                            
+                        }
+                        else
+                        {
+                            ObjectsMoveable[i].PickDown();
+                            if (iCurrentLookIndex == i)
+                                iCurrentLookIndex = -1;
 
-                    //player can move
-                    PlayerMovementScript.canMove = true;
+                        }
+                    }
 
-                    //reset vita follow
-                    VitaParticleScript.bCanFollow = true;
+                    //set the pick up index when press submit
+                    if (iCurrentLookIndex >= 0 && Input.GetButtonDown("Submit"))
+                    {
+                        
 
-                    //reset gaze
-                    VitaParticleGazeScript.bVitaSoulCanGaze = false;
+                        iPickUpIndex = iCurrentLookIndex;
+                        ObjectsMoveable[iCurrentLookIndex].transform.GetComponent<BoxCollider2D>().enabled = false;
 
-                    //reset particle
-                    VitaParticleScript.StopSkillAfterTime(0.0f);
-
-                    // reset timer
-                    VitaSoulCanGazeTimer = 0.0f;
-
-                    //reset magic light
-                    SkillScript.MagicLightScript.FadeOut();
-
-                    //reset player animate
-                    SkillScript.ResetAnimateToIdle();
-
-                    VitaParticleScript.animator.SetBool("StartSkill", false);
-
-                    VitaSoulRenderer.color = new Color(VitaSoulRenderer.color.r, VitaSoulRenderer.color.g, VitaSoulRenderer.color.b, 1.0f);
-
-                    SkillStage = 0;//reset stage
-
-
-
+                        //reset iCurrentLookIndex
+                        iCurrentLookIndex = -1;
+                    }
                 }
 
+                //if already pick an object
+                else
+                {
+                    ObjectsMoveable[iPickUpIndex].FollowingVitaPosition();
+                    //cancel the pick
+                    if (Input.GetButtonDown("Cancel"))
+                    {
+                        //disable box collider
+                        ObjectsMoveable[iPickUpIndex].transform.GetComponent<BoxCollider2D>().enabled = true;
+
+                        //pick line off
+                        ObjectsMoveable[iPickUpIndex].PickDown();
+
+                        //reset pick up object index
+                        iPickUpIndex = -1;
+                    }
+                    
+
+                }
+                
+            }
+
+            if (VitaSoulCanGazeTimer > fCanGazeTime || SkillNUM != 0) 
+            {
+                //Finish skill 1
+                
+                //reset UI
+                StopCoroutine(FadeInUI);
+                FadeOutUI = FadeOutSkillIconIEnumerator();
+                StartCoroutine(FadeOutUI);
+
+                //player can move
+                PlayerMovementScript.canMove = true;
+
+                //reset vita follow
+                VitaParticleScript.bCanFollow = true;
+
+                //reset gaze
+                VitaParticleGazeScript.bVitaSoulCanGaze = false;
+
+                //reset particle
+                VitaParticleScript.StopSkillAfterTime(0.0f);
+
+                // reset timer
+                VitaSoulCanGazeTimer = 0.0f;
+
+                //reset magic light
+                SkillScript.MagicLightScript.FadeOut();
+
+                //reset player animate
+                SkillScript.ResetAnimateToIdle();
+
+                VitaParticleScript.animator.SetBool("StartSkill", false);
+
+                VitaSoulRenderer.color = new Color(VitaSoulRenderer.color.r, VitaSoulRenderer.color.g, VitaSoulRenderer.color.b, 1.0f);
+
+                SkillStage = 0;//reset stage
+
+                //reset skill2
+                if (PlayerSkill.CURRENTSKILL == 2)
+                    resetSkill();
 
             }
 
         }
 
 
+        //detect LT RT hold button
+        int TriggerButton = SkillScript.DetectSkillChangeKeyHold();
+        if(TriggerButton == 1)
+            Debug.Log("RT");
+        else if (TriggerButton == -1)
+            Debug.Log("LT");
+
+
+
+
+
 
     }
+
+    //reset Skill 2 object
+    void resetSkill()
+    {
+
+        if(iPickUpIndex >= 0)
+        {
+            //disable box collider
+            ObjectsMoveable[iPickUpIndex].transform.GetComponent<BoxCollider2D>().enabled = true;
+
+            //pick line off
+            ObjectsMoveable[iPickUpIndex].PickDown();
+
+            //reset pick up object index
+            iPickUpIndex = -1;
+        }
+
+        //reset pick up outline
+        for (int i = 0; i < ObjectsMoveable.Length; i++)
+        {           
+            ObjectsMoveable[i].PickDown();           
+        }
+
+    }
+
 
     //obj move to
 
