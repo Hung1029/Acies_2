@@ -9,6 +9,9 @@ public class Skill2Moveable : MonoBehaviour
     private GameObject Skill2PickedOutLine;
     SpriteRenderer PickedOut;
 
+
+    public bool bIsAJigsaw  = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class Skill2Moveable : MonoBehaviour
         Skill2PickedOutLine.name = "PickOutline";
         Skill2PickedOutLine.transform.parent = this.gameObject.transform;
         Skill2PickedOutLine.transform.position = this.gameObject.transform.position;
-        Skill2PickedOutLine.transform.localScale = new Vector3(1.2f, 1.2f,0.0f);        
+        Skill2PickedOutLine.transform.localScale = new Vector3(1.1f, 1.1f,0.0f);        
         PickedOut =  Skill2PickedOutLine.AddComponent<SpriteRenderer>();
         this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = PickedOut.sortingOrder + 1;
         PickedOut.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
@@ -30,7 +33,7 @@ public class Skill2Moveable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // FollowingVitaPosition();
+       
     }
 
     public void FollowingVitaPosition()

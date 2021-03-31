@@ -156,8 +156,9 @@ public class SkillManager_v2 : MonoBehaviour
                 VitaSoulGatheringTimer += Time.deltaTime;
                 VitaParticleScript.animator.SetBool("isGazeing", true);
                 VitaSoulBG.SetBool("isGazeing", true);
+                PlayerMovementScript.canMove = false;
 
-                if(VitaSoulGatheringTimer >= fNeedGatheringTime) //gathering for 2s
+                if (VitaSoulGatheringTimer >= fNeedGatheringTime) //gathering for 2s
                 {
                     //stop vita move coroutine
                     StopCoroutine(ObjMoveTo);
@@ -206,8 +207,11 @@ public class SkillManager_v2 : MonoBehaviour
             }
 
             //if gathering are interrupted
-            if ((PlayerMovementScript.bPlayerMove || VitaSoulCanGazeTimer >= fCanGathingTime || (SkillNUM != 0 && VitaSoulCanGazeTimer > 0.5f)) )
+            if (( VitaSoulCanGazeTimer >= fCanGathingTime || (Input.GetButtonDown("Cancel") && VitaSoulCanGazeTimer > 0.5f)) )
             {
+                
+                StartCoroutine(CaneMoveIntervelJump());
+
                 //stop vita move coroutine
                 StopCoroutine(ObjMoveTo);
 
@@ -256,13 +260,13 @@ public class SkillManager_v2 : MonoBehaviour
                 //still no object pick
                 if (iPickUpIndex < 0)
                 {
-                    for (int i = 0; i < ObjectsMoveable.Length; i++)
+                    for (int i = 0; i < ObjectsMoveable.Length ; i++)
                     {
                         if (ObjectsMoveable[i].transform.GetComponent<VitaTriggerDetect>()._bSkillTrigger)
                         {
                             ObjectsMoveable[i].PickUp();
                             iCurrentLookIndex = i;
-                            
+                           
                         }
                         else
                         {
@@ -276,10 +280,20 @@ public class SkillManager_v2 : MonoBehaviour
                     //set the pick up index when press submit
                     if (iCurrentLookIndex >= 0 && Input.GetButtonDown("Submit"))
                     {
-                        
+
+                        //Pick Down other object
+                        for (int i = 0; i < ObjectsMoveable.Length; i++)
+                        {
+                            if (i == iCurrentLookIndex)
+                                continue;
+                            ObjectsMoveable[i].PickDown();
+                        }
+
 
                         iPickUpIndex = iCurrentLookIndex;
-                        ObjectsMoveable[iCurrentLookIndex].transform.GetComponent<BoxCollider2D>().enabled = false;
+                        ObjectsMoveable[iCurrentLookIndex].transform.GetComponent<PolygonCollider2D>().isTrigger  = true;
+
+                        ObjectsMoveable[iCurrentLookIndex].transform.rotation = Quaternion.identity;
 
                         //reset iCurrentLookIndex
                         iCurrentLookIndex = -1;
@@ -290,25 +304,68 @@ public class SkillManager_v2 : MonoBehaviour
                 else
                 {
                     ObjectsMoveable[iPickUpIndex].FollowingVitaPosition();
-                    //cancel the pick
-                    if (Input.GetButtonDown("Cancel"))
+                    //cancel the pick or put it in template
+                    if (Input.GetButtonDown("Submit") )
                     {
-                        //disable box collider
-                        ObjectsMoveable[iPickUpIndex].transform.GetComponent<BoxCollider2D>().enabled = true;
+                        //if it is not jigsaw
+                        if (!ObjectsMoveable[iPickUpIndex].bIsAJigsaw)
+                        {
+                            //reset physic movement
+                            ObjectsMoveable[iPickUpIndex].transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
-                        //pick line off
-                        ObjectsMoveable[iPickUpIndex].PickDown();
+                            //disable box collider
+                            ObjectsMoveable[iPickUpIndex].transform.GetComponent<PolygonCollider2D>().isTrigger = false;
 
-                        //reset pick up object index
-                        iPickUpIndex = -1;
+                            //pick line off
+                            ObjectsMoveable[iPickUpIndex].PickDown();
+
+                            //reset pick up object index
+                            iPickUpIndex = -1;
+                        }
+
+                        //it is a jigsaw, then check the match with template
+                        else
+                        {
+                            
+                            //match
+                            if (ObjectsMoveable[iPickUpIndex].transform.GetComponent<MatchingJigsaw>().DetectIfMatch())
+                            {
+                                //Freeze it physic movement
+                                ObjectsMoveable[iPickUpIndex].transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+                                //pick line off
+                                ObjectsMoveable[iPickUpIndex].PickDown();
+
+                                //reset pick up object index
+                                iPickUpIndex = -1;
+                            }
+
+                            //not match
+                            else
+                            {
+                                //reset physic movement
+                                ObjectsMoveable[iPickUpIndex].transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
+                                //disable box collider
+                                ObjectsMoveable[iPickUpIndex].transform.GetComponent<PolygonCollider2D>().isTrigger = false;
+
+                                //pick line off
+                                ObjectsMoveable[iPickUpIndex].PickDown();
+
+                                //reset pick up object index
+                                iPickUpIndex = -1;
+                            }
+
+                        }
+                        
                     }
-                    
+
 
                 }
                 
             }
 
-            if (VitaSoulCanGazeTimer > fCanGazeTime || SkillNUM != 0) 
+            if (VitaSoulCanGazeTimer > fCanGazeTime || Input.GetButtonDown("Cancel")) 
             {
                 //Finish skill 1
                 
@@ -316,10 +373,10 @@ public class SkillManager_v2 : MonoBehaviour
                 StopCoroutine(FadeInUI);
                 FadeOutUI = FadeOutSkillIconIEnumerator();
                 StartCoroutine(FadeOutUI);
+                
 
-                //player can move
-                PlayerMovementScript.canMove = true;
-
+                StartCoroutine(CaneMoveIntervelJump());
+                
                 //reset vita follow
                 VitaParticleScript.bCanFollow = true;
 
@@ -352,7 +409,6 @@ public class SkillManager_v2 : MonoBehaviour
 
         }
 
-
         //detect LT RT hold button
         int TriggerButton = SkillScript.DetectSkillChangeKeyHold();
         if(TriggerButton == 1)
@@ -361,11 +417,19 @@ public class SkillManager_v2 : MonoBehaviour
             Debug.Log("LT");
 
 
-
-
-
-
     }
+
+    IEnumerator CaneMoveIntervelJump()
+    {
+        yield return new WaitForSeconds(0.2f);
+        //player can move
+        PlayerMovementScript.canMove = !PlayerMovementScript.canMove;
+    }
+
+
+
+
+
 
     //reset Skill 2 object
     void resetSkill()
@@ -374,7 +438,7 @@ public class SkillManager_v2 : MonoBehaviour
         if(iPickUpIndex >= 0)
         {
             //disable box collider
-            ObjectsMoveable[iPickUpIndex].transform.GetComponent<BoxCollider2D>().enabled = true;
+            ObjectsMoveable[iPickUpIndex].transform.GetComponent<PolygonCollider2D>().isTrigger = false;
 
             //pick line off
             ObjectsMoveable[iPickUpIndex].PickDown();
@@ -386,7 +450,8 @@ public class SkillManager_v2 : MonoBehaviour
         //reset pick up outline
         for (int i = 0; i < ObjectsMoveable.Length; i++)
         {           
-            ObjectsMoveable[i].PickDown();           
+            ObjectsMoveable[i].PickDown();
+
         }
 
     }
