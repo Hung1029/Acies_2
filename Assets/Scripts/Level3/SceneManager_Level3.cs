@@ -49,7 +49,22 @@ public class SceneManager_Level3 : MonoBehaviour
     //Trigger skill 2 token
     public GameObject TriggerSkill;
 
+    //Status Jisaw
+    public MatchingJigsaw[] StatusMatchingJigsawScript;
+    bool MatchingJigsawFinish = false;
 
+
+    //Status light up
+    public GameObject[] StatusToLightUp;
+    public Color[] CColor;
+    private int[] iLightUpOrder = { -1,-1,-1};
+    private float[] ftimer_statusLightUp = { 0, 0, 0 };
+    int iCountOrder = 0;
+    bool bStatusLightUpCorrect = false;
+
+
+    //status gate open
+    public GameObject StatusGate;
 
 
     // Start is called before the first frame update
@@ -62,6 +77,9 @@ public class SceneManager_Level3 : MonoBehaviour
         WaterWheelScript = WaterWheel.GetComponent<WaterWheel>();
 
         playerSkillScript = GameObject.Find("Player").GetComponent<PlayerSkill>();
+
+
+           
     }
 
     private void FixedUpdate()
@@ -283,17 +301,121 @@ public class SceneManager_Level3 : MonoBehaviour
         }
 
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger
+        for (int i = 0; i < StatusToLightUp.Length; i++)
+        {
+            if (iLightUpOrder[i] < 0)
+            {
+                //status trigger
+                if (StatusToLightUp[i].GetComponent<VitaTriggerDetect>()._bSkillTrigger)
+                {
+                    if (ftimer_statusLightUp[i] == 0)
+                    {
+                        StatusToLightUp[i].GetComponent<ColorChange>().ColorChanging(CColor[i], VitaParticleScript.fSkillOneGatheringTime);
+                    }
+
+                    ftimer_statusLightUp[i] += Time.deltaTime;
+
+                    //if jigsaw is match, can start check light up order
+                    if (ftimer_statusLightUp[i] >= VitaParticleScript.fSkillOneGatheringTime && MatchingJigsawFinish)
+                    {
+                        //set light up order
+                        iLightUpOrder[i] = iCountOrder;
+                        iCountOrder++;
+
+                        //reset timer
+                        ftimer_statusLightUp[i] = 0.0f;
+                    }
+                }
+                //if  status is not trigger
+                else
+                {
+                    if (ftimer_statusLightUp[i] != 0)
+                    {
+                        //reset timer
+                        ftimer_statusLightUp[i] = 0.0f;
+                        StatusToLightUp[i].GetComponent<ColorChange>().ColorChanging(Color.white, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+                    }
+
+                }
+            }
+
+        }
+
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         //get skill 2
-        if(TriggerSkill)
+        if (TriggerSkill)
             if (TriggerSkill.GetComponent<PlayerTrigger>()._bPlayerTrigger)
             {
                 playerSkillScript.CanUseSkill2 = true;
                 Destroy(TriggerSkill);
             }
-       
+
+
+        //Status match
+        if (!MatchingJigsawFinish)
+        {
+            int count = 0;
+            for (int i = 0; i < StatusMatchingJigsawScript.Length; i++)
+            {
+                if (StatusMatchingJigsawScript[i].bMatch)
+                    count++;
+            }
+            if (count == 4)
+            {
+                MatchingJigsawFinish = true;
+
+                //run light up buddha clue
+                StartCoroutine(StatusClueIEnumerator());
+
+            }
+               
+        }
+
+
+        //light up status after jigsaw is all match 
+        if (!bStatusLightUpCorrect && MatchingJigsawFinish)
+        {
+            //if all status is light up
+            if (iLightUpOrder[0] > -1 && iLightUpOrder[1] > -1 && iLightUpOrder[2] > -1)
+            {
+                //check if all three status light up in correct order
+                bool bIfStatusLightUpInOrder = true;
+                iCountOrder = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    
+                    if (iLightUpOrder[array[i]] != iCountOrder)
+                    {   
+                        bIfStatusLightUpInOrder = false;
+                        break;
+                    }
+                    iCountOrder++;
+                }
+                //status light up correct
+                if (bIfStatusLightUpInOrder)
+                {
+                    bStatusLightUpCorrect = true;
+                }
+
+                //reset status
+                else 
+                {
+                    StartCoroutine(resetStatusIEnumerator());
+                }
+                
+            }
+            
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (StatusGate && bStatusLightUpCorrect)
+        {
+            Destroy(StatusGate);
+        }
 
     }
 
@@ -327,5 +449,82 @@ public class SceneManager_Level3 : MonoBehaviour
 
     }
 
+    IEnumerator StatusClueIEnumerator()
+    {
+        yield return new WaitForSeconds(1.0f);
+        //set jigsaw color to white
+        for (int i = 0; i < StatusMatchingJigsawScript.Length; i++)
+        {
+            StatusMatchingJigsawScript[i].GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        yield return new WaitForSeconds(1.0f);
+
+        //pick color order
+        for (int i = 0; i < array.Length;)
+        {
+            bool flag = true;
+            int ii = Random.Range(0, 3);
+            for (int j = 0; j < i; j++)
+            {
+                if (ii == array[j])
+                {
+                    flag = false;
+                }
+            }
+            if (flag)
+            {
+                array[i] = ii;
+                i++;
+            }
+            
+        }
+
+        // light up status in particular color order
+        for (int i = 0; i < array.Length; i++)
+        {
+            for (int j = 0; j < StatusMatchingJigsawScript.Length; j++)
+            {
+                StatusMatchingJigsawScript[j].GetComponent<SpriteRenderer>().color = CColor[array[i]];
+            }
+            
+            yield return new WaitForSeconds(2.0f);
+        }
+
+        //set jigsaw color to white
+        for (int i = 0; i < StatusMatchingJigsawScript.Length; i++)
+        {
+            StatusMatchingJigsawScript[i].GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+
+
+
+    }
+
+    IEnumerator resetStatusIEnumerator()
+    {
+        //set status color to red
+        for (int i = 0; i < StatusToLightUp.Length; i++)
+        {
+            StatusToLightUp[i].GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+
+        for (int i = 0; i < iLightUpOrder.Length; i++)
+        {
+            StatusToLightUp[i].GetComponent<ColorChange>().ColorChanging(Color.white, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+        }
+
+        yield return new WaitForSeconds(VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+
+        for (int i = 0; i < iLightUpOrder.Length; i++)
+        {
+            iLightUpOrder[i] = -1;
+        }
+
+        iCountOrder = 0;
+
+    }
 
 }

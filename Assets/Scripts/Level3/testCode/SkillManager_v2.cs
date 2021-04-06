@@ -405,6 +405,8 @@ public class SkillManager_v2 : MonoBehaviour
                 if (PlayerSkill.CURRENTSKILL == 2)
                     resetSkill();
 
+                //reset Current skill num
+                PlayerSkill.CURRENTSKILL = 0;
             }
 
         }

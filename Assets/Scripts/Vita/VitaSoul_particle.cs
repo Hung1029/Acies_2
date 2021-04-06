@@ -30,7 +30,7 @@ public class VitaSoul_particle : MonoBehaviour
 
     [System.NonSerialized]
     //time for skill one need to gathering
-    public float fSkillOneGatheringTime = 3.0f; 
+    public float fSkillOneGatheringTime = 2.0f; 
 
 
 
@@ -62,7 +62,7 @@ public class VitaSoul_particle : MonoBehaviour
 
         OuterParticleSys = OuterParticleObj.GetComponent<ParticleSystem>();
 
-
+        //Trail
         ParticleTrail = OuterParticleObj.GetComponent<TrailRenderer>();
 
         //follow player

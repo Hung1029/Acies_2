@@ -24,7 +24,7 @@ public class VitaTriggerDetect : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "VitaSoul" && PlayerSkill.CURRENTSKILL == _iSkillNumToDetect)
+        if (other.name == "VitaSoul" )
         {
             _bSkillTrigger = false;
 

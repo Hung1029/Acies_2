@@ -20,10 +20,12 @@ public class MatchingJigsaw : MonoBehaviour
         if (distance < intervalDistance)
         {
             StartCoroutine( MoveToTemplate());
+            bMatch = true;
             return true;
         }
         else
         {
+            bMatch = false;
             return false;
         }
         
