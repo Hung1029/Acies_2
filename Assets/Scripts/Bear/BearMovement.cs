@@ -46,6 +46,7 @@ public class BearMovement : MonoBehaviour
 
     IEnumerator HowlRippleIEnumerator()
     {
+        
         yield return new WaitForSeconds(0.8f);
 
         ps.Play();
