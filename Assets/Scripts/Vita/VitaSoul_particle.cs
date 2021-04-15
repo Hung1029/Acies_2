@@ -38,7 +38,7 @@ public class VitaSoul_particle : MonoBehaviour
 
     //Follow Player
     private Transform target;
-    private float stoppingDistance_x = 1.2f;
+    private float stoppingDistance_x = 1f;
     private float stoppingDistance_y = 0.57f;
 
     private Rigidbody2D rb;

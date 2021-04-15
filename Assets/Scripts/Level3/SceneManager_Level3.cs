@@ -82,6 +82,16 @@ public class SceneManager_Level3 : MonoBehaviour
     //jump
     public GameObject BearJumpCheckPoint;
 
+    //Bear gate
+    public GameObject DogGate;
+    bool bGateDown = false;
+    float fGateTimer = 0.0f;
+
+
+    //Bear gate 2
+    public GameObject Gate2;
+    public GameObject GateMatchJigsaw;
+    bool bGate2Down = false;
 
     enum BearStageNUM
     {
@@ -101,7 +111,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
     }
-    BearStageNUM BearStage = BearStageNUM.Run;
+    BearStageNUM BearStage = BearStageNUM.DetectingPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -453,6 +463,47 @@ public class SceneManager_Level3 : MonoBehaviour
             BearStage = BearStageNUM.DetectingPlayer;
         }
 
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Detect dog gate
+        if (bGateDown == false)
+        {
+            
+            if (DogGate.GetComponentInChildren<VitaTriggerDetect>()._bSkillTrigger)
+            {
+                if (fGateTimer == 0)
+                {
+                    DogGate.GetComponentInChildren<ColorChange>().ColorChanging(Color.green, VitaParticleScript.fSkillOneGatheringTime);
+                }
+
+                fGateTimer += Time.deltaTime;
+
+                if (fGateTimer >= VitaParticleScript.fSkillOneGatheringTime)
+                {
+                    //set get down bool true
+                    bGateDown = true;
+
+                    // gate down animation
+                    StartCoroutine(GateDown());
+
+
+                    //reset timer
+                    fGateTimer = 0.0f;
+                }
+            }
+            //if  move platform is not trigger
+            else
+            {
+                if (fGateTimer != 0)
+                {
+                    //reset timer
+                    fGateTimer = 0.0f;
+                    DogGate.GetComponentInChildren<ColorChange>().ColorChanging(Color.yellow, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+                }
+
+            }
+        }
+
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
 
         //wait for player run to checkpoint
@@ -570,7 +621,7 @@ public class SceneManager_Level3 : MonoBehaviour
         else if (BearStage == BearStageNUM.GoThroughtDogGate)
         {
             //Gate Down
-            if (true)
+            if (bGateDown)
             {
                 Bear.GetComponent<Animator>().SetTrigger("tClimb");
 
@@ -581,15 +632,15 @@ public class SceneManager_Level3 : MonoBehaviour
             }
 
             //Gate doesn't get down
-            /*else
+            else
             {
-                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(12.0f, 0.0f);
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(3.0f, 0.0f);
             }
 
-            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearCheckPointTransform[5].position.x)
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= 81.89f)
             {
-                BearStage = BearMovementStage.OverGate;
-            }*/
+                BearStage = BearStageNUM.Run3;
+            }
         }
 
         //Finish Climb change rigibody position
@@ -614,11 +665,31 @@ public class SceneManager_Level3 : MonoBehaviour
             //touch jump check point
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearJumpCheckPoint.transform.position.x)
             {
-                Debug.Log("in");
                 BearStage++;
             }
 
         }
+
+        //Jump
+        else if (BearStage == BearStageNUM.Jump)
+        {
+            /*Bear.GetComponent<Animator>().SetTrigger("tJump");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(4f, 15f);
+            BearStage++;*/
+
+            Bear.GetComponent<Animator>().Play("Bear_Idle");
+            BearStage++;
+        }
+
+
+        //Bear gate2, jigsaw is match, gate goes down
+        if (GateMatchJigsaw.GetComponent<MatchingJigsaw>().bMatch && bGate2Down == false)
+        {
+            Debug.Log("in");
+            bGate2Down = true;
+            StartCoroutine(Gate2Down());
+        }
+
 
     }
 
@@ -736,6 +807,28 @@ public class SceneManager_Level3 : MonoBehaviour
         yield return new WaitForSeconds(time);
         BearStage++;
 
+    }
+
+    //dog gate
+    IEnumerator GateDown()
+    {
+        while ( DogGate.transform.position.y > 5f)
+        {
+            DogGate.transform.position = new Vector2(DogGate.transform.position.x, DogGate.transform.position.y - 0.05f);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+
+    //dog gate
+    IEnumerator Gate2Down()
+    {
+        yield return new WaitForSeconds(1f);
+        while (Gate2.transform.position.y > 7.22f)
+        {
+            Gate2.transform.position = new Vector2(Gate2.transform.position.x, Gate2.transform.position.y - 0.05f);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
 }
