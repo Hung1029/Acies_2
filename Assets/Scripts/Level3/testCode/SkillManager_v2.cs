@@ -412,11 +412,11 @@ public class SkillManager_v2 : MonoBehaviour
         }
 
         //detect LT RT hold button
-        int TriggerButton = SkillScript.DetectSkillChangeKeyHold();
+       /* int TriggerButton = SkillScript.DetectSkillChangeKeyHold();
         if(TriggerButton == 1)
             Debug.Log("RT");
         else if (TriggerButton == -1)
-            Debug.Log("LT");
+            Debug.Log("LT");*/
 
 
     }

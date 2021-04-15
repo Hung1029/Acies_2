@@ -29,8 +29,8 @@ public class PlayerSkill : MonoBehaviour
     public bool CanUseSkill2 = false;
 
     //RT LT button hold
-    bool bButtonTrigger_right = false;
-    bool bButtonTrigger_left = false;
+    public static bool bButtonTrigger_right = false;
+    public static bool bButtonTrigger_left = false;
     float fButtonInterval_right = 0.0f;
     float fButtonInterval_left = 0.0f;
 
@@ -47,6 +47,8 @@ public class PlayerSkill : MonoBehaviour
 
         
     }
+
+   
 
 
     public void StartSkillAnimate()
@@ -79,11 +81,24 @@ public class PlayerSkill : MonoBehaviour
     }
 
 
-    //change left return -1; change right return -1; no change return 0 
-    public int DetectSkillChangeKeyHold()
+
+/*
+    private void Update()
     {
         //RT button button hold caculating 
         fButtonInterval_right += Time.deltaTime;
+
+        //LT button button hold caculating 
+        fButtonInterval_left += Time.deltaTime;
+
+    }
+
+
+
+    //change left return -1; change right return -1; no change return 0 
+    public int DetectSkillChangeKeyHold()
+    {
+        
 
         if (Input.GetAxisRaw("ChangeSkillAttribute_right") == 1 && fButtonInterval_right > 0.5f)
         {
@@ -98,8 +113,7 @@ public class PlayerSkill : MonoBehaviour
 
         
 
-        //LT button button hold caculating 
-        fButtonInterval_left += Time.deltaTime;
+       
 
         if (Input.GetAxisRaw("ChangeSkillAttribute_left") == 1 && fButtonInterval_left > 0.5f)
         {
@@ -129,6 +143,6 @@ public class PlayerSkill : MonoBehaviour
         }
 
         
-    }
+    }*/
 
 }

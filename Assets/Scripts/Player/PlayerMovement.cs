@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform feetPos; //detector position
     public float checkRadius; //detect range
     public LayerMask whatIsGround; //which ground will trigger
-    private float jumpForce = 6.0f;
+    private float jumpForce = 8.0f;
 
     //can move or not
     [System.NonSerialized]
