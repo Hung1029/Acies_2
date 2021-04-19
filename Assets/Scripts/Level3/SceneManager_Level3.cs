@@ -186,13 +186,16 @@ public class SceneManager_Level3 : MonoBehaviour
                     WaterWheelScript.PlayWaterWheelRotate();
                     PlantScript.GrowUp();
 
+                    //set camera 
+                    this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, PlantScript.GetComponentInParent<Transform>().position);
+                    StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 1.5f, 0.08f));
+
+
                     //reset timer
                     ftimer_water = 0.0f;
                 }
            
-                //set camera 
-                /*this.gameObject.GetComponent<CameraParallaxManager_Level1>().ShortFollowing(2.0f, new Vector3(16.6f, -0.66f, 0.0f));
-                StartCoroutine(this.gameObject.GetComponent<CameraParallaxManager_Level1>().Shake(1.0f, 1.5f, 0.08f));*/
+               
             }
             else
             {
