@@ -289,9 +289,11 @@ public class SkillManager_v2 : MonoBehaviour
                             ObjectsMoveable[i].PickDown();
                         }
 
-
                         iPickUpIndex = iCurrentLookIndex;
                         ObjectsMoveable[iCurrentLookIndex].transform.GetComponent<PolygonCollider2D>().isTrigger  = true;
+
+                        //remember last effective position
+                        ObjectsMoveable[iCurrentLookIndex].v2LastPosition = ObjectsMoveable[iCurrentLookIndex].transform.position;
 
                         ObjectsMoveable[iCurrentLookIndex].transform.rotation = Quaternion.identity;
 

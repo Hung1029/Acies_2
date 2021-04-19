@@ -113,7 +113,8 @@ public class SceneManager_Level3 : MonoBehaviour
     }
     BearStageNUM BearStage = BearStageNUM.DetectingPlayer;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
         VitaParticleScript = Vita.GetComponent<VitaSoul_particle>();
@@ -125,7 +126,6 @@ public class SceneManager_Level3 : MonoBehaviour
         playerSkillScript = GameObject.Find("Player").GetComponent<PlayerSkill>();
 
 
-           
     }
 
     private void FixedUpdate()

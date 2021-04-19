@@ -10,17 +10,24 @@ public class VitaTriggerDetect : MonoBehaviour
     //Which skill can trigger
     public int _iSkillNumToDetect;
 
+    [System.NonSerialized]
+    public bool bCanTrigger = true;
     
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.name == "VitaSoul" && PlayerSkill.CURRENTSKILL == _iSkillNumToDetect)
+        if (other.name == "VitaSoul" && PlayerSkill.CURRENTSKILL == _iSkillNumToDetect && bCanTrigger)
         {
             _bSkillTrigger = true;
 
         }
-    }
 
+        else if (!bCanTrigger)
+        {
+            _bSkillTrigger = false;
+        }
+    }
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {
