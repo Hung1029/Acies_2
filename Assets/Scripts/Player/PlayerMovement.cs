@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     bool canMoveX = true;
     private Vector3 originalScale;
 
+    bool bCanJump = true;
+    float fJumpIntervalTime = 0.0f;
+
 
 
     void Start()
@@ -85,7 +88,15 @@ public class PlayerMovement : MonoBehaviour
             Movement_y();
         }
 
-       
+
+
+        fJumpIntervalTime += Time.deltaTime;
+        if (bCanJump ==false && fJumpIntervalTime > 0.15f )
+        {
+            bCanJump = true;
+            fJumpIntervalTime = 0.0f;
+        }
+
     }
 
 
@@ -122,10 +133,13 @@ public class PlayerMovement : MonoBehaviour
         if(JumpState == 1)
             Debug.Log("JumpState = " + JumpState);*/
 
+
+        //Debug.Log("JumpState = " + JumpState);
+
         //press jump
-        if (isGrounded && Input.GetButtonDown("Jump") && canMove && (JumpState == -1 || JumpState > 2))
+        if (isGrounded && Input.GetButtonDown("Jump") && canMove && (JumpState == -1 || JumpState > 2) && bCanJump)
         {
-           // Debug.Log("Jump_1");
+            //Debug.Log("Jump_1");
 
             JumpState++;
 
@@ -137,6 +151,8 @@ public class PlayerMovement : MonoBehaviour
 
             canMoveX = false;
             rb.velocity = new Vector2(0, rb.velocity.y);
+
+            bCanJump = false;
 
         }
 
@@ -154,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //double jump
-        if (Input.GetButtonDown("Jump") && extraJumps > 0 && !isGrounded )
+        if (Input.GetButtonDown("Jump") && extraJumps > 0 && !isGrounded && bCanJump)
         {
             //Debug.Log("Jump_2");
             JumpState = 1;
@@ -162,6 +178,8 @@ public class PlayerMovement : MonoBehaviour
             animator.Play("ReadyJump");
 
             extraJumps--;
+
+            bCanJump = false;
         }
 
         // finish jump 
@@ -206,6 +224,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(time);
         JumpState ++;
         canMoveX = true;
+
     }
 
 }

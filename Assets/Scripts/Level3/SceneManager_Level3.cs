@@ -34,8 +34,6 @@ public class SceneManager_Level3 : MonoBehaviour
     [SerializeField]
     private Plant PlantScript;
 
-    //Short camera following
-    public CameraParallaxManager_Level1 CameraParallaxManager;
 
     //Buddha Candle
     public GameObject[] StartCandle;

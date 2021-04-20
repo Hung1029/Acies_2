@@ -37,8 +37,26 @@ public class MovingPlatform : MonoBehaviour
     private void FixedUpdate()
     {
         if (_bCanMove)
-            rb.velocity = new Vector2(speed, 0.0f);
+            transform.position = new Vector2(transform.position.x + (speed * Time.deltaTime), transform.position.y);
 
+
+    }
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        {
+            GameObject.Find("Player").GetComponent<Transform>().parent = this.transform;
+        }
+    }
+ 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "Player")
+        {
+            GameObject.Find("Player").GetComponent<Transform>().parent = null;
+        }
     }
 
 }

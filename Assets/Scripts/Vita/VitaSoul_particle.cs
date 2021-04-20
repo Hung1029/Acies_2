@@ -95,7 +95,7 @@ public class VitaSoul_particle : MonoBehaviour
 
     public void VitaSpriteFadeIn()
     {
-        VitaSoulPictureRenderer = VitaSoulPicture.GetComponent<SpriteRenderer>();
+        VitaSoulPictureRenderer = this.transform.GetComponent<SpriteRenderer>();
         
         //stop IEnumerator
        StartCoroutine(VitaSpriteFadeInIEnumerator());
