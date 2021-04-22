@@ -1,0 +1,1232 @@
+fileFormatVersion: 2
+guid: 7adcfce7dae681c43a91af65c69b8ff1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6924618010349380844
+    second: BearCreepBack-3_0
+  - first:
+      213: 8013445268000396419
+    second: BearCreepBack-3_1
+  - first:
+      213: -3048245177556573912
+    second: BearCreepBack-3_2
+  - first:
+      213: -217125284177614095
+    second: BearCreepBack-3_3
+  - first:
+      213: -6642579294620474611
+    second: BearCreepBack-3_4
+  - first:
+      213: 2138870259930388980
+    second: BearCreepBack-3_5
+  - first:
+      213: 6902715226484544888
+    second: BearCreepBack-3_6
+  - first:
+      213: 3545149819802672916
+    second: BearCreepBack-3_7
+  - first:
+      213: 6484213413128895931
+    second: BearCreepBack-3_8
+  - first:
+      213: -4783892962183164054
+    second: BearCreepBack-3_9
+  - first:
+      213: -4531274903383251591
+    second: BearCreepBack-3_10
+  - first:
+      213: 686985736230091854
+    second: BearCreepBack-3_11
+  - first:
+      213: -6140430956813479612
+    second: BearCreepBack-3_12
+  - first:
+      213: -5665214560182022659
+    second: BearCreepBack-3_13
+  - first:
+      213: 3369340153908745143
+    second: BearCreepBack-3_14
+  - first:
+      213: -5190665986739658348
+    second: BearCreepBack-3_15
+  - first:
+      213: -732061857109560065
+    second: BearCreepBack-3_16
+  - first:
+      213: 1438092972148729693
+    second: BearCreepBack-3_17
+  - first:
+      213: 4210759248740456269
+    second: BearCreepBack-3_18
+  - first:
+      213: -1217019497399690737
+    second: BearCreepBack-3_19
+  - first:
+      213: 8801124186498764091
+    second: BearCreepBack-3_20
+  - first:
+      213: 8830571792201950786
+    second: BearCreepBack-3_21
+  - first:
+      213: -7628247725023965809
+    second: BearCreepBack-3_22
+  - first:
+      213: 3821003726080778566
+    second: BearCreepBack-3_23
+  - first:
+      213: 727513266979052663
+    second: BearCreepBack-3_24
+  - first:
+      213: -5251828705984843747
+    second: BearCreepBack-3_25
+  - first:
+      213: -8817228849069608561
+    second: BearCreepBack-3_26
+  - first:
+      213: 2118529617038552650
+    second: BearCreepBack-3_27
+  - first:
+      213: -7557633620531421105
+    second: BearCreepBack-3_28
+  - first:
+      213: 9217894844661966152
+    second: BearCreepBack-3_29
+  - first:
+      213: 18534638513385998
+    second: BearCreepBack-3_30
+  - first:
+      213: 9153848338264095222
+    second: BearCreepBack-3_31
+  - first:
+      213: -2296002466235528620
+    second: BearCreepBack-3_32
+  - first:
+      213: 9128480752039441255
+    second: BearCreepBack-3_33
+  - first:
+      213: 4942204597369267800
+    second: BearCreepBack-3_34
+  - first:
+      213: -4619452696157708734
+    second: BearCreepBack-3_35
+  - first:
+      213: -2681385521375876641
+    second: BearCreepBack-3_36
+  - first:
+      213: -8036713427710250838
+    second: BearCreepBack-3_37
+  - first:
+      213: -6748977301450026133
+    second: BearCreepBack-3_38
+  - first:
+      213: -7862516385088312827
+    second: BearCreepBack-3_39
+  - first:
+      213: 9160932794351824323
+    second: BearCreepBack-3_40
+  - first:
+      213: 7413004434354469935
+    second: BearCreepBack-3_41
+  - first:
+      213: -300990370896657652
+    second: BearCreepBack-3_42
+  - first:
+      213: 932315785529582456
+    second: BearCreepBack-3_43
+  - first:
+      213: 2733545062808497377
+    second: BearCreepBack-3_44
+  - first:
+      213: -539278728575126314
+    second: BearCreepBack-3_45
+  - first:
+      213: 4925665352341786645
+    second: BearCreepBack-3_46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BearCreepBack-3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8100
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4a528646f291060800000000000000
+      internalID: 6924618010349380844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_1
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 8100
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384d232a30a753f60800000000000000
+      internalID: 8013445268000396419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_2
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 8100
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821617b492572b5d0800000000000000
+      internalID: -3048245177556573912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_3
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 8100
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa66d454bd9cfcf0800000000000000
+      internalID: -217125284177614095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_4
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 8100
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0328cf4351d0d3a0800000000000000
+      internalID: -6642579294620474611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f95ccf4b2bcead10800000000000000
+      internalID: 2138870259930388980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_6
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 7200
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8759a442dee5bcf50800000000000000
+      internalID: 6902715226484544888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_7
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 7200
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fd0e46af6e23130800000000000000
+      internalID: 3545149819802672916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_8
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 7200
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdfe519ebd8cf950800000000000000
+      internalID: 6484213413128895931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_9
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 7200
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fc49172b23c9db0800000000000000
+      internalID: -4783892962183164054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6300
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975e23cab7dad11c0800000000000000
+      internalID: -4531274903383251591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_11
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 6300
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c31c523e9a88900800000000000000
+      internalID: 686985736230091854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_12
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 6300
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4411253049ec8caa0800000000000000
+      internalID: -6140430956813479612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_13
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 6300
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdcaf38f5d1161b0800000000000000
+      internalID: -5665214560182022659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_14
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 6300
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3d039b40d42ce20800000000000000
+      internalID: 3369340153908745143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4912ea059cc07f7b0800000000000000
+      internalID: -5190665986739658348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_16
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 5400
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff43f5d9e9137d5f0800000000000000
+      internalID: -732061857109560065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_17
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 5400
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5729e650f125f310800000000000000
+      internalID: 1438092972148729693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_18
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 5400
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d479dd72a3f9f6a30800000000000000
+      internalID: 4210759248740456269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_19
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 5400
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a54c417374c1fe0800000000000000
+      internalID: -1217019497399690737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d8b5831dfd32a70800000000000000
+      internalID: 8801124186498764091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_21
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 4500
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24628c5324e7c8a70800000000000000
+      internalID: 8830571792201950786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_22
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 4500
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dc34b3c15032690800000000000000
+      internalID: -7628247725023965809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_23
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 4500
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6412d72f4aee60530800000000000000
+      internalID: 3821003726080778566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_24
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 4500
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c9ba73675a81a00800000000000000
+      internalID: 727513266979052663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10f2960e91cd17b0800000000000000
+      internalID: -5251828705984843747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_26
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 3600
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8131e3d319e2a580800000000000000
+      internalID: -8817228849069608561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_27
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 3600
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e2ab55677866d10800000000000000
+      internalID: 2118529617038552650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_28
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 3600
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40eca1a344ed1790800000000000000
+      internalID: -7557633620531421105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_29
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 3600
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8452bf0d58a8cef70800000000000000
+      internalID: 9217894844661966152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2700
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0271a0d729d14000800000000000000
+      internalID: 18534638513385998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_31
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 2700
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9f7028090090f70800000000000000
+      internalID: 9153848338264095222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_32
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 2700
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a4c94fbe5f220e0800000000000000
+      internalID: -2296002466235528620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_33
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 2700
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7633d4411e0eeae70800000000000000
+      internalID: 9128480752039441255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_34
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 2700
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8566f7975ec369440800000000000000
+      internalID: 4942204597369267800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e9ccc6f3864efb0800000000000000
+      internalID: -4619452696157708734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_36
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1800
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9e38c231ec9cad0800000000000000
+      internalID: -2681385521375876641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_37
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 1800
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0f7b3c7bbd77090800000000000000
+      internalID: -8036713427710250838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_38
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 1800
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6395e5e6e0d652a0800000000000000
+      internalID: -6748977301450026133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_39
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 1800
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a6f12510bb2e290800000000000000
+      internalID: -7862516385088312827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd219af6db222f70800000000000000
+      internalID: 9160932794351824323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_41
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 900
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cf71cd14840e660800000000000000
+      internalID: 7413004434354469935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_42
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 900
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0344e53adaa2dbf0800000000000000
+      internalID: -300990370896657652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_43
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 900
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873eafe644040fc00800000000000000
+      internalID: 932315785529582456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_44
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 900
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec293e60c08fe520800000000000000
+      internalID: 2733545062808497377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4fa548ad81488f0800000000000000
+      internalID: -539278728575126314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearCreepBack-3_46
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 0
+        width: 1349
+        height: 900
+      alignment: 9
+      pivot: {x: -0.405, y: -0.172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51018c86a8a7b5440800000000000000
+      internalID: 4925665352341786645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -65,7 +65,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
     }
-    BearStageNUM BearStage = BearStageNUM.Run;
+    BearStageNUM BearStage = BearStageNUM.Pause;
 
 
     // Start is called before the first frame update
