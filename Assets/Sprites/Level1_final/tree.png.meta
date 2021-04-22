@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: a191813b23f259c46924c4806c456024
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8667466294985060184
+    second: tree_0
+  - first:
+      213: 5281997702118322174
+    second: tree_1
+  - first:
+      213: -3105659087322419395
+    second: tree_2
+  - first:
+      213: -25497680464327838
+    second: tree_3
+  - first:
+      213: -2187617102101193605
+    second: tree_4
+  - first:
+      213: 6962057269733102035
+    second: tree_5
+  - first:
+      213: -3386072866006247602
+    second: tree_6
+  - first:
+      213: 2374228815192248797
+    second: tree_7
+  - first:
+      213: -1328196128117911941
+    second: tree_8
+  - first:
+      213: 6399430291284773974
+    second: tree_9
+  - first:
+      213: 7003882221379653708
+    second: tree_10
+  - first:
+      213: 194759427804239468
+    second: tree_11
+  - first:
+      213: 5332751900989755886
+    second: tree_12
+  - first:
+      213: -7157479827221165309
+    second: tree_0
+  - first:
+      213: -7278711843470343937
+    second: tree_1
+  - first:
+      213: -4804902470952087509
+    second: tree_2
+  - first:
+      213: 660471712903848806
+    second: tree_3
+  - first:
+      213: -6967470558012695465
+    second: tree_4
+  - first:
+      213: 8148857075066766366
+    second: tree_5
+  - first:
+      213: 2993081860968083954
+    second: tree_6
+  - first:
+      213: 4688567014461253889
+    second: tree_7
+  - first:
+      213: -4548422421340119090
+    second: tree_8
+  - first:
+      213: -2328030050706168903
+    second: tree_9
+  - first:
+      213: -8194911876707948711
+    second: tree_10
+  - first:
+      213: -7479748290254496652
+    second: tree_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +160,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tree_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 879
+        height: 1192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b4573e4068bac90800000000000000
+      internalID: -7157479827221165309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_1
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 115
+        width: 370
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff085838422dcfa90800000000000000
+      internalID: -7278711843470343937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_2
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 504
+        width: 811
+        height: 1132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20118ef8ae815db0800000000000000
+      internalID: -4804902470952087509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -95,7 +233,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 16c93523a2a369c4eb4224c2cab0dc78, type: 3}
+      name: normal_map
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
