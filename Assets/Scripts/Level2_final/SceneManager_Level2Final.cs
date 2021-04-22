@@ -26,6 +26,8 @@ public class SceneManager_Level2Final : MonoBehaviour
     //climb wall
     public GameObject BearClimbCheckPoint;
 
+    public GameObject BearRestartClimbCheckPoint;
+
     public GameObject BearAfterClimbCheckPoint;
 
     //jump
@@ -44,6 +46,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
     enum BearStageNUM
     {
+        Pause = 0,
         DetectingPlayer = 1,
         Roar = 3,
         FogBlow = 5,
@@ -54,9 +57,11 @@ public class SceneManager_Level2Final : MonoBehaviour
         BearDamageRock = 14,
         Run2 = 16,
         GoThroughtDogGate = 17,
-        ClimbFinish = 19,
-        Run3 = 20,
-        Jump = 21
+        OnTopOfDogGate = 18,
+        RestartBearAnimation = 19,
+        Howl3 = 21,
+        Run3 = 23,
+        Jump = 24
 
 
     }
@@ -89,6 +94,9 @@ public class SceneManager_Level2Final : MonoBehaviour
         if (BearStage == BearStageNUM.DetectingPlayer && GameObject.Find("Player").GetComponent<Transform>().position.x >= BearWakeUpCheckPoint.transform.position.x)
         {
             //camera action
+            //set camera 
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, Bear.GetComponentInParent<Transform>().position);
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 1.5f, 0.08f));
 
             BearStage++;
 
@@ -200,12 +208,11 @@ public class SceneManager_Level2Final : MonoBehaviour
         else if (BearStage == BearStageNUM.GoThroughtDogGate)
         {
             //Gate Down
+            //if (bGateDown)
             if (true)
             {
                 Bear.GetComponent<Animator>().SetTrigger("tClimb");
 
-                //start next stage 
-                StartCoroutine(BearNextStageWait(3.08f));
                 BearStage++;
 
             }
@@ -216,28 +223,49 @@ public class SceneManager_Level2Final : MonoBehaviour
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
             }
 
-            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= 81.89f)
-            {
-                BearStage = BearStageNUM.Run3;
-            }
         }
 
-        //Finish Climb change rigibody position
-        else if (BearStage == BearStageNUM.ClimbFinish)
+        //when bear on the top animation stop
+        else if (BearStage == BearStageNUM.OnTopOfDogGate && Bear.GetComponent<SpriteRenderer>().sprite.name == "1-2_12")
         {
+            //stop animation
+            Bear.GetComponent<Animator>().enabled = false;
+            
+            BearStage++;
+        }
 
-            Bear.GetComponent<Animator>().Play("Bear_Run");
+        //Bear jump down after player over checkpoint
+        else if (BearStage == BearStageNUM.RestartBearAnimation && GameObject.Find("Player").transform.position.x >= BearRestartClimbCheckPoint.transform.position.x)
+        {
+            //start animation
+            Bear.GetComponent<Animator>().enabled = true;
 
-            //change position
+
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(0.5f, 0.69f, 0.08f));
+
+            //finish jump after 1.2s
+            StartCoroutine(BearNextStageWait(1.5f));
+            BearStage++;
+        }
+
+
+        //Keep Howl
+        else if (BearStage == BearStageNUM.Howl3)
+        {
+             //change position
             Bear.transform.position = BearAfterClimbCheckPoint.transform.position;
 
-            BearStage++;
+            //Bear start Roar
+            Bear.GetComponent<BearMovement>().Howl();
 
+            //Wait for next stage
+            StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHowlTime - 1));
+            BearStage++;
         }
 
         else if (BearStage == BearStageNUM.Run3)
         {
-
+            Bear.GetComponent<Animator>().Play("Bear_Run");
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
 
 
@@ -324,11 +352,13 @@ public class SceneManager_Level2Final : MonoBehaviour
 
     }
 
+    
+
+
     //dog gate
     IEnumerator GateDown()
     {
-        Debug.Log("in");
-        while (DogGate.transform.localPosition.y >22f)
+        while (DogGate.transform.localPosition.y >23f)
         {
             DogGate.transform.position = new Vector2(DogGate.transform.position.x, DogGate.transform.position.y - 0.05f);
             yield return new WaitForSeconds(0.01f);
