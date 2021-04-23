@@ -65,7 +65,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
     }
-    BearStageNUM BearStage = BearStageNUM.Pause;
+    BearStageNUM BearStage = BearStageNUM.DetectingPlayer;
 
 
     // Start is called before the first frame update
@@ -280,12 +280,11 @@ public class SceneManager_Level2Final : MonoBehaviour
         //Jump
         else if (BearStage == BearStageNUM.Jump)
         {
-            /*Bear.GetComponent<Animator>().SetTrigger("tJump");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(4f, 15f);
-            BearStage++;*/
-
-            Bear.GetComponent<Animator>().Play("Bear_Idle");
+            Bear.GetComponent<Animator>().SetTrigger("tJump");
             BearStage++;
+
+            //Bear.GetComponent<Animator>().Play("Bear_Idle");
+            //BearStage++;
         }
 
 
