@@ -128,7 +128,7 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
         //update last player area
         lastPlayerArea = currentPlayerArea;
 
-
+        Debug.Log("currentPlayerArea = " + currentPlayerArea);
     }
 
 

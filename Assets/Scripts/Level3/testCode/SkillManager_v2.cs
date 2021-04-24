@@ -89,9 +89,7 @@ public class SkillManager_v2 : MonoBehaviour
 
         fCanGathingTime = magicLightScript.fRaiseHand + fLightUpTime;
 
-        //skill2
-        //if it is moveable object give it outline
-        ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];
+       
 
 
 
@@ -106,6 +104,11 @@ public class SkillManager_v2 : MonoBehaviour
 
     void Update()
     {
+
+        //skill2
+        //if it is moveable object give it outline
+        ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];
+
         ///////////////////////////////////////////////////////////////////////////////////Detect Skill Button
         SkillNUM = SkillScript.DetectSkillKeyDown();
 

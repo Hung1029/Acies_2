@@ -12,6 +12,8 @@ public class Skill2Moveable : MonoBehaviour
     [System.NonSerialized]
     public Vector2 v2LastPosition;
 
+    public Quaternion v2LastRotation;
+
     public bool bIsAJigsaw  = false;
 
     bool bObjectNotEffective = false;
@@ -24,7 +26,8 @@ public class Skill2Moveable : MonoBehaviour
     void Start()
     {
 
-        v2LastPosition = this.transform.position;
+        v2LastPosition = this.transform.localPosition;
+        v2LastRotation = this.transform.localRotation;
 
         VitaSoulTrans = GameObject.Find("VitaSoul").GetComponent<Transform>();
 
@@ -33,10 +36,13 @@ public class Skill2Moveable : MonoBehaviour
         Skill2PickedOutLine.name = "PickOutline";
         Skill2PickedOutLine.transform.parent = this.gameObject.transform;
         Skill2PickedOutLine.transform.position = this.gameObject.transform.position;
-        Skill2PickedOutLine.transform.localScale = new Vector3(1.1f, 1.1f,0.0f);        
+        Skill2PickedOutLine.transform.localScale = new Vector3(1.1f, 1.1f,0.0f);
+        Skill2PickedOutLine.transform.localRotation = Quaternion.identity;
         PickedOut =  Skill2PickedOutLine.AddComponent<SpriteRenderer>();
         this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = PickedOut.sortingOrder + 1;
         PickedOut.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
+        PickedOut.material.shader = Shader.Find("GUI/Text Shader");
+        PickedOut.color = Color.white;
         PickedOut.color = new Color(PickedOut.color.r, PickedOut.color.g, PickedOut.color.b,0.0f);
 
 
@@ -69,11 +75,19 @@ public class Skill2Moveable : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "invalidAreaForMovableObj")
         {
             bObjectNotEffective = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "invalidAreaForMovableObj")
+        {
+            bObjectNotEffective = false;
         }
     }
 
@@ -109,8 +123,9 @@ public class Skill2Moveable : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
         
-        //move obj to last availble position
+        //move obj to last availble position, rotation
         this.transform.localPosition = new Vector2(v2LastPosition.x , v2LastPosition.y + 1.0f) ;
+        this.transform.rotation = v2LastRotation;
 
 
         //start animation

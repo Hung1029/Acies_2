@@ -44,6 +44,10 @@ public class SceneManager_Level2Final : MonoBehaviour
     public GameObject GateMatchJigsaw;
     bool bGate2Down = false;
 
+
+   
+
+
     enum BearStageNUM
     {
         Pause = 0,
@@ -58,14 +62,24 @@ public class SceneManager_Level2Final : MonoBehaviour
         Run2 = 16,
         GoThroughtDogGate = 17,
         OnTopOfDogGate = 18,
-        RestartBearAnimation = 19,
-        Howl3 = 21,
-        Run3 = 23,
-        Jump = 24
+        BearRockTimer = 19,
+        RestartBearAnimation = 20,
+        Howl3 = 22,
+        Run3 = 24,
+        Jump = 25
 
 
     }
     BearStageNUM BearStage = BearStageNUM.DetectingPlayer;
+
+
+    //Falling Rock
+    public GameObject FallingRock;
+    float fBearRockTimer = 0.0f;
+    float fFallingRockTime = 5.0f;
+    float fBearJumpDownTime = 15.0f;
+
+    bool bTimeUpBearJumpDown = false;
 
 
     // Start is called before the first frame update
@@ -77,6 +91,10 @@ public class SceneManager_Level2Final : MonoBehaviour
         playerSkillScript = GameObject.Find("Player").GetComponent<PlayerSkill>();
         playerSkillScript.CanUseSkill2 = true;
 
+        //start camera position
+        this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(4.0f, 0f, 0.0f, true, false);
+
+
     }
 
     private void FixedUpdate()
@@ -84,25 +102,25 @@ public class SceneManager_Level2Final : MonoBehaviour
         VitaParticleScript.FollowObj();
     }
 
-
     // Update is called once per frame
     void Update()
     {
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
 
         //wait for player run to checkpoint
         if (BearStage == BearStageNUM.DetectingPlayer && GameObject.Find("Player").GetComponent<Transform>().position.x >= BearWakeUpCheckPoint.transform.position.x)
         {
             //camera action
-            //set camera 
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, Bear.GetComponentInParent<Transform>().position);
-            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 1.5f, 0.08f));
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(3.7f, Bear.GetComponentInParent<Transform>().position);
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(2.0f, 2.5f, 0.15f));
+            this.gameObject.GetComponent<CameraManager>().BackToFollowPlayer();
 
             BearStage++;
 
-            //test
-            BearStage++;
-            //
+            //Wait for 1.0f second turn to "Run" stage
+            StartCoroutine(BearNextStageWait(1.0f));
+
         }
 
         //Bear roar
@@ -134,11 +152,13 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<BearMovement>().Howl();
 
             //shaking
-            //StartCoroutine(CameraParallaxManager.Shake(1.0f, 2.5f, 0.15f));
+            //StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(2.0f, 2.5f, 0.15f));
 
             //set camera projection
-            //CameraParallaxManager.ChangeCameraProjectionSize(FinalCamera, 7.5f, 2.0f);
-            //CameraParallaxManager.ChangeCamraFollowingTargetPosition(-6.0f, 5f, 0.8f, true, false);
+            this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 7.5f, 2.0f);
+            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-6.0f, 0f, 0.8f, true, false);
+            
+            
 
             //Wait for next stage
             StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHowlTime - 1));
@@ -152,7 +172,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<BearMovement>().Howl();
 
             //shaking
-            //StartCoroutine(CameraParallaxManager.Shake(1.0f, 2.5f, 0.15f));
+            //StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(2.0f, 2.5f, 0.15f));
 
 
             //Wait for next stage
@@ -208,8 +228,8 @@ public class SceneManager_Level2Final : MonoBehaviour
         else if (BearStage == BearStageNUM.GoThroughtDogGate)
         {
             //Gate Down
-            //if (bGateDown)
-            if (true)
+            if (bGateDown)
+            //if (true)
             {
                 Bear.GetComponent<Animator>().SetTrigger("tClimb");
 
@@ -220,6 +240,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             //Gate doesn't get down
             else
             {
+                BearStage = BearStageNUM.Run3;
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
             }
 
@@ -234,8 +255,40 @@ public class SceneManager_Level2Final : MonoBehaviour
             BearStage++;
         }
 
+
+        //falling rock
+        else if (BearStage == BearStageNUM.BearRockTimer)
+        {
+            fBearRockTimer += Time.deltaTime;
+
+            //active rock
+            if (fBearRockTimer >= fFallingRockTime)
+            {
+                FallingRock.SetActive(true);
+            }
+
+            //time up bear jump down
+            if (fBearRockTimer > fBearJumpDownTime)
+            {
+                Debug.Log("Time Up Bear jump down");
+                
+                //set camera projection
+                this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 9.5f, 2.0f);
+                this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-13.0f, 0f, 0.8f, true, true);
+
+
+
+                bTimeUpBearJumpDown = true;
+                BearStage = BearStageNUM.RestartBearAnimation;
+            }
+
+
+        }
+
+
+
         //Bear jump down after player over checkpoint
-        else if (BearStage == BearStageNUM.RestartBearAnimation && GameObject.Find("Player").transform.position.x >= BearRestartClimbCheckPoint.transform.position.x)
+        else if (BearStage == BearStageNUM.RestartBearAnimation && (GameObject.Find("Player").transform.position.x >= BearRestartClimbCheckPoint.transform.position.x || bTimeUpBearJumpDown))
         {
             //start animation
             Bear.GetComponent<Animator>().enabled = true;
@@ -247,6 +300,9 @@ public class SceneManager_Level2Final : MonoBehaviour
             StartCoroutine(BearNextStageWait(1.5f));
             BearStage++;
         }
+
+
+        
 
 
         //Keep Howl
@@ -278,7 +334,7 @@ public class SceneManager_Level2Final : MonoBehaviour
         }
 
         //Jump
-        else if (BearStage == BearStageNUM.Jump)
+        else if (BearStage == BearStageNUM.Jump && !bGate2Down)
         {
             Bear.GetComponent<Animator>().SetTrigger("tJump");
             BearStage++;
@@ -287,11 +343,19 @@ public class SceneManager_Level2Final : MonoBehaviour
             //BearStage++;
         }
 
+        //Can't Jump
+        else if (BearStage == BearStageNUM.Jump && bGate2Down)
+        {
+            Bear.GetComponent<Animator>().Play("Bear_Idle");
+            BearStage++;
+
+        }
+
 
         //Bear gate2, jigsaw is match, gate goes down
         if (GateMatchJigsaw.GetComponent<MatchingJigsaw>().bMatch && bGate2Down == false)
         {
-            Debug.Log("in");
+           
             bGate2Down = true;
             StartCoroutine(Gate2Down());
         }
@@ -358,6 +422,7 @@ public class SceneManager_Level2Final : MonoBehaviour
     IEnumerator GateDown()
     {
         while (DogGate.transform.localPosition.y >23f)
+        //while (DogGate.transform.localPosition.y > 0.1f)
         {
             DogGate.transform.position = new Vector2(DogGate.transform.position.x, DogGate.transform.position.y - 0.05f);
             yield return new WaitForSeconds(0.01f);
@@ -369,7 +434,7 @@ public class SceneManager_Level2Final : MonoBehaviour
     IEnumerator Gate2Down()
     {
         yield return new WaitForSeconds(1f);
-        while (Gate2.transform.position.y > 7.22f)
+        while (Gate2.transform.localPosition.y > 24.17f)
         {
             Gate2.transform.position = new Vector2(Gate2.transform.position.x, Gate2.transform.position.y - 0.05f);
             yield return new WaitForSeconds(0.01f);

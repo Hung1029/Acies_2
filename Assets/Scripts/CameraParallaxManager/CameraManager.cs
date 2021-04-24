@@ -72,7 +72,6 @@ public class CameraManager : MonoBehaviour
     {
 
 
-
     }
 
 
@@ -91,7 +90,7 @@ public class CameraManager : MonoBehaviour
         }
         else
         {
-            for (int i = 1; i < CheckPointInfo.Length - 1; i++)
+            for (int i = 0; i < CheckPointInfo.Length -1; i++)
             {
                 if (PlayerTransform.position.x > CheckPointInfo[i].CheckPoint.GetComponentInParent<Transform>().position.x && PlayerTransform.position.x < CheckPointInfo[i + 1].CheckPoint.GetComponentInParent<Transform>().position.x)
                 {
@@ -127,7 +126,10 @@ public class CameraManager : MonoBehaviour
         //update last player area
         lastPlayerArea = currentPlayerArea;
 
-
+        //Debug.Log("currentPlayerArea = "+currentPlayerArea);
+        //Debug.Log("point 1 = " + CheckPointInfo[0].CheckPoint.GetComponentInParent<Transform>().position.x);
+        //Debug.Log("point 2 = " + CheckPointInfo[1].CheckPoint.GetComponentInParent<Transform>().position.x);
+       // Debug.Log("player = " + PlayerTransform.position.x);
     }
 
 
@@ -138,13 +140,13 @@ public class CameraManager : MonoBehaviour
         //Adjust target position
         TargetTransform = PlayerTransform.position;
         TargetTransform = new Vector2(TargetTransform.x + TargetTransformAdjust_X, TargetTransform.y + TargetTransformAdjust_Y);
-
+       
 
         if (bCameraFocusOtherObj == false)
         {
             //PlayerTransform position
             Vector3 PlayerTransformPos = TargetTransform;
-
+           
 
             //vertical
             if (CheckPointInfo[currentPlayerArea].YMinEnabled && CheckPointInfo[currentPlayerArea].YMaxEnabled)
@@ -184,6 +186,7 @@ public class CameraManager : MonoBehaviour
             //align the camera and the PlayerTransforms z position
             PlayerTransformPos.z = MainCamera.transform.position.z;
 
+           
             MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, PlayerTransformPos, ref velocity, smoothTime);
         }
 
@@ -196,6 +199,8 @@ public class CameraManager : MonoBehaviour
 
     public void ChangeCameraProjectionSize(Camera MainCamera, float fSizeValue, float fTransformTime)
     {
+        //Debug.Log("ChangeCameraProjectionSize");
+
         StartCoroutine(ChangeCameraProjectionSizeIEnumerator(MainCamera, fSizeValue, fTransformTime));
 
     }
@@ -218,22 +223,32 @@ public class CameraManager : MonoBehaviour
 
     public void ChangeCamraFollowingTargetPosition(float x, float y, float fTransformTime, bool KeepXFollow = true, bool KeepYFollow = true)
     {
+        //Debug.Log("ChangeCamraFollowingTargetPosition");
         StartCoroutine(ChangeCamraFollowingTargetPositionIEnumerator(x, y, fTransformTime, KeepXFollow, KeepYFollow));
     }
 
     IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow = true, bool KeepYFollow = true)
     {
-
-        float fTranformValueX = (x - TargetTransformAdjust_X) / (fTransformTime / 0.03f);
-        float fTranformValueY = (y - TargetTransformAdjust_Y) / (fTransformTime / 0.03f);
-
-        while (Mathf.Abs(TargetTransformAdjust_X - x) >= 0.5f || Mathf.Abs(TargetTransformAdjust_Y - y) >= 0.5f)
+        if (fTransformTime > 0.0f)
         {
-            TargetTransformAdjust_X += fTranformValueX;
-            TargetTransformAdjust_Y += fTranformValueY;
+            float fTranformValueX = (x - TargetTransformAdjust_X) / (fTransformTime / 0.03f);
+            float fTranformValueY = (y - TargetTransformAdjust_Y) / (fTransformTime / 0.03f);
 
-            yield return new WaitForSeconds(0.03f);
+            while (Mathf.Abs(TargetTransformAdjust_X - x) >= 0.5f || Mathf.Abs(TargetTransformAdjust_Y - y) >= 0.5f)
+            {
+                TargetTransformAdjust_X += fTranformValueX;
+                TargetTransformAdjust_Y += fTranformValueY;
+
+                yield return new WaitForSeconds(0.03f);
+            }
         }
+
+        else if (fTransformTime == 0.0f)
+        {
+            TargetTransformAdjust_X = x;
+            TargetTransformAdjust_Y = y;
+        }
+        
 
         Follow_X = KeepXFollow;
         Follow_Y = KeepYFollow;
@@ -244,6 +259,7 @@ public class CameraManager : MonoBehaviour
 
     public void ShortFollowing(float time, Vector3 ObjPosition)
     {
+       // Debug.Log("ShortFollowing");
         //set Player can't
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
@@ -279,10 +295,28 @@ public class CameraManager : MonoBehaviour
 
         //reset Player move bool
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+        //Debug.Log("ShortFollowing finish");
     }
+
+    public void SetXYFollowing(bool KeepXFollow = true, bool KeepYFollow = true)
+    {
+        Follow_X = KeepXFollow;
+        Follow_Y = KeepYFollow;
+    }
+
+
+    public void BackToFollowPlayer()
+    {
+        TargetTransformAdjust_X = 0;
+        TargetTransformAdjust_Y = 0;
+        Follow_X = true;
+        Follow_Y = true;
+    }
+
 
     public IEnumerator Shake(float fPreWaitTime, float duration, float magnitude) // during time and strength of shake
     {
+        //Debug.Log("Shake");
         yield return new WaitForSeconds(fPreWaitTime);
 
 
