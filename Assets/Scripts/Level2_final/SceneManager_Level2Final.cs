@@ -82,10 +82,20 @@ public class SceneManager_Level2Final : MonoBehaviour
         FogBlow = 5,
         CameraSetting = 7,
         Run = 9,
-
+        BearTouchRock = 11,
+        BearDamageRock = 12,
+        Run2 = 14,
+        Hurt = 15,
+        Run3 = 17,
+        Attack2 = 18,
 
     }
     BearStageNUM_test BearStage_test = BearStageNUM_test.DetectingPlayer;
+
+
+    //Trap Plant Detect
+    public DetectBearTrigger TrapPlantDetectBearScript;
+
 
 
 
@@ -155,7 +165,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             BearStage_test++;
 
             //Wait for 1.0f second turn to "Run" stage
-            StartCoroutine(BearNextStageWaitTest(Bear.GetComponent<BearMovement>().fBearHowlTime - 1 + 1.0f));
+            StartCoroutine(BearNextStageWaitTest(Bear.GetComponent<BearMovement>().fBearHowlTime - 1 ));
 
         }
         else if (BearStage_test == BearStageNUM_test.CameraSetting)
@@ -163,24 +173,121 @@ public class SceneManager_Level2Final : MonoBehaviour
             //set camera projection
             this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 7.5f, 0.8f);
 
-            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-6.0f, 4.9f , 0.5f, true,false);
-            
-            //Point2.transform.position = new Vector2(GameObject.Find("Player").transform.position.x, Point2.transform.position.y);
+            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-5.0f, 4.9f , 0.5f, true,false);
 
+            
 
             BearStage_test++;
             //Wait for 1.0f second turn to "Run" stage
-            StartCoroutine(BearNextStageWaitTest(2.0f));
-
+            StartCoroutine(BearNextStageWaitTest(1.0f));
 
         }
 
-       /* //start Run
+
         else if (BearStage_test == BearStageNUM_test.Run)
         {
+
+            //set scene check point
+            Point2.transform.position = new Vector2(GameObject.Find("Player").transform.position.x, Point2.transform.position.y);
+
             Bear.GetComponent<Animator>().Play("Bear_Run");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(5.0f, 0.0f);
-        }*/
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(9.0f, 0.0f);
+        }
+
+
+        //Bear touch rock, stop run
+        if (RockDamage != null && BearStage_test < BearStageNUM_test.BearTouchRock)
+        {
+            if (RockDamage.GetComponent<RockBearDamage_Level2>()._bSkillOneTrigger)
+            {
+                Bear.GetComponent<Animator>().SetTrigger("tAttack");
+
+                BearStage_test = BearStageNUM_test.BearTouchRock;
+
+                //wait for bear animation to damage
+                StartCoroutine(BearNextStageWaitTest(0.9f));
+
+            }
+        }
+
+
+        //Bear Damage Rock
+        if (BearStage_test == BearStageNUM_test.BearDamageRock)
+        {
+            RockDamageParticle.Play();
+            Destroy(RockDamage);
+
+            //start next stage 
+            StartCoroutine(BearNextStageWaitTest(1.1f));
+            BearStage_test++;
+
+        }
+
+        else if (BearStage_test == BearStageNUM_test.Run2)
+        {
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(9.0f, 0.0f);
+            
+
+            //Bear step on trap plant
+            if (TrapPlantDetectBearScript._bSkillOneTrigger)
+            {
+                BearStage_test++;
+            }
+        }
+
+        else if (BearStage_test == BearStageNUM_test.Hurt)
+        {
+            Bear.GetComponent<BearMovement>().Hurt();
+            BearStage_test++;
+            StartCoroutine(BearNextStageWaitTest(Bear.GetComponent<BearMovement>().fBearHurtTime));
+        }
+
+
+        else if (BearStage_test == BearStageNUM_test.Run3)
+        {
+            Bear.GetComponent<Animator>().Play("Bear_Run");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
+
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearClimbCheckPoint.transform.position.x)
+            {
+                BearStage_test++;
+            }
+        }
+
+
+        else if (BearStage_test == BearStageNUM_test.Attack2)
+        {
+
+            Bear.GetComponent<Animator>().SetTrigger("tAttackRight");
+            BearStage_test++;
+
+            /* //Gate Down
+             if (bGateDown)
+             //if (true)
+             {
+                 Bear.GetComponent<Animator>().SetTrigger("tClimb");
+
+                 BearStage_test++;
+
+             }
+
+             //Gate doesn't get down
+             else
+             {
+                 BearStage_test = BearStageNUM_test.Run3;
+                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
+             }*/
+
+        }
+
+
+
+        /* //start Run
+         else if (BearStage_test == BearStageNUM_test.Run)
+         {
+             Bear.GetComponent<Animator>().Play("Bear_Run");
+             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(5.0f, 0.0f);
+         }*/
 
 
 

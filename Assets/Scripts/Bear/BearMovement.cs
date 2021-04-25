@@ -40,14 +40,21 @@ public class BearMovement : MonoBehaviour
     {
         animator.SetTrigger("tHowl");
 
-        StopCoroutine(HowlRippleIEnumerator());
-        StartCoroutine(HowlRippleIEnumerator());
+        StopCoroutine(HowlRippleIEnumerator(0.8f));
+        StartCoroutine(HowlRippleIEnumerator(0.8f));
     }
 
-    IEnumerator HowlRippleIEnumerator()
+    public void HowlRipple(float fWaitRippleTime)
+    {
+        StopCoroutine(HowlRippleIEnumerator( fWaitRippleTime));
+        StartCoroutine(HowlRippleIEnumerator(fWaitRippleTime));
+    }
+
+
+    IEnumerator HowlRippleIEnumerator(float fWaitRippleTime)
     {
         
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(fWaitRippleTime);
 
         ps.Play();
 

@@ -237,33 +237,36 @@ public class CameraManager : MonoBehaviour
     IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow , bool KeepYFollow)
     {
         //Debug.Log("start ChangeCamraFollowingTargetPositionIEnumerator ");
-        Follow_X = false;
-        Follow_Y = false;
+        Follow_X = true;
+        Follow_Y = true; 
+        Vector3 v2NewValue = new Vector3();
 
         if (fTransformTime > 0.0f)
         {
-            Vector3 v2NewValue = new Vector3();
+           
 
             Vector3 v2OriginalPosition = new Vector3(MainCamera.position.x, MainCamera.position.y, MainCamera.position.z);
-            Vector3 v2TargetPosition = new Vector3(v2OriginalPosition.x + x, y, MainCamera.position.z);
+            Vector3 v2TargetPosition = new Vector3(GameObject.Find("Player").transform.position.x + x, y, MainCamera.position.z);
             
 
             float fCameraChangePositionTimer = 0.0f;
 
             while (Vector2.Distance(MainCamera.transform.position, v2TargetPosition) >= 0.001f)
             {
+
+                v2TargetPosition = new Vector3(GameObject.Find("Player").transform.position.x + x, y, MainCamera.position.z);
+
                 v2NewValue = Vector2.Lerp(v2OriginalPosition, v2TargetPosition, fCameraChangePositionTimer);
 
                 fCameraChangePositionTimer += Time.deltaTime / fTransformTime;
 
-                //TargetTransformAdjust_X = v2NewValue.x;
-                //TargetTransformAdjust_Y = v2NewValue.y;
+                TargetTransformAdjust_X = v2NewValue.x - GameObject.Find("Player").transform.position.x;
+                TargetTransformAdjust_Y = v2NewValue.y - GameObject.Find("Player").transform.position.y;
 
 
                 //setting camera 
 
                 //Adjust target position
-                TargetTransform = PlayerTransform.position;
                 TargetTransform = new Vector2(v2NewValue.x, v2NewValue.y);
                 
                 //PlayerTransform position
@@ -278,7 +281,7 @@ public class CameraManager : MonoBehaviour
 
             }
             MainCamera.transform.position = v2TargetPosition;
-            TargetTransformAdjust_X = x;
+            //TargetTransformAdjust_X = v2NewValue.x - GameObject.Find("Player").transform.position.x;
         }
 
         else if (fTransformTime == 0.0f)
