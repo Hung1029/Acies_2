@@ -188,6 +188,8 @@ public class CameraManager : MonoBehaviour
 
            
             MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, PlayerTransformPos, ref velocity, smoothTime);
+            
+            //Debug.Log(Follow_Y);
         }
 
         else
@@ -199,48 +201,84 @@ public class CameraManager : MonoBehaviour
 
     public void ChangeCameraProjectionSize(Camera MainCamera, float fSizeValue, float fTransformTime)
     {
-        //Debug.Log("ChangeCameraProjectionSize");
-
         StartCoroutine(ChangeCameraProjectionSizeIEnumerator(MainCamera, fSizeValue, fTransformTime));
 
     }
 
     IEnumerator ChangeCameraProjectionSizeIEnumerator(Camera MainCamera, float fSizeValue, float fTransformTime)
     {
-
-
-        float fTranformValue = 0.05f;
-        while (MainCamera.orthographicSize <= fSizeValue)
+        if (fTransformTime > 0.0f)
         {
-            MainCamera.orthographicSize += fTranformValue;
+            float fOriginalValue = MainCamera.orthographicSize;
+            float fCameraChangePositionTimer = 0.0f;
 
-            yield return new WaitForSeconds(fTransformTime / (fSizeValue / fTranformValue));
+            while (MainCamera.orthographicSize != fSizeValue)
+            {
+                Camera.main.orthographicSize = Mathf.Lerp(fOriginalValue, fSizeValue, fCameraChangePositionTimer);
+                fCameraChangePositionTimer += Time.deltaTime / fTransformTime;
+
+                yield return null;
+            }
+        }
+        else if(fTransformTime == 0.0f)
+        {
+            Camera.main.orthographicSize = fSizeValue;
         }
 
     }
 
 
 
-    public void ChangeCamraFollowingTargetPosition(float x, float y, float fTransformTime, bool KeepXFollow = true, bool KeepYFollow = true)
+    public void ChangeCamraFollowingTargetPosition(float x, float y, float fTransformTime, bool KeepXFollow , bool KeepYFollow )
     {
-        //Debug.Log("ChangeCamraFollowingTargetPosition");
         StartCoroutine(ChangeCamraFollowingTargetPositionIEnumerator(x, y, fTransformTime, KeepXFollow, KeepYFollow));
     }
 
-    IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow = true, bool KeepYFollow = true)
+    IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow , bool KeepYFollow)
     {
+        //Debug.Log("start ChangeCamraFollowingTargetPositionIEnumerator ");
+        Follow_X = false;
+        Follow_Y = false;
+
         if (fTransformTime > 0.0f)
         {
-            float fTranformValueX = (x - TargetTransformAdjust_X) / (fTransformTime / 0.03f);
-            float fTranformValueY = (y - TargetTransformAdjust_Y) / (fTransformTime / 0.03f);
+            Vector3 v2NewValue = new Vector3();
 
-            while (Mathf.Abs(TargetTransformAdjust_X - x) >= 0.5f || Mathf.Abs(TargetTransformAdjust_Y - y) >= 0.5f)
+            Vector3 v2OriginalPosition = new Vector3(MainCamera.position.x, MainCamera.position.y, MainCamera.position.z);
+            Vector3 v2TargetPosition = new Vector3(v2OriginalPosition.x + x, y, MainCamera.position.z);
+            
+
+            float fCameraChangePositionTimer = 0.0f;
+
+            while (Vector2.Distance(MainCamera.transform.position, v2TargetPosition) >= 0.001f)
             {
-                TargetTransformAdjust_X += fTranformValueX;
-                TargetTransformAdjust_Y += fTranformValueY;
+                v2NewValue = Vector2.Lerp(v2OriginalPosition, v2TargetPosition, fCameraChangePositionTimer);
 
-                yield return new WaitForSeconds(0.03f);
+                fCameraChangePositionTimer += Time.deltaTime / fTransformTime;
+
+                //TargetTransformAdjust_X = v2NewValue.x;
+                //TargetTransformAdjust_Y = v2NewValue.y;
+
+
+                //setting camera 
+
+                //Adjust target position
+                TargetTransform = PlayerTransform.position;
+                TargetTransform = new Vector2(v2NewValue.x, v2NewValue.y);
+                
+                //PlayerTransform position
+                Vector3 TransformPos = TargetTransform;
+
+                TransformPos.z = MainCamera.transform.position.z;
+
+                MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, TransformPos, ref velocity, smoothTime);
+            
+
+                yield return null;
+
             }
+            MainCamera.transform.position = v2TargetPosition;
+            TargetTransformAdjust_X = x;
         }
 
         else if (fTransformTime == 0.0f)
@@ -248,12 +286,12 @@ public class CameraManager : MonoBehaviour
             TargetTransformAdjust_X = x;
             TargetTransformAdjust_Y = y;
         }
-        
+
 
         Follow_X = KeepXFollow;
         Follow_Y = KeepYFollow;
 
-
+        /*.Log("finish ChangeCamraFollowingTargetPositionIEnumerator ");*/
     }
 
 
@@ -298,7 +336,7 @@ public class CameraManager : MonoBehaviour
         //Debug.Log("ShortFollowing finish");
     }
 
-    public void SetXYFollowing(bool KeepXFollow = true, bool KeepYFollow = true)
+    public void SetXYFollowing(bool KeepXFollow , bool KeepYFollow )
     {
         Follow_X = KeepXFollow;
         Follow_Y = KeepYFollow;

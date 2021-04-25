@@ -44,8 +44,8 @@ public class SceneManager_Level2Final : MonoBehaviour
     public GameObject GateMatchJigsaw;
     bool bGate2Down = false;
 
-
-   
+    //scene check point
+    public GameObject Point2;
 
 
     enum BearStageNUM
@@ -73,6 +73,22 @@ public class SceneManager_Level2Final : MonoBehaviour
     BearStageNUM BearStage = BearStageNUM.DetectingPlayer;
 
 
+    //test bear stage
+    enum BearStageNUM_test
+    {
+        Pause = 0,
+        DetectingPlayer = 1,
+        Roar = 3,
+        FogBlow = 5,
+        CameraSetting = 7,
+        Run = 9,
+
+
+    }
+    BearStageNUM_test BearStage_test = BearStageNUM_test.DetectingPlayer;
+
+
+
     //Falling Rock
     public GameObject FallingRock;
     float fBearRockTimer = 0.0f;
@@ -92,8 +108,7 @@ public class SceneManager_Level2Final : MonoBehaviour
         playerSkillScript.CanUseSkill2 = true;
 
         //start camera position
-        this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(4.0f, 0f, 0.0f, true, false);
-
+        this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(4.0f, 0f, 0.0f, true, false) ;
 
     }
 
@@ -108,7 +123,69 @@ public class SceneManager_Level2Final : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
 
-        //wait for player run to checkpoint
+        if (BearStage_test == BearStageNUM_test.DetectingPlayer && GameObject.Find("Player").GetComponent<Transform>().position.x >= BearWakeUpCheckPoint.transform.position.x)
+        {
+            //camera action
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(3.7f, Bear.GetComponentInParent<Transform>().position);
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(2.0f, 2.5f, 0.15f));
+            this.gameObject.GetComponent<CameraManager>().BackToFollowPlayer();
+
+            BearStage_test++;
+
+            //Wait for 1.0f second turn to "Run" stage
+            StartCoroutine(BearNextStageWaitTest(1.0f));
+
+        }
+
+        //Bear roar
+        else if (BearStage_test == BearStageNUM_test.Roar)
+        {
+            Bear.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 5.0f);
+            Bear.GetComponent<BearMovement>().Howl();
+
+            //Wait for next stage
+            StartCoroutine(BearNextStageWaitTest(1.0f));
+            BearStage_test++;
+        }
+
+        else if (BearStage_test == BearStageNUM_test.FogBlow)
+        {
+            BearFog.GetComponent<testCloud>().FadeOutAndDestory(Bear.transform.GetChild(0).position);
+
+            BearStage_test++;
+
+            //Wait for 1.0f second turn to "Run" stage
+            StartCoroutine(BearNextStageWaitTest(Bear.GetComponent<BearMovement>().fBearHowlTime - 1 + 1.0f));
+
+        }
+        else if (BearStage_test == BearStageNUM_test.CameraSetting)
+        {
+            //set camera projection
+            this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 7.5f, 0.8f);
+
+            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-6.0f, 4.9f , 0.5f, true,false);
+            
+            //Point2.transform.position = new Vector2(GameObject.Find("Player").transform.position.x, Point2.transform.position.y);
+
+
+            BearStage_test++;
+            //Wait for 1.0f second turn to "Run" stage
+            StartCoroutine(BearNextStageWaitTest(2.0f));
+
+
+        }
+
+       /* //start Run
+        else if (BearStage_test == BearStageNUM_test.Run)
+        {
+            Bear.GetComponent<Animator>().Play("Bear_Run");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(5.0f, 0.0f);
+        }*/
+
+
+
+
+        /*//wait for player run to checkpoint
         if (BearStage == BearStageNUM.DetectingPlayer && GameObject.Find("Player").GetComponent<Transform>().position.x >= BearWakeUpCheckPoint.transform.position.x)
         {
             //camera action
@@ -358,7 +435,7 @@ public class SceneManager_Level2Final : MonoBehaviour
            
             bGate2Down = true;
             StartCoroutine(Gate2Down());
-        }
+        }*/
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Detect dog gate
@@ -406,6 +483,13 @@ public class SceneManager_Level2Final : MonoBehaviour
     }
 
 
+    //test
+    IEnumerator BearNextStageWaitTest(float time)
+    {
+        yield return new WaitForSeconds(time);
+        BearStage_test++;
+
+    }
 
     //Wait for Bear next stage
     IEnumerator BearNextStageWait(float time)
