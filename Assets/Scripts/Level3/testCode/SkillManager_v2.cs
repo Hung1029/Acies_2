@@ -104,7 +104,7 @@ public class SkillManager_v2 : MonoBehaviour
 
     void Update()
     {
-
+       
         //skill2
         //if it is moveable object give it outline
         ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];
@@ -296,7 +296,7 @@ public class SkillManager_v2 : MonoBehaviour
                         ObjectsMoveable[iCurrentLookIndex].transform.GetComponent<PolygonCollider2D>().isTrigger  = true;
 
                         //remember last effective position
-                        ObjectsMoveable[iCurrentLookIndex].v2LastPosition = ObjectsMoveable[iCurrentLookIndex].transform.position;
+                        ObjectsMoveable[iCurrentLookIndex].v2LastPosition = ObjectsMoveable[iCurrentLookIndex].transform.localPosition;
 
                         ObjectsMoveable[iCurrentLookIndex].transform.rotation = Quaternion.identity;
 
@@ -417,12 +417,11 @@ public class SkillManager_v2 : MonoBehaviour
         }
 
         //detect LT RT hold button
-       /* int TriggerButton = SkillScript.DetectSkillChangeKeyHold();
-        if(TriggerButton == 1)
-            Debug.Log("RT");
-        else if (TriggerButton == -1)
-            Debug.Log("LT");*/
-
+        /* int TriggerButton = SkillScript.DetectSkillChangeKeyHold();
+         if(TriggerButton == 1)
+             Debug.Log("RT");
+         else if (TriggerButton == -1)
+             Debug.Log("LT");*/
 
     }
 
@@ -435,7 +434,12 @@ public class SkillManager_v2 : MonoBehaviour
 
 
 
-
+    public int GetCurrentPickUpStoneNUM()
+    {
+        
+        Debug.Log(iPickUpIndex);
+        return iPickUpIndex;
+    }
 
 
     //reset Skill 2 object

@@ -10,10 +10,14 @@ public class BearMovement : MonoBehaviour
     public float fBearHurtTime = 4.0f;
 
     [System.NonSerialized]
-    public float fBearHowlTime = 4.1f;
+    public float fBearHowlTime = 4.0f;
 
     [System.NonSerialized]
     public float fBearAttackTime = 2f;
+
+    [System.NonSerialized]
+    public float fBearAttackRightTime = 2.8f;
+
 
     //Camera camera;
 

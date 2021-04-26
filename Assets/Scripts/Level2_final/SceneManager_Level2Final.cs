@@ -23,6 +23,10 @@ public class SceneManager_Level2Final : MonoBehaviour
     public GameObject RockDamage;
     public ParticleSystem RockDamageParticle;
 
+    //Rock2
+    public GameObject RockDamage2;
+    public ParticleSystem RockDamageParticle2;
+
     //climb wall
     public GameObject BearClimbCheckPoint;
 
@@ -46,6 +50,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
     //scene check point
     public GameObject Point2;
+    public GameObject Point3;
 
 
     enum BearStageNUM
@@ -87,7 +92,19 @@ public class SceneManager_Level2Final : MonoBehaviour
         Run2 = 14,
         Hurt = 15,
         Run3 = 17,
-        Attack2 = 18,
+        GoThroughtDogGate = 18,
+        StartClimb = 20,
+        OnTopOfDogGate = 21,
+        BearRockTimer = 22,
+        RestartBearAnimation = 23,
+        Howl1 = 25,
+        Run4 = 27,
+
+        BearTouchRock2 = 29,
+        BearDamageRock2 = 30,
+        Run5 = 32,
+        Jump = 33,
+        CameraSettingAfterJump = 35
 
     }
     BearStageNUM_test BearStage_test = BearStageNUM_test.DetectingPlayer;
@@ -100,12 +117,21 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
     //Falling Rock
-    public GameObject FallingRock;
+    public GameObject[] FallingRock;
     float fBearRockTimer = 0.0f;
-    float fFallingRockTime = 5.0f;
-    float fBearJumpDownTime = 15.0f;
+    float fFallingRock1Time = 1.5f;
+    float fFallingRock2Time = 3.5f;
+    float fFallingRock3Time = 4.5f;
+    float fFallingRock4Time = 5.5f;
+    float fBearJumpDownTime = 25.0f;
 
     bool bTimeUpBearJumpDown = false;
+
+    //Camera turn flag
+    bool bCameraTurn = false;
+
+
+    IEnumerator RecordIEnumerator;
 
 
     // Start is called before the first frame update
@@ -120,6 +146,8 @@ public class SceneManager_Level2Final : MonoBehaviour
         //start camera position
         this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(4.0f, 0f, 0.0f, true, false) ;
 
+
+        
     }
 
     private void FixedUpdate()
@@ -130,7 +158,6 @@ public class SceneManager_Level2Final : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
 
         if (BearStage_test == BearStageNUM_test.DetectingPlayer && GameObject.Find("Player").GetComponent<Transform>().position.x >= BearWakeUpCheckPoint.transform.position.x)
@@ -225,8 +252,8 @@ public class SceneManager_Level2Final : MonoBehaviour
 
         else if (BearStage_test == BearStageNUM_test.Run2)
         {
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(9.0f, 0.0f);
-            
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
+
 
             //Bear step on trap plant
             if (TrapPlantDetectBearScript._bSkillOneTrigger)
@@ -246,7 +273,7 @@ public class SceneManager_Level2Final : MonoBehaviour
         else if (BearStage_test == BearStageNUM_test.Run3)
         {
             Bear.GetComponent<Animator>().Play("Bear_Run");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(11.0f, 0.0f);
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.5f, 0.0f);
 
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearClimbCheckPoint.transform.position.x)
             {
@@ -255,30 +282,245 @@ public class SceneManager_Level2Final : MonoBehaviour
         }
 
 
-        else if (BearStage_test == BearStageNUM_test.Attack2)
+        else if (BearStage_test == BearStageNUM_test.GoThroughtDogGate)
         {
+            ///If Gate Down
+            // if (bGateDown)
+            if (true)
+            {
 
-            Bear.GetComponent<Animator>().SetTrigger("tAttackRight");
-            BearStage_test++;
+                if (bGateDown)
+                    Debug.Log("On time");
+                else
+                    Debug.Log("Not on time");
 
-            /* //Gate Down
-             if (bGateDown)
-             //if (true)
-             {
-                 Bear.GetComponent<Animator>().SetTrigger("tClimb");
+                Bear.GetComponent<Animator>().SetTrigger("tAttackRight");
+                BearStage_test++;
+                StartCoroutine(BearNextStageWaitTest(Bear.GetComponent<BearMovement>().fBearAttackRightTime));
 
-                 BearStage_test++;
 
-             }
+            }
 
-             //Gate doesn't get down
-             else
-             {
-                 BearStage_test = BearStageNUM_test.Run3;
-                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
-             }*/
+            //Gate doesn't get down, keep running
+            else
+            {
+                BearStage_test = BearStageNUM_test.Run4;
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
+            }
 
         }
+
+        else if (BearStage_test == BearStageNUM_test.StartClimb)
+        {
+            Bear.GetComponent<Animator>().SetTrigger("tClimb");
+            BearStage_test++;
+        }
+
+        //when bear on the top animation stop
+        else if (BearStage_test == BearStageNUM_test.OnTopOfDogGate && Bear.GetComponent<SpriteRenderer>().sprite.name == "1-2_12")
+        {
+            //stop animation
+            Bear.GetComponent<Animator>().enabled = false;
+
+            //set camera  
+            Point3.transform.localPosition = new Vector3(18.2f, Point3.transform.position.y, Point3.transform.position.z);
+            this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 5f, 1.0f);
+            RecordIEnumerator = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(-2.0f, 2.33f, 1.0f, true, true);
+            StartCoroutine(RecordIEnumerator);
+
+            BearStage_test++;
+        }
+        
+
+        //Turn camera when player over particular x
+        else if (BearStage_test == BearStageNUM_test.BearRockTimer && bCameraTurn == false && GameObject.Find("Player").transform.position.x > 47f)
+        {
+            StopCoroutine(RecordIEnumerator);
+
+            RecordIEnumerator = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(-5.0f, 5.3f, 1.6f, true, false);
+            StartCoroutine(RecordIEnumerator);
+
+            this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 8.0f, 2.0f);
+
+            //set flag
+            bCameraTurn = true;
+        }
+
+
+
+        //falling rock
+        else if (BearStage_test == BearStageNUM_test.BearRockTimer)
+        {
+            fBearRockTimer += Time.deltaTime;
+
+            //active rock
+            //falling part 1
+            if (fBearRockTimer >= fFallingRock1Time )
+            {
+                
+                FallingRock[0].SetActive(true);
+
+            }
+
+            //falling part 2
+            if (fBearRockTimer >= fFallingRock2Time)
+            {
+                FallingRock[1].SetActive(true);
+            }
+
+            //falling part 3
+            if (fBearRockTimer >= fFallingRock3Time)
+            {
+                FallingRock[2].SetActive(true);
+            }
+
+            //falling part 4
+            if (fBearRockTimer >= fFallingRock4Time)
+            {
+                FallingRock[3].SetActive(true);
+            }
+
+            //Debug.Log(fBearRockTimer);
+            //time up bear jump down
+            if (fBearRockTimer > fBearJumpDownTime || GameObject.Find("Player").transform.position.x >= BearRestartClimbCheckPoint.transform.position.x)
+            {
+                Debug.Log("Time Up Bear jump down");
+
+                //set camera projection
+                StopCoroutine(RecordIEnumerator);
+                this.gameObject.GetComponent<CameraManager>().ShortFollowing(1.8f, new Vector3(BearAfterClimbCheckPoint.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z));
+              
+
+                BearStage_test = BearStageNUM_test.RestartBearAnimation;
+            }
+
+
+        }
+
+
+        
+        //Bear jump down after player over checkpoint
+        else if (BearStage_test == BearStageNUM_test.RestartBearAnimation )
+        {
+            //start animation
+            Bear.GetComponent<Animator>().enabled = true;
+
+
+            //StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(0.5f, 0.69f, 0.08f));
+
+            //finish jump after 1.2s
+            StartCoroutine(BearNextStageWaitTest(1.5f));
+            BearStage_test++;
+        }
+
+        //Keep Howl
+        else if (BearStage_test == BearStageNUM_test.Howl1)
+        {
+            //change position
+            Bear.transform.position = BearAfterClimbCheckPoint.transform.position;
+
+            //Bear start Roar
+            Bear.GetComponent<BearMovement>().Howl();
+
+            //Wait for next stage
+            StartCoroutine(BearNextStageWaitTest(Bear.GetComponent<BearMovement>().fBearHowlTime - 1));
+            BearStage_test++;
+        }
+
+        else if (BearStage_test == BearStageNUM_test.Run4)
+        {
+            Bear.GetComponent<Animator>().Play("Bear_Run");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(7.0f, 0.0f);
+        }
+
+
+
+        //Bear touch rock, stop run
+        if (RockDamage2 != null && BearStage_test < BearStageNUM_test.BearTouchRock2)
+        {
+            if (RockDamage2.GetComponent<RockBearDamage_Level2>()._bSkillOneTrigger)
+            {
+                Bear.GetComponent<Animator>().SetTrigger("tAttack");
+
+                BearStage_test = BearStageNUM_test.BearTouchRock2;
+
+                //wait for bear animation to damage
+                StartCoroutine(BearNextStageWaitTest(0.9f));
+
+            }
+        }
+
+
+        //Bear Damage Rock
+        if (BearStage_test == BearStageNUM_test.BearDamageRock2)
+        {
+            RockDamageParticle2.Play();
+            Destroy(RockDamage2);
+
+            //start next stage 
+            StartCoroutine(BearNextStageWaitTest(1.1f));
+            BearStage_test++;
+
+        }
+
+        else if (BearStage_test == BearStageNUM_test.Run5)
+        {
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
+
+
+            //touch jump check point
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearJumpCheckPoint.transform.position.x)
+            {
+                BearStage_test++;
+            }
+        }
+
+
+
+        //Jump
+        else if (BearStage_test == BearStageNUM_test.Jump && !bGate2Down)
+        {
+            Bear.GetComponent<Animator>().SetTrigger("tJump");
+            BearStage_test++;
+
+        }
+
+        //Can't Jump
+        else if (BearStage_test == BearStageNUM_test.Jump && bGate2Down)
+        {
+            //Bear start Roar
+            Bear.GetComponent<BearMovement>().Howl();
+            BearStage_test++;
+
+
+            //start next stage 
+            StartCoroutine(BearNextStageWaitTest(3.0f));
+
+        }
+
+        else if (BearStage_test == BearStageNUM_test.CameraSettingAfterJump)
+        {
+            
+            this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 4f, 0.8f);
+
+            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(0.0f, 7.804268f, 0.8f, true, true);
+            /*if(RecordIEnumerator != null)
+                StopCoroutine(RecordIEnumerator);
+            RecordIEnumerator = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(0.0f, GameObject.Find("Player").transform.position.y, 1.0f, true, true);
+            StartCoroutine(RecordIEnumerator);*/
+        }
+
+
+        //Bear gate2, jigsaw is match, gate goes down
+        if (GateMatchJigsaw.GetComponent<MatchingJigsaw>().bMatch && bGate2Down == false)
+        {
+
+            bGate2Down = true;
+            StartCoroutine(Gate2Down());
+        }
+        
+
+
 
 
 

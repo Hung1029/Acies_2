@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     //Vertical move
     public Transform feetPos; //detector position
     public float checkRadius; //detect range
-    public LayerMask whatIsGround; //which ground will trigger
+    public LayerMask[] whatIsGround; //which ground will trigger
     private float jumpForce = 8.0f;
 
     //can move or not
@@ -75,8 +75,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); //check if on the exactly ground
-        
+        foreach (var item in whatIsGround)
+        {
+            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, item); //check if on the exactly ground
+            if (isGrounded)
+                break;
+        }
+       
         //tell animator 
         animator.SetBool("Ground", isGrounded);
 
@@ -198,13 +203,23 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
     }
 
-
+    bool OnTheGround()
+    {
+        bool bFlag = false;
+        foreach (var item in whatIsGround)
+        {
+            bFlag = Physics2D.OverlapCircle(feetPos.position, checkRadius, item); //check if on the exactly ground
+            if (bFlag)
+                break;
+        }
+        return bFlag;
+    }
 
     public bool bPlayerMove
     {
         get
         {
-            return (moveInput!= 0 || !Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround));
+            return (moveInput!= 0 || !OnTheGround());
         }
 
     }

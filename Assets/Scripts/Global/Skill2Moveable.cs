@@ -22,6 +22,7 @@ public class Skill2Moveable : MonoBehaviour
 
     bool bCanCheckInEffective =true;
 
+
     // Start is called before the first frame update
     void Start()
     {

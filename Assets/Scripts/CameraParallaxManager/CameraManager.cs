@@ -67,6 +67,7 @@ public class CameraManager : MonoBehaviour
     //Camera focus On different object
     bool bCameraFocusOtherObj = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -234,8 +235,9 @@ public class CameraManager : MonoBehaviour
         StartCoroutine(ChangeCamraFollowingTargetPositionIEnumerator(x, y, fTransformTime, KeepXFollow, KeepYFollow));
     }
 
-    IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow , bool KeepYFollow)
+    public IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow , bool KeepYFollow)
     {
+
         //Debug.Log("start ChangeCamraFollowingTargetPositionIEnumerator ");
         Follow_X = true;
         Follow_Y = true; 
@@ -243,17 +245,16 @@ public class CameraManager : MonoBehaviour
 
         if (fTransformTime > 0.0f)
         {
-           
 
+            
             Vector3 v2OriginalPosition = new Vector3(MainCamera.position.x, MainCamera.position.y, MainCamera.position.z);
             Vector3 v2TargetPosition = new Vector3(GameObject.Find("Player").transform.position.x + x, y, MainCamera.position.z);
             
 
             float fCameraChangePositionTimer = 0.0f;
 
-            while (Vector2.Distance(MainCamera.transform.position, v2TargetPosition) >= 0.001f)
+            while (Vector2.Distance(MainCamera.transform.position, v2TargetPosition) >= 0.001f )
             {
-
                 v2TargetPosition = new Vector3(GameObject.Find("Player").transform.position.x + x, y, MainCamera.position.z);
 
                 v2NewValue = Vector2.Lerp(v2OriginalPosition, v2TargetPosition, fCameraChangePositionTimer);
@@ -281,7 +282,6 @@ public class CameraManager : MonoBehaviour
 
             }
             MainCamera.transform.position = v2TargetPosition;
-            //TargetTransformAdjust_X = v2NewValue.x - GameObject.Find("Player").transform.position.x;
         }
 
         else if (fTransformTime == 0.0f)
@@ -294,7 +294,7 @@ public class CameraManager : MonoBehaviour
         Follow_X = KeepXFollow;
         Follow_Y = KeepYFollow;
 
-        /*.Log("finish ChangeCamraFollowingTargetPositionIEnumerator ");*/
+        //Debug.Log("finish ChangeCamraFollowingTargetPositionIEnumerator ");
     }
 
 
