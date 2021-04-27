@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Splash
-  m_Shader: {fileID: -6465566751694194690, guid: dd535555c73a48c48a9cd829f2432f38,
+  m_Name: circle
+  m_Shader: {fileID: -6465566751694194690, guid: 52ec2d412b06dfb429c5b68b90c00cfc,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -20,16 +20,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_54328B2:
-        m_Texture: {fileID: 2800000, guid: f37998bcfc7b09940a0e32e37ff73431, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 9f6316ec55d1096469e3d28343d804f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4452863632fea23449bd0064f4f0aacd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5870ceca03d9255419a9be9840fc0555, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_6B5763E6: {r: 2, g: 2, b: 2, a: 1}
+    - Color_1256EBB7: {r: 109.14087, g: 416.38995, b: 502.9971, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
