@@ -13,42 +13,13 @@ public class WaterWheel : MonoBehaviour
     [System.NonSerialized]
     public bool _bLightBlowEnable = true;
 
-    public GameObject Target;
-    
 
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.name == "VitaSoul")
-        {
-            _bSkillOneTrigger = true;
-           
-        }
-    }
-
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.name == "VitaSoul")
-        {
-            _bSkillOneTrigger = false;
-           
-        }
-    }
 
    
 
     void Update()
     {
-        // set light color
-        float t = Mathf.PingPong(Time.time, 1.0f) / 1.0f;
-        if (_bLightBlowEnable == true)
-        {
-           Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity += t;
-        }
-        else {
-            Target.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity = 1.5f;
-        }
+        
     }
 
     ////water wheel rotate
@@ -72,7 +43,7 @@ public class WaterWheel : MonoBehaviour
                  yield return new WaitForSeconds(0.05f);
              }
          }
-        _bIsRotate = false;
+        //_bIsRotate = false;
        
 
 

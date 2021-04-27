@@ -355,7 +355,7 @@ public class CameraManager : MonoBehaviour
     }
 
 
-    public IEnumerator Shake(float fPreWaitTime, float duration, float magnitude) // during time and strength of shake
+    public IEnumerator Shake(float fPreWaitTime, float duration, float magnitude , bool xMove=true, bool yMove = true) // during time and strength of shake
     {
         //Debug.Log("Shake");
         yield return new WaitForSeconds(fPreWaitTime);
@@ -367,9 +367,16 @@ public class CameraManager : MonoBehaviour
 
         while (elapsed < duration)
         {
-            float x = Random.Range(-1f, 1f) * magnitude;
+            float x,y;
+            if (xMove)
+                x = Random.Range(-1f, 1f) * magnitude;
+            else
+                x = 0;
 
-            float y = Random.Range(-1f, 1f) * magnitude;
+            if (yMove)
+                y = Random.Range(-1f, 1f) * magnitude;
+            else
+                y = 0;
 
             MainCamera.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
 

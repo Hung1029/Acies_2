@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class SceneManager_Level3 : MonoBehaviour
 {
-    public VitaTriggerDetect movePlatformTrigger;
 
     public GameObject Vita;
 
     public MovingPlatform MovingPlatform;
+    public SkillOneTriggerIcon PlatformTrigger;
     private ColorChange MovingPlatformTriggerColorChange;
     
 
 
     private VitaSoul_particle VitaParticleScript;
 
-    private float ftimer_moving  = 0.0f;
-    private float ftimer_water = 0.0f;
+    //private float ftimer_moving  = 0.0f;
+    //private float ftimer_water = 0.0f;
 
     //player
     private PlayerSkill playerSkillScript;
@@ -25,6 +25,9 @@ public class SceneManager_Level3 : MonoBehaviour
     [SerializeField]
     private GameObject WaterWheel;
     private WaterWheel WaterWheelScript;
+
+    [SerializeField]
+    public SkillOneTriggerIcon WaterWheelTrigger;
 
     //particle system
     [SerializeField]
@@ -93,69 +96,29 @@ public class SceneManager_Level3 : MonoBehaviour
     void Update()
     {
         //move platform
-        if (MovingPlatform._bCanMove == false)
+        PlatformTrigger.DetectFinish();
+        if (MovingPlatform._bCanMove == false && PlatformTrigger.bTriggerFinish)
         {
-           
-            if (movePlatformTrigger._bSkillTrigger)
-            {
-                if (ftimer_moving == 0)
-                {
-                    MovingPlatformTriggerColorChange.ColorChanging(Color.green, VitaParticleScript.fSkillOneGatheringTime);
-                }
-
-                ftimer_moving += Time.deltaTime;
-            
-                if (ftimer_moving >= VitaParticleScript.fSkillOneGatheringTime)
-                {
-                    MovingPlatform._bCanMove = true;
-
-                    //reset timer
-                    ftimer_moving = 0.0f;
-                }
-            }
-            //if  move platform is not trigger
-            else 
-            {
-                if (ftimer_moving != 0)
-                {
-                    //reset timer
-                    ftimer_moving = 0.0f;
-                    MovingPlatformTriggerColorChange.ColorChanging(Color.yellow, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
-                }
-
-            }
+            MovingPlatform._bCanMove = true;
         }
 
 
 
         //water wheel rotate
-        if (WaterWheelScript._bIsRotate == false)
+        WaterWheelTrigger.DetectFinish();
+        if (WaterWheelScript._bIsRotate == false && WaterWheelTrigger.bTriggerFinish)
         {
-            if (WaterWheelScript._bSkillOneTrigger && PlayerSkill.CURRENTSKILL == 1)
-            {
-                ftimer_water += Time.deltaTime;
-
-                if (ftimer_water >= VitaParticleScript.fSkillOneGatheringTime)
-                {
-                    Splash.Play();
-                    WaterWheelScript.PlayWaterWheelRotate();
-                    PlantScript.GrowUp();
-
-                    //set camera 
-                    this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, PlantScript.GetComponentInParent<Transform>().position);
-                    StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 1.5f, 0.08f));
-
-
-                    //reset timer
-                    ftimer_water = 0.0f;
-                }
            
-               
-            }
-            else
-            {
-                ftimer_water = 0;
-            }
+            Splash.Play();
+            WaterWheelScript.PlayWaterWheelRotate();
+            PlantScript.GrowUp();
+
+            //set camera 
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, PlantScript.GetComponentInParent<Transform>().position);
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 1.5f, 0.08f));
+
+            
+
         }
 
 

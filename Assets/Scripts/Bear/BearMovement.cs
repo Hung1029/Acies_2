@@ -7,7 +7,7 @@ public class BearMovement : MonoBehaviour
     ParticleSystem ps;
 
     [System.NonSerialized]
-    public float fBearHurtTime = 4.0f;
+    public float fBearHurtTime = 3.6f;
 
     [System.NonSerialized]
     public float fBearHowlTime = 4.0f;

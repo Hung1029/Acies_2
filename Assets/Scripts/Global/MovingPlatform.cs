@@ -47,6 +47,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.name == "Player")
         {
+            
             GameObject.Find("Player").GetComponent<Transform>().parent = this.transform;
         }
     }

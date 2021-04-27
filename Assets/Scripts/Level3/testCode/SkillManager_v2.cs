@@ -29,7 +29,7 @@ public class SkillManager_v2 : MonoBehaviour
 
 
     //Skill time
-    float fLightUpTime = 5.0f;
+    public static float fLightUpTime = 5.0f;
     float fNeedGatheringTime = 2.0f;
     float fCanGathingTime;
     float fCanGazeTime = 7.0f;
