@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+    [System.NonSerialized]
+    public bool bBearCatchPlayer = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -240,6 +243,25 @@ public class PlayerMovement : MonoBehaviour
         JumpState ++;
         canMoveX = true;
 
+    }
+
+
+    //detect bear
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+        if (collision.name == "DetectPlayer")
+        {
+            bBearCatchPlayer = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "DetectPlayer")
+        {
+            bBearCatchPlayer = false;
+        }
     }
 
 }

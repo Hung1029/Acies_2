@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneManager_Level2Final : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class SceneManager_Level2Final : MonoBehaviour
     //bear stage
     enum BearStageNUM
     {
-        Pause = 0,
+        Pause = -100,
         DetectingPlayer = 1,
         Roar = 3,
         FogBlow = 5,
@@ -110,6 +111,11 @@ public class SceneManager_Level2Final : MonoBehaviour
     //trigger icon
     public SkillOneTriggerIcon Gate1Trigger;
 
+    //If bear catch player
+    bool bCatchPlayer = false;
+
+    //player dead loader
+    public PlayerDeadLoader PlayerDeadLoaderScript;
 
 
     // Start is called before the first frame update
@@ -136,6 +142,34 @@ public class SceneManager_Level2Final : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////If bear catch player
+
+        if (GameObject.Find("Player").GetComponent<PlayerMovement>().bBearCatchPlayer && BearStage > BearStageNUM.CameraSetting && BearStage < BearStageNUM.Jump && !bCatchPlayer)
+        {
+            bCatchPlayer = true;
+
+            Debug.Log("bear attack");
+
+            StopAllCoroutines();
+
+            BearStage = BearStageNUM.Pause;
+
+            Bear.GetComponent<Animator>().SetTrigger("tAttack");
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+
+            //player stop
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+
+            //trun player face to face bear 
+            if (GameObject.Find("Player").GetComponent<Transform>().localScale.x < 0)
+                GameObject.Find("Player").GetComponent<Transform>().localScale = new Vector2(GameObject.Find("Player").GetComponent<Transform>().localScale.x * -1f , GameObject.Find("Player").GetComponent<Transform>().localScale.y) ;
+
+            PlayerDeadLoaderScript.TransitionAfterTime(0.75f);
+
+        }
+
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
@@ -203,11 +237,13 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
         //Bear touch rock, stop run
-        if (RockDamage != null && BearStage < BearStageNUM.BearTouchRock)
+        if (RockDamage != null && BearStage < BearStageNUM.BearTouchRock && BearStage >= BearStageNUM.Run)
         {
             if (RockDamage.GetComponent<RockBearDamage_Level2>()._bSkillOneTrigger)
             {
                 Bear.GetComponent<Animator>().SetTrigger("tAttack");
+
+
 
                 BearStage = BearStageNUM.BearTouchRock;
 

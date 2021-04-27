@@ -31,7 +31,7 @@ public class SkillOneTriggerIcon : MonoBehaviour
 
     public void DetectFinish()
     {
-        Debug.Log("VitaDetect._bSkillTrigger" + VitaDetect._bSkillTrigger);
+       
         //if state change, start another coroutinges
         if (bLastDetectState != VitaDetect._bSkillTrigger)
         {

@@ -19,6 +19,7 @@ public class BearMovement : MonoBehaviour
     public float fBearAttackRightTime = 2.8f;
 
 
+
     //Camera camera;
 
     // Start is called before the first frame update
@@ -102,4 +103,6 @@ public class BearMovement : MonoBehaviour
         Destroy(DestoryGameObject);
 
     }
+
+
 }
