@@ -19,7 +19,7 @@ public class CloudBGMoving : MonoBehaviour
     {
         foreach (var item in Cloud)
         {
-            item.transform.Translate(Vector2.left * Time.deltaTime ,Space.World);
+            item.transform.Translate(Vector2.left * Time.deltaTime*0.2f ,Space.World);
 
 
             if (item.transform.localPosition.x < -55.2f)

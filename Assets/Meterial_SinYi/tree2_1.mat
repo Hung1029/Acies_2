@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tree1
+  m_Name: tree2_1
   m_Shader: {fileID: -6465566751694194690, guid: 24fd2a045f21a69419eb2674bb7a297d,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 08dba6fe11350094daba723f08f16bb3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2e8c6354c110f174aa1dc2143919690e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -33,17 +33,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: f2fa4c66571b25144b9fad0810f52eea, type: 3}
+        m_Texture: {fileID: 2800000, guid: 18397018d2f8be14f864f4c8fdc0f0da, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_64EA8F8: 0.1
-    - Vector1_B5EE0412: 0.2
-    - Vector1_BB7506BA: 3
-    - Vector1_C94931BF: 1
+    - Vector1_64EA8F8: 3
+    - Vector1_B5EE0412: 3.77
+    - Vector1_BB7506BA: 7
+    - Vector1_C94931BF: 0.12
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Vector2_A84A8433: {r: 3, g: -2, b: 0, a: 0}
+    - Vector2_A84A8433: {r: 2, g: -1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

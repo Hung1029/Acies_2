@@ -8,6 +8,7 @@ TagManager:
   - Interactive
   - vita
   - invalidAreaForMovableObj
+  - BackgroundMusic
   layers:
   - Default
   - TransparentFX
