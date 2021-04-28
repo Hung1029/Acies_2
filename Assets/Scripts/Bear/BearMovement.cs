@@ -18,7 +18,8 @@ public class BearMovement : MonoBehaviour
     [System.NonSerialized]
     public float fBearAttackRightTime = 2.8f;
 
-
+    [System.NonSerialized]
+    public bool bHitWall = false;
 
     //Camera camera;
 
@@ -104,5 +105,20 @@ public class BearMovement : MonoBehaviour
 
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.name == "DetectBearTrigger")
+        {
+            bHitWall = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "DetectBearTrigger")
+        {
+            bHitWall = false;
+        }
+    }
 
 }

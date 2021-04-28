@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneManager_Level2Final : MonoBehaviour
 {
@@ -115,7 +116,28 @@ public class SceneManager_Level2Final : MonoBehaviour
     bool bCatchPlayer = false;
 
     //player dead loader
-    public PlayerDeadLoader PlayerDeadLoaderScript;
+    private PlayerDeadLoader PlayerDeadLoaderScript;
+
+    private static SceneManager_Level2Final instance;
+
+
+    //if gate not down bear speed
+    float fBearFastSpeed = 12.0f;
+
+    private void Awake()
+    {
+        //check for the instance of the object
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
 
     // Start is called before the first frame update
@@ -130,8 +152,8 @@ public class SceneManager_Level2Final : MonoBehaviour
         //start camera position
         this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(4.0f, 0f, 0.0f, true, false) ;
 
+        PlayerDeadLoaderScript = GameObject.Find("PlayerDeadLoaderCanvas").GetComponent<PlayerDeadLoader>();
 
-        
     }
 
     private void FixedUpdate()
@@ -149,7 +171,6 @@ public class SceneManager_Level2Final : MonoBehaviour
         {
             bCatchPlayer = true;
 
-            Debug.Log("bear attack");
 
             StopAllCoroutines();
 
@@ -160,17 +181,23 @@ public class SceneManager_Level2Final : MonoBehaviour
 
             //player stop
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
-            GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+            GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+
+            //set animate to idle
+            GameObject.Find("Player").GetComponent<PlayerSkill>().ResetAnimateToIdle();
 
             //trun player face to face bear 
             if (GameObject.Find("Player").GetComponent<Transform>().localScale.x < 0)
                 GameObject.Find("Player").GetComponent<Transform>().localScale = new Vector2(GameObject.Find("Player").GetComponent<Transform>().localScale.x * -1f , GameObject.Find("Player").GetComponent<Transform>().localScale.y) ;
 
-            PlayerDeadLoaderScript.TransitionAfterTime(0.75f);
+            PlayerDeadLoaderScript.TransitionAfterTime(0.35f);
+
+            StartCoroutine(ReloadSceneAfterTimeIEnumerator(1.0f));
+            
 
         }
 
-
+       
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
 
@@ -235,7 +262,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
         }
 
-
+        //Debug.Log(BearStage);
         //Bear touch rock, stop run
         if (RockDamage != null && BearStage < BearStageNUM.BearTouchRock && BearStage >= BearStageNUM.Run)
         {
@@ -252,8 +279,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
             }
         }
-
-
+        
         //Bear Damage Rock
         if (BearStage == BearStageNUM.BearDamageRock)
         {
@@ -289,22 +315,27 @@ public class SceneManager_Level2Final : MonoBehaviour
         else if (BearStage == BearStageNUM.Run3)
         {
             Bear.GetComponent<Animator>().Play("Bear_Run");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.5f, 0.0f);
+
+            //if player is far away 
+            if(!Gate1Trigger.bTriggerFinish  && !Gate1Trigger.VitaDetect._bSkillTrigger)                
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(fBearFastSpeed, 0.0f);
+               
+            else
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.5f, 0.0f);
 
             if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearClimbCheckPoint.transform.position.x)
             {
                 BearStage++;
             }
         }
-
+        
 
         else if (BearStage == BearStageNUM.GoThroughtDogGate)
         {
             ///If Gate Down
-            // if (bGateDown)
-            if (true)
+            if (bGateDown)
+            //if (true)
             {
-
                 if (bGateDown)
                     Debug.Log("On time");
                 else
@@ -321,7 +352,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             else
             {
                 BearStage = BearStageNUM.Run4;
-                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(10.0f, 0.0f);
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(fBearFastSpeed, 0.0f);
+                //Debug.Log(Bear.GetComponent<Rigidbody2D>().velocity.x);
             }
 
         }
@@ -449,7 +481,24 @@ public class SceneManager_Level2Final : MonoBehaviour
         else if (BearStage == BearStageNUM.Run4)
         {
             Bear.GetComponent<Animator>().Play("Bear_Run");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(7.0f, 0.0f);
+            
+            if(!bGateDown)
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(fBearFastSpeed, 0.0f);
+
+            else
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(7.0f, 0.0f);
+
+            //if bear hit wall, state back to climb wall
+            if (Bear.GetComponent<BearMovement>().bHitWall && bGateDown)
+            {
+                //change bear position
+                Bear.transform.position = new Vector2(BearClimbCheckPoint.transform.position.x + 3.0f, Bear.transform.position.y);
+
+                //change state
+                BearStage = BearStageNUM.GoThroughtDogGate;
+
+            }
+
         }
 
 
@@ -484,11 +533,15 @@ public class SceneManager_Level2Final : MonoBehaviour
 
         else if (BearStage == BearStageNUM.Run5)
         {
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
+            if(!bGateDown)
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(fBearFastSpeed, 0.0f);
+
+            else
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
 
 
-            //touch jump check point
-            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearJumpCheckPoint.transform.position.x)
+            //touch jump check point, and player is on right stair
+            if (GameObject.Find("Bear").GetComponent<Transform>().position.x >= BearJumpCheckPoint.transform.position.x && GameObject.Find("Player").transform.position.y > BearRestartClimbCheckPoint.transform.position.y)
             {
                 BearStage++;
             }
@@ -501,6 +554,24 @@ public class SceneManager_Level2Final : MonoBehaviour
         {
             Bear.GetComponent<Animator>().SetTrigger("tJump");
             BearStage++;
+
+
+
+            //////////////////////////////////////////////////////////////////player hurt, level reload
+            //player stop
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+
+            //set animate to idle
+            GameObject.Find("Player").GetComponent<PlayerSkill>().ResetAnimateToIdle();
+
+            //trun player face to face bear 
+            if (GameObject.Find("Player").GetComponent<Transform>().localScale.x < 0)
+                GameObject.Find("Player").GetComponent<Transform>().localScale = new Vector2(GameObject.Find("Player").GetComponent<Transform>().localScale.x * -1f, GameObject.Find("Player").GetComponent<Transform>().localScale.y);
+
+            PlayerDeadLoaderScript.TransitionAfterTime(3.0f);
+
+            StartCoroutine(ReloadSceneAfterTimeIEnumerator(4.0f));
 
         }
 
@@ -527,6 +598,8 @@ public class SceneManager_Level2Final : MonoBehaviour
                 StopCoroutine(RecordIEnumerator);
             RecordIEnumerator = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(0.0f, GameObject.Find("Player").transform.position.y, 1.0f, true, true);
             StartCoroutine(RecordIEnumerator);*/
+
+
         }
 
 
@@ -585,6 +658,11 @@ public class SceneManager_Level2Final : MonoBehaviour
         }
     }
 
-
+    IEnumerator ReloadSceneAfterTimeIEnumerator(float time)
+    {
+        yield return new WaitForSeconds(time);
+        //reload scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
 }

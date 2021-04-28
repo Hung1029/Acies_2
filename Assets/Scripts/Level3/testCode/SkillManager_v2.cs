@@ -22,9 +22,9 @@ public class SkillManager_v2 : MonoBehaviour
     private Animator VitaSoulBG;
 
     //UI
-    [SerializeField]
+    //[SerializeField]
     private Image SkillIcon;
-    [SerializeField]
+    //[SerializeField]
     private Image SkillName;
 
 
@@ -89,8 +89,9 @@ public class SkillManager_v2 : MonoBehaviour
 
         fCanGathingTime = magicLightScript.fRaiseHand + fLightUpTime;
 
-       
 
+        SkillIcon = GameObject.Find("SkillIcon").GetComponent<Image>();
+        SkillName = GameObject.Find("SkillName").GetComponent<Image>();
 
 
     }
@@ -298,6 +299,9 @@ public class SkillManager_v2 : MonoBehaviour
                         //remember last effective position
                         ObjectsMoveable[iCurrentLookIndex].v2LastPosition = ObjectsMoveable[iCurrentLookIndex].transform.localPosition;
 
+                        //reset rigibody velocity
+                        ObjectsMoveable[iCurrentLookIndex].transform.Rotate(new Vector3(0.0f, 0.0f, 0.0f));
+                        ObjectsMoveable[iCurrentLookIndex].GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
                         ObjectsMoveable[iCurrentLookIndex].transform.rotation = Quaternion.identity;
 
                         //reset iCurrentLookIndex

@@ -6,6 +6,25 @@ public class PlayerDeadLoader : MonoBehaviour
 {
     Animator LoaderAnimator;
 
+    private static PlayerDeadLoader instance;
+
+    private void Awake()
+    {
+        //check for the instance of the object
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {

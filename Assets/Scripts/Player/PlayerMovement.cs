@@ -249,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
     //detect bear
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+       
         if (collision.name == "DetectPlayer")
         {
             bBearCatchPlayer = true;
