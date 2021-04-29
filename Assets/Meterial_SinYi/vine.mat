@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: circle
-  m_Shader: {fileID: -6465566751694194690, guid: 52ec2d412b06dfb429c5b68b90c00cfc,
+  m_Name: vine
+  m_Shader: {fileID: -6465566751694194690, guid: 24fd2a045f21a69419eb2674bb7a297d,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -25,11 +25,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission:
-        m_Texture: {fileID: 2800000, guid: 9f6316ec55d1096469e3d28343d804f0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 58d8ab1b3f8570d47bc42716519d9781, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5870ceca03d9255419a9be9840fc0555, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6b38cbe6fe7352a408117cbe73de2f7b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -41,9 +41,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_64EA8F8: 0.3
+    - Vector1_B5EE0412: 0.3
+    - Vector1_BB7506BA: 0.2
+    - Vector1_C94931BF: 0.5
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_1256EBB7: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+    - Color_14D8EE53: {r: 0.5508393, g: 1.557321, b: 1.877862, a: 0}
+    - Vector2_A84A8433: {r: 1, g: 0.4, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace ilhamhe {
+	
 
 	public class DynamicWater2D : MonoBehaviour {
 
@@ -31,17 +32,23 @@ namespace ilhamhe {
 		public float spread = 0.1f;
 		public float collisionVelocityFactor = 0.04f;
 
+
 		float[] velocities;
 		float[] accelerations;
 		float[] leftDeltas;
 		float[] rightDeltas;
 
+		
+
+
 		private float timer;
 
 		private void Start () {
+			
 			InitializePhysics ();
 			GenerateMesh ();
 			SetBoxCollider2D ();
+			
 		}
 
 		private void InitializePhysics () {
@@ -87,10 +94,10 @@ namespace ilhamhe {
 
 			// generate mesh
 			MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer> ();
-            meshRenderer.sortingLayerName = "ground";
+            meshRenderer.sortingLayerName = "Explosion";
             meshRenderer.sortingOrder = 0;
 			if (waterMaterial) meshRenderer.sharedMaterial = waterMaterial;
-
+			
 			MeshFilter meshFilter = gameObject.AddComponent<MeshFilter> ();
 
 			mesh = new Mesh ();
@@ -115,6 +122,7 @@ namespace ilhamhe {
 			if(timer <= 0) return;
 			timer -= Time.deltaTime;
 
+			
 			// updating physics
 			for (int i = 0; i < quality; i++) {
 				float force = springconstant * (vertices[i].y - bound.top) + velocities[i] * damping;
@@ -136,8 +144,9 @@ namespace ilhamhe {
 
 			// updating mesh
 			mesh.vertices = vertices;
-		}
 
+			
+		}
 		private void OnTriggerEnter2D(Collider2D col) {
             if (col.gameObject.tag == "vita")
             {
@@ -153,13 +162,13 @@ namespace ilhamhe {
 			float radius = col.bounds.max.x - col.bounds.min.x;
 			Vector2 center = new Vector2(col.bounds.center.x, bound.top) ;
 			// instantiate splash particle
+			
 			GameObject splashGO = Instantiate(splash, new Vector3(center.x, center.y-0.5f, 0), Quaternion.Euler(0,0,60));
 			Destroy(splashGO, 2f);
 
 			// applying physics
 			for (int i = 0; i < quality; i++) {
 				if (PointInsideCircle (vertices[i], center, radius)) {
-					
 					velocities[i] = force;
 				}
 			}
