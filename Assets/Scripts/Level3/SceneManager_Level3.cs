@@ -52,6 +52,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
     //Status Jisaw
     public MatchingJigsaw[] StatusMatchingJigsawScript;
+    public SpriteRenderer StatusSprite;
     bool MatchingJigsawFinish = false;
 
 
@@ -67,11 +68,12 @@ public class SceneManager_Level3 : MonoBehaviour
     //status gate open
     public GameObject StatusGate;
 
-   
+    //Skill 1 description
+    public SkillDiscription SkillDescription_1;
+    bool bSkill1Des_open = true;
+    bool bSkill1Des_finish = false;
 
-   
-
-
+    public SpriteRenderer[] StatusMaterial;
 
     void Start()
     {
@@ -95,6 +97,25 @@ public class SceneManager_Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //skill 1 description
+        if(bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
+        {
+            StartCoroutine(SkillDescription_1.FadeIn());
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+            bSkill1Des_open = true;
+        }
+        else if (bSkill1Des_open == true && bSkill1Des_finish　== false && Input.GetButtonDown("Submit") && SkillDescription_1.SkillDiscriptionSet[SkillDescription_1.SkillDiscriptionSet.Length -1].image.color.a ==1)
+        {
+            StopCoroutine(SkillDescription_1.FadeIn());
+            StartCoroutine(SkillDescription_1.FadeOut());
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+            bSkill1Des_finish = true;
+        }
+
+
+
         //move platform
         PlatformTrigger.DetectFinish();
         if (MovingPlatform._bCanMove == false && PlatformTrigger.bTriggerFinish)
@@ -338,10 +359,16 @@ public class SceneManager_Level3 : MonoBehaviour
                 //run light up buddha clue
                 StartCoroutine(StatusClueIEnumerator());
 
+
+                for (int i = 0; i < StatusMaterial.Length; i++)
+                {
+                    StartCoroutine(ColorChangingIEnumerator(i, new Color(1.0f, 1.0f, 1.0f, 0.0f), 2.0f));
+                }
+                
+
             }
                
         }
-
 
         //light up status after jigsaw is all match 
         if (!bStatusLightUpCorrect && MatchingJigsawFinish)
@@ -427,6 +454,7 @@ public class SceneManager_Level3 : MonoBehaviour
         {
             StatusMatchingJigsawScript[i].GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         }
+
         yield return new WaitForSeconds(1.0f);
 
         //pick color order
@@ -456,7 +484,7 @@ public class SceneManager_Level3 : MonoBehaviour
             {
                 StatusMatchingJigsawScript[j].GetComponent<SpriteRenderer>().color = CColor[array[i]];
             }
-            
+            StatusSprite.color = CColor[array[i]];
             yield return new WaitForSeconds(2.0f);
         }
 
@@ -464,6 +492,7 @@ public class SceneManager_Level3 : MonoBehaviour
         for (int i = 0; i < StatusMatchingJigsawScript.Length; i++)
         {
             StatusMatchingJigsawScript[i].GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            StatusSprite.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         }
 
 
@@ -496,7 +525,30 @@ public class SceneManager_Level3 : MonoBehaviour
         iCountOrder = 0;
 
     }
+    IEnumerator ColorChangingIEnumerator(int iIndex, Color tagetColor, float duration)
+    {
+        bool bColorFinishChang = false;
+        float t = 0;
 
-   
+        while (!bColorFinishChang)
+        {
+            
+            StatusMaterial[iIndex].color = Color.Lerp(StatusMaterial[iIndex].color, tagetColor, t);
+
+            if (t < duration)
+            {
+                t += Time.deltaTime / duration;
+                bColorFinishChang = false;
+            }
+            else
+            {
+                bColorFinishChang = true;
+            }
+
+            yield return null;
+        }
+
+    }
+
 
 }

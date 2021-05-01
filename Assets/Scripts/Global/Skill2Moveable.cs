@@ -40,6 +40,7 @@ public class Skill2Moveable : MonoBehaviour
         Skill2PickedOutLine.transform.localScale = new Vector3(1.1f, 1.1f,0.0f);
         Skill2PickedOutLine.transform.localRotation = Quaternion.identity;
         PickedOut =  Skill2PickedOutLine.AddComponent<SpriteRenderer>();
+        PickedOut.sortingLayerName = "PlayItem";
         this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = PickedOut.sortingOrder + 1;
         PickedOut.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         PickedOut.material.shader = Shader.Find("GUI/Text Shader");

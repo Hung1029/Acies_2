@@ -1,0 +1,1592 @@
+fileFormatVersion: 2
+guid: 785ae3b009192664ab7720b21decb516
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -514901928912321952
+    second: godlight_0
+  - first:
+      213: 3006677173890531259
+    second: godlight_1
+  - first:
+      213: 6567020826968321626
+    second: godlight_2
+  - first:
+      213: 7503602276812330590
+    second: godlight_3
+  - first:
+      213: -452655950185583534
+    second: godlight_4
+  - first:
+      213: -1890784343008783442
+    second: godlight_5
+  - first:
+      213: -1740283997208653433
+    second: godlight_6
+  - first:
+      213: 8379601997690844785
+    second: godlight_7
+  - first:
+      213: -6976713534965676349
+    second: godlight_8
+  - first:
+      213: 5281359039770187978
+    second: godlight_9
+  - first:
+      213: -3469443719903287357
+    second: godlight_10
+  - first:
+      213: -8884674964423636040
+    second: godlight_11
+  - first:
+      213: -2150626845489842424
+    second: godlight_12
+  - first:
+      213: 7737062502811077823
+    second: godlight_13
+  - first:
+      213: 2717574768867797002
+    second: godlight_14
+  - first:
+      213: 1254885952720011097
+    second: godlight_15
+  - first:
+      213: -1905173282499052115
+    second: godlight_16
+  - first:
+      213: 10953927516814676
+    second: godlight_17
+  - first:
+      213: 8944428650336315733
+    second: godlight_18
+  - first:
+      213: -1698578951816496858
+    second: godlight_19
+  - first:
+      213: -6203688878527756282
+    second: godlight_20
+  - first:
+      213: -5038022427211974992
+    second: godlight_21
+  - first:
+      213: 4844031231830177074
+    second: godlight_22
+  - first:
+      213: -4431371008703492322
+    second: godlight_23
+  - first:
+      213: 5715299110287541800
+    second: godlight_24
+  - first:
+      213: -3356867915517283733
+    second: godlight_25
+  - first:
+      213: -5799499599573522564
+    second: godlight_26
+  - first:
+      213: -1923071085500179644
+    second: godlight_27
+  - first:
+      213: 7778432724236937639
+    second: godlight_28
+  - first:
+      213: -3484957471100585961
+    second: godlight_29
+  - first:
+      213: -7564303410978211369
+    second: godlight_30
+  - first:
+      213: -162082871555684347
+    second: godlight_31
+  - first:
+      213: 5825928315306029083
+    second: godlight_32
+  - first:
+      213: 8657424127696563278
+    second: godlight_33
+  - first:
+      213: -2352079186115069313
+    second: godlight_34
+  - first:
+      213: 4082271134598763776
+    second: godlight_35
+  - first:
+      213: 1435293423043542109
+    second: godlight_36
+  - first:
+      213: 1373894738082147223
+    second: godlight_37
+  - first:
+      213: 2546786815313070566
+    second: godlight_38
+  - first:
+      213: 2938124831051812380
+    second: godlight_39
+  - first:
+      213: -7136632095674681893
+    second: godlight_40
+  - first:
+      213: -7817397829312529489
+    second: godlight_41
+  - first:
+      213: -3108940406044068553
+    second: godlight_42
+  - first:
+      213: -7038155759734794279
+    second: godlight_43
+  - first:
+      213: 8212330578016291762
+    second: godlight_44
+  - first:
+      213: -5746778601869134886
+    second: godlight_45
+  - first:
+      213: -9198664404121564389
+    second: godlight_46
+  - first:
+      213: -8510022068402136956
+    second: godlight_47
+  - first:
+      213: 6356519176192112500
+    second: godlight_48
+  - first:
+      213: -5164515113739911581
+    second: godlight_49
+  - first:
+      213: -8335858446749595071
+    second: godlight_50
+  - first:
+      213: -865356237123929733
+    second: godlight_51
+  - first:
+      213: 8025265514011565333
+    second: godlight_52
+  - first:
+      213: 5903465315597352678
+    second: godlight_53
+  - first:
+      213: -7720469304030643391
+    second: godlight_54
+  - first:
+      213: 5806751155969662038
+    second: godlight_55
+  - first:
+      213: -5676229702037419854
+    second: godlight_56
+  - first:
+      213: 741526577909637101
+    second: godlight_57
+  - first:
+      213: 4618248700577287155
+    second: godlight_58
+  - first:
+      213: -7669363748331454426
+    second: godlight_59
+  - first:
+      213: -6586391666422541334
+    second: godlight_60
+  - first:
+      213: -8820361657895339860
+    second: godlight_61
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: godlight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6360
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06284097c63bad8f0800000000000000
+      internalID: -514901928912321952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 6360
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf3508a5fcd9b920800000000000000
+      internalID: 3006677173890531259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_2
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 6360
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ee90806aeb22b50800000000000000
+      internalID: 6567020826968321626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_3
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 6360
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e561635d386222860800000000000000
+      internalID: 7503602276812330590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_4
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 6360
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ca8b3cfc7d7b9f0800000000000000
+      internalID: -452655950185583534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5830
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3571868a592c5e0800000000000000
+      internalID: -1890784343008783442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 5830
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781d41acce449d7e0800000000000000
+      internalID: -1740283997208653433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_7
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 5830
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176348fae935a4470800000000000000
+      internalID: 8379601997690844785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_8
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 5830
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c606b0110cbd2f90800000000000000
+      internalID: -6976713534965676349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_9
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 5830
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8dcc890182b4940800000000000000
+      internalID: 5281359039770187978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5300
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c764f2915f0adfc0800000000000000
+      internalID: -3469443719903287357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_11
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 5300
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb09b0613b43b480800000000000000
+      internalID: -8884674964423636040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_12
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 5300
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807b82e47407722e0800000000000000
+      internalID: -2150626845489842424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_13
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 5300
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc8c058a519f5b60800000000000000
+      internalID: 7737062502811077823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_14
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 5300
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08edec9ad3c6b520800000000000000
+      internalID: 2717574768867797002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4770
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ff08510204a6110800000000000000
+      internalID: 1254885952720011097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_16
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 4770
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad341d5ef67f85e0800000000000000
+      internalID: -1905173282499052115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_17
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 4770
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45df88ef98ae62000800000000000000
+      internalID: 10953927516814676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_18
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 4770
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5596f16c77ef02c70800000000000000
+      internalID: 8944428650336315733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_19
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 4770
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629b50a517f6d68e0800000000000000
+      internalID: -1698578951816496858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4240
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608cf4265d118e9a0800000000000000
+      internalID: -6203688878527756282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 4240
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b634978b49551ab0800000000000000
+      internalID: -5038022427211974992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_22
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 4240
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235b2269db4793340800000000000000
+      internalID: 4844031231830177074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_23
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 4240
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f8346cb8b9082c0800000000000000
+      internalID: -4431371008703492322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_24
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 4240
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8268bc58242d05f40800000000000000
+      internalID: 5715299110287541800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3710
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62bfa19a620a61d0800000000000000
+      internalID: -3356867915517283733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_26
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 3710
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77666c57d9048fa0800000000000000
+      internalID: -5799499599573522564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_27
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 3710
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bdfee5901ef45e0800000000000000
+      internalID: -1923071085500179644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_28
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 3710
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9aa6dc95b82fb60800000000000000
+      internalID: 7778432724236937639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_29
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 3710
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718b4b5e4a1f2afc0800000000000000
+      internalID: -3484957471100585961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3180
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d93e570022360790800000000000000
+      internalID: -7564303410978211369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_31
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 3180
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5088fb0bc7a20cdf0800000000000000
+      internalID: -162082871555684347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_32
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 3180
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10b4b88fead9d050800000000000000
+      internalID: 5825928315306029083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_33
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 3180
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cef390069552870800000000000000
+      internalID: 8657424127696563278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_34
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 3180
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a750c217cbb5fd0800000000000000
+      internalID: -2352079186115069313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2650
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0051796d7f327a830800000000000000
+      internalID: 4082271134598763776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_36
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 2650
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cf6f483cf2be310800000000000000
+      internalID: 1435293423043542109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_37
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 2650
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b2a2e2cfd011310800000000000000
+      internalID: 1373894738082147223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_38
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 2650
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e942657d11085320800000000000000
+      internalID: 2546786815313070566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_39
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 2650
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e099c87f056c820800000000000000
+      internalID: 2938124831051812380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2120
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5b8a4abe695fc90800000000000000
+      internalID: -7136632095674681893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_41
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 2120
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabbae3b716038390800000000000000
+      internalID: -7817397829312529489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_42
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 2120
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73572ed2c23dad4d0800000000000000
+      internalID: -3108940406044068553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_43
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 2120
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7532350a2735e90800000000000000
+      internalID: -7038155759734794279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_44
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 2120
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb4db0662f08f170800000000000000
+      internalID: 8212330578016291762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1590
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad336c03f475f30b0800000000000000
+      internalID: -5746778601869134886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_46
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1590
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bcd480677c75080800000000000000
+      internalID: -9198664404121564389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_47
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1590
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488d72e440456e980800000000000000
+      internalID: -8510022068402136956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_48
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1590
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477b3e03384e63850800000000000000
+      internalID: 6356519176192112500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_49
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1590
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e7568edd4f358b0800000000000000
+      internalID: -5164515113739911581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1060
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a0d8f68e4115c80800000000000000
+      internalID: -8335858446749595071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_51
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1060
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b793f025613adf3f0800000000000000
+      internalID: -865356237123929733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_52
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1060
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d1ade17787f5f60800000000000000
+      internalID: 8025265514011565333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_53
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1060
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eef4083d625de150800000000000000
+      internalID: 5903465315597352678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_54
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1060
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b32f1a2126bd490800000000000000
+      internalID: -7720469304030643391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 530
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c19ae2969b59050800000000000000
+      internalID: 5806751155969662038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_56
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 530
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8c982f82bf931b0800000000000000
+      internalID: -5676229702037419854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_57
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 530
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def90db6e7e6a4a00800000000000000
+      internalID: 741526577909637101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_58
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 530
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb815289b0571040800000000000000
+      internalID: 4618248700577287155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_59
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 530
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620027f0e42f09590800000000000000
+      internalID: -7669363748331454426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae39a43fcaf6894a0800000000000000
+      internalID: -6586391666422541334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: godlight_61
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 242
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca83caeedc7c79580800000000000000
+      internalID: -8820361657895339860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
