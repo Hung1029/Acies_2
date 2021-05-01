@@ -206,7 +206,7 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    IEnumerator ChangeCameraProjectionSizeIEnumerator(Camera MainCamera, float fSizeValue, float fTransformTime)
+    public IEnumerator ChangeCameraProjectionSizeIEnumerator(Camera MainCamera, float fSizeValue, float fTransformTime)
     {
         if (fTransformTime > 0.0f)
         {
@@ -245,7 +245,6 @@ public class CameraManager : MonoBehaviour
 
         if (fTransformTime > 0.0f)
         {
-
             
             Vector3 v2OriginalPosition = new Vector3(MainCamera.position.x, MainCamera.position.y, MainCamera.position.z);
             Vector3 v2TargetPosition = new Vector3(GameObject.Find("Player").transform.position.x + x, y, MainCamera.position.z);
@@ -253,9 +252,18 @@ public class CameraManager : MonoBehaviour
 
             float fCameraChangePositionTimer = 0.0f;
 
-            while (Vector2.Distance(MainCamera.transform.position, v2TargetPosition) >= 0.001f )
+            while (Vector2.Distance(MainCamera.transform.position, v2TargetPosition) > 0.1f )
             {
+
                 v2TargetPosition = new Vector3(GameObject.Find("Player").transform.position.x + x, y, MainCamera.position.z);
+
+                //test
+                //if target x position over limit break 
+                if (v2TargetPosition.x > CheckPointInfo[currentPlayerArea].XMaxValue && CheckPointInfo[currentPlayerArea].XMaxEnabled)
+                {
+                    v2TargetPosition = new Vector3(CheckPointInfo[currentPlayerArea].XMaxValue, y, MainCamera.position.z);
+                }
+                //test
 
                 v2NewValue = Vector2.Lerp(v2OriginalPosition, v2TargetPosition, fCameraChangePositionTimer);
 
@@ -275,13 +283,23 @@ public class CameraManager : MonoBehaviour
 
                 TransformPos.z = MainCamera.transform.position.z;
 
-                MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, TransformPos, ref velocity, smoothTime);
+                //on time
+                if(fCameraChangePositionTimer < fTransformTime)
+                    MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, TransformPos, ref velocity, smoothTime);
             
+                //not on time, camera speed up 
+                else
+                    MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, TransformPos, ref velocity, smoothTime / 3.0f);
 
                 yield return null;
 
             }
             MainCamera.transform.position = v2TargetPosition;
+
+            //test
+            TargetTransformAdjust_X = x;
+            TargetTransformAdjust_Y = y - GameObject.Find("Player").transform.position.y;
+            //test
         }
 
         else if (fTransformTime == 0.0f)

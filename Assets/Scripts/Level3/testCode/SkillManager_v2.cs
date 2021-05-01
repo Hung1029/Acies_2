@@ -22,10 +22,10 @@ public class SkillManager_v2 : MonoBehaviour
     private Animator VitaSoulBG;
 
     //UI
-    //[SerializeField]
-    private Image SkillIcon;
-    //[SerializeField]
-    private Image SkillName;
+    [System.NonSerialized]
+    public Image SkillIcon;
+    [System.NonSerialized]
+    public Image SkillName;
 
 
     //Skill time
@@ -44,8 +44,10 @@ public class SkillManager_v2 : MonoBehaviour
 
     /////IEnumerator
     private IEnumerator ObjMoveTo;
-    private IEnumerator FadeOutUI;
-    private IEnumerator FadeInUI;
+    [System.NonSerialized]
+    public IEnumerator FadeOutUI;
+    [System.NonSerialized]
+    public IEnumerator FadeInUI;
 
 
     //Skill 2 
@@ -302,6 +304,7 @@ public class SkillManager_v2 : MonoBehaviour
                         //reset rigibody velocity
                         ObjectsMoveable[iCurrentLookIndex].transform.Rotate(new Vector3(0.0f, 0.0f, 0.0f));
                         ObjectsMoveable[iCurrentLookIndex].GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+                        ObjectsMoveable[iCurrentLookIndex].GetComponent<Rigidbody2D>().angularVelocity = 0f;
                         ObjectsMoveable[iCurrentLookIndex].transform.rotation = Quaternion.identity;
 
                         //reset iCurrentLookIndex
@@ -495,7 +498,7 @@ public class SkillManager_v2 : MonoBehaviour
 
     //UI
 
-    IEnumerator FadeOutSkillIconIEnumerator()
+    public IEnumerator FadeOutSkillIconIEnumerator()
     {
         SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 1.0f);
         SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 1.0f);
