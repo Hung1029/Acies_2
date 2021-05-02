@@ -16,12 +16,16 @@ public class BuddhaCandle : MonoBehaviour
     float fGameGatheringTime = 1.0f;
 
 
+    private const int SpriteNUM = 36;
+    [SerializeField]
+    private Sprite[] StartSprite = new Sprite[SpriteNUM];
+
+    private int SpriteCount = 0;
+
+
     void Start()
     {
         CandleRenderer = GetComponent<SpriteRenderer>();
-
-
-
     }
 
 
@@ -30,9 +34,10 @@ public class BuddhaCandle : MonoBehaviour
     {
         if (bChangeColorFinish == false)
         {
+            Debug.Log(_bSkillOneTrigger);
             if (_bSkillOneTrigger && bChangeColor == false && PlayerSkill.CURRENTSKILL == 1)
             {
-
+                Debug.Log("in");
                 StopCoroutine("ChangeBackCandleColorIEnumerator");
                 StartCoroutine("ChangeCandleColorIEnumerator");
                 bChangeColor = true;
@@ -59,10 +64,25 @@ public class BuddhaCandle : MonoBehaviour
     }
 
 
-    IEnumerator ChangeCandleColorIEnumerator()
+    public IEnumerator ChangeCandleColorIEnumerator()
     {
-       
-        // change format
+
+        for (; SpriteCount < SpriteNUM; SpriteCount++)
+        {
+            Debug.Log(SpriteCount);
+            CandleRenderer.sprite = StartSprite[SpriteCount];
+
+            yield return new WaitForSeconds(3.0f / SpriteNUM);
+
+            if (SpriteCount == 34)
+                bChangeColorFinish = true;
+
+        }
+        SpriteCount = SpriteNUM - 1;
+
+        bChangeColorFinish = true;
+
+        /*// change format
         float fr_goal = 1.0f;
         float fg_goal = 0.987f;
         float fb_goal = 0f;
@@ -83,40 +103,68 @@ public class BuddhaCandle : MonoBehaviour
             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a + fa);          
             yield return new WaitForSeconds(fGameGatheringTime / 20f); 
         }
-        bChangeColorFinish = true;
+        bChangeColorFinish = true;*/
     }
 
 
 
-    IEnumerator ChangeBackCandleColorIEnumerator()
+    public IEnumerator ChangeBackCandleColorIEnumerator()
     {
 
-        // change format
-        float fr_goal = 1.0f;
-        float fg_goal = 0.987f;
-        float fb_goal = 0f;
-        float fa_goal = 1.0f;
-
-        //set ever time to change
-        float fr = (fr_goal - 0.9294118f) / 20;
-        float fg = (fg_goal - 0.9294118f) / 20f;
-        float fb = (fb_goal - 0.9294118f) / 20;
-        float fa = (fa_goal - 1.0f) / 20;
-
-        
-        for (; iAddColorTimeCounter > 0; iAddColorTimeCounter--)
+        for (; SpriteCount >= 0; SpriteCount--)
         {
-            CandleRenderer.color = new Color(CandleRenderer.color.r - fr, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a);
-            CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g - fg, CandleRenderer.color.b, CandleRenderer.color.a);
-            CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b - fb, CandleRenderer.color.a);
-            CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a - fa);
-            yield return new WaitForSeconds(fGameGatheringTime / 20f);
+            CandleRenderer.sprite = StartSprite[SpriteCount];
+
+            yield return new WaitForSeconds(3.0f / SpriteNUM);
         }
+        SpriteCount = 0;
+
+        /* // change format
+         float fr_goal = 1.0f;
+         float fg_goal = 0.987f;
+         float fb_goal = 0f;
+         float fa_goal = 1.0f;
+
+         //set ever time to change
+         float fr = (fr_goal - 0.9294118f) / 20;
+         float fg = (fg_goal - 0.9294118f) / 20f;
+         float fb = (fb_goal - 0.9294118f) / 20;
+         float fa = (fa_goal - 1.0f) / 20;
+
+
+         for (; iAddColorTimeCounter > 0; iAddColorTimeCounter--)
+         {
+             CandleRenderer.color = new Color(CandleRenderer.color.r - fr, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a);
+             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g - fg, CandleRenderer.color.b, CandleRenderer.color.a);
+             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b - fb, CandleRenderer.color.a);
+             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a - fa);
+             yield return new WaitForSeconds(fGameGatheringTime / 20f);
+         }*/
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public IEnumerator reset()
     {
+
+        for (; SpriteCount >= 0; SpriteCount--)
+        {
+            CandleRenderer.sprite = StartSprite[SpriteCount];
+
+            yield return new WaitForSeconds(3.0f / SpriteNUM);
+        }
+        SpriteCount = 0;
+
+    _bSkillOneTrigger = false;
+
+    
+    bChangeColor = false;
+    bChangeColorFinish = false;
+}
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log(other.name);
         if (other.name == "VitaSoul")
         {
             _bSkillOneTrigger = true;

@@ -150,8 +150,13 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////Dectect Buddha level start 
-        bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
-        bool bCandle2 = StartCandle[1].GetComponent<BuddhaCandle>().DetectCandleFinish();
+        /*bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
+        bool bCandle2 = StartCandle[1].GetComponent<BuddhaCandle>().DetectCandleFinish();*/
+
+        StartCandle[0].GetComponent<SkillOneTriggerIcon>().DetectFinish();
+        StartCandle[1].GetComponent<SkillOneTriggerIcon>().DetectFinish();
+        bool bCandle1 = StartCandle[0].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
+        bool bCandle2 = StartCandle[1].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
         if (bCandle1 && bCandle2 && iBuddhaLevel == 0)
         {
             iBuddhaLevel = 1;
@@ -184,8 +189,9 @@ public class SceneManager_Level3 : MonoBehaviour
         //fade in in order GameCandle 1 
         else if (iBuddhaLevel == 2)
         {
-
-            GameCandle[array[0]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle
+            StartCoroutine(GameCandle[array[0]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator());
+            
+            //GameCandle[array[0]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle
             StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
 
         }
@@ -193,9 +199,10 @@ public class SceneManager_Level3 : MonoBehaviour
         //fade in in order GameCandle 2
         else if (iBuddhaLevel == 3)
         {
-
-            GameCandle[array[0]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
-            GameCandle[array[1]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle
+            StartCoroutine(GameCandle[array[0]].GetComponent<BuddhaCandle>().reset());
+            StartCoroutine(GameCandle[array[1]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator());
+            /*GameCandle[array[0]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
+            GameCandle[array[1]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle*/
             StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
 
         }
@@ -203,9 +210,10 @@ public class SceneManager_Level3 : MonoBehaviour
         //fade in in order GameCandle 3 
         else if (iBuddhaLevel == 4)
         {
-
-            GameCandle[array[1]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
-            GameCandle[array[2]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle
+            StartCoroutine(GameCandle[array[1]].GetComponent<BuddhaCandle>().reset());
+            StartCoroutine(GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator());
+            /*GameCandle[array[1]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
+            GameCandle[array[2]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle*/
             StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
 
 
@@ -218,7 +226,8 @@ public class SceneManager_Level3 : MonoBehaviour
 
             for (int i = 0; i < 3; i++)
             {
-                GameCandle[array[i]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
+                StartCoroutine(GameCandle[array[i]].GetComponent<BuddhaCandle>().reset());
+                //GameCandle[array[i]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
                 Go.color = new Color(Go.color.r, Go.color.g, Go.color.b, 1.0f);
             }
             iBuddhaLevel = 6;
