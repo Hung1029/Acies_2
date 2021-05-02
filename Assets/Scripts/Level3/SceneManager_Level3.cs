@@ -75,6 +75,11 @@ public class SceneManager_Level3 : MonoBehaviour
 
     public SpriteRenderer[] StatusMaterial;
 
+    //Trigger three status
+    public GameObject[] StatusTrigger;
+
+
+
     void Start()
     {
         VitaParticleScript = Vita.GetComponent<VitaSoul_particle>();
@@ -294,7 +299,17 @@ public class SceneManager_Level3 : MonoBehaviour
         {
             if (iLightUpOrder[i] < 0)
             {
-                //status trigger
+                //detect trigger
+                StatusTrigger[i].GetComponent<SkillOneTriggerIcon>().DetectFinish();
+
+                if (StatusTrigger[i].GetComponent<SkillOneTriggerIcon>().bTriggerFinish)
+                {
+                    //set light up order
+                    iLightUpOrder[i] = iCountOrder;
+                    iCountOrder++;
+                }
+
+                /*//status trigger
                 if (StatusToLightUp[i].GetComponent<VitaTriggerDetect>()._bSkillTrigger)
                 {
                     if (ftimer_statusLightUp[i] == 0)
@@ -325,7 +340,7 @@ public class SceneManager_Level3 : MonoBehaviour
                         StatusToLightUp[i].GetComponent<ColorChange>().ColorChanging(Color.white, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
                     }
 
-                }
+                }*/
             }
 
         }
@@ -409,9 +424,6 @@ public class SceneManager_Level3 : MonoBehaviour
         {
             Destroy(StatusGate);
         }
-
-
-        
 
 
     }
@@ -501,7 +513,35 @@ public class SceneManager_Level3 : MonoBehaviour
 
     IEnumerator resetStatusIEnumerator()
     {
-        //set status color to red
+
+        //set status icon to red
+        for (int i = 0; i < StatusToLightUp.Length; i++)
+        {
+            StatusTrigger[i].GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        for (int i = 0; i < iLightUpOrder.Length; i++)
+        {
+            StatusTrigger[i].GetComponent<ColorChange>().ColorChanging(Color.white, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+        }
+
+        yield return new WaitForSeconds(VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+
+        for (int i = 0; i < iLightUpOrder.Length; i++)
+        {
+            StartCoroutine(StatusTrigger[i].GetComponent<SkillOneTriggerIcon>().reset());
+        }
+
+        for (int i = 0; i < iLightUpOrder.Length; i++)
+        {
+            iLightUpOrder[i] = -1;
+        }
+
+        iCountOrder = 0;
+
+        /*//set status color to red
         for (int i = 0; i < StatusToLightUp.Length; i++)
         {
             StatusToLightUp[i].GetComponent<SpriteRenderer>().color = Color.red;
@@ -522,7 +562,7 @@ public class SceneManager_Level3 : MonoBehaviour
             iLightUpOrder[i] = -1;
         }
 
-        iCountOrder = 0;
+        iCountOrder = 0;*/
 
     }
     IEnumerator ColorChangingIEnumerator(int iIndex, Color tagetColor, float duration)

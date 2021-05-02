@@ -67,15 +67,15 @@ TagManager:
   - name: ground
     uniqueID: 2535439509
     locked: 0
-  - name: Player
-    uniqueID: 1489229143
-    locked: 0
   - name: PlayItem
     uniqueID: 2376486837
     locked: 0
-  - name: Vita
-    uniqueID: 1021863969
-    locked: 0
   - name: Explosion
     uniqueID: 2864934111
+    locked: 0
+  - name: Player
+    uniqueID: 1489229143
+    locked: 0
+  - name: Vita
+    uniqueID: 1021863969
     locked: 0

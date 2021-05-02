@@ -60,11 +60,11 @@ public class SkillOneTriggerIcon : MonoBehaviour
     }
 
 
-    public void reset()
-    {
-        SpriteCount = 0;
-        bTriggerFinish = false;
-    }
+    //public void reset()
+    //{
+    //    SpriteCount = 0;
+    //    bTriggerFinish = false;
+    //}
 
     IEnumerator PlayerTriggerFinishIEnumerator()
     {
@@ -97,6 +97,23 @@ public class SkillOneTriggerIcon : MonoBehaviour
         SpriteCount = 0;
     }
 
+    public IEnumerator reset()
+    {
 
+        for (; SpriteCount >= 0; SpriteCount--)
+        {
+            TriggerRenderer.sprite = StartSprite[SpriteCount];
+
+            yield return new WaitForSeconds(3.0f / SpriteNUM);
+        }
+        SpriteCount = 0;
+
+
+        canDetectTrigger = false;
+
+        bTriggerFinish = false;
+
+        bLastDetectState = false;
+    }
 
 }
