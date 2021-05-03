@@ -23,6 +23,8 @@ public class VitaSoul_particle : MonoBehaviour
     private GameObject VitaSoulPicture;
     private SpriteRenderer VitaSoulPictureRenderer;
 
+    private SpriteRenderer VitaSoulCoreSprite;
+
     private TrailRenderer ParticleTrail;
 
     [System.NonSerialized]
@@ -49,6 +51,7 @@ public class VitaSoul_particle : MonoBehaviour
     [System.NonSerialized]
     public bool bCanFollow = true;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +62,7 @@ public class VitaSoul_particle : MonoBehaviour
         //rescale stopping distance y
         stoppingDistance_y = Mathf.Abs(stoppingDistance_y * transform.localScale.y / 0.1472596f);
 
-
+        //particle system
         OuterParticleSys = OuterParticleObj.GetComponent<ParticleSystem>();
 
         //Trail
@@ -74,13 +77,17 @@ public class VitaSoul_particle : MonoBehaviour
 
 
         rb = this.GetComponent<Rigidbody2D>();
+
+        VitaSoulCoreSprite = GameObject.Find("VitaSoulCore").GetComponent<SpriteRenderer>();
+
     }
 
     public void LightUpVita(Color lightColor)
     {
         ParticleTrail.startColor = lightColor;
         ParticleTrail.endColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-        
+
+        VitaSoulCoreSprite.color = lightColor;
 
         this.GetComponent<SpriteRenderer>().color = lightColor;
 
@@ -160,7 +167,45 @@ public class VitaSoul_particle : MonoBehaviour
 
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////Vita Soul Core Fade in 
+    public IEnumerator VitaSoulCoreFadeIn()
+    {
+        StopCoroutine("VitaSoulCoreFadeOut");
 
+        this.gameObject.GetComponent<ParticleSystem>().enableEmission = true;
+        OuterParticleSys.enableEmission = true;
+        ParticleTrail.enabled = true;
+
+        float fTimer = 0.0f;
+        while (VitaSoulCoreSprite.color.a != 1.0f)
+        {
+            VitaSoulCoreSprite.color = Color.Lerp(new Color(VitaSoulCoreSprite.color.r, VitaSoulCoreSprite.color.g, VitaSoulCoreSprite.color.b, 0.0f), new Color(VitaSoulCoreSprite.color.r, VitaSoulCoreSprite.color.g, VitaSoulCoreSprite.color.b, 1.0f), fTimer);
+            fTimer += Time.deltaTime / 1.0f;
+
+            yield return null;
+        }
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////Vita Soul Core Fade out 
+    public IEnumerator VitaSoulCoreFadeOut()
+    {
+        StopCoroutine("VitaSoulCoreFadeIn");
+
+        this.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
+        OuterParticleSys.enableEmission = false;
+        ParticleTrail.enabled = false;
+
+        float fTimer = 0.0f;
+        while (VitaSoulCoreSprite.color.a != 0.0f)
+        {
+            VitaSoulCoreSprite.color = Color.Lerp(new Color(VitaSoulCoreSprite.color.r, VitaSoulCoreSprite.color.g, VitaSoulCoreSprite.color.b, 1.0f), new Color(VitaSoulCoreSprite.color.r, VitaSoulCoreSprite.color.g, VitaSoulCoreSprite.color.b, 0.0f), fTimer);
+
+            fTimer += Time.deltaTime / 1.0f;
+            yield return null;
+        }
+    }
+    ////////////////////////////////////////////////////////////////////////////////////
 
 
     public void StopSkillAfterTime(float time)

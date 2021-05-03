@@ -20,6 +20,8 @@ public class SkillManager_v2 : MonoBehaviour
     private VitaSoul_particle VitaParticleScript;
     private SpriteRenderer VitaSoulRenderer;
     private Animator VitaSoulBG;
+    
+    private Animator VitaSoulCore;
 
     //UI
     [System.NonSerialized]
@@ -32,7 +34,7 @@ public class SkillManager_v2 : MonoBehaviour
     public static float fLightUpTime = 5.0f;
     float fNeedGatheringTime = 2.0f;
     float fCanGathingTime;
-    float fCanGazeTime = 7.0f;
+    float fCanGazeTime = 7.65f;
 
     //gaze
     Vector3 gazeOnScreen;
@@ -86,7 +88,8 @@ public class SkillManager_v2 : MonoBehaviour
         VitaParticleScript = VitaSoul.GetComponent<VitaSoul_particle>();
         VitaSoulBG = GameObject.Find("VitaParticle").GetComponent<Animator>();
         VitaSoulRenderer = VitaSoul.GetComponent<SpriteRenderer>();
-
+        VitaSoulCore = GameObject.Find("VitaSoulCore").GetComponent<Animator>();
+        
         SkillScript = Player.GetComponent<PlayerSkill>();
 
         fCanGathingTime = magicLightScript.fRaiseHand + fLightUpTime;
@@ -193,6 +196,7 @@ public class SkillManager_v2 : MonoBehaviour
                     VitaParticleScript.SkillNUM = PlayerSkill.CURRENTSKILL;
 
                     VitaParticleScript.animator.SetBool("StartSkill", true);
+                    VitaSoulCore.SetBool("StartSkill", true);
 
                     magicLightScript.LightUpVita = false; // reset bool
 
@@ -408,6 +412,7 @@ public class SkillManager_v2 : MonoBehaviour
                 SkillScript.ResetAnimateToIdle();
 
                 VitaParticleScript.animator.SetBool("StartSkill", false);
+                VitaSoulCore.SetBool("StartSkill", false);
 
                 VitaSoulRenderer.color = new Color(VitaSoulRenderer.color.r, VitaSoulRenderer.color.g, VitaSoulRenderer.color.b, 1.0f);
 

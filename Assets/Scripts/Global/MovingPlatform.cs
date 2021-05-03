@@ -49,6 +49,7 @@ public class MovingPlatform : MonoBehaviour
         {
             
             GameObject.Find("Player").GetComponent<Transform>().parent = this.transform;
+            GameObject.Find("VitaSoul").GetComponent<Transform>().parent = this.transform;
         }
     }
  
@@ -57,6 +58,7 @@ public class MovingPlatform : MonoBehaviour
         if (collision.name == "Player")
         {
             GameObject.Find("Player").GetComponent<Transform>().parent = null;
+            GameObject.Find("VitaSoul").GetComponent<Transform>().parent = null;
         }
     }
 

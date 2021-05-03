@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerTriggerDetect : MonoBehaviour
 {
-    //[System.NonSerialized]
+    [System.NonSerialized]
     public bool bTrigger = false;
     //[System.NonSerialized]
     public string TriggerName = null;

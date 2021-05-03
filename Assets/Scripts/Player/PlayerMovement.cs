@@ -37,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
     bool bCanJump = true;
     float fJumpIntervalTime = 0.0f;
 
+    /*//original value
+    float fGravity;
+    float fDrag;*/
+
 
 
     [System.NonSerialized]
@@ -59,6 +63,10 @@ public class PlayerMovement : MonoBehaviour
 
         //reset speed
         speed = Mathf.Abs(speed * transform.localScale.y / 0.5f);
+
+        /*fGravity = this.gameObject.GetComponent<Rigidbody2D>().gravityScale;
+        fDrag = this.gameObject.GetComponent<Rigidbody2D>().drag;*/
+
     }
 
  
@@ -263,5 +271,7 @@ public class PlayerMovement : MonoBehaviour
             bBearCatchPlayer = false;
         }
     }
+
+
 
 }

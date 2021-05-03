@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager_Level3 : MonoBehaviour
 {
@@ -84,6 +85,12 @@ public class SceneManager_Level3 : MonoBehaviour
     public GameObject[] StatusTrigger;
     IEnumerator test;
 
+    //detect drowing 
+    public PlayerTriggerDetect DetectDrowingScript;
+    bool bDrowing = false;
+    //player dead loader
+    private PlayerDeadLoader PlayerDeadLoaderScript;
+
 
     void Start()
     {
@@ -98,6 +105,10 @@ public class SceneManager_Level3 : MonoBehaviour
         ilightUpArray[0] = -1;
         ilightUpArray[1] = -1;
         ilightUpArray[2] = -1;
+
+        PlayerDeadLoaderScript = GameObject.Find("PlayerDeadLoaderCanvas").GetComponent<PlayerDeadLoader>();
+
+
     }
 
     private void FixedUpdate()
@@ -109,9 +120,39 @@ public class SceneManager_Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /////////////////////////detect drowing
+        if (DetectDrowingScript.bTrigger && !bDrowing)
+        {
+            bDrowing = true;
 
+            StopAllCoroutines();
+
+            //player rigibody edit
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<Rigidbody2D>().gravityScale = 0.5f;
+            GameObject.Find("Player").GetComponent<Rigidbody2D>().drag = 8.0f;
+            GameObject.Find("Player").GetComponent<Animator>().SetTrigger("tDrowing");
+
+            //create bubble
+            GameObject.Find("Bubble").GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+
+            PlayerDeadLoaderScript.TransitionAfterTime(3.0f);
+            StartCoroutine(ReloadSceneAfterTimeIEnumerator(3.65f));
+
+            //reset UI
+            if(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI != null)
+            {
+                StopCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
+                this.gameObject.GetComponent<SkillManager_v2>().FadeInUI = this.gameObject.GetComponent<SkillManager_v2>().FadeOutSkillIconIEnumerator();
+                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
+            }
+                
+
+        }
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////
         //skill 1 description
-        if(bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
+        if (bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
         {
             StartCoroutine(SkillDescription_1.FadeIn());
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
@@ -164,11 +205,11 @@ public class SceneManager_Level3 : MonoBehaviour
 
         StartCandle[0].GetComponent<SkillOneTriggerIcon>().DetectFinish();
         StartCandle[1].GetComponent<SkillOneTriggerIcon>().DetectFinish();
-        //bool bCandle1 = StartCandle[0].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
-        //bool bCandle2 = StartCandle[1].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
+        bool bCandle1 = StartCandle[0].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
+        bool bCandle2 = StartCandle[1].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
 
-        bool bCandle1 = true;
-        bool bCandle2 = true;
+        //bool bCandle1 = true;
+        //bool bCandle2 = true;
         if (bCandle1 && bCandle2 && iBuddhaLevel == 0)
         {
             iBuddhaLevel = 1;
@@ -599,5 +640,10 @@ public class SceneManager_Level3 : MonoBehaviour
 
     }
 
-
+    IEnumerator ReloadSceneAfterTimeIEnumerator(float time)
+    {
+        yield return new WaitForSeconds(time);
+        //reload scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
