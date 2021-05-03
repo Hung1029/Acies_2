@@ -196,10 +196,12 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
             //reset UI
-            StopCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
-            this.gameObject.GetComponent<SkillManager_v2>().FadeInUI = this.gameObject.GetComponent<SkillManager_v2>().FadeOutSkillIconIEnumerator();
-            StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
-
+            if (this.gameObject.GetComponent<SkillManager_v2>().FadeInUI != null)
+            {
+                StopCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
+                this.gameObject.GetComponent<SkillManager_v2>().FadeInUI = this.gameObject.GetComponent<SkillManager_v2>().FadeOutSkillIconIEnumerator();
+                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
+            }
         }
 
        

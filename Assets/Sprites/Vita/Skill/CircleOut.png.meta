@@ -1,0 +1,3704 @@
+fileFormatVersion: 2
+guid: 962a09f37fe31b942aff64a496df16fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5039112629643934283
+    second: CircleOut_0
+  - first:
+      213: 1672864594983465113
+    second: CircleOut_1
+  - first:
+      213: 6543304997833477539
+    second: CircleOut_2
+  - first:
+      213: 7451386228650922197
+    second: CircleOut_3
+  - first:
+      213: 1764573479339505320
+    second: CircleOut_4
+  - first:
+      213: 7409467034108568200
+    second: CircleOut_5
+  - first:
+      213: -4012173597308918597
+    second: CircleOut_6
+  - first:
+      213: 5861504139651571359
+    second: CircleOut_7
+  - first:
+      213: -6215833142262539640
+    second: CircleOut_8
+  - first:
+      213: 5034442961214461871
+    second: CircleOut_9
+  - first:
+      213: 609698015738799878
+    second: CircleOut_10
+  - first:
+      213: -528699276037153140
+    second: CircleOut_11
+  - first:
+      213: -4274224182403583171
+    second: CircleOut_12
+  - first:
+      213: -7221667019770645714
+    second: CircleOut_13
+  - first:
+      213: -8124551751092528440
+    second: CircleOut_14
+  - first:
+      213: -6218991600487615608
+    second: CircleOut_15
+  - first:
+      213: -6988183808375094681
+    second: CircleOut_16
+  - first:
+      213: -4307620705289234006
+    second: CircleOut_17
+  - first:
+      213: 2980681602927051216
+    second: CircleOut_18
+  - first:
+      213: 7235926384468362618
+    second: CircleOut_19
+  - first:
+      213: 4898644817623531395
+    second: CircleOut_20
+  - first:
+      213: 3933116402592205796
+    second: CircleOut_21
+  - first:
+      213: -7057700380221326356
+    second: CircleOut_22
+  - first:
+      213: 7663929322712362351
+    second: CircleOut_23
+  - first:
+      213: 4665548981895821115
+    second: CircleOut_24
+  - first:
+      213: -4087411248487351380
+    second: CircleOut_25
+  - first:
+      213: 3737370128952912966
+    second: CircleOut_26
+  - first:
+      213: 8711105424904945965
+    second: CircleOut_27
+  - first:
+      213: 8556495126113243639
+    second: CircleOut_28
+  - first:
+      213: 1178077752762067634
+    second: CircleOut_29
+  - first:
+      213: -3627041297239373877
+    second: CircleOut_30
+  - first:
+      213: 624452992222322337
+    second: CircleOut_31
+  - first:
+      213: 7768323617778885045
+    second: CircleOut_32
+  - first:
+      213: -1073210436563684006
+    second: CircleOut_33
+  - first:
+      213: 3623087616612128172
+    second: CircleOut_34
+  - first:
+      213: 8873736131155323176
+    second: CircleOut_35
+  - first:
+      213: 2240717106824704514
+    second: CircleOut_36
+  - first:
+      213: 981285379750947272
+    second: CircleOut_37
+  - first:
+      213: 3169835534736824658
+    second: CircleOut_38
+  - first:
+      213: 8817462090100484146
+    second: CircleOut_39
+  - first:
+      213: -7609619383396796547
+    second: CircleOut_40
+  - first:
+      213: 4735493753743173540
+    second: CircleOut_41
+  - first:
+      213: 5486799092433738279
+    second: CircleOut_42
+  - first:
+      213: -7567745951803354753
+    second: CircleOut_43
+  - first:
+      213: 2824826070922738251
+    second: CircleOut_44
+  - first:
+      213: -233560741964124064
+    second: CircleOut_45
+  - first:
+      213: 5465771280920348839
+    second: CircleOut_46
+  - first:
+      213: -5082033294277075492
+    second: CircleOut_47
+  - first:
+      213: 4040438991767048041
+    second: CircleOut_48
+  - first:
+      213: -6401720003317924833
+    second: CircleOut_49
+  - first:
+      213: -291374090864388536
+    second: CircleOut_50
+  - first:
+      213: -9040710885999632716
+    second: CircleOut_51
+  - first:
+      213: -1818949401677820567
+    second: CircleOut_52
+  - first:
+      213: -9038497300033403955
+    second: CircleOut_53
+  - first:
+      213: -3813239550576597416
+    second: CircleOut_54
+  - first:
+      213: 3620012501774873283
+    second: CircleOut_55
+  - first:
+      213: 4753866154340254643
+    second: CircleOut_56
+  - first:
+      213: 7663083445964446561
+    second: CircleOut_57
+  - first:
+      213: -700482134022408326
+    second: CircleOut_58
+  - first:
+      213: -4842086795119303733
+    second: CircleOut_59
+  - first:
+      213: 5706789144426448406
+    second: CircleOut_60
+  - first:
+      213: 8089363444814886819
+    second: CircleOut_61
+  - first:
+      213: -3066985313499571114
+    second: CircleOut_62
+  - first:
+      213: -3906689945121523484
+    second: CircleOut_63
+  - first:
+      213: -5971472639709673023
+    second: CircleOut_64
+  - first:
+      213: -1123399959261335583
+    second: CircleOut_65
+  - first:
+      213: 6160751443807595438
+    second: CircleOut_66
+  - first:
+      213: -4883153036131311855
+    second: CircleOut_67
+  - first:
+      213: 2898037873145231035
+    second: CircleOut_68
+  - first:
+      213: -8318320763952883558
+    second: CircleOut_69
+  - first:
+      213: -3090587568557154368
+    second: CircleOut_70
+  - first:
+      213: -5924502310407318084
+    second: CircleOut_71
+  - first:
+      213: -2198854435057394685
+    second: CircleOut_72
+  - first:
+      213: -7065621385036287825
+    second: CircleOut_73
+  - first:
+      213: 6701546854628191840
+    second: CircleOut_74
+  - first:
+      213: -4579686155265814492
+    second: CircleOut_75
+  - first:
+      213: -7773796746467174328
+    second: CircleOut_76
+  - first:
+      213: -6510893110427990994
+    second: CircleOut_77
+  - first:
+      213: 8440066521428944065
+    second: CircleOut_78
+  - first:
+      213: 3661416587595867793
+    second: CircleOut_79
+  - first:
+      213: -2770806740670732819
+    second: CircleOut_80
+  - first:
+      213: 5151817139518799433
+    second: CircleOut_81
+  - first:
+      213: 1718940836995966149
+    second: CircleOut_82
+  - first:
+      213: 5033208051533670262
+    second: CircleOut_83
+  - first:
+      213: 4249843506719116968
+    second: CircleOut_84
+  - first:
+      213: -6853690578990419255
+    second: CircleOut_85
+  - first:
+      213: -8299102692262085451
+    second: CircleOut_86
+  - first:
+      213: 2537156357699394320
+    second: CircleOut_87
+  - first:
+      213: -6600174258392069734
+    second: CircleOut_88
+  - first:
+      213: -214166568106505218
+    second: CircleOut_89
+  - first:
+      213: -8752063780929361664
+    second: CircleOut_90
+  - first:
+      213: -3673631882031340045
+    second: CircleOut_91
+  - first:
+      213: 3597397655191981695
+    second: CircleOut_92
+  - first:
+      213: 276451597775517451
+    second: CircleOut_93
+  - first:
+      213: -3934245896641773941
+    second: CircleOut_94
+  - first:
+      213: 2257108213144156316
+    second: CircleOut_95
+  - first:
+      213: 965274647237987017
+    second: CircleOut_96
+  - first:
+      213: -1914889996033976413
+    second: CircleOut_97
+  - first:
+      213: -6839867695286273727
+    second: CircleOut_98
+  - first:
+      213: 4326610692715591073
+    second: CircleOut_99
+  - first:
+      213: 6225089506383580682
+    second: CircleOut_100
+  - first:
+      213: -7922527994947752635
+    second: CircleOut_101
+  - first:
+      213: -8513178679089026237
+    second: CircleOut_102
+  - first:
+      213: 3423803807321896024
+    second: CircleOut_103
+  - first:
+      213: 4511662718836881059
+    second: CircleOut_104
+  - first:
+      213: 3046173333371803418
+    second: CircleOut_105
+  - first:
+      213: 6841486293851470188
+    second: CircleOut_106
+  - first:
+      213: -6398297967023994648
+    second: CircleOut_107
+  - first:
+      213: -3734154447562241900
+    second: CircleOut_108
+  - first:
+      213: 5034775610032662792
+    second: CircleOut_109
+  - first:
+      213: 2691218123808180206
+    second: CircleOut_110
+  - first:
+      213: -1223873583408521340
+    second: CircleOut_111
+  - first:
+      213: 2573975970009440333
+    second: CircleOut_112
+  - first:
+      213: 1425306706270368162
+    second: CircleOut_113
+  - first:
+      213: 5806852354193212823
+    second: CircleOut_114
+  - first:
+      213: 4897275843292311211
+    second: CircleOut_115
+  - first:
+      213: -2495757803855269542
+    second: CircleOut_116
+  - first:
+      213: 4728078465348812039
+    second: CircleOut_117
+  - first:
+      213: 1215911779694494134
+    second: CircleOut_118
+  - first:
+      213: 2011388939629857764
+    second: CircleOut_119
+  - first:
+      213: 7122660127446778479
+    second: CircleOut_120
+  - first:
+      213: 4998800042701494304
+    second: CircleOut_121
+  - first:
+      213: -6792400241936990645
+    second: CircleOut_122
+  - first:
+      213: 4277966983353204516
+    second: CircleOut_123
+  - first:
+      213: 3404503435640148179
+    second: CircleOut_124
+  - first:
+      213: -7118728848539179235
+    second: CircleOut_125
+  - first:
+      213: 4392932235623137749
+    second: CircleOut_126
+  - first:
+      213: 7156118840516055125
+    second: CircleOut_127
+  - first:
+      213: 6342410910365869856
+    second: CircleOut_128
+  - first:
+      213: 3908491925351220055
+    second: CircleOut_129
+  - first:
+      213: 9120285238751927911
+    second: CircleOut_130
+  - first:
+      213: -2982099738944886163
+    second: CircleOut_131
+  - first:
+      213: 5859731891935019284
+    second: CircleOut_132
+  - first:
+      213: 3218798478087715671
+    second: CircleOut_133
+  - first:
+      213: -2337733054664703800
+    second: CircleOut_134
+  - first:
+      213: 1206783297650722885
+    second: CircleOut_135
+  - first:
+      213: 4415371369589449493
+    second: CircleOut_136
+  - first:
+      213: -6184203005187087963
+    second: CircleOut_137
+  - first:
+      213: -901043024314176210
+    second: CircleOut_138
+  - first:
+      213: 2810913402042878245
+    second: CircleOut_139
+  - first:
+      213: -4368236874764319641
+    second: CircleOut_140
+  - first:
+      213: -3983419477073511549
+    second: CircleOut_141
+  - first:
+      213: 5328968582815447102
+    second: CircleOut_142
+  - first:
+      213: 5524233751303949812
+    second: CircleOut_143
+  - first:
+      213: -5767123422651601216
+    second: CircleOut_144
+  - first:
+      213: -635131752726771501
+    second: CircleOut_145
+  - first:
+      213: 6608568246605257778
+    second: CircleOut_146
+  - first:
+      213: -6919978363623272380
+    second: CircleOut_147
+  - first:
+      213: -3776752588700190207
+    second: CircleOut_148
+  - first:
+      213: 8271768551230992817
+    second: CircleOut_149
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CircleOut_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b583eef2c9711ab0800000000000000
+      internalID: -5039112629643934283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_1
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99031556c75373710800000000000000
+      internalID: 1672864594983465113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_2
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad07e44a3d7eca50800000000000000
+      internalID: 6543304997833477539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_3
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0d9fabb44a86760800000000000000
+      internalID: 7451386228650922197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_4
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 15805
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a63b18fa360d7810800000000000000
+      internalID: 1764573479339505320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882220fa207b3d660800000000000000
+      internalID: 7409467034108568200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_6
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb46333ee55e158c0800000000000000
+      internalID: -4012173597308918597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_7
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ed96d95fe385150800000000000000
+      internalID: 5861504139651571359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_8
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a5754a0bcecb9a0800000000000000
+      internalID: -6215833142262539640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_9
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 15260
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa75729133fedd540800000000000000
+      internalID: 5034442961214461871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6072f507d15167800800000000000000
+      internalID: 609698015738799878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_11
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e9cc24fcea9a8f0800000000000000
+      internalID: -528699276037153140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_12
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33337d70c7eea4c0800000000000000
+      internalID: -4274224182403583171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_13
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23ba688b1c77cb90800000000000000
+      internalID: -7221667019770645714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_14
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 14715
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca1ad46a3bcf3f80800000000000000
+      internalID: -8124551751092528440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8833cc7c614b1b9a0800000000000000
+      internalID: -6218991600487615608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_16
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7628aace9dbf40f90800000000000000
+      internalID: -6988183808375094681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_17
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa91e129ac14834c0800000000000000
+      internalID: -4307620705289234006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_18
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1420320228d5920800000000000000
+      internalID: 2980681602927051216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_19
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 14170
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a750d1785bc2b6460800000000000000
+      internalID: 7235926384468362618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f324be18b7bf340800000000000000
+      internalID: 4898644817623531395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_21
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb45c4978c359630800000000000000
+      internalID: 3933116402592205796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_22
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebb4c1c5e20e0e90800000000000000
+      internalID: -7057700380221326356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_23
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d68ff1d1fbb5a60800000000000000
+      internalID: 7663929322712362351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_24
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 13625
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37f514741c5fb040800000000000000
+      internalID: 4665548981895821115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabb9f220299647c0800000000000000
+      internalID: -4087411248487351380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_26
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ce462b45ecdd330800000000000000
+      internalID: 3737370128952912966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_27
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2100740b3014e870800000000000000
+      internalID: 8711105424904945965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_28
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f15752abf6ceb670800000000000000
+      internalID: 8556495126113243639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_29
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 13080
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba6c23797f595010800000000000000
+      internalID: 1178077752762067634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7006438292aadc0800000000000000
+      internalID: -3627041297239373877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_31
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae575c10b08aa800800000000000000
+      internalID: 624452992222322337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_32
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1ecf90c21aecb60800000000000000
+      internalID: 7768323617778885045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_33
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5531674bc03b11f0800000000000000
+      internalID: -1073210436563684006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_34
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 12535
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5584acdfac74230800000000000000
+      internalID: 3623087616612128172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829ef080ff7d52b70800000000000000
+      internalID: 8873736131155323176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_36
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2027d6a3650a81f10800000000000000
+      internalID: 2240717106824704514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_37
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9e6539ad93e9d00800000000000000
+      internalID: 981285379750947272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_38
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2591664df948dfb20800000000000000
+      internalID: 3169835534736824658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_39
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 11990
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238a9e4dd0bed5a70800000000000000
+      internalID: 8817462090100484146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77f4b00d73356690800000000000000
+      internalID: -7609619383396796547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_41
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a761f3ba7ad7b140800000000000000
+      internalID: 4735493753743173540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_42
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ad27a44b6052c40800000000000000
+      internalID: 5486799092433738279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_43
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f715c580727f9f690800000000000000
+      internalID: -7567745951803354753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_44
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 11445
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4abc9d485cc33720800000000000000
+      internalID: 2824826070922738251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06070cd1eb932ccf0800000000000000
+      internalID: -233560741964124064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_46
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a80ac665025adb40800000000000000
+      internalID: 5465771280920348839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_47
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd18e505adf879b0800000000000000
+      internalID: -5082033294277075492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_48
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f89e81bd5821830800000000000000
+      internalID: 4040438991767048041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_49
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 10900
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cf8b223958827a0800000000000000
+      internalID: -6401720003317924833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8469641eec4d4fbf0800000000000000
+      internalID: -291374090864388536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_51
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be1cf25951f88280800000000000000
+      internalID: -9040710885999632716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_52
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d8598082bc1c6e0800000000000000
+      internalID: -1818949401677820567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_53
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc38e28f79ec09280800000000000000
+      internalID: -9038497300033403955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_54
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 10355
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856696805d6a41bc0800000000000000
+      internalID: -3813239550576597416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2b3c2d03edc3230800000000000000
+      internalID: 3620012501774873283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_56
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3043f841029f140800000000000000
+      internalID: 4753866154340254643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_57
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b13e81bcdb85a60800000000000000
+      internalID: 7663083445964446561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_58
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77361ed5336746f0800000000000000
+      internalID: -700482134022408326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_59
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 9810
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3ed4dd6b37dccb0800000000000000
+      internalID: -4842086795119303733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6160891bd76923f40800000000000000
+      internalID: 5706789144426448406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_61
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7b83b9131334070800000000000000
+      internalID: 8089363444814886819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_62
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c94816b11ef65d0800000000000000
+      internalID: -3066985313499571114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_63
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8f0758136a8c9c0800000000000000
+      internalID: -3906689945121523484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_64
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 9265
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9042cb541112da0800000000000000
+      internalID: -5971472639709673023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef2a8760b1e860f0800000000000000
+      internalID: -1123399959261335583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_66
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab60ad0cc26f7550800000000000000
+      internalID: 6160751443807595438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_67
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fd5898f2e8b3cb0800000000000000
+      internalID: -4883153036131311855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_68
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb633765716e73820800000000000000
+      internalID: 2898037873145231035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_69
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 8720
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9815d866536f8c80800000000000000
+      internalID: -8318320763952883558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf99e42bf60c15d0800000000000000
+      internalID: -3090587568557154368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_71
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5d03db980f7cda0800000000000000
+      internalID: -5924502310407318084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_72
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c9c959a891c71e0800000000000000
+      internalID: -2198854435057394685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_73
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0328b19ced1fd90800000000000000
+      internalID: -7065621385036287825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_74
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 8175
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06eefb3ab5da00d50800000000000000
+      internalID: 6701546854628191840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4205b9cb4bfa170c0800000000000000
+      internalID: -4579686155265814492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_76
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8489cb2eb0ded1490800000000000000
+      internalID: -7773796746467174328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_77
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24c6665639a4a5a0800000000000000
+      internalID: -6510893110427990994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_78
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4607aa8c3212570800000000000000
+      internalID: 8440066521428944065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_79
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 7630
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196ef56ccf6ffc230800000000000000
+      internalID: 3661416587595867793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5201123fd1c89d0800000000000000
+      internalID: -2770806740670732819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_81
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e79c4946eee7740800000000000000
+      internalID: 5151817139518799433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_82
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4ae0b7597ead710800000000000000
+      internalID: 1718940836995966149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_83
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677ec484e0c89d540800000000000000
+      internalID: 5033208051533670262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_84
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 7085
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae4ef8172a7afa30800000000000000
+      internalID: 4249843506719116968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2b5d61bbcc2e0a0800000000000000
+      internalID: -6853690578990419255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_86
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcfa39621aa3dc80800000000000000
+      internalID: -8299102692262085451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_87
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bdb40d34ac53320800000000000000
+      internalID: 2537156357699394320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_88
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a990dd03b787764a0800000000000000
+      internalID: -6600174258392069734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_89
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 6540
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb4f3914a0270df0800000000000000
+      internalID: -214166568106505218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009a4269c5c6a8680800000000000000
+      internalID: -8752063780929361664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_91
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5e8fb5443a40dc0800000000000000
+      internalID: -3673631882031340045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_92
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e8a898b168ce130800000000000000
+      internalID: 3597397655191981695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_93
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07bff2734726d300800000000000000
+      internalID: 276451597775517451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_94
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 5995
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ef0a79330c669c0800000000000000
+      internalID: -3934245896641773941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98f21016fbd25f10800000000000000
+      internalID: 2257108213144156316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_96
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca8f4b6d28556d00800000000000000
+      internalID: 965274647237987017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_97
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a71272b1b1fc65e0800000000000000
+      internalID: -1914889996033976413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_98
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149bacff198e311a0800000000000000
+      internalID: -6839867695286273727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_99
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 5450
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a538bc60853b0c30800000000000000
+      internalID: 4326610692715591073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e41039ce5f36650800000000000000
+      internalID: 6225089506383580682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_101
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d2d0293c68d0290800000000000000
+      internalID: -7922527994947752635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_102
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b287b981d1bd980800000000000000
+      internalID: -8513178679089026237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_103
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8543d043c6bc38f20800000000000000
+      internalID: 3423803807321896024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_104
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 4905
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a635a6c655ac9e30800000000000000
+      internalID: 4511662718836881059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17d4e3e18e264a20800000000000000
+      internalID: 3046173333371803418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_106
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6978b85987d1fe50800000000000000
+      internalID: 6841486293851470188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_107
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e84e6c06eda437a0800000000000000
+      internalID: -6398297967023994648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_108
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4988b98705e9d2cc0800000000000000
+      internalID: -3734154447562241900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_109
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 4360
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8092ccfedbd1fd540800000000000000
+      internalID: 5034775610032662792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee70eaaff90295520800000000000000
+      internalID: 2691218123808180206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_111
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f53f2d57de30fe0800000000000000
+      internalID: -1223873583408521340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_112
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40edc8d18998b320800000000000000
+      internalID: 2573975970009440333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_113
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a13a33d5e4b7c310800000000000000
+      internalID: 1425306706270368162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_114
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3815
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795c3da3375169050800000000000000
+      internalID: 5806852354193212823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_115
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae2a8ebe6e96f340800000000000000
+      internalID: 4897275843292311211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_116
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a513ccf10894d5dd0800000000000000
+      internalID: -2495757803855269542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_117
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d3a4550528d9140800000000000000
+      internalID: 4728078465348812039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_118
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b147ea4259cfd010800000000000000
+      internalID: 1215911779694494134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_119
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3270
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb89c37593e9eb10800000000000000
+      internalID: 2011388939629857764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62cd4006a5c8d260800000000000000
+      internalID: 7122660127446778479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_121
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0281e60772e4f5540800000000000000
+      internalID: 4998800042701494304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_122
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e7117b7fb8cb1a0800000000000000
+      internalID: -6792400241936990645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_123
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ffd934e446e5b30800000000000000
+      internalID: 4277966983353204516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_124
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2725
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d09ded36d93f3f20800000000000000
+      internalID: 3404503435640148179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d172f7234d1353d90800000000000000
+      internalID: -7118728848539179235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_126
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d10ea2f794d6fc30800000000000000
+      internalID: 4392932235623137749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_127
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5509073bb24af4360800000000000000
+      internalID: 7156118840516055125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_128
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0276be39e15c40850800000000000000
+      internalID: 6342410910365869856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_129
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2180
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753ca02b2b0cd3630800000000000000
+      internalID: 3908491925351220055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e1c027a13c19e70800000000000000
+      internalID: 9120285238751927911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_131
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6aa76756147d96d0800000000000000
+      internalID: -2982099738944886163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_132
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41180d90c13f15150800000000000000
+      internalID: 5859731891935019284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_133
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b7cf179287bac20800000000000000
+      internalID: 3218798478087715671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_134
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1635
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c085013c24be8fd0800000000000000
+      internalID: -2337733054664703800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5488851f30b5fb010800000000000000
+      internalID: 1206783297650722885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_136
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5132fc3fddc864d30800000000000000
+      internalID: 4415371369589449493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_137
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1abe0d12c4d2aa0800000000000000
+      internalID: -6184203005187087963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_138
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2de860b42ade73f0800000000000000
+      internalID: -901043024314176210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_139
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1090
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5298627a8de520720800000000000000
+      internalID: 2810913402042878245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76409e0d4b7e063c0800000000000000
+      internalID: -4368236874764319641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_141
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b39a5371d08b8c0800000000000000
+      internalID: -3983419477073511549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_142
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e387ee521bc44f940800000000000000
+      internalID: 5328968582815447102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_143
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd02b204550aac40800000000000000
+      internalID: 5524233751303949812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_144
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 545
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce24097dcf07ffa0800000000000000
+      internalID: -5767123422651601216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_145
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d84625390f8f27f0800000000000000
+      internalID: -635131752726771501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_146
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c15dc7ec956bb50800000000000000
+      internalID: 6608568246605257778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_147
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44098d6875c47ff90800000000000000
+      internalID: -6919978363623272380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_148
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10afcf9d787469bc0800000000000000
+      internalID: -3776752588700190207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleOut_149
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 0
+        width: 546
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1fe50fba93bc270800000000000000
+      internalID: 8271768551230992817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

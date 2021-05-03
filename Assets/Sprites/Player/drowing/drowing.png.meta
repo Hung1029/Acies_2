@@ -1,0 +1,944 @@
+fileFormatVersion: 2
+guid: 2069671de1c298f42bab449345e86173
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -494975427520592585
+    second: drowing_0
+  - first:
+      213: 6526808299778101894
+    second: drowing_1
+  - first:
+      213: 1200004157520838140
+    second: drowing_2
+  - first:
+      213: 8804678397296188661
+    second: drowing_3
+  - first:
+      213: -6930523887460499565
+    second: drowing_4
+  - first:
+      213: 4242895787714153792
+    second: drowing_5
+  - first:
+      213: 3321114090755314369
+    second: drowing_6
+  - first:
+      213: 7857966390669658641
+    second: drowing_7
+  - first:
+      213: -3201919244710337691
+    second: drowing_8
+  - first:
+      213: 1310167512807018590
+    second: drowing_9
+  - first:
+      213: -3748920619473020538
+    second: drowing_10
+  - first:
+      213: 8044937287200127344
+    second: drowing_11
+  - first:
+      213: 7816286164433047145
+    second: drowing_12
+  - first:
+      213: 2324665422174402285
+    second: drowing_13
+  - first:
+      213: -1697146350508817054
+    second: drowing_14
+  - first:
+      213: 3185081397578432188
+    second: drowing_15
+  - first:
+      213: -3063079838559108703
+    second: drowing_16
+  - first:
+      213: -4597219741445291618
+    second: drowing_17
+  - first:
+      213: -3212040892247072942
+    second: drowing_18
+  - first:
+      213: 7855979311672405791
+    second: drowing_19
+  - first:
+      213: -1603224295363114097
+    second: drowing_20
+  - first:
+      213: 9219194798051811004
+    second: drowing_21
+  - first:
+      213: 7033362377562772557
+    second: drowing_22
+  - first:
+      213: 6034346529930688282
+    second: drowing_23
+  - first:
+      213: -6139218373211280372
+    second: drowing_24
+  - first:
+      213: 7569286474489706646
+    second: drowing_25
+  - first:
+      213: 4506497996244419963
+    second: drowing_26
+  - first:
+      213: -3234868904034092063
+    second: drowing_27
+  - first:
+      213: 5121863381936967921
+    second: drowing_28
+  - first:
+      213: -2353697752053730168
+    second: drowing_29
+  - first:
+      213: 7312000301397958142
+    second: drowing_30
+  - first:
+      213: -3182292116101417934
+    second: drowing_31
+  - first:
+      213: 6673805069147089297
+    second: drowing_32
+  - first:
+      213: -63397184051937795
+    second: drowing_33
+  - first:
+      213: 1884426058541733916
+    second: drowing_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: drowing_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2370
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735861e987e7129f0800000000000000
+      internalID: -494975427520592585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 2370
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68258517191e39a50800000000000000
+      internalID: 6526808299778101894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_2
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2370
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd75026c6547a010800000000000000
+      internalID: 1200004157520838140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_3
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2370
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc15686a50803a70800000000000000
+      internalID: 8804678397296188661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_4
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 2370
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fbe8c6e35d1df90800000000000000
+      internalID: -6930523887460499565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1975
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d04b53d3bc1ea30800000000000000
+      internalID: 4242895787714153792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_6
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1975
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2d3066ba7f61e20800000000000000
+      internalID: 3321114090755314369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_7
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1975
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ac2dc8cca1d0d60800000000000000
+      internalID: 7857966390669658641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_8
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1975
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563ad83596f7093d0800000000000000
+      internalID: -3201919244710337691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_9
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1975
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e509e1d4966ae2210800000000000000
+      internalID: 1310167512807018590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1580
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6895c292f8829fbc0800000000000000
+      internalID: -3748920619473020538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_11
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1580
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079bbdbb6db55af60800000000000000
+      internalID: 8044937287200127344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_12
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1580
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e05d5aad6097c60800000000000000
+      internalID: 7816286164433047145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_13
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1580
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6b65682eed24020800000000000000
+      internalID: 2324665422174402285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_14
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1580
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2654216d2668278e0800000000000000
+      internalID: -1697146350508817054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1185
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbefd53e7aea33c20800000000000000
+      internalID: 3185081397578432188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1185
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a10600ad11cd75d0800000000000000
+      internalID: -3063079838559108703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_17
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1185
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e918db490056330c0800000000000000
+      internalID: -4597219741445291618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_18
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1185
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f959d93d98c63d0800000000000000
+      internalID: -3212040892247072942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_19
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1185
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f2d0baf8b060d60800000000000000
+      internalID: 7855979311672405791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 790
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b0b936ff330c9e0800000000000000
+      internalID: -1603224295363114097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_21
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 790
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbed10dc2d821ff70800000000000000
+      internalID: 9219194798051811004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_22
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 790
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44d93b61d58b9160800000000000000
+      internalID: 7033362377562772557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_23
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 790
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a173128923e4eb350800000000000000
+      internalID: 6034346529930688282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_24
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 790
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ca032aa6d1dcaa0800000000000000
+      internalID: -6139218373211280372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 395
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698b02bd1f18b0960800000000000000
+      internalID: 7569286474489706646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_26
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 395
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7588271d0c4a8e30800000000000000
+      internalID: 4506497996244419963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_27
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 395
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb3710fedf6b13d0800000000000000
+      internalID: -3234868904034092063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_28
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 395
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f01f6ceb93841740800000000000000
+      internalID: 5121863381936967921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_29
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 395
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884b33c6d5cf55fd0800000000000000
+      internalID: -2353697752053730168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efddf529881797560800000000000000
+      internalID: 7312000301397958142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_31
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234bf305e2a36d3d0800000000000000
+      internalID: -3182292116101417934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_32
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 0
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199a6bed95e1e9c50800000000000000
+      internalID: 6673805069147089297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_33
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdf2d4d894ce1ff0800000000000000
+      internalID: -63397184051937795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drowing_34
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 0
+        width: 237
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c189ed02483d62a10800000000000000
+      internalID: 1884426058541733916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
