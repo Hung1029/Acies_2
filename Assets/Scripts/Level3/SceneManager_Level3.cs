@@ -41,9 +41,14 @@ public class SceneManager_Level3 : MonoBehaviour
     //Buddha Candle
     public GameObject[] StartCandle;
     public GameObject[] GameCandle;
-    public SpriteRenderer Go;
-    public SpriteRenderer Finish;
+
+    IEnumerator StartCandleIEnumerator;
+    IEnumerator ReverseCandleIEnumerator;
+
+    /*public SpriteRenderer Go;
+    public SpriteRenderer Finish;*/
     int iBuddhaLevel = 0;
+    int iOrder = 0;
     int[] array = new int[3]; //set candle number
     int[] ilightUpArray = new int[3]; //set  candle light up number
 
@@ -77,7 +82,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
     //Trigger three status
     public GameObject[] StatusTrigger;
-
+    IEnumerator test;
 
 
     void Start()
@@ -90,7 +95,9 @@ public class SceneManager_Level3 : MonoBehaviour
 
         playerSkillScript = GameObject.Find("Player").GetComponent<PlayerSkill>();
 
-
+        ilightUpArray[0] = -1;
+        ilightUpArray[1] = -1;
+        ilightUpArray[2] = -1;
     }
 
     private void FixedUpdate()
@@ -153,10 +160,15 @@ public class SceneManager_Level3 : MonoBehaviour
         /*bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
         bool bCandle2 = StartCandle[1].GetComponent<BuddhaCandle>().DetectCandleFinish();*/
 
+        //Debug.Log("iBuddhaLevel : " + iBuddhaLevel);
+
         StartCandle[0].GetComponent<SkillOneTriggerIcon>().DetectFinish();
         StartCandle[1].GetComponent<SkillOneTriggerIcon>().DetectFinish();
-        bool bCandle1 = StartCandle[0].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
-        bool bCandle2 = StartCandle[1].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
+        //bool bCandle1 = StartCandle[0].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
+        //bool bCandle2 = StartCandle[1].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
+
+        bool bCandle1 = true;
+        bool bCandle2 = true;
         if (bCandle1 && bCandle2 && iBuddhaLevel == 0)
         {
             iBuddhaLevel = 1;
@@ -169,7 +181,7 @@ public class SceneManager_Level3 : MonoBehaviour
             for (int i = 0; i < array.Length;)
             {
                 bool flag = true;
-                int ii = Random.Range(1, 5);
+                int ii = Random.Range(0, 5);
                 for (int j = 0; j < i; j++)
                 {
                     if (ii == array[j])
@@ -189,122 +201,112 @@ public class SceneManager_Level3 : MonoBehaviour
         //fade in in order GameCandle 1 
         else if (iBuddhaLevel == 2)
         {
-            StartCoroutine(GameCandle[array[0]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator());
-            
-            //GameCandle[array[0]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle
-            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+            StartCandleIEnumerator = GameCandle[array[0]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator(2.0f);
+            StartCoroutine(StartCandleIEnumerator);
 
+            StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
+            iBuddhaLevel++;
         }
 
         //fade in in order GameCandle 2
-        else if (iBuddhaLevel == 3)
+        else if (iBuddhaLevel == 4)
         {
-            StartCoroutine(GameCandle[array[0]].GetComponent<BuddhaCandle>().reset());
-            StartCoroutine(GameCandle[array[1]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator());
-            /*GameCandle[array[0]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
-            GameCandle[array[1]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle*/
-            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+            if (StartCandleIEnumerator != null)
+                StopCoroutine(StartCandleIEnumerator);
 
+            ReverseCandleIEnumerator = GameCandle[array[0]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
+            StartCoroutine(ReverseCandleIEnumerator);
+
+            StartCandleIEnumerator = GameCandle[array[1]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator(2.0f);
+            StartCoroutine(StartCandleIEnumerator);
+
+             StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
+            iBuddhaLevel++;
         }
 
         //fade in in order GameCandle 3 
-        else if (iBuddhaLevel == 4)
+        else if (iBuddhaLevel == 6)
         {
-            StartCoroutine(GameCandle[array[1]].GetComponent<BuddhaCandle>().reset());
-            StartCoroutine(GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator());
-            /*GameCandle[array[1]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
-            GameCandle[array[2]].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.987f, 0f, 1.0f); //Light up candle*/
-            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+            if (StartCandleIEnumerator != null)
+                StopCoroutine(StartCandleIEnumerator);
 
+            ReverseCandleIEnumerator = GameCandle[array[1]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
+            StartCoroutine(ReverseCandleIEnumerator);
+
+            StartCandleIEnumerator = GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator(2.0f);
+            StartCoroutine(StartCandleIEnumerator);
+            StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
+            iBuddhaLevel++;
 
         }
 
         //fade out 
-        else if (iBuddhaLevel == 5)
+        else if (iBuddhaLevel == 8)
         {
+            ReverseCandleIEnumerator = GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
+            StartCoroutine(ReverseCandleIEnumerator);
 
-
-            for (int i = 0; i < 3; i++)
-            {
-                StartCoroutine(GameCandle[array[i]].GetComponent<BuddhaCandle>().reset());
-                //GameCandle[array[i]].GetComponent<SpriteRenderer>().color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f); //Light up candle
-                Go.color = new Color(Go.color.r, Go.color.g, Go.color.b, 1.0f);
-            }
-            iBuddhaLevel = 6;
+            StartCoroutine(BuddhaLevelDelayIEnumerator(1.5f));
+            iBuddhaLevel++;
         }
 
         //check if Buddha level end
-        else if (iBuddhaLevel == 6)
+        else if (iBuddhaLevel == 10)
         {
-
-            int iCandleCounter = 0;
 
             //Detect all candle
             for (int i = 0; i < GameCandle.Length; i++)
             {
-                //detect candle and count
-                if (GameCandle[i].GetComponent<BuddhaCandle>().DetectCandleFinish())
-                {
-                    ilightUpArray[iCandleCounter] = i;
-                    iCandleCounter++;
-                }
-            }
+                GameCandle[i].GetComponent<BuddhaCandle>().DetectCandleFinish();
 
-
-            //one candle light up
-            if (iCandleCounter == 1)
-            {
-                if (!GameCandle[array[0]].GetComponent<BuddhaCandle>().DetectCandleFinish()) // if is not first one 
+                //if this light never record
+                if (ilightUpArray[0] != i && ilightUpArray[1] != i && ilightUpArray[2] != i && GameCandle[i].GetComponent<BuddhaCandle>().bTriggerFinish)
                 {
-                    resetCandle();
-                    iCandleCounter = 0; // reset counter
+                    ilightUpArray[iOrder] = i;
+                    iOrder++;
                 }
+
 
             }
 
-            //two candle light up
-            if (iCandleCounter == 2)
+            //all number in
+            if (ilightUpArray[0] >= 0 && ilightUpArray[1] >= 0 && ilightUpArray[2] >= 0 )
             {
-                if (!GameCandle[array[1]].GetComponent<BuddhaCandle>().DetectCandleFinish()) // if is not first one 
-                {
-                    resetCandle();
-                    iCandleCounter = 0; // reset counter
-                }
-
-            }
-
-
-            //three candle light up
-            if (iCandleCounter == 3)
-            {
-                if (!GameCandle[array[2]].GetComponent<BuddhaCandle>().DetectCandleFinish()) // if is not first one 
-                {
-                    resetCandle();
-                    iCandleCounter = 0; // reset counter
-                }
-                //finish 
-                else
-                {
-                    iBuddhaLevel++;
-                }
-
+                iOrder = 0;
+                iBuddhaLevel++;
             }
 
 
         }
 
-        //finish
-        else if (iBuddhaLevel == 7)
+        //check candle
+        else if (iBuddhaLevel == 11)
         {
-            Go.color = new Color(Go.color.r, Go.color.g, Go.color.b, 0.0f);
-            Finish.color = new Color(Finish.color.r, Finish.color.g, Finish.color.b, 1.0f);
-            iBuddhaLevel += 1;
-
+           
+            Debug.Log("answer 1 : " + array[0]);
+            Debug.Log("1 : " + ilightUpArray[0]);
+            Debug.Log("answer 2 : " + array[1]);
+            Debug.Log("2 : " + ilightUpArray[1]);
+            Debug.Log("answer 3 : " + array[2]);
+            Debug.Log("3 : " + ilightUpArray[2]);
+            for (int i = 0; i < 3; i++)
+            {
+                
+                if (ilightUpArray[i] != array[i]) // if is not first one 
+                {
+                    //Debug.Log("not match");
+                    StartCoroutine(resetCandleIEnumerator());
+                    //resetCandle();
+                    break;
+                }
+            }
+            iBuddhaLevel++;
+            //Debug.Log("end check");
+            
         }
 
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger
-        for (int i = 0; i < StatusToLightUp.Length; i++)
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger
+            for (int i = 0; i < StatusToLightUp.Length; i++)
         {
             if (iLightUpOrder[i] < 0)
             {
@@ -317,39 +319,6 @@ public class SceneManager_Level3 : MonoBehaviour
                     iLightUpOrder[i] = iCountOrder;
                     iCountOrder++;
                 }
-
-                /*//status trigger
-                if (StatusToLightUp[i].GetComponent<VitaTriggerDetect>()._bSkillTrigger)
-                {
-                    if (ftimer_statusLightUp[i] == 0)
-                    {
-                        StatusToLightUp[i].GetComponent<ColorChange>().ColorChanging(CColor[i], VitaParticleScript.fSkillOneGatheringTime);
-                    }
-
-                    ftimer_statusLightUp[i] += Time.deltaTime;
-
-                    //if jigsaw is match, can start check light up order
-                    if (ftimer_statusLightUp[i] >= VitaParticleScript.fSkillOneGatheringTime && MatchingJigsawFinish)
-                    {
-                        //set light up order
-                        iLightUpOrder[i] = iCountOrder;
-                        iCountOrder++;
-
-                        //reset timer
-                        ftimer_statusLightUp[i] = 0.0f;
-                    }
-                }
-                //if  status is not trigger
-                else
-                {
-                    if (ftimer_statusLightUp[i] != 0)
-                    {
-                        //reset timer
-                        ftimer_statusLightUp[i] = 0.0f;
-                        StatusToLightUp[i].GetComponent<ColorChange>().ColorChanging(Color.white, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
-                    }
-
-                }*/
             }
 
         }
@@ -442,17 +411,48 @@ public class SceneManager_Level3 : MonoBehaviour
     {
         yield return new WaitForSeconds(fTime);
         iBuddhaLevel += 1;
-        StopAllCoroutines();
+        //StopAllCoroutines();
     }
 
-    ////reset candle
-    void resetCandle()
+
+    IEnumerator resetCandleIEnumerator()
     {
-        GameCandle[0].GetComponent<BuddhaCandle>().ResetCandle();
-        GameCandle[1].GetComponent<BuddhaCandle>().ResetCandle();
-        GameCandle[2].GetComponent<BuddhaCandle>().ResetCandle();
-        GameCandle[3].GetComponent<BuddhaCandle>().ResetCandle();
+
+        //set status icon to red
+        for (int i = 0; i < 3; i++)
+        {
+            Debug.Log(GameCandle[ilightUpArray[i]].name);
+            GameCandle[ilightUpArray[i]].GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        for (int i = 0; i < 3; i++)
+        {
+            Debug.Log(ilightUpArray[i]);
+            GameCandle[ilightUpArray[i]].GetComponent<ColorChange>().ColorChanging(Color.white, VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+        }
+
+        yield return new WaitForSeconds(VitaParticleScript.fSkillOneGatheringTime * 0.5f);
+
+        for (int i = 0; i < 3; i++)
+        {
+            GameCandle[ilightUpArray[i]].GetComponent<BuddhaCandle>().ResetCandle();
+        }
+        yield return new WaitForSeconds(1.5f);
+
+
+        for (int i = 0; i < 3; i++)
+        {
+            ilightUpArray[i] = -1;
+        }
+
+        
+
+        iBuddhaLevel = 10;
+
     }
+
 
     IEnumerator RaiseGameObjectUp(GameObject gameObject, float heightDegree)
     {

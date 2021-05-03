@@ -55,6 +55,7 @@ public class Skill2Moveable : MonoBehaviour
         smoke.transform.parent = this.gameObject.transform;
         smoke.AddComponent<SpriteRenderer>();
         smoke.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f,1.0f);
+        smoke.GetComponent<SpriteRenderer>().sortingLayerName = "PlayItem";
         smoke.AddComponent<Animator>();
         smoke.GetComponent<Animator>().runtimeAnimatorController = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.Animations.AnimatorController>("Assets/Sprites/Skill2_final/Smoke.controller");
         smoke.transform.localPosition = new Vector2(0.0f, 0.0f);

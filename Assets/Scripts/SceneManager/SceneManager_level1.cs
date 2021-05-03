@@ -194,7 +194,7 @@ public class SceneManager_level1 : MonoBehaviour
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////Dectect Buddha level start 
-        bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
+        /*bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
         bool bCandle2 = StartCandle[1].GetComponent<BuddhaCandle>().DetectCandleFinish();
         if (bCandle1 && bCandle2 && iBuddhaLevel == 0)
         {
@@ -339,7 +339,7 @@ public class SceneManager_level1 : MonoBehaviour
             StartCoroutine(RaiseGameObjectUp(Stair,2.5f));
             CameraParallaxManager.ShortFollowing( 2.0f , Stair.GetComponent<Transform>().position);
             
-        }
+        }*/
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

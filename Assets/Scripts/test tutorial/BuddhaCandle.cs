@@ -6,14 +6,22 @@ using UnityEngine.UI;
 public class BuddhaCandle : MonoBehaviour
 {
     [System.NonSerialized]
-    public bool _bSkillOneTrigger = false;
+    public VitaTriggerDetect VitaDetect;
+    [System.NonSerialized]
+    public bool bTriggerFinish = false;
+
+    bool bLastDetectState = false;
+
+
+    private bool canDetectTrigger = false;
 
     private SpriteRenderer CandleRenderer;
-    bool bChangeColor = false;
-    bool bChangeColorFinish = false;
-    int iAddColorTimeCounter = 0;
+    //bool bChangeColor = false;
+    //bool bChangeColorFinish = false;
 
-    float fGameGatheringTime = 1.0f;
+    //int iAddColorTimeCounter = 0;
+
+    //float fGameGatheringTime = 1.0f;
 
 
     private const int SpriteNUM = 36;
@@ -22,163 +30,115 @@ public class BuddhaCandle : MonoBehaviour
 
     private int SpriteCount = 0;
 
+    IEnumerator StartCandleIEnumerator;
+    IEnumerator ReverseCandleIEnumerator;
+
 
     void Start()
     {
         CandleRenderer = GetComponent<SpriteRenderer>();
+        VitaDetect = this.GetComponent<VitaTriggerDetect>();
     }
 
 
 
-    public bool DetectCandleFinish()
+    public void  DetectCandleFinish()
     {
-        if (bChangeColorFinish == false)
+        //Debug.Log(VitaDetect._bSkillTrigger);
+        //if state change, start another coroutinges
+        if (bLastDetectState != VitaDetect._bSkillTrigger)
         {
-            Debug.Log(_bSkillOneTrigger);
-            if (_bSkillOneTrigger && bChangeColor == false && PlayerSkill.CURRENTSKILL == 1)
-            {
-                Debug.Log("in");
-                StopCoroutine("ChangeBackCandleColorIEnumerator");
-                StartCoroutine("ChangeCandleColorIEnumerator");
-                bChangeColor = true;
-            }
+            canDetectTrigger = true;
+        }
 
-            else if (_bSkillOneTrigger == false && bChangeColor)
-            {
+        //Debug.Log(_bSkillOneTrigger);
+        if (canDetectTrigger && VitaDetect._bSkillTrigger && !bTriggerFinish)
+        {
+            canDetectTrigger = false;
 
-                StopCoroutine("ChangeCandleColorIEnumerator"); // stop change color
-                StartCoroutine("ChangeBackCandleColorIEnumerator"); // turn back color
-                bChangeColor = false;
-            }
+            StopAllCoroutines();
+            StartCoroutine(ChangeCandleColorIEnumerator(3.0f));
+                
+        }
 
+        else if (canDetectTrigger && !VitaDetect._bSkillTrigger && !bTriggerFinish)
+        {
+            canDetectTrigger = false;
+
+            StopAllCoroutines();
+            StartCoroutine(ChangeBackCandleColorIEnumerator(3.0f));
+          
 
         }
-        return bChangeColorFinish;
+
+        //record last state
+        bLastDetectState = VitaDetect._bSkillTrigger;
+
+        //return bTriggerFinish;
     }
 
-    public void  ResetCandle()
-    {
-        iAddColorTimeCounter = 0;
-        bChangeColorFinish = false;
-        CandleRenderer.color = new Color(0.9294118f, 0.9294118f, 0.9294118f, 1.0f );
-    }
+    
 
 
-    public IEnumerator ChangeCandleColorIEnumerator()
+    public IEnumerator ChangeCandleColorIEnumerator(float duration)
     {
+        //Debug.Log("in");
 
         for (; SpriteCount < SpriteNUM; SpriteCount++)
         {
-            Debug.Log(SpriteCount);
+            //Debug.Log("SpriteCount : " + SpriteCount);
             CandleRenderer.sprite = StartSprite[SpriteCount];
 
-            yield return new WaitForSeconds(3.0f / SpriteNUM);
+            yield return new WaitForSeconds(duration / SpriteNUM);
 
-            if (SpriteCount == 34)
-                bChangeColorFinish = true;
+            if (SpriteCount == 17)
+                bTriggerFinish = true;
 
         }
+
         SpriteCount = SpriteNUM - 1;
-
-        bChangeColorFinish = true;
-
-        /*// change format
-        float fr_goal = 1.0f;
-        float fg_goal = 0.987f;
-        float fb_goal = 0f;
-        float fa_goal = 1.0f;
-
-        //set ever time to change
-        float fr = (fr_goal - 0.9294118f) / 20;
-        float fg = (fg_goal - 0.9294118f) / 20f;
-        float fb = (fb_goal - 0.9294118f) / 20;
-        float fa = (fa_goal - 1.0f) / 20;
-
-        for (; iAddColorTimeCounter < 20; iAddColorTimeCounter++)
-        {
-                       
-            CandleRenderer.color = new Color(CandleRenderer.color.r + fr, CandleRenderer.color.g, CandleRenderer.color.b , CandleRenderer.color.a);         
-            CandleRenderer.color = new Color(CandleRenderer.color.r , CandleRenderer.color.g + fg, CandleRenderer.color.b, CandleRenderer.color.a);         
-            CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b + fb, CandleRenderer.color.a);           
-            CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a + fa);          
-            yield return new WaitForSeconds(fGameGatheringTime / 20f); 
-        }
-        bChangeColorFinish = true;*/
+        CandleRenderer.sprite = StartSprite[SpriteCount];
     }
 
 
 
-    public IEnumerator ChangeBackCandleColorIEnumerator()
+    public IEnumerator ChangeBackCandleColorIEnumerator(float duration)
     {
 
         for (; SpriteCount >= 0; SpriteCount--)
         {
             CandleRenderer.sprite = StartSprite[SpriteCount];
 
-            yield return new WaitForSeconds(3.0f / SpriteNUM);
+            yield return new WaitForSeconds(duration / SpriteNUM);
         }
         SpriteCount = 0;
+        //CandleRenderer.sprite = StartSprite[SpriteCount];
 
-        /* // change format
-         float fr_goal = 1.0f;
-         float fg_goal = 0.987f;
-         float fb_goal = 0f;
-         float fa_goal = 1.0f;
-
-         //set ever time to change
-         float fr = (fr_goal - 0.9294118f) / 20;
-         float fg = (fg_goal - 0.9294118f) / 20f;
-         float fb = (fb_goal - 0.9294118f) / 20;
-         float fa = (fa_goal - 1.0f) / 20;
-
-
-         for (; iAddColorTimeCounter > 0; iAddColorTimeCounter--)
-         {
-             CandleRenderer.color = new Color(CandleRenderer.color.r - fr, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a);
-             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g - fg, CandleRenderer.color.b, CandleRenderer.color.a);
-             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b - fb, CandleRenderer.color.a);
-             CandleRenderer.color = new Color(CandleRenderer.color.r, CandleRenderer.color.g, CandleRenderer.color.b, CandleRenderer.color.a - fa);
-             yield return new WaitForSeconds(fGameGatheringTime / 20f);
-         }*/
+        bTriggerFinish = false;
     }
 
-
-    public IEnumerator reset()
+    public void ResetCandle()
     {
+        StopAllCoroutines();
+        StartCoroutine(CandleReset(1.0f));
 
+    }
+    public IEnumerator CandleReset(float duration)
+    {
+        //Debug.Log(this.gameObject.name +"  " + SpriteCount);
         for (; SpriteCount >= 0; SpriteCount--)
         {
             CandleRenderer.sprite = StartSprite[SpriteCount];
+            yield return new WaitForSeconds(duration / SpriteNUM);
 
-            yield return new WaitForSeconds(3.0f / SpriteNUM);
         }
         SpriteCount = 0;
 
-    _bSkillOneTrigger = false;
+        canDetectTrigger = false;
 
-    
-    bChangeColor = false;
-    bChangeColorFinish = false;
-}
+        bTriggerFinish = false;
 
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        Debug.Log(other.name);
-        if (other.name == "VitaSoul")
-        {
-            _bSkillOneTrigger = true;
-
-        }
+        bLastDetectState = false;
     }
 
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.name == "VitaSoul")
-        {
-            _bSkillOneTrigger = false;
-
-        }
-    }
 }
