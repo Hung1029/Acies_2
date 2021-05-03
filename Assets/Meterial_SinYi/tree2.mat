@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tree1
+  m_Name: tree2
   m_Shader: {fileID: -6465566751694194690, guid: 24fd2a045f21a69419eb2674bb7a297d,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 63bc83d40c1a93843ad6eca92746d8e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 080ec5024f58aa54cb5c19eca791b188, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -37,10 +37,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_64EA8F8: 0.15
-    - Vector1_B5EE0412: 1.5
+    - Vector1_64EA8F8: 0.2
+    - Vector1_B5EE0412: 0.8
     - Vector1_BB7506BA: 1
-    - Vector1_C94931BF: 0.3
+    - Vector1_C94931BF: 1.3
     - _EnableExternalAlpha: 0
     m_Colors:
     - Vector2_A84A8433: {r: 1, g: 0, b: 0, a: 0}
