@@ -70,11 +70,11 @@ TagManager:
   - name: PlayItem
     uniqueID: 2376486837
     locked: 0
-  - name: Explosion
-    uniqueID: 2864934111
-    locked: 0
   - name: Player
     uniqueID: 1489229143
+    locked: 0
+  - name: Explosion
+    uniqueID: 2864934111
     locked: 0
   - name: Vita
     uniqueID: 1021863969

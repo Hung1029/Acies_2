@@ -84,7 +84,7 @@ public class SceneManager_Level2Final : MonoBehaviour
         CameraSettingAfterJump = 35
 
     }
-    BearStageNUM BearStage = BearStageNUM.DetectingPlayer;
+    BearStageNUM BearStage = BearStageNUM.Pause;
 
 
     //Trap Plant Detect
