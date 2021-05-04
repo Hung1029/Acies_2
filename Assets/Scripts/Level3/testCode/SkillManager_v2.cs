@@ -45,7 +45,8 @@ public class SkillManager_v2 : MonoBehaviour
     float VitaSoulCanGazeTimer = 0.0f;
 
     /////IEnumerator
-    private IEnumerator ObjMoveTo;
+    [System.NonSerialized]
+    public IEnumerator ObjMoveTo;
     [System.NonSerialized]
     public IEnumerator FadeOutUI;
     [System.NonSerialized]
@@ -56,6 +57,10 @@ public class SkillManager_v2 : MonoBehaviour
     Skill2Moveable[] ObjectsMoveable;
     private int iPickUpIndex = -1;
     private int iCurrentLookIndex = -1;
+
+    public static bool bDirectTriggerVitaSkill = false;
+
+    public static bool bFinishSkill = false;
 
     enum SkillStageNUM
     {
@@ -120,7 +125,42 @@ public class SkillManager_v2 : MonoBehaviour
 
         if (SkillNUM != 0 && SkillStage == SkillStageNUM.DetectSkillButton && !PlayerMovementScript.bPlayerMove) //detect start skill
         {
-            SkillStage++;
+            //trigger vita directly
+            if (bDirectTriggerVitaSkill)
+            {
+                //allow user controll vita
+                VitaParticleGazeScript.bVitaSoulCanGaze = true;
+
+                //set current skill
+                CurrentSkillNUM = SkillNUM;
+
+                //set currentSkill
+                PlayerSkill.CURRENTSKILL = CurrentSkillNUM;
+
+
+                VitaParticleScript.LightUpVita(new Color(1.0f, 0.79f, 0.49f));
+                VitaParticleScript.SkillNUM = PlayerSkill.CURRENTSKILL;
+
+                VitaParticleScript.animator.SetBool("StartSkill", true);
+                VitaSoulCore.SetBool("StartSkill", true);
+
+                SkillStage = SkillStageNUM.FinishLLghtUpVita;
+
+                //vita soul stop following player
+                VitaParticleScript.bCanFollow = false;
+
+                //stop obj move to
+                if (ObjMoveTo != null)
+                    StopCoroutine(ObjMoveTo);
+
+                
+            }
+            else
+            {
+                SkillStage++;
+            }
+
+            
         }
         ///////////////////////////////////////////////////////////////////////////////////Strat Skill
         if (SkillStage == SkillStageNUM.StartSkill)
@@ -130,6 +170,9 @@ public class SkillManager_v2 : MonoBehaviour
 
             //vita soul move to miagic wound 
             Vector2 V2magicWoundTop = new Vector2(Player.transform.Find("magicLight").GetComponent<Transform>().position.x, Player.transform.Find("magicLight").GetComponent<Transform>().position.y + 0.2f);
+
+            if (ObjMoveTo != null)
+                StopCoroutine(ObjMoveTo);
             ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, V2magicWoundTop);
             StartCoroutine(ObjMoveTo);
 
@@ -186,7 +229,6 @@ public class SkillManager_v2 : MonoBehaviour
                     //player can't move
                     PlayerMovementScript.canMove = false;
 
-                    //light up vita
 
                     //set currentSkill
                     PlayerSkill.CURRENTSKILL = CurrentSkillNUM;
@@ -381,20 +423,35 @@ public class SkillManager_v2 : MonoBehaviour
                 
             }
 
-            if (VitaSoulCanGazeTimer > fCanGazeTime || Input.GetButtonDown("Cancel")) 
+            if (VitaSoulCanGazeTimer > fCanGazeTime || Input.GetButtonDown("Cancel") || bFinishSkill) 
             {
-                //Finish skill 1
-                
-                //reset UI
-                StopCoroutine(FadeInUI);
-                FadeOutUI = FadeOutSkillIconIEnumerator();
-                StartCoroutine(FadeOutUI);
                 
 
-                StartCoroutine(CaneMoveIntervelJump());
-                
-                //reset vita follow
-                VitaParticleScript.bCanFollow = true;
+                //Vita is direct trigger
+                if (bDirectTriggerVitaSkill)
+                {
+                    if (ObjMoveTo != null)
+                        StopCoroutine(ObjMoveTo);
+                    ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, GameObject.Find("VitaSoulGamePos").transform.position);
+                    StartCoroutine(ObjMoveTo);
+                }
+
+                else
+                {
+                    //Finish skill 1
+                    StartCoroutine(CaneMoveIntervelJump());
+
+                    //reset UI
+                    if (FadeInUI != null)
+                        StopCoroutine(FadeInUI);
+                    FadeOutUI = FadeOutSkillIconIEnumerator();
+                    StartCoroutine(FadeOutUI);
+
+                    //reset vita follow
+                    VitaParticleScript.bCanFollow = true;
+                }
+
+               
 
                 //reset gaze
                 VitaParticleGazeScript.bVitaSoulCanGaze = false;
@@ -482,11 +539,12 @@ public class SkillManager_v2 : MonoBehaviour
 
     //obj move to
 
-    IEnumerator ObjMoveToIEnumerator(Transform objTransform, Vector2 v2Position)
+    public IEnumerator ObjMoveToIEnumerator(Transform objTransform, Vector2 v2Position)
     {
-
+       
         for (; (objTransform.position.x > v2Position.x + 0.001f || objTransform.position.x < v2Position.x - 0.001f) && (objTransform.position.y > v2Position.y + 0.001f || objTransform.position.y < v2Position.y - 0.001f); )
         {
+            //Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!in");
             float fVectorX = v2Position.x - objTransform.position.x;
             float fVectorY = v2Position.y - objTransform.position.y;
 

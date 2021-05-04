@@ -200,14 +200,17 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    public void ChangeCameraProjectionSize(Camera MainCamera, float fSizeValue, float fTransformTime)
+    public void ChangeCameraProjectionSize(Camera MainCamera, float fSizeValue, float fTransformTime, float fPreWaitTime = 0.0f)
     {
-        StartCoroutine(ChangeCameraProjectionSizeIEnumerator(MainCamera, fSizeValue, fTransformTime));
+        StartCoroutine(ChangeCameraProjectionSizeIEnumerator(MainCamera, fSizeValue, fTransformTime, fPreWaitTime));
 
     }
-
-    public IEnumerator ChangeCameraProjectionSizeIEnumerator(Camera MainCamera, float fSizeValue, float fTransformTime)
+     
+    public IEnumerator ChangeCameraProjectionSizeIEnumerator(Camera MainCamera, float fSizeValue, float fTransformTime, float fPreWaitTime = 0.0f)
     {
+
+        yield return new WaitForSeconds(fPreWaitTime);
+
         if (fTransformTime > 0.0f)
         {
             float fOriginalValue = MainCamera.orthographicSize;
@@ -363,9 +366,34 @@ public class CameraManager : MonoBehaviour
         Follow_Y = KeepYFollow;
     }
 
+    public IEnumerator ChangeCameraFollowingPosition(float fPreWaitTime, float duration, Vector2 TargetPosition)
+    {
+        yield return new WaitForSeconds(fPreWaitTime);
+
+        bCameraFocusOtherObj = true;
+
+
+        float fTimer = 0.0f;
+
+        Vector3 originalVector3 = MainCamera.transform.position;
+
+        while ((Vector2)MainCamera.transform.position != TargetPosition)
+        {
+            MainCamera.transform.position = Vector3.Lerp(originalVector3, new Vector3(TargetPosition.x, TargetPosition.y, MainCamera.transform.position.z) , fTimer);
+
+            fTimer += Time.deltaTime / duration;
+
+            yield return null;
+        }
+
+
+
+    }
+
 
     public void BackToFollowPlayer()
     {
+        bCameraFocusOtherObj = true;
         TargetTransformAdjust_X = 0;
         TargetTransformAdjust_Y = 0;
         Follow_X = true;

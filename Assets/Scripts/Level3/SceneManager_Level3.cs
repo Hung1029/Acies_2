@@ -40,15 +40,49 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
     //Buddha Candle
+    public GameObject GameBoard;
     public GameObject[] StartCandle;
     public GameObject[] GameCandle;
+    public GameObject BGMask;
+    public GameObject levelUI;
+    public GameObject levelUITitle;
+    public GameObject levelUIText;
+    public GameObject StartGame;
+    bool bGameFinish = true;
+    public Transform VitaSoulGamePos;
+    float fLerpTimer = 0.0f;
+    Vector2 originalVector2;
 
     IEnumerator StartCandleIEnumerator;
     IEnumerator ReverseCandleIEnumerator;
 
-    /*public SpriteRenderer Go;
-    public SpriteRenderer Finish;*/
-    int iBuddhaLevel = 0;
+    enum BuddhaCandleStateNUM
+    {
+        Start = 0,
+        ChooseNUM = 1,
+        RisingUp = 2,
+        FadeOutLevelUI = 4,
+        Dialogue1 = 6,
+        Dialogue2 = 7,
+        FinishDialogue = 8,
+        FadeInPrompt = 10,
+        FadeOutPrompt = 12,
+
+        FadeIn1 = 14,
+        FadeIn2 = 16,
+        FadeIn3 = 18,
+        FadeOut = 20,
+        PlayerDetecting = 22,
+        CheckAns = 23,
+        FinishVitaSetting = 25,
+        Finish = 27
+
+
+    }
+    BuddhaCandleStateNUM BuddhaCandleState = BuddhaCandleStateNUM.Start;
+
+    
+    //int iBuddhaLevel = 0;
     int iOrder = 0;
     int[] array = new int[3]; //set candle number
     int[] ilightUpArray = new int[3]; //set  candle light up number
@@ -88,9 +122,19 @@ public class SceneManager_Level3 : MonoBehaviour
     //detect drowing 
     public PlayerTriggerDetect DetectDrowingScript;
     bool bDrowing = false;
+
     //player dead loader
     private PlayerDeadLoader PlayerDeadLoaderScript;
 
+    //Dialogue
+    private Dialogue Dialogue;
+    private NPC_Dialogue VitaDialogueScript;
+    public Sprite PlayerCV;
+    public Sprite VitaCV;
+    //UI set
+    [SerializeField]
+    private GameObject CGMove;
+    private VitaCGMovement CGMoveScript;
 
     void Start()
     {
@@ -108,6 +152,15 @@ public class SceneManager_Level3 : MonoBehaviour
 
         PlayerDeadLoaderScript = GameObject.Find("PlayerDeadLoaderCanvas").GetComponent<PlayerDeadLoader>();
 
+        originalVector2 = GameBoard.transform.localPosition;
+
+        //Dialogue
+        VitaDialogueScript = Vita.GetComponent<NPC_Dialogue>();
+        //new dialogue
+        Dialogue = new Dialogue();
+
+        // UI
+        CGMoveScript = CGMove.GetComponent<VitaCGMovement>();
 
     }
 
@@ -198,10 +251,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////Dectect Buddha level start 
-        /*bool bCandle1 = StartCandle[0].GetComponent<BuddhaCandle>().DetectCandleFinish();
-        bool bCandle2 = StartCandle[1].GetComponent<BuddhaCandle>().DetectCandleFinish();*/
-
-        //Debug.Log("iBuddhaLevel : " + iBuddhaLevel);
+        //Debug.Log(Vita.GetComponent<GazeMovement>().bVitaSoulCanGaze);
 
         StartCandle[0].GetComponent<SkillOneTriggerIcon>().DetectFinish();
         StartCandle[1].GetComponent<SkillOneTriggerIcon>().DetectFinish();
@@ -210,14 +260,17 @@ public class SceneManager_Level3 : MonoBehaviour
 
         //bool bCandle1 = true;
         //bool bCandle2 = true;
-        if (bCandle1 && bCandle2 && iBuddhaLevel == 0)
+
+
+        //bool bCandle1 = true;
+        //bool bCandle2 = true;
+        if (bCandle1 && bCandle2 && BuddhaCandleState == BuddhaCandleStateNUM.Start)
         {
-            iBuddhaLevel = 1;
+            BuddhaCandleState = BuddhaCandleStateNUM.ChooseNUM;
         }
 
-
         //Choose 3number between 1-5  
-        else if (iBuddhaLevel == 1)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.ChooseNUM)
         {
             for (int i = 0; i < array.Length;)
             {
@@ -236,21 +289,126 @@ public class SceneManager_Level3 : MonoBehaviour
                     i++;
                 }
             }
-            iBuddhaLevel += 1;
+            BuddhaCandleState += 1;
+
+            //camera shaking
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f, 0.5f,new Vector2(GameBoard.transform.position.x, 7.34f)));
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(0.5f, 3.5f, 0.05f));
+
+
+            //set player movement, disable trigger skill
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            PlayerSkill.bCanTriggerSkill = false;
+
         }
 
+        //rising board up
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.RisingUp)
+        {
+            if (GameBoard.transform.localPosition.y != 0.5)
+            {
+                GameBoard.transform.localPosition = Vector2.Lerp(originalVector2, new Vector2(GameBoard.transform.localPosition.x, 0.5f), fLerpTimer);
+                fLerpTimer += Time.deltaTime / 4.0f;
+            }
+
+            //next stage
+            else if (GameBoard.transform.localPosition.y == 0.5)
+            {
+                fLerpTimer = 0;
+                BuddhaCandleState++;
+
+                //set camera
+                StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main,2.5f , 0.75f , 0.5f));
+                
+                //set background color
+                GameObject.Find("Player").GetComponent<ColorChange>().ColorChanging(new Color(1.0f,1.0f,1.0f,0.0f) , 0.5f,0.5f );
+                BGMask.GetComponent<ColorChange>().ColorChanging(new Color(0.0f, 0.0f, 0.0f, 0.74f), 0.75f, 0.5f);
+                levelUI.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 1.0f, 1.75f);
+                levelUITitle.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 1.0f, 2.25f);
+                levelUIText.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 1.0f, 2.75f);
+
+                //vita soul stop following player
+                VitaParticleScript.bCanFollow = false;
+                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().ObjMoveToIEnumerator(Vita.transform, VitaSoulGamePos.position));
+                StartCoroutine(BuddhaLevelDelayIEnumerator(4.5f));
+            }
+
+        }
+
+        //fade out level UI
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeOutLevelUI)
+        {
+            levelUI.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
+            levelUITitle.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
+            levelUIText.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
+
+            BuddhaCandleState++;
+            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+        }
+
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.Dialogue1)
+        {
+            Dialogue.name = "薇妲";
+            Dialogue.sentences = new string[2];
+            Dialogue.sentences[0] = "欸？";
+            Dialogue.sentences[1] = "這是什麼啊太酷了吧";
+            CGMoveScript.SetRecTransformX(62.98596f);
+            FindObjectOfType<DialogueManager>().StartDialogue(Dialogue, VitaCV);
+            BuddhaCandleState ++;
+        }
+
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.Dialogue2 && DialogueManager.bFinishDialogue)
+        {
+            Dialogue.name = "莉妲";
+            Dialogue.sentences = new string[1];
+            Dialogue.sentences[0] = "嘿嘿，按下X鍵就可以....討厭拉";
+            CGMoveScript.SetRecTransformX(145.7859f);
+            FindObjectOfType<DialogueManager>().StartDialogue(Dialogue, PlayerCV);
+            BuddhaCandleState++;
+        }
+
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FinishDialogue && DialogueManager.bFinishDialogue)
+        {
+            //can trigger skill
+            PlayerSkill.bCanTriggerSkill = true;
+
+            //set skill manager
+            SkillManager_v2.bDirectTriggerVitaSkill = true;
+
+            BuddhaCandleState++;
+
+            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+        }
+
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeInPrompt)
+        {
+            StartGame.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 1.0f);
+
+            BuddhaCandleState++;
+            StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
+        }
+
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeOutPrompt)
+        {
+            StartGame.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
+
+            BuddhaCandleState++;
+            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+        }
+
+
         //fade in in order GameCandle 1 
-        else if (iBuddhaLevel == 2)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeIn1)
         {
             StartCandleIEnumerator = GameCandle[array[0]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator(2.0f);
             StartCoroutine(StartCandleIEnumerator);
 
             StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
-            iBuddhaLevel++;
+            BuddhaCandleState++;
         }
 
         //fade in in order GameCandle 2
-        else if (iBuddhaLevel == 4)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeIn2)
         {
             if (StartCandleIEnumerator != null)
                 StopCoroutine(StartCandleIEnumerator);
@@ -261,12 +419,12 @@ public class SceneManager_Level3 : MonoBehaviour
             StartCandleIEnumerator = GameCandle[array[1]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator(2.0f);
             StartCoroutine(StartCandleIEnumerator);
 
-             StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
-            iBuddhaLevel++;
+            StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
+            BuddhaCandleState++;
         }
 
         //fade in in order GameCandle 3 
-        else if (iBuddhaLevel == 6)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeIn3)
         {
             if (StartCandleIEnumerator != null)
                 StopCoroutine(StartCandleIEnumerator);
@@ -277,24 +435,24 @@ public class SceneManager_Level3 : MonoBehaviour
             StartCandleIEnumerator = GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeCandleColorIEnumerator(2.0f);
             StartCoroutine(StartCandleIEnumerator);
             StartCoroutine(BuddhaLevelDelayIEnumerator(3.0f));
-            iBuddhaLevel++;
+            BuddhaCandleState++;
 
         }
 
         //fade out 
-        else if (iBuddhaLevel == 8)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FadeOut)
         {
             ReverseCandleIEnumerator = GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
             StartCoroutine(ReverseCandleIEnumerator);
 
             StartCoroutine(BuddhaLevelDelayIEnumerator(1.5f));
-            iBuddhaLevel++;
+            BuddhaCandleState++;
         }
 
         //check if Buddha level end
-        else if (iBuddhaLevel == 10)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.PlayerDetecting)
         {
-
+            
             //Detect all candle
             for (int i = 0; i < GameCandle.Length; i++)
             {
@@ -314,40 +472,79 @@ public class SceneManager_Level3 : MonoBehaviour
             if (ilightUpArray[0] >= 0 && ilightUpArray[1] >= 0 && ilightUpArray[2] >= 0 )
             {
                 iOrder = 0;
-                iBuddhaLevel++;
+                BuddhaCandleState++;
             }
 
 
         }
 
         //check candle
-        else if (iBuddhaLevel == 11)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.CheckAns)
         {
-           
-            Debug.Log("answer 1 : " + array[0]);
-            Debug.Log("1 : " + ilightUpArray[0]);
-            Debug.Log("answer 2 : " + array[1]);
-            Debug.Log("2 : " + ilightUpArray[1]);
-            Debug.Log("answer 3 : " + array[2]);
-            Debug.Log("3 : " + ilightUpArray[2]);
+            bGameFinish = true;
             for (int i = 0; i < 3; i++)
             {
                 
                 if (ilightUpArray[i] != array[i]) // if is not first one 
                 {
-                    //Debug.Log("not match");
+                    bGameFinish = false;
                     StartCoroutine(resetCandleIEnumerator());
-                    //resetCandle();
                     break;
                 }
             }
-            iBuddhaLevel++;
+
+            if(bGameFinish)
+                StartCoroutine(BuddhaLevelDelayIEnumerator(0.0f));
+
+            BuddhaCandleState++;
+
             //Debug.Log("end check");
-            
+
         }
 
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger
-            for (int i = 0; i < StatusToLightUp.Length; i++)
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.FinishVitaSetting)
+        {
+            SkillManager_v2.bFinishSkill = true;
+            BuddhaCandleState++;
+            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+        }
+
+
+        else if (BuddhaCandleState == BuddhaCandleStateNUM.Finish)
+        {
+            //reset
+            SkillManager_v2.bFinishSkill = false;
+
+            if (this.gameObject.GetComponent<SkillManager_v2>().ObjMoveTo != null)
+            {
+                StopCoroutine(this.gameObject.GetComponent<SkillManager_v2>().ObjMoveTo);
+            }
+
+
+            BGMask.GetComponent<ColorChange>().ColorChanging(new Color(0.0f, 0.0f, 0.0f, 0.0f), 0.75f);
+
+            //set camera
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main, 5.0f, 0.75f));
+
+            //set background color
+            GameObject.Find("Player").GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f);
+
+            //set skill manager
+            SkillManager_v2.bDirectTriggerVitaSkill = false;
+
+            //vita soul stop following player
+            VitaParticleScript.bCanFollow = true;
+
+            //set player movement, disable trigger skill
+            //GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+
+            
+            BuddhaCandleState++;
+
+        }
+        Debug.Log(GameObject.Find("Player").GetComponent<PlayerMovement>().canMove);
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger
+        for (int i = 0; i < StatusToLightUp.Length; i++)
         {
             if (iLightUpOrder[i] < 0)
             {
@@ -451,7 +648,7 @@ public class SceneManager_Level3 : MonoBehaviour
     IEnumerator BuddhaLevelDelayIEnumerator(float fTime)
     {
         yield return new WaitForSeconds(fTime);
-        iBuddhaLevel += 1;
+        BuddhaCandleState += 1;
         //StopAllCoroutines();
     }
 
@@ -488,9 +685,9 @@ public class SceneManager_Level3 : MonoBehaviour
             ilightUpArray[i] = -1;
         }
 
-        
 
-        iBuddhaLevel = 10;
+
+        BuddhaCandleState = BuddhaCandleStateNUM.PlayerDetecting;
 
     }
 

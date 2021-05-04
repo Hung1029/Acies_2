@@ -18,8 +18,10 @@ public class VitaTriggerDetect : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+
         if (other.name == "VitaSoul" && PlayerSkill.CURRENTSKILL == _iSkillNumToDetect && bCanTrigger)
         {
+            
             _bSkillTrigger = true;
 
         }
@@ -51,13 +53,11 @@ public class VitaTriggerDetect : MonoBehaviour
         //if is skill one and is triggered => fade in 
         if (_iSkillNumToDetect == 1 && !_bSkillTrigger && bCanChangeVitaSoulCore)
         {
-            Debug.Log("fade in");
             StartCoroutine(GameObject.Find("VitaSoul").GetComponent<VitaSoul_particle>().VitaSoulCoreFadeIn());
             bCanChangeVitaSoulCore = false;
         }
         else if (_iSkillNumToDetect == 1 && _bSkillTrigger && bCanChangeVitaSoulCore)
         {
-            Debug.Log("fade out");
             StartCoroutine(GameObject.Find("VitaSoul").GetComponent<VitaSoul_particle>().VitaSoulCoreFadeOut());
             bCanChangeVitaSoulCore = false;
         }

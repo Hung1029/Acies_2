@@ -15,15 +15,18 @@ public class ColorChange : MonoBehaviour
     }
 
 
-    public void ColorChanging( Color tagetColor, float duration)
+    public void ColorChanging( Color tagetColor, float duration, float fPreWaitTime = 0.0f)
     {
 
         StopAllCoroutines();
-        StartCoroutine(ColorChangingIEnumerator( tagetColor,  duration));
+        StartCoroutine(ColorChangingIEnumerator( tagetColor,  duration, fPreWaitTime));
     }
     
-    IEnumerator ColorChangingIEnumerator(Color tagetColor, float duration)
+    IEnumerator ColorChangingIEnumerator(Color tagetColor, float duration, float fPreWaitTime = 0.0f)
     {
+
+        yield return new WaitForSeconds(fPreWaitTime);
+
         Color originalColor = sprite.color;
         bool bColorFinishChang = false;
         float t = 0;

@@ -21,6 +21,9 @@ public class PlayerSkill : MonoBehaviour
     //Scene Management
     Scene currentScene;
 
+    [System.NonSerialized]
+    public static bool bCanTriggerSkill = true;
+
     //Skill
     public static int CURRENTSKILL = 0;
 
@@ -68,11 +71,11 @@ public class PlayerSkill : MonoBehaviour
     public int DetectSkillKeyDown()
     {
         int SkillNUM = 0;
-        if (Input.GetButtonDown("skillOne"))
+        if (Input.GetButtonDown("skillOne") && bCanTriggerSkill)
         {
             SkillNUM = 1;
         }
-        else if (Input.GetButtonDown("skillTwo") && CanUseSkill2)
+        else if (Input.GetButtonDown("skillTwo") && CanUseSkill2 && bCanTriggerSkill)
         {
             SkillNUM = 2;
         }
