@@ -8287,6 +8287,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SunLightParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 6697008042241511745, guid: 7e5ffec6db736e1498a9d60759f74591,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6697008042241511748, guid: 7e5ffec6db736e1498a9d60759f74591,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8938,7 +8943,7 @@ MonoBehaviour:
   isGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 0.6
+  weight: 0.53
   sharedProfile: {fileID: 11400000, guid: 633157286725ff249b7c79ebc93df5d1, type: 2}
 --- !u!1 &837510268
 GameObject:
@@ -10935,7 +10940,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -13348,10 +13353,10 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.70790315, g: 0.72462213, b: 0.7735849, a: 1}
-  m_Intensity: 1.2
+  m_Color: {r: 0.9716981, g: 0.8152783, b: 0.7975258, a: 1}
+  m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 1fa2ec43000000002de2c08e679b43847768eed1a35c137fe35cddfab54fa68ddf6cc3aa57d5c3582168e83c
+  m_ApplyToSortingLayers: 1fa2ec437768eed1
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -20820,7 +20825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708390710}
   m_LocalRotation: {x: -0.63766277, y: -0, z: -0, w: 0.7703157}
-  m_LocalPosition: {x: 18.74, y: -1.1, z: -8.962891}
+  m_LocalPosition: {x: 36.5, y: -2.7, z: -8.962891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21523,7 +21528,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -69
   m_Sprite: {fileID: 21300000, guid: b976291a323e3dc488c255d82ba5e2ff, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8666667}
+  m_Color: {r: 0.49261484, g: 0.8301887, b: 0.45425418, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27086,7 +27091,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: abad2ad30ab14a34b9cac53a5918ea46, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
