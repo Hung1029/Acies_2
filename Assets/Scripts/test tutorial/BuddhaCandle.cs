@@ -91,7 +91,7 @@ public class BuddhaCandle : MonoBehaviour
 
             yield return new WaitForSeconds(duration / SpriteNUM);
 
-            if (SpriteCount == 17)
+            if (SpriteCount == 15)
                 bTriggerFinish = true;
 
         }

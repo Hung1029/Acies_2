@@ -23,6 +23,10 @@ public class SkillOneTriggerIcon : MonoBehaviour
 
     bool bLastDetectState = false;
 
+    [System.NonSerialized]
+    public bool bReseting = false;
+
+
     void Start()
     {
         TriggerRenderer = this.GetComponent<SpriteRenderer>();
@@ -39,14 +43,14 @@ public class SkillOneTriggerIcon : MonoBehaviour
         }
 
 
-        if (canDetectTrigger && VitaDetect._bSkillTrigger && !bTriggerFinish)
+        if (canDetectTrigger && VitaDetect._bSkillTrigger && !bTriggerFinish  && !bReseting)
         {
             canDetectTrigger = false;
 
             StopAllCoroutines();
             StartCoroutine(PlayerTriggerFinishIEnumerator());
         }
-        else if (canDetectTrigger && !VitaDetect._bSkillTrigger && !bTriggerFinish)
+        else if (canDetectTrigger && !VitaDetect._bSkillTrigger && !bTriggerFinish && !bReseting)
         {
             canDetectTrigger = false;
 
@@ -99,7 +103,7 @@ public class SkillOneTriggerIcon : MonoBehaviour
 
     public IEnumerator reset()
     {
-
+        
         for (; SpriteCount >= 0; SpriteCount--)
         {
             TriggerRenderer.sprite = StartSprite[SpriteCount];
@@ -114,6 +118,43 @@ public class SkillOneTriggerIcon : MonoBehaviour
         bTriggerFinish = false;
 
         bLastDetectState = false;
+    }
+
+    public IEnumerator reset(float fDuration)
+    {
+        //reset at once, vita can't interrupt
+        bReseting = true;
+        canDetectTrigger = false;
+
+        bTriggerFinish = false;
+
+        bLastDetectState = false;
+
+        for (; SpriteCount >= 0; SpriteCount--)
+        {
+            TriggerRenderer.sprite = StartSprite[SpriteCount];
+
+            yield return new WaitForSeconds(fDuration / SpriteNUM);
+        }
+        SpriteCount = 0;
+        bReseting = false;
+    }
+
+    public IEnumerator LightUp(float fDuration)
+    {
+        //Debug.Log("PlayerTriggerFinishIEnumerator");
+
+        for (; SpriteCount < SpriteNUM; SpriteCount++)
+        {
+            TriggerRenderer.sprite = StartSprite[SpriteCount];
+
+            yield return new WaitForSeconds(fDuration / SpriteNUM);
+
+            if (SpriteCount == 34)
+                bTriggerFinish = true;
+
+        }
+        SpriteCount = SpriteNUM - 1;
     }
 
 }

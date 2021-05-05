@@ -1,0 +1,2600 @@
+fileFormatVersion: 2
+guid: a43d448310f0b8649a8f66e5b24ff4a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2239438813595859882
+    second: rockSmoke_0
+  - first:
+      213: -8883374240789905788
+    second: rockSmoke_1
+  - first:
+      213: -3645070328830942629
+    second: rockSmoke_2
+  - first:
+      213: 2215203474262279154
+    second: rockSmoke_3
+  - first:
+      213: 2987472772154731274
+    second: rockSmoke_4
+  - first:
+      213: 3398757825233467796
+    second: rockSmoke_5
+  - first:
+      213: 4298013044636459551
+    second: rockSmoke_6
+  - first:
+      213: -4625225486465284759
+    second: rockSmoke_7
+  - first:
+      213: 332132368211157981
+    second: rockSmoke_8
+  - first:
+      213: -5650361302761423055
+    second: rockSmoke_9
+  - first:
+      213: 4212116133915118874
+    second: rockSmoke_10
+  - first:
+      213: 709284297657838182
+    second: rockSmoke_11
+  - first:
+      213: -6117096794711457186
+    second: rockSmoke_12
+  - first:
+      213: -4071858043939022863
+    second: rockSmoke_13
+  - first:
+      213: -2766869007106302735
+    second: rockSmoke_14
+  - first:
+      213: -8354173268894851022
+    second: rockSmoke_15
+  - first:
+      213: -8215425626223701083
+    second: rockSmoke_16
+  - first:
+      213: 3846169806622592203
+    second: rockSmoke_17
+  - first:
+      213: 3789423294096279620
+    second: rockSmoke_18
+  - first:
+      213: -2624955122579051545
+    second: rockSmoke_19
+  - first:
+      213: 2382116544431184097
+    second: rockSmoke_20
+  - first:
+      213: -8137003277934847751
+    second: rockSmoke_21
+  - first:
+      213: -5066833863183603876
+    second: rockSmoke_22
+  - first:
+      213: 6897791818047534870
+    second: rockSmoke_23
+  - first:
+      213: 7674689929829234992
+    second: rockSmoke_24
+  - first:
+      213: 5941187160855779311
+    second: rockSmoke_25
+  - first:
+      213: 358519489479595862
+    second: rockSmoke_26
+  - first:
+      213: 1551454602985693878
+    second: rockSmoke_27
+  - first:
+      213: -8428052765708749530
+    second: rockSmoke_28
+  - first:
+      213: -302931543678719258
+    second: rockSmoke_29
+  - first:
+      213: 3818840219042968120
+    second: rockSmoke_30
+  - first:
+      213: -5134441023989229427
+    second: rockSmoke_31
+  - first:
+      213: 3205505847601620138
+    second: rockSmoke_32
+  - first:
+      213: -5517690481055060242
+    second: rockSmoke_33
+  - first:
+      213: 795548599949982034
+    second: rockSmoke_34
+  - first:
+      213: 550689859902488507
+    second: rockSmoke_35
+  - first:
+      213: 2780287939645936190
+    second: rockSmoke_36
+  - first:
+      213: -4032829847180419843
+    second: rockSmoke_37
+  - first:
+      213: 623583104458231963
+    second: rockSmoke_38
+  - first:
+      213: 4807439333674045030
+    second: rockSmoke_39
+  - first:
+      213: -5433117074508196645
+    second: rockSmoke_40
+  - first:
+      213: -3022981272495296260
+    second: rockSmoke_41
+  - first:
+      213: 2035525323973770797
+    second: rockSmoke_42
+  - first:
+      213: -641528233648933318
+    second: rockSmoke_43
+  - first:
+      213: -4179989798940760277
+    second: rockSmoke_44
+  - first:
+      213: -2795584912038026387
+    second: rockSmoke_45
+  - first:
+      213: -6402758148105565861
+    second: rockSmoke_46
+  - first:
+      213: 2172272778095512975
+    second: rockSmoke_47
+  - first:
+      213: 1869136591234565283
+    second: rockSmoke_48
+  - first:
+      213: 7005761019271759203
+    second: rockSmoke_49
+  - first:
+      213: 2141073665353816480
+    second: rockSmoke_50
+  - first:
+      213: -6562409075171515476
+    second: rockSmoke_51
+  - first:
+      213: -2865742609447824641
+    second: rockSmoke_52
+  - first:
+      213: 5923632404223342268
+    second: rockSmoke_53
+  - first:
+      213: 3401233119102704024
+    second: rockSmoke_54
+  - first:
+      213: 12591352650638274
+    second: rockSmoke_55
+  - first:
+      213: 5153051280672286611
+    second: rockSmoke_56
+  - first:
+      213: 3295742626687295503
+    second: rockSmoke_57
+  - first:
+      213: -4597062762275056457
+    second: rockSmoke_58
+  - first:
+      213: -944238949771182657
+    second: rockSmoke_59
+  - first:
+      213: 7795248410328518753
+    second: rockSmoke_60
+  - first:
+      213: -3580308582390825154
+    second: rockSmoke_61
+  - first:
+      213: -4927313264914559120
+    second: rockSmoke_62
+  - first:
+      213: -9132224525585227458
+    second: rockSmoke_63
+  - first:
+      213: -6997240668295770448
+    second: rockSmoke_64
+  - first:
+      213: 8098788701297988987
+    second: rockSmoke_65
+  - first:
+      213: -4420330395053772204
+    second: rockSmoke_66
+  - first:
+      213: -8484496900554042146
+    second: rockSmoke_67
+  - first:
+      213: 3265133953247393877
+    second: rockSmoke_68
+  - first:
+      213: -520228150074952003
+    second: rockSmoke_69
+  - first:
+      213: -6680195737318762786
+    second: rockSmoke_70
+  - first:
+      213: -1192508977712576272
+    second: rockSmoke_71
+  - first:
+      213: -647189703590873746
+    second: rockSmoke_72
+  - first:
+      213: 4694302088858640400
+    second: rockSmoke_73
+  - first:
+      213: 6771682419881496386
+    second: rockSmoke_74
+  - first:
+      213: -2912642199245427703
+    second: rockSmoke_75
+  - first:
+      213: 6935953077921864297
+    second: rockSmoke_76
+  - first:
+      213: 8334869056146920717
+    second: rockSmoke_77
+  - first:
+      213: -4952828761134139421
+    second: rockSmoke_78
+  - first:
+      213: -4245799844347653052
+    second: rockSmoke_79
+  - first:
+      213: 6247142701870628172
+    second: rockSmoke_80
+  - first:
+      213: -4336915469071657851
+    second: rockSmoke_81
+  - first:
+      213: 3699332234626256662
+    second: rockSmoke_82
+  - first:
+      213: 8945072220536150914
+    second: rockSmoke_83
+  - first:
+      213: -3886355854375037791
+    second: rockSmoke_84
+  - first:
+      213: -1190374051008046456
+    second: rockSmoke_85
+  - first:
+      213: 7181477873636593782
+    second: rockSmoke_86
+  - first:
+      213: 5048144035721857294
+    second: rockSmoke_87
+  - first:
+      213: -6990004081100760401
+    second: rockSmoke_88
+  - first:
+      213: -8815508928200783208
+    second: rockSmoke_89
+  - first:
+      213: -347811664560116559
+    second: rockSmoke_90
+  - first:
+      213: 1920114871601119173
+    second: rockSmoke_91
+  - first:
+      213: 7895852105564397663
+    second: rockSmoke_92
+  - first:
+      213: 7409230511593782923
+    second: rockSmoke_93
+  - first:
+      213: -3738387375216980194
+    second: rockSmoke_94
+  - first:
+      213: 2195915660794469651
+    second: rockSmoke_95
+  - first:
+      213: -2840953282019502841
+    second: rockSmoke_96
+  - first:
+      213: 7649965391337854849
+    second: rockSmoke_97
+  - first:
+      213: -8559648761004838558
+    second: rockSmoke_98
+  - first:
+      213: -2789329281004349346
+    second: rockSmoke_99
+  - first:
+      213: 1281503695339932231
+    second: rockSmoke_100
+  - first:
+      213: -925789245995448537
+    second: rockSmoke_101
+  - first:
+      213: 3883205246745768165
+    second: rockSmoke_102
+  - first:
+      213: 7335656805651792849
+    second: rockSmoke_103
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rockSmoke_0
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 5796
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab7a946cb5141f10800000000000000
+      internalID: 2239438813595859882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5520
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ebcd2b13ae7b480800000000000000
+      internalID: -8883374240789905788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 5520
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5227bc29db1a6dc0800000000000000
+      internalID: -3645070328830942629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_3
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 5520
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f34d9cb2dbfdbe10800000000000000
+      internalID: 2215203474262279154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_4
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 5520
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b2f6078a2a57920800000000000000
+      internalID: 2987472772154731274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_5
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 5520
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499be921c30da2f20800000000000000
+      internalID: 3398757825233467796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5244
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f122d8d971c95ab30800000000000000
+      internalID: 4298013044636459551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_7
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 5244
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9654721fce5efcfb0800000000000000
+      internalID: -4625225486465284759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_8
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 5244
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3a2a111a8fb9400800000000000000
+      internalID: 332132368211157981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_9
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 5244
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fba400552e591b0800000000000000
+      internalID: -5650361302761423055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_10
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 5244
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dc3ba9e41747a30800000000000000
+      internalID: 4212116133915118874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4968
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a68ae8f42e7d900800000000000000
+      internalID: 709284297657838182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_12
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 4968
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e520b8effd4bb1ba0800000000000000
+      internalID: -6117096794711457186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_13
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 4968
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f79233ceaadd77c0800000000000000
+      internalID: -4071858043939022863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_14
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 4968
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc146b2c4b1a99d0800000000000000
+      internalID: -2766869007106302735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_15
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 4968
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230657b9ca3001c80800000000000000
+      internalID: -8354173268894851022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4692
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a39b4e8be1fcfd80800000000000000
+      internalID: -8215425626223701083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_17
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 4692
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc829daf07506530800000000000000
+      internalID: 3846169806622592203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_18
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 4692
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4480334a86cb69430800000000000000
+      internalID: 3789423294096279620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_19
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 4692
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb655f3939429bd0800000000000000
+      internalID: -2624955122579051545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_20
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 4692
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8d66c406afe0120800000000000000
+      internalID: 2382116544431184097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4416
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8118261ae831f80800000000000000
+      internalID: -8137003277934847751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_22
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 4416
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c576509527dfea9b0800000000000000
+      internalID: -5066833863183603876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_23
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 4416
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617b159cc11e9bf50800000000000000
+      internalID: 6897791818047534870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_24
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 4416
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0393db434d9f18a60800000000000000
+      internalID: 7674689929829234992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_25
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 4416
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe79beabe36537250800000000000000
+      internalID: 5941187160855779311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4140
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6575c7f7397b9f400800000000000000
+      internalID: 358519489479595862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_27
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 4140
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b26b10ddbfd78510800000000000000
+      internalID: 1551454602985693878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_28
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 4140
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6257eafc9aa890b80800000000000000
+      internalID: -8428052765708749530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_29
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 4140
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eae4c3bd55cbcbf0800000000000000
+      internalID: -302931543678719258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_30
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 4140
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832f70632fe3ff430800000000000000
+      internalID: 3818840219042968120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3864
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88dde4971dceb8b0800000000000000
+      internalID: -5134441023989229427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_32
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 3864
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa46bbbb59e3c7c20800000000000000
+      internalID: 3205505847601620138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_33
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 3864
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeea820ddb93d63b0800000000000000
+      internalID: -5517690481055060242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_34
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 3864
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259f3959c3b5a0b00800000000000000
+      internalID: 795548599949982034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_35
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 3864
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfb5e8828174a700800000000000000
+      internalID: 550689859902488507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3588
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3216e78621959620800000000000000
+      internalID: 2780287939645936190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_37
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 3588
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcd73fee928808c0800000000000000
+      internalID: -4032829847180419843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_38
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 3588
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b901b25978967a800800000000000000
+      internalID: 623583104458231963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_39
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 3588
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ec1e26a9477b240800000000000000
+      internalID: 4807439333674045030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_40
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 3588
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd454de7ec0b994b0800000000000000
+      internalID: -5433117074508196645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3312
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf072429c863c06d0800000000000000
+      internalID: -3022981272495296260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_42
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 3312
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2eb4ca5f73af3c10800000000000000
+      internalID: 2035525323973770797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_43
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 3312
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36b8ff6875d817f0800000000000000
+      internalID: -641528233648933318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_44
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 3312
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b272165ac61bdf5c0800000000000000
+      internalID: -4179989798940760277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_45
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 3312
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63288a85561439d0800000000000000
+      internalID: -2795584912038026387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3036
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b590e673365d427a0800000000000000
+      internalID: -6402758148105565861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_47
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 3036
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d42ad1596752e10800000000000000
+      internalID: 2172272778095512975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_48
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 3036
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4883d93d180f910800000000000000
+      internalID: 1869136591234565283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_49
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 3036
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365c8f66786793160800000000000000
+      internalID: 7005761019271759203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_50
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 3036
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a99b5d972f96bd10800000000000000
+      internalID: 2141073665353816480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2760
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca32a9b17b3ade4a0800000000000000
+      internalID: -6562409075171515476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_52
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2760
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff25922b746da38d0800000000000000
+      internalID: -2865742609447824641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_53
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2760
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6b9b17948f43250800000000000000
+      internalID: 5923632404223342268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_54
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2760
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8991966508b933f20800000000000000
+      internalID: 3401233119102704024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_55
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 2760
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3abfdb4cbbc2000800000000000000
+      internalID: 12591352650638274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2484
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397e7d576d0538740800000000000000
+      internalID: 5153051280672286611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_57
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2484
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f002fc61574dcbd20800000000000000
+      internalID: 3295742626687295503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_58
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2484
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b45b6426c3f330c0800000000000000
+      internalID: -4597062762275056457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_59
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2484
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdfccf8da365e2f0800000000000000
+      internalID: -944238949771182657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_60
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 2484
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1605f81d0294e2c60800000000000000
+      internalID: 7795248410328518753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2208
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fff484050305ec0800000000000000
+      internalID: -3580308582390825154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_62
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2208
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f82bb01baae9bb0800000000000000
+      internalID: -4927313264914559120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_63
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2208
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31e167bd22d34180800000000000000
+      internalID: -9132224525585227458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_64
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2208
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be40566faec4ee90800000000000000
+      internalID: -6997240668295770448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_65
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 2208
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7550d32a6da46070800000000000000
+      internalID: 8098788701297988987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1932
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45235f4fce4d7a2c0800000000000000
+      internalID: -4420330395053772204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_67
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1932
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4d2909503014a80800000000000000
+      internalID: -8484496900554042146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_68
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1932
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558b063f706105d20800000000000000
+      internalID: 3265133953247393877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_69
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 1932
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6bf98f047c7c8f0800000000000000
+      internalID: -520228150074952003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_70
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 1932
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6590fbe5d2b43a0800000000000000
+      internalID: -6680195737318762786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1656
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f84af7276b537fe0800000000000000
+      internalID: -1192508977712576272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_72
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1656
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65fc2fb468b407f0800000000000000
+      internalID: -647189703590873746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_73
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1656
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0102bcad0e2852140800000000000000
+      internalID: 4694302088858640400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_74
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 1656
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f4bc07849d9fd50800000000000000
+      internalID: 6771682419881496386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_75
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 1656
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ce9240a573497d0800000000000000
+      internalID: -2912642199245427703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1380
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a5f4c7394714060800000000000000
+      internalID: 6935953077921864297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_77
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1380
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05580d1f376ba370800000000000000
+      internalID: 8334869056146920717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_78
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1380
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7f243ab74044bb0800000000000000
+      internalID: -4952828761134139421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_79
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 1380
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444df3a6983e315c0800000000000000
+      internalID: -4245799844347653052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_80
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 1380
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d3c26403f42b650800000000000000
+      internalID: 6247142701870628172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584561ddb5e20d3c0800000000000000
+      internalID: -4336915469071657851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_82
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1104
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fcc07411ba65330800000000000000
+      internalID: 3699332234626256662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_83
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1104
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b9543aac7432c70800000000000000
+      internalID: 8945072220536150914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_84
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 1104
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a45735f0f3e01ac0800000000000000
+      internalID: -3886355854375037791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_85
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 1104
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a92d38b11fa7fe0800000000000000
+      internalID: -1190374051008046456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_86
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 828
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670df64b31cb9a360800000000000000
+      internalID: 7181477873636593782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_87
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 828
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e094538114c9e0640800000000000000
+      internalID: 5048144035721857294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_88
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 828
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa5577a2548efe90800000000000000
+      internalID: -6990004081100760401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_89
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 828
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ace4c165509a580800000000000000
+      internalID: -8815508928200783208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_90
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 828
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc282542235c2bf0800000000000000
+      internalID: -347811664560116559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfbab17d4e95aa10800000000000000
+      internalID: 1920114871601119173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_92
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 552
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50af2fe7a3b39d60800000000000000
+      internalID: 7895852105564397663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_93
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 552
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e788ef4efd2d660800000000000000
+      internalID: 7409230511593782923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_94
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 552
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f03633d749e1cc0800000000000000
+      internalID: -3738387375216980194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_95
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 552
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d1f56b8a5797e10800000000000000
+      internalID: 2195915660794469651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7055fb1ca08e298d0800000000000000
+      internalID: -2840953282019502841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_97
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 276
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18799befdf22a2a60800000000000000
+      internalID: 7649965391337854849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_98
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 276
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261b1368dc4063980800000000000000
+      internalID: -8559648761004838558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_99
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 276
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58d3242ccf4a49d0800000000000000
+      internalID: -2789329281004349346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_100
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 276
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a461b32d0d8c110800000000000000
+      internalID: 1281503695339932231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_101
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7278097f59fe623f0800000000000000
+      internalID: -925789245995448537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_102
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 0
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0f63a099ae3e530800000000000000
+      internalID: 3883205246745768165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockSmoke_103
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 0
+        width: 872
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d34d0faffc7dc560800000000000000
+      internalID: 7335656805651792849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

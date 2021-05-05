@@ -192,6 +192,9 @@ public class SkillManager_v2 : MonoBehaviour
             //Player skill animate
             SkillScript.StartSkillAnimate();
 
+            //set prompt
+            VitaParticleScript.PromptFadeIn();
+
             //next stage
             SkillStage++;
 
@@ -212,6 +215,9 @@ public class SkillManager_v2 : MonoBehaviour
 
                 if (VitaSoulGatheringTimer >= fNeedGatheringTime) //gathering for 2s
                 {
+                    //set prompt
+                    VitaParticleScript.PromptFadeOut();
+
                     //stop vita move coroutine
                     StopCoroutine(ObjMoveTo);
 
@@ -261,11 +267,14 @@ public class SkillManager_v2 : MonoBehaviour
             //if gathering are interrupted
             if (( VitaSoulCanGazeTimer >= fCanGathingTime || (Input.GetButtonDown("Cancel") && VitaSoulCanGazeTimer > 0.5f)) )
             {
-                
+                //set prompt
+                VitaParticleScript.PromptFadeOut();
+
                 StartCoroutine(CaneMoveIntervelJump());
 
                 //stop vita move coroutine
-                StopCoroutine(ObjMoveTo);
+                if(ObjMoveTo != null)
+                    StopCoroutine(ObjMoveTo);
 
                 //reset vita animate
                 VitaParticleScript.animator.SetBool("isGazeing", false);
@@ -425,7 +434,12 @@ public class SkillManager_v2 : MonoBehaviour
 
             if (VitaSoulCanGazeTimer > fCanGazeTime || Input.GetButtonDown("Cancel") || bFinishSkill) 
             {
-                
+                Debug.Log("in!!!!!!!!!!! : " + PlayerMovementScript.canMove);
+
+                //Finish skill 1
+                StartCoroutine(CaneMoveIntervelJump());
+
+
 
                 //Vita is direct trigger
                 if (bDirectTriggerVitaSkill)
@@ -438,9 +452,7 @@ public class SkillManager_v2 : MonoBehaviour
 
                 else
                 {
-                    //Finish skill 1
-                    StartCoroutine(CaneMoveIntervelJump());
-
+                   
                     //reset UI
                     if (FadeInUI != null)
                         StopCoroutine(FadeInUI);
@@ -498,7 +510,7 @@ public class SkillManager_v2 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         //player can move
-        PlayerMovementScript.canMove = !PlayerMovementScript.canMove;
+        PlayerMovementScript.canMove = true;
     }
 
 

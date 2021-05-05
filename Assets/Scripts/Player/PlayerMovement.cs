@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     bool bCanJump = true;
     float fJumpIntervalTime = 0.0f;
 
+    Animator JumpEffect;
+
     /*//original value
     float fGravity;
     float fDrag;*/
@@ -66,6 +68,9 @@ public class PlayerMovement : MonoBehaviour
 
         /*fGravity = this.gameObject.GetComponent<Rigidbody2D>().gravityScale;
         fDrag = this.gameObject.GetComponent<Rigidbody2D>().drag;*/
+
+        //jump effect
+        JumpEffect = GameObject.Find("JumpEffect").GetComponent<Animator>();
 
     }
 
@@ -188,6 +193,8 @@ public class PlayerMovement : MonoBehaviour
         //double jump
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && !isGrounded && bCanJump)
         {
+            JumpEffect.SetTrigger("tJump");
+
             //Debug.Log("Jump_2");
             JumpState = 1;
 

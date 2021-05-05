@@ -161,7 +161,7 @@ public class VitaSoul_particle : MonoBehaviour
         for (float a = 1.0f; a > 0.0f; a -= 0.4f)
         {
             PromptSprite.color = new Color(PromptSprite.color.r, PromptSprite.color.g, PromptSprite.color.b, a); 
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.1f);
         }
         PromptSprite.color = new Color(PromptSprite.color.r, PromptSprite.color.g, PromptSprite.color.b, 0.0f);
 

@@ -366,6 +366,7 @@ public class CameraManager : MonoBehaviour
         Follow_Y = KeepYFollow;
     }
 
+
     public IEnumerator ChangeCameraFollowingPosition(float fPreWaitTime, float duration, Vector2 TargetPosition)
     {
         yield return new WaitForSeconds(fPreWaitTime);
@@ -390,6 +391,10 @@ public class CameraManager : MonoBehaviour
 
     }
 
+    public void ResetCamera()
+    {
+        bCameraFocusOtherObj = false;
+    }
 
     public void BackToFollowPlayer()
     {
