@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
  
     void FixedUpdate()
     {
-
+        
 
         if (canMove && canMoveX)
         {
@@ -85,6 +85,10 @@ public class PlayerMovement : MonoBehaviour
             Movement_x();
         }
 
+        else
+        {
+            moveInput = 0.0f;
+        }
 
     }
 
@@ -237,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
     {
         get
         {
-            return (moveInput!= 0 || !OnTheGround());
+            return (rb.velocity.x != 0.0f || rb.velocity.y != 0.0f || !OnTheGround());
         }
 
     }

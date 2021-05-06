@@ -180,8 +180,6 @@ public class SkillManager : MonoBehaviour
                 VitaParticleScript.animator.SetBool("isGazeing", true);
                 VitaSoulBG.SetBool("isGazeing", true);
 
-                //fade out prompt
-                if (VitaParticleScript.bPromptExist)
                     VitaParticleScript.PromptFadeOut();
 
                 if (VitaSoulgGatheringTimer >= fNeedGatheringTime) //gathering for 2s
@@ -217,7 +215,6 @@ public class SkillManager : MonoBehaviour
                 VitaSoulBG.SetBool("isGazeing", false);
 
 
-                if (!VitaParticleScript.bPromptExist)
                     VitaParticleScript.PromptFadeIn();
 
                
@@ -288,7 +285,6 @@ public class SkillManager : MonoBehaviour
             if (VitaSoulCanGazeTimer > 5.0f || (VitaSoulCanGazeTimer > 0.5f && SkillNUM != 0)) //over 5.0s or after Player raise hand and then press skillbutton
             {
                 //reset animate
-                if (VitaParticleScript.bPromptExist)
                     VitaParticleScript.PromptFadeOut();
 
                 //player can't move

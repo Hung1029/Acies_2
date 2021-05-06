@@ -18,7 +18,7 @@ public class VitaSoul_particle : MonoBehaviour
 
     [SerializeField]
     private GameObject PromptArrow;
-    private SpriteRenderer PromptSprite;
+    private ColorChange PromptColorChange;
 
     private GameObject VitaSoulPicture;
     private SpriteRenderer VitaSoulPictureRenderer;
@@ -46,11 +46,9 @@ public class VitaSoul_particle : MonoBehaviour
     private Rigidbody2D rb;
 
     [System.NonSerialized]
-    public bool bPromptExist = false;
-
-    [System.NonSerialized]
     public bool bCanFollow = true;
 
+    IEnumerator RecordPrompt = null;
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +71,7 @@ public class VitaSoul_particle : MonoBehaviour
 
 
         //prompt arrow
-        PromptSprite = PromptArrow.GetComponent<SpriteRenderer>();
+        PromptColorChange = PromptArrow.GetComponent<ColorChange>();
 
 
         rb = this.GetComponent<Rigidbody2D>();
@@ -123,50 +121,19 @@ public class VitaSoul_particle : MonoBehaviour
 
     public void PromptFadeIn()
     {
-        bPromptExist = true;
-        //stop IEnumerator
-        StopCoroutine(PromptFadeInIEnumerator());
-        StopCoroutine(PromptFadeOutIEnumerator());
-
-        StartCoroutine(PromptFadeInIEnumerator());
+       
+        PromptColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f);
 
     }
 
     public void PromptFadeOut()
     {
+      
+        PromptColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
-        bPromptExist = false;
-        //stop IEnumerator
-        StopCoroutine(PromptFadeInIEnumerator());
-        StopCoroutine(PromptFadeOutIEnumerator());
-
-        StartCoroutine(PromptFadeOutIEnumerator());
 
     }
-    IEnumerator PromptFadeInIEnumerator() //Vita core
-    {
-        
-        for (float a = 0.0f; a < 1.0f; a += 0.4f)
-        {
-            
-            PromptSprite.color = new Color(PromptSprite.color.r, PromptSprite.color.g, PromptSprite.color.b, a);
-            yield return new WaitForSeconds(0.15f);
-        }
-        PromptSprite.color = new Color(PromptSprite.color.r, PromptSprite.color.g, PromptSprite.color.b, 1.0f);
-
-    }
-
-    IEnumerator PromptFadeOutIEnumerator()//Vita core
-    {
-        for (float a = 1.0f; a > 0.0f; a -= 0.4f)
-        {
-            PromptSprite.color = new Color(PromptSprite.color.r, PromptSprite.color.g, PromptSprite.color.b, a); 
-            yield return new WaitForSeconds(0.1f);
-        }
-        PromptSprite.color = new Color(PromptSprite.color.r, PromptSprite.color.g, PromptSprite.color.b, 0.0f);
-
-    }
-
+    
     ////////////////////////////////////////////////////////////////////////////////////Vita Soul Core Fade in 
     public IEnumerator VitaSoulCoreFadeIn()
     {

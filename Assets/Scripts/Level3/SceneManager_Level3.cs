@@ -121,7 +121,7 @@ public class SceneManager_Level3 : MonoBehaviour
     public GameObject StatusGate;
 
     //Skill 1 description
-    public SkillDiscription SkillDescription_1;
+    SkillDiscription SkillDescription_1;
     bool bSkill1Des_open = true;
     bool bSkill1Des_finish = false;
 
@@ -182,7 +182,7 @@ public class SceneManager_Level3 : MonoBehaviour
             bLastColorState[i] = false;
         }
 
-
+        SkillDescription_1 = GameObject.Find("SkillDirection").GetComponent<SkillDiscription>();
     }
 
     private void FixedUpdate()
@@ -235,6 +235,7 @@ public class SceneManager_Level3 : MonoBehaviour
         }
         else if (bSkill1Des_open == true && bSkill1Des_finish　== false && Input.GetButtonDown("Submit") && SkillDescription_1.SkillDiscriptionSet[SkillDescription_1.SkillDiscriptionSet.Length -1].image.color.a ==1)
         {
+
             StopCoroutine(SkillDescription_1.FadeIn());
             StartCoroutine(SkillDescription_1.FadeOut());
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
@@ -272,8 +273,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////Dectect Buddha level start 
-        //Debug.Log(Vita.GetComponent<GazeMovement>().bVitaSoulCanGaze);
-
+        
         StartCandle[0].GetComponent<SkillOneTriggerIcon>().DetectFinish();
         StartCandle[1].GetComponent<SkillOneTriggerIcon>().DetectFinish();
         bool bCandle1 = StartCandle[0].GetComponent<SkillOneTriggerIcon>().bTriggerFinish;
@@ -359,7 +359,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
                 //vita soul stop following player
                 VitaParticleScript.bCanFollow = false;
-                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().ObjMoveToIEnumerator(Vita.transform, VitaSoulGamePos.position));
+                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().ObjMoveToIEnumerator(Vita.transform, VitaSoulGamePos));
                 StartCoroutine(BuddhaLevelDelayIEnumerator(4.5f));
 
 
@@ -577,7 +577,6 @@ public class SceneManager_Level3 : MonoBehaviour
 
             BuddhaCandleState++;
 
-            //Debug.Log("end check");
 
         }
 
@@ -623,20 +622,20 @@ public class SceneManager_Level3 : MonoBehaviour
 
             BuddhaCandleState++;
 
-            StartCoroutine(BuddhaLevelDelayIEnumerator(2.0f));
+            StartCoroutine(BuddhaLevelDelayIEnumerator(1.5f));
 
-            //set game board original position
-            originalVector2 = GameBoard.transform.localPosition;
+            ////set game board original position
+            //originalVector2 = GameBoard.transform.localPosition;
 
-            //set camera
-            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(2.0f, 3.5f, 0.05f));
+            ////set camera
+            //StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(2.0f, 3.5f, 0.05f));
         }
 
 
 
         else if (BuddhaCandleState == BuddhaCandleStateNUM.RisingDown)
         {
-            //set smoke
+           /* //set smoke
             if (GameBoard.transform.localPosition.y == 0.5f)
                 SmokeAnimator.SetTrigger("Start");
 
@@ -651,7 +650,7 @@ public class SceneManager_Level3 : MonoBehaviour
             {
                 fLerpTimer = 0;
                 BuddhaCandleState++;
-
+                */
 
                 //set player movement, disable trigger skill
                 GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
@@ -661,10 +660,11 @@ public class SceneManager_Level3 : MonoBehaviour
 
                 Skill2Token.SetActive(true);
 
-            }
+                BuddhaCandleState++;
+            /*
+            }*/
 
         }
-
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger

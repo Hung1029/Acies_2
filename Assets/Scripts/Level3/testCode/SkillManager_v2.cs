@@ -12,6 +12,7 @@ public class SkillManager_v2 : MonoBehaviour
     private PlayerMovement PlayerMovementScript;
     private GameObject magicLightObj;
     private magicLight magicLightScript;
+    private Transform VitaSkillMoveTo;
 
     //vita
     private GameObject VitaSoul;
@@ -103,7 +104,7 @@ public class SkillManager_v2 : MonoBehaviour
         SkillIcon = GameObject.Find("SkillIcon").GetComponent<Image>();
         SkillName = GameObject.Find("SkillName").GetComponent<Image>();
 
-
+        VitaSkillMoveTo = GameObject.Find("VitaSkillMoveTo").GetComponent<Transform>();
     }
 
     private void FixedUpdate()
@@ -123,8 +124,13 @@ public class SkillManager_v2 : MonoBehaviour
         ///////////////////////////////////////////////////////////////////////////////////Detect Skill Button
         SkillNUM = SkillScript.DetectSkillKeyDown();
 
-        if (SkillNUM != 0 && SkillStage == SkillStageNUM.DetectSkillButton && !PlayerMovementScript.bPlayerMove) //detect start skill
+        if (SkillNUM != 0 && SkillStage == SkillStageNUM.DetectSkillButton ) //detect start skill
         {
+            //set player movement
+            PlayerMovementScript.canMove = false;
+            PlayerMovementScript.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+            PlayerMovementScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f,0.0f);
+
             //trigger vita directly
             if (bDirectTriggerVitaSkill)
             {
@@ -162,18 +168,20 @@ public class SkillManager_v2 : MonoBehaviour
 
             
         }
+
+
         ///////////////////////////////////////////////////////////////////////////////////Strat Skill
-        if (SkillStage == SkillStageNUM.StartSkill)
+        if (SkillStage == SkillStageNUM.StartSkill && !PlayerMovementScript.bPlayerMove)
         {
             //vita soul stop following
             VitaParticleScript.bCanFollow = false;
 
             //vita soul move to miagic wound 
-            Vector2 V2magicWoundTop = new Vector2(Player.transform.Find("magicLight").GetComponent<Transform>().position.x, Player.transform.Find("magicLight").GetComponent<Transform>().position.y + 0.2f);
+            //Vector2 V2magicWoundTop = new Vector2(Player.transform.Find("magicLight").GetComponent<Transform>().position.x, Player.transform.Find("magicLight").GetComponent<Transform>().position.y + 0.2f);
 
             if (ObjMoveTo != null)
                 StopCoroutine(ObjMoveTo);
-            ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, V2magicWoundTop);
+            ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, VitaSkillMoveTo);
             StartCoroutine(ObjMoveTo);
 
 
@@ -372,7 +380,7 @@ public class SkillManager_v2 : MonoBehaviour
                 {
                     ObjectsMoveable[iPickUpIndex].FollowingVitaPosition();
                     //cancel the pick or put it in template
-                    if (Input.GetButtonDown("Submit") )
+                    if (Input.GetButtonUp("Submit") )
                     {
                         //if it is not jigsaw
                         if (!ObjectsMoveable[iPickUpIndex].bIsAJigsaw)
@@ -434,19 +442,20 @@ public class SkillManager_v2 : MonoBehaviour
 
             if (VitaSoulCanGazeTimer > fCanGazeTime || Input.GetButtonDown("Cancel") || bFinishSkill) 
             {
-                Debug.Log("in!!!!!!!!!!! : " + PlayerMovementScript.canMove);
+                //Debug.Log("in!!!!!!!!!!! : " + PlayerMovementScript.canMove);
+
+                //set prompt
+                VitaParticleScript.PromptFadeOut();
 
                 //Finish skill 1
                 StartCoroutine(CaneMoveIntervelJump());
-
-
 
                 //Vita is direct trigger
                 if (bDirectTriggerVitaSkill)
                 {
                     if (ObjMoveTo != null)
                         StopCoroutine(ObjMoveTo);
-                    ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, GameObject.Find("VitaSoulGamePos").transform.position);
+                    ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, GameObject.Find("VitaSoulGamePos").transform);
                     StartCoroutine(ObjMoveTo);
                 }
 
@@ -551,21 +560,21 @@ public class SkillManager_v2 : MonoBehaviour
 
     //obj move to
 
-    public IEnumerator ObjMoveToIEnumerator(Transform objTransform, Vector2 v2Position)
+    public IEnumerator ObjMoveToIEnumerator(Transform objTransform, Transform TargetTransform)
     {
        
-        for (; (objTransform.position.x > v2Position.x + 0.001f || objTransform.position.x < v2Position.x - 0.001f) && (objTransform.position.y > v2Position.y + 0.001f || objTransform.position.y < v2Position.y - 0.001f); )
+        for (; (objTransform.position.x > TargetTransform.position.x + 0.001f || objTransform.position.x < TargetTransform.position.x - 0.001f) && (objTransform.position.y > TargetTransform.position.y + 0.001f || objTransform.position.y < TargetTransform.position.y - 0.001f); )
         {
             //Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!in");
-            float fVectorX = v2Position.x - objTransform.position.x;
-            float fVectorY = v2Position.y - objTransform.position.y;
+            float fVectorX = TargetTransform.position.x - objTransform.position.x;
+            float fVectorY = TargetTransform.position.y - objTransform.position.y;
 
             objTransform.position = new Vector2(objTransform.position.x + fVectorX * 0.25f , objTransform.position.y + fVectorY * 0.25f);
 
             yield return new WaitForSeconds(0.05f);
         }
-        objTransform.position = new Vector2(v2Position.x, v2Position.y);
-            
+        objTransform.position = new Vector2(TargetTransform.position.x, TargetTransform.position.y);
+
     }
 
 
