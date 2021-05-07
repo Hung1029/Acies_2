@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+  
     //Horizontal move
     private float moveInput;
 
@@ -132,8 +133,8 @@ public class PlayerMovement : MonoBehaviour
         if (moveInput > 0 && !faceRight)
         {
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-
             
+
             faceRight = true;
         }
         else if (moveInput < 0 && faceRight)
@@ -146,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
         //set animate
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
     }
 
     private void Movement_y()
@@ -165,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Jump") && canMove && (JumpState == -1 || JumpState > 2) && bCanJump)
         {
             //Debug.Log("Jump_1");
+            
 
             JumpState++;
 
@@ -184,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
         if (JumpState == 1)
         {
             //Debug.Log("Jump");
-
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             //not on the ground
             animator.SetBool("Ground", false);
 
@@ -203,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
             JumpState = 1;
 
             animator.Play("ReadyJump");
-
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             extraJumps--;
 
             bCanJump = false;
