@@ -90,14 +90,12 @@ public class SceneManager_Level3 : MonoBehaviour
     }
     BuddhaCandleStateNUM BuddhaCandleState = BuddhaCandleStateNUM.Start;
     bool bBuddhaRestart = false;
-    
+
     //int iBuddhaLevel = 0;
     int iOrder = 0;
     int[] array = new int[3]; //set candle number
     int[] ilightUpArray = new int[3]; //set  candle light up number
 
-    //Trigger skill 2 token
-    public GameObject TriggerSkill;
 
     //Status Jisaw
     public MatchingJigsaw[] StatusMatchingJigsawScript;
@@ -194,6 +192,15 @@ public class SceneManager_Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //test
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Skill2Token.SetActive(true);
+            StartCoroutine(skillTokenTrigger());
+        }
+
+
+
         /////////////////////////detect drowing
         if (DetectDrowingScript.bTrigger && !bDrowing)
         {
@@ -214,16 +221,13 @@ public class SceneManager_Level3 : MonoBehaviour
             StartCoroutine(ReloadSceneAfterTimeIEnumerator(3.65f));
 
             //reset UI
-            if(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI != null)
-            {
-                StopCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
-                this.gameObject.GetComponent<SkillManager_v2>().FadeInUI = this.gameObject.GetComponent<SkillManager_v2>().FadeOutSkillIconIEnumerator();
-                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
-            }
-                
+            this.gameObject.GetComponent<SkillManager_v2>().SkillIconColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+            this.gameObject.GetComponent<SkillManager_v2>().SkillNameColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+          
+
 
         }
-        
+
         //////////////////////////////////////////////////////////////////////////////////////////////
         //skill 1 description
         if (bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
@@ -282,9 +286,6 @@ public class SceneManager_Level3 : MonoBehaviour
         //bool bCandle1 = true;
         //bool bCandle2 = true;
 
-
-        //bool bCandle1 = true;
-        //bool bCandle2 = true;
         if (bCandle1 && bCandle2 && BuddhaCandleState == BuddhaCandleStateNUM.Start)
         {
             //set vita stop skill
@@ -391,8 +392,9 @@ public class SceneManager_Level3 : MonoBehaviour
         else if (BuddhaCandleState == BuddhaCandleStateNUM.Dialogue2 && DialogueManager.bFinishDialogue)
         {
             Dialogue.name = "莉妲";
-            Dialogue.sentences = new string[1];
+            Dialogue.sentences = new string[2];
             Dialogue.sentences[0] = "旁邊好像寫了一些文字";
+            Dialogue.sentences[1] = "「按下X使用技能點亮圖紋」";
             CGMoveScript.SetRecTransformX(145.7859f);
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue, PlayerCV);
             BuddhaCandleState++;
@@ -402,7 +404,7 @@ public class SceneManager_Level3 : MonoBehaviour
         {
             Dialogue.name = "薇妲";
             Dialogue.sentences = new string[1];
-            Dialogue.sentences[0] = "按下X即可使用技能點亮圖紋";
+            Dialogue.sentences[0] = "什麼意思阿?";
             CGMoveScript.SetRecTransformX(62.98596f);
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue, VitaCV);
             BuddhaCandleState++;
@@ -412,7 +414,7 @@ public class SceneManager_Level3 : MonoBehaviour
         {
             Dialogue.name = "莉妲";
             Dialogue.sentences = new string[1];
-            Dialogue.sentences[0] = "好，那我們來試試看吧!";
+            Dialogue.sentences[0] = "總之，我們先來試試看吧!";
             CGMoveScript.SetRecTransformX(145.7859f);
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue, PlayerCV);
             BuddhaCandleState++;
@@ -664,6 +666,8 @@ public class SceneManager_Level3 : MonoBehaviour
             /*
             }*/
 
+            Skill2Token.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f) , 1.5f);
+
         }
 
 
@@ -744,11 +748,11 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
         //get skill 2
-        if (TriggerSkill)
-            if (TriggerSkill.GetComponent<PlayerTrigger>()._bPlayerTrigger)
+        if (Skill2Token)
+            if (Skill2Token.GetComponent<PlayerTrigger>()._bPlayerTrigger)
             {
                 playerSkillScript.CanUseSkill2 = true;
-                Destroy(TriggerSkill);
+                StartCoroutine(skillTokenTrigger());
             }
 
 
@@ -821,6 +825,20 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
     }
+
+    //skill 2 token trigger
+    IEnumerator skillTokenTrigger()
+    {
+        Skill2Token.GetComponent<ColorChange>().ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.5f);
+        Skill2Token.GetComponent<SizeChange>().SizeChanging( 0.0f , 1.5f);
+
+
+        yield return new WaitForSeconds(2.0f);
+
+        Destroy(Skill2Token);
+    }
+
+
 
     ////Buddha Level Delay
     IEnumerator BuddhaLevelDelayIEnumerator(float fTime)

@@ -113,12 +113,14 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
             //disable last enable parallax script
             for (int j = 0; j < Info[lastPlayerArea].ParallaxSprite.Length; j++)
             {
+                Debug.Log("Disable : " + lastPlayerArea);
                 Info[lastPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = false;
             }
 
             //enable parallax script
             for (int j = 0; j < Info[currentPlayerArea].ParallaxSprite.Length; j++)
             {
+                Debug.Log("Enable : " + currentPlayerArea);
                 Info[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = true;
             }
 

@@ -112,15 +112,16 @@ public class CameraManager : MonoBehaviour
             //disable last enable parallax script
             for (int j = 0; j < CheckPointInfo[lastPlayerArea].ParallaxSprite.Length; j++)
             {
+                Debug.Log("Disable : " + lastPlayerArea);
                 CheckPointInfo[lastPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = false;
             }
 
             //enable parallax script
             for (int j = 0; j < CheckPointInfo[currentPlayerArea].ParallaxSprite.Length; j++)
             {
+                Debug.Log("Enable : " + currentPlayerArea);
                 CheckPointInfo[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = true;
             }
-
 
         }
 
@@ -198,6 +199,10 @@ public class CameraManager : MonoBehaviour
             //when Camera focuse player can't move
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
         }
+
+        Debug.Log(currentPlayerArea);
+
+
     }
 
     public void ChangeCameraProjectionSize(Camera MainCamera, float fSizeValue, float fTransformTime, float fPreWaitTime = 0.0f)

@@ -1,0 +1,1136 @@
+fileFormatVersion: 2
+guid: 752f213fa50d40a41873c7baeb656175
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6635732513574696006
+    second: Skill2Token_0
+  - first:
+      213: -8622068047237782424
+    second: Skill2Token_1
+  - first:
+      213: -2572971733902819660
+    second: Skill2Token_2
+  - first:
+      213: -3133188783962133651
+    second: Skill2Token_3
+  - first:
+      213: 7781424639839671659
+    second: Skill2Token_4
+  - first:
+      213: -4278214300689676109
+    second: Skill2Token_5
+  - first:
+      213: 537423723019851841
+    second: Skill2Token_6
+  - first:
+      213: -4545429188174426473
+    second: Skill2Token_7
+  - first:
+      213: 988462676285485647
+    second: Skill2Token_8
+  - first:
+      213: 7193465298996925799
+    second: Skill2Token_9
+  - first:
+      213: -2454892160229912451
+    second: Skill2Token_10
+  - first:
+      213: 2753144802773662145
+    second: Skill2Token_11
+  - first:
+      213: -6348149752283691181
+    second: Skill2Token_12
+  - first:
+      213: -152342213263282466
+    second: Skill2Token_13
+  - first:
+      213: 7284313997782624336
+    second: Skill2Token_14
+  - first:
+      213: -2806464781401094126
+    second: Skill2Token_15
+  - first:
+      213: 1601043981302936953
+    second: Skill2Token_16
+  - first:
+      213: 2589987304107512913
+    second: Skill2Token_17
+  - first:
+      213: 5857550701248958670
+    second: Skill2Token_18
+  - first:
+      213: -6897248978127335757
+    second: Skill2Token_19
+  - first:
+      213: -8672976889230961576
+    second: Skill2Token_20
+  - first:
+      213: -1634575010799691810
+    second: Skill2Token_21
+  - first:
+      213: -6966637883320308417
+    second: Skill2Token_22
+  - first:
+      213: 5202633695722139269
+    second: Skill2Token_23
+  - first:
+      213: -8067046997206537452
+    second: Skill2Token_24
+  - first:
+      213: -5505689489013158136
+    second: Skill2Token_25
+  - first:
+      213: 3853085095005191328
+    second: Skill2Token_26
+  - first:
+      213: 7166423364181637197
+    second: Skill2Token_27
+  - first:
+      213: 7859528732772864773
+    second: Skill2Token_28
+  - first:
+      213: -3585867715344846469
+    second: Skill2Token_29
+  - first:
+      213: -4206868056034341397
+    second: Skill2Token_30
+  - first:
+      213: 182297488945629206
+    second: Skill2Token_31
+  - first:
+      213: 5207324639061164029
+    second: Skill2Token_32
+  - first:
+      213: 4082593641924741127
+    second: Skill2Token_33
+  - first:
+      213: 7454390815864089328
+    second: Skill2Token_34
+  - first:
+      213: 6532926747664156295
+    second: Skill2Token_35
+  - first:
+      213: -154879371845207472
+    second: Skill2Token_36
+  - first:
+      213: -2241319307430620656
+    second: Skill2Token_37
+  - first:
+      213: 2384961649548843655
+    second: Skill2Token_38
+  - first:
+      213: -2319756852868010079
+    second: Skill2Token_39
+  - first:
+      213: -7537726626790793982
+    second: Skill2Token_40
+  - first:
+      213: -2747306243076138953
+    second: Skill2Token_41
+  - first:
+      213: 7842955051512290879
+    second: Skill2Token_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skill2Token_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11968
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6443120409bd61c50800000000000000
+      internalID: 6635732513574696006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_1
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 11968
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864652feac2485880800000000000000
+      internalID: -8622068047237782424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_2
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 11968
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bef99717d7fa4cd0800000000000000
+      internalID: -2572971733902819660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_3
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 11968
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6be2bdb66da484d0800000000000000
+      internalID: -3133188783962133651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_4
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 11968
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b659d107b7c2dfb60800000000000000
+      internalID: 7781424639839671659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10472
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8456ea2cab0a4c0800000000000000
+      internalID: -4278214300689676109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_6
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 10472
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14857785700557700800000000000000
+      internalID: 537423723019851841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_7
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 10472
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ecb2f6c346be0c0800000000000000
+      internalID: -4545429188174426473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_8
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 10472
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f427ab52199b7bd00800000000000000
+      internalID: 988462676285485647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_9
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 10472
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7659fcaa39254d360800000000000000
+      internalID: 7193465298996925799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8976
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70da9b36987eedd0800000000000000
+      internalID: -2454892160229912451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_11
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 8976
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c979808c92253620800000000000000
+      internalID: 2753144802773662145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_12
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 8976
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357852a2f67d6e7a0800000000000000
+      internalID: -6348149752283691181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_13
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 8976
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede252e6095c2edf0800000000000000
+      internalID: -152342213263282466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_14
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 8976
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0582d3eacf4171560800000000000000
+      internalID: 7284313997782624336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7480
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21881fd862f6d09d0800000000000000
+      internalID: -2806464781401094126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_16
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 7480
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975b65fa40d083610800000000000000
+      internalID: 1601043981302936953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_17
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 7480
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15499121bbb71f320800000000000000
+      internalID: 2589987304107512913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_18
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 7480
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0d8c104533a4150800000000000000
+      internalID: 5857550701248958670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_19
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 7480
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be4b4bf89c0840a0800000000000000
+      internalID: -6897248978127335757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5984
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854573c787563a780800000000000000
+      internalID: -8672976889230961576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_21
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 5984
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7dd8220b2d059e0800000000000000
+      internalID: -1634575010799691810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_22
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 5984
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3de9e581c7815f90800000000000000
+      internalID: -6966637883320308417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_23
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 5984
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eeef118c7733840800000000000000
+      internalID: 5202633695722139269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_24
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 5984
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b6f114f771c0090800000000000000
+      internalID: -8067046997206537452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4488
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fc4c3849cd793b0800000000000000
+      internalID: -5505689489013158136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_26
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 4488
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acf229ba78e87530800000000000000
+      internalID: 3853085095005191328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_27
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 4488
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d483b149410447360800000000000000
+      internalID: 7166423364181637197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_28
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 4488
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50317eaadb7a21d60800000000000000
+      internalID: 7859528732772864773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_29
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 4488
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b713457cf407c3ec0800000000000000
+      internalID: -3585867715344846469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2992
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed822fbac33e95c0800000000000000
+      internalID: -4206868056034341397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_31
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 2992
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618cc00b996a78200800000000000000
+      internalID: 182297488945629206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_32
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 2992
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff316d6b22244840800000000000000
+      internalID: 5207324639061164029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_33
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 2992
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708413d694948a830800000000000000
+      internalID: 4082593641924741127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_34
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 2992
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa6384b3f0537760800000000000000
+      internalID: 7454390815864089328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1496
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7868b2a934e99aa50800000000000000
+      internalID: 6532926747664156295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_36
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1496
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a712a2802c9ddf0800000000000000
+      internalID: -154879371845207472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_37
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 1496
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0129f5407fb35e0e0800000000000000
+      internalID: -2241319307430620656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_38
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 1496
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ad944fbf5191120800000000000000
+      internalID: 2384961649548843655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_39
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 1496
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af2683de619ecfd0800000000000000
+      internalID: -2319756852868010079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d912cc19d946790800000000000000
+      internalID: -7537726626790793982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_41
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 0
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738db3c178b9fd9d0800000000000000
+      internalID: -2747306243076138953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2Token_42
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 0
+        width: 1148
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3edebac016c7dc60800000000000000
+      internalID: 7842955051512290879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

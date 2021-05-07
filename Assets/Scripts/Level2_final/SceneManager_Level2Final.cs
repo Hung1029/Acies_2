@@ -196,15 +196,13 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
             //reset UI
-            if (this.gameObject.GetComponent<SkillManager_v2>().FadeInUI != null)
-            {
-                StopCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
-                this.gameObject.GetComponent<SkillManager_v2>().FadeInUI = this.gameObject.GetComponent<SkillManager_v2>().FadeOutSkillIconIEnumerator();
-                StartCoroutine(this.gameObject.GetComponent<SkillManager_v2>().FadeInUI);
-            }
+            this.gameObject.GetComponent<SkillManager_v2>().SkillIconColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+            this.gameObject.GetComponent<SkillManager_v2>().SkillNameColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+
+           
         }
 
-       
+
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bear
 

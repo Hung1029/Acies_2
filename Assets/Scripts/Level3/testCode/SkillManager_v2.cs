@@ -26,9 +26,9 @@ public class SkillManager_v2 : MonoBehaviour
 
     //UI
     [System.NonSerialized]
-    public Image SkillIcon;
+    public ColorChange SkillIconColorChange;
     [System.NonSerialized]
-    public Image SkillName;
+    public ColorChange SkillNameColorChange;
 
 
     //Skill time
@@ -48,10 +48,7 @@ public class SkillManager_v2 : MonoBehaviour
     /////IEnumerator
     [System.NonSerialized]
     public IEnumerator ObjMoveTo;
-    [System.NonSerialized]
-    public IEnumerator FadeOutUI;
-    [System.NonSerialized]
-    public IEnumerator FadeInUI;
+    
 
 
     //Skill 2 
@@ -101,8 +98,8 @@ public class SkillManager_v2 : MonoBehaviour
         fCanGathingTime = magicLightScript.fRaiseHand + fLightUpTime;
 
 
-        SkillIcon = GameObject.Find("SkillIcon").GetComponent<Image>();
-        SkillName = GameObject.Find("SkillName").GetComponent<Image>();
+        SkillIconColorChange = GameObject.Find("SkillIcon").GetComponent<ColorChange>();
+        SkillNameColorChange = GameObject.Find("SkillName").GetComponent<ColorChange>();
 
         VitaSkillMoveTo = GameObject.Find("VitaSkillMoveTo").GetComponent<Transform>();
     }
@@ -134,23 +131,11 @@ public class SkillManager_v2 : MonoBehaviour
             //trigger vita directly
             if (bDirectTriggerVitaSkill)
             {
-                //allow user controll vita
-                VitaParticleGazeScript.bVitaSoulCanGaze = true;
 
                 //set current skill
                 CurrentSkillNUM = SkillNUM;
 
-                //set currentSkill
-                PlayerSkill.CURRENTSKILL = CurrentSkillNUM;
-
-
-                VitaParticleScript.LightUpVita(new Color(1.0f, 0.79f, 0.49f));
-                VitaParticleScript.SkillNUM = PlayerSkill.CURRENTSKILL;
-
-                VitaParticleScript.animator.SetBool("StartSkill", true);
-                VitaSoulCore.SetBool("StartSkill", true);
-
-                SkillStage = SkillStageNUM.FinishLLghtUpVita;
+                SkillStage = SkillStageNUM.Gathering;
 
                 //vita soul stop following player
                 VitaParticleScript.bCanFollow = false;
@@ -186,8 +171,10 @@ public class SkillManager_v2 : MonoBehaviour
 
 
             //start UI
-            FadeInUI = FadeInSkillIconIEnumerator();            
-            StartCoroutine(FadeInUI);
+            /*FadeInUI = FadeInSkillIconIEnumerator();            
+            StartCoroutine(FadeInUI);*/
+            SkillIconColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f) , 1.0f);
+            SkillNameColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 1.0f);
 
             //set current skill
             CurrentSkillNUM = SkillNUM;
@@ -227,7 +214,8 @@ public class SkillManager_v2 : MonoBehaviour
                     VitaParticleScript.PromptFadeOut();
 
                     //stop vita move coroutine
-                    StopCoroutine(ObjMoveTo);
+                    if (ObjMoveTo != null)
+                        StopCoroutine(ObjMoveTo);
 
                     //vita animate
                     VitaParticleScript.animator.SetBool("isGazeing", false);
@@ -292,23 +280,34 @@ public class SkillManager_v2 : MonoBehaviour
                 VitaParticleGazeScript.bVitaSoulCanGaze = false;
 
                 //reset UI
-                StopCoroutine(FadeInUI);
-                FadeOutUI = FadeOutSkillIconIEnumerator();                
-                StartCoroutine(FadeOutUI);
-
-                //reset player animate 
-                SkillScript.ResetAnimateToIdle();
-
+                SkillIconColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+                SkillNameColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
                 //reset timer
                 VitaSoulCanGazeTimer = 0.0f;
                 VitaSoulGatheringTimer = 0.0f;
 
-                //reset magic light and reset can light up vita bool
-                SkillScript.MagicLightScript.FadeOut();
+                //Vita is direct trigger
+                if (bDirectTriggerVitaSkill)
+                {
+                    ObjMoveTo = ObjMoveToIEnumerator(VitaTransform, GameObject.Find("VitaSoulGamePos").transform);
+                    StartCoroutine(ObjMoveTo);
 
-                //vita back to follow
-                VitaParticleScript.bCanFollow = true;
+
+                }
+
+                else
+                {
+                    //reset player animate 
+                    SkillScript.ResetAnimateToIdle();
+
+                    //reset magic light and reset can light up vita bool
+                    SkillScript.MagicLightScript.FadeOut();
+
+                    //vita back to follow
+                    VitaParticleScript.bCanFollow = true;
+                }
+
 
                 //reset Current skill num
                 PlayerSkill.CURRENTSKILL = 0;
@@ -461,12 +460,14 @@ public class SkillManager_v2 : MonoBehaviour
 
                 else
                 {
-                   
+
                     //reset UI
-                    if (FadeInUI != null)
+                    /*if (FadeInUI != null)
                         StopCoroutine(FadeInUI);
                     FadeOutUI = FadeOutSkillIconIEnumerator();
-                    StartCoroutine(FadeOutUI);
+                    StartCoroutine(FadeOutUI);*/
+                    SkillIconColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+                    SkillNameColorChange.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
                     //reset vita follow
                     VitaParticleScript.bCanFollow = true;
@@ -576,45 +577,6 @@ public class SkillManager_v2 : MonoBehaviour
         objTransform.position = new Vector2(TargetTransform.position.x, TargetTransform.position.y);
 
     }
-
-
-
-
-    //UI
-
-    public IEnumerator FadeOutSkillIconIEnumerator()
-    {
-        SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 1.0f);
-        SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 1.0f);
-
-        for (float a = 1.0f; SkillIcon.color.a > 0.0f; a -= 0.06f)
-        {
-            SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, a);
-            SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, a);
-            yield return new WaitForSeconds(0.05f);
-        }
-        SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 0.0f);
-        SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 0.0f);
-    }
-
-
-
-    IEnumerator FadeInSkillIconIEnumerator()
-    {
-
-
-        SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 0.0f);
-        SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 0.0f);
-
-        yield return new WaitForSeconds(0.8f); //Wait for Raise hand
-        for (float a = 0.0f; SkillIcon.color.a < 1.0f; a += 0.06f)
-        {
-            SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, a);
-            SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, a);
-            yield return new WaitForSeconds(0.05f);
-        }
-        SkillIcon.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 1.0f);
-        SkillName.color = new Color(SkillIcon.color.r, SkillIcon.color.g, SkillIcon.color.b, 1.0f);
-    }
+    
     
 }
