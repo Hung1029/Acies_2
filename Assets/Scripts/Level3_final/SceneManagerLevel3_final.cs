@@ -109,7 +109,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         if (MuralTrigger2_1.bTriggerFinish && MuralTrigger2_2.bTriggerFinish && bTriggerMurl2 == false  && bTriggerMurl1)
         {
             //set camera
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(3.89f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(3.6f, Camera.main.transform.position.y, Camera.main.transform.position.z));
 
             //MuralSprite2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
             StoryMaterialSprite2_1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);

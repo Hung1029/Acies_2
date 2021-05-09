@@ -16,7 +16,7 @@ public class BearMovement : MonoBehaviour
     public float fBearAttackTime = 2f;
 
     [System.NonSerialized]
-    public float fBearAttackRightTime = 2.8f;
+    public float fBearAttackRightTime = 1.4f;
 
     [System.NonSerialized]
     public bool bHitWall = false;

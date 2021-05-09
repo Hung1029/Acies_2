@@ -27,8 +27,8 @@ TagManager:
   - Bear
   - BearCollider
   - MovableObject
-  - 
-  - 
+  - ColliderForMoveAble
+  - Gate
   - 
   - 
   - 

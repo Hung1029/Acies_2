@@ -240,6 +240,22 @@ public class PlayerMovement : MonoBehaviour
         return bFlag;
     }
 
+
+    public void PlayerHurtAni(float fPreWaitTime)
+    {
+        StartCoroutine(PlayerHurtAniIEnumerator( fPreWaitTime));
+    }
+
+    IEnumerator PlayerHurtAniIEnumerator(float fPreWaitTime)
+    {
+        yield return new  WaitForSeconds(fPreWaitTime);
+
+        animator.SetTrigger("tHurt");
+
+    }
+
+
+
     public bool bPlayerMove
     {
         get

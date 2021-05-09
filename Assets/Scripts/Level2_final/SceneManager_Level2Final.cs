@@ -122,6 +122,10 @@ public class SceneManager_Level2Final : MonoBehaviour
     float fBearFastSpeed = 12.0f;
 
     bool bCameraTurn = false;
+    bool bCameraTurn2 = false;
+
+
+    public Transform Part2CameraTurnPos;
 
 
     private void Awake()
@@ -182,6 +186,12 @@ public class SceneManager_Level2Final : MonoBehaviour
             //player stop
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
             GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+
+            //set player animation
+            GameObject.Find("Player").GetComponent<PlayerMovement>().PlayerHurtAni(0.0f);
+
+           //stop skill
+            SkillManager_v2.bFinishSkill = true;
 
             //set animate to idle
             GameObject.Find("Player").GetComponent<PlayerSkill>().ResetAnimateToIdle();
@@ -246,7 +256,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             //set camera projection
             this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSize(Camera.main, 7.5f, 0.8f);
 
-            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-5.0f, 4.9f , 0.5f, true,false);
+            this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPosition(-5.0f, 4.9f , 0.8f, true,false);
 
             
 
@@ -264,7 +274,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             Point2.transform.position = new Vector2(GameObject.Find("Player").transform.position.x, Point2.transform.position.y);
 
             Bear.GetComponent<Animator>().Play("Bear_Run");
-            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
+            Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(9.5f, 0.0f);
         }
 
         //Debug.Log(BearStage);
@@ -350,6 +360,17 @@ public class SceneManager_Level2Final : MonoBehaviour
                 BearStage++;
                 StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearAttackRightTime));
 
+                //test set camera
+                /*Debug.Log("set camera");
+                if(RecordIEnumeratorCamraFollowing !=  null)
+                    StopCoroutine(RecordIEnumeratorCamraFollowing);
+                RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator( (playerSkillScript.transform.position.x +  Bear.transform.position.x) / 2.0f - playerSkillScript.transform.position.x, Camera.main.transform.position.y, 2.0f, true, false);
+                StartCoroutine(RecordIEnumeratorCamraFollowing);*/
+
+                if (RecordIEnumeratorCamraFollowing != null)
+                    StopCoroutine(RecordIEnumeratorCamraFollowing);
+                RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().SetCameraBetweenPlayerBearIEnumerator(3.5f, false,true);
+                StartCoroutine(RecordIEnumeratorCamraFollowing);
 
             }
 
@@ -358,11 +379,10 @@ public class SceneManager_Level2Final : MonoBehaviour
             {
                 BearStage = BearStageNUM.Run4;
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(fBearFastSpeed, 0.0f);
-                //Debug.Log(Bear.GetComponent<Rigidbody2D>().velocity.x);
             }
 
         }
-
+        
         else if (BearStage == BearStageNUM.StartClimb)
         {
             Bear.GetComponent<Animator>().SetTrigger("tClimb");
@@ -381,7 +401,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             RecordIEnumeratorCamraProjectionSize =  this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main, 5f, 1.0f);
             StartCoroutine(RecordIEnumeratorCamraProjectionSize);
 
-
+            if (RecordIEnumeratorCamraFollowing != null)
+                StopCoroutine(RecordIEnumeratorCamraFollowing);
             RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(-2.0f, 2.33f, 1.0f, true, true);
             StartCoroutine(RecordIEnumeratorCamraFollowing);
 
@@ -392,12 +413,13 @@ public class SceneManager_Level2Final : MonoBehaviour
         //Turn camera when player over particular x
         else if (BearStage == BearStageNUM.BearRockTimer && GameObject.Find("Player").transform.position.x > 47f && !bCameraTurn)
         {
-            StopCoroutine(RecordIEnumeratorCamraFollowing);
-            RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(-5.0f, 5.3f, 1.6f, true, false);
+            if (RecordIEnumeratorCamraFollowing != null)
+                StopCoroutine(RecordIEnumeratorCamraFollowing);
+            RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f, 1.5f, new Vector2(50.3f,6.5f), true);
             StartCoroutine(RecordIEnumeratorCamraFollowing);
 
             StopCoroutine(RecordIEnumeratorCamraProjectionSize);
-            RecordIEnumeratorCamraProjectionSize = this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main, 8.0f, 2.0f);
+            RecordIEnumeratorCamraProjectionSize = this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main, 8.5f, 1.5f);
             StartCoroutine(RecordIEnumeratorCamraProjectionSize);
 
             bCameraTurn = true;
@@ -437,24 +459,40 @@ public class SceneManager_Level2Final : MonoBehaviour
                 FallingRock[3].SetActive(true);
             }
 
-            //Debug.Log(fBearRockTimer);
             //time up bear jump down
             if (fBearRockTimer > fBearJumpDownTime || GameObject.Find("Player").transform.position.x >= BearRestartClimbCheckPoint.transform.position.x)
             {
                 Debug.Log("Time Up Bear jump down");
 
                 //set camera projection
-                StopCoroutine(RecordIEnumeratorCamraFollowing);
-                this.gameObject.GetComponent<CameraManager>().ShortFollowing(1.8f, new Vector3(BearAfterClimbCheckPoint.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z));
-                
+               if (RecordIEnumeratorCamraFollowing != null)
+                    StopCoroutine(RecordIEnumeratorCamraFollowing);
+                RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f,1.0f, new Vector3(BearAfterClimbCheckPoint.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z));
+                StartCoroutine(RecordIEnumeratorCamraFollowing);
+
+                //this.gameObject.GetComponent<CameraManager>().ShortFollowing(1.8f, new Vector3(BearAfterClimbCheckPoint.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z));
+
 
                 BearStage = BearStageNUM.RestartBearAnimation;
             }
 
+            //after over limit height
+            if (!bCameraTurn2 && GameObject.Find("Player").transform.position.y > Part2CameraTurnPos.position.y && GameObject.Find("Player").transform.position.x > Part2CameraTurnPos.position.x)
+            {
+                if (RecordIEnumeratorCamraFollowing != null)
+                    StopCoroutine(RecordIEnumeratorCamraFollowing);
+                this.gameObject.GetComponent<CameraManager>().bCameraFocusOtherObj = false;
+                RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(0.0f, Camera.main.transform.position.y, 2.5f, true, false);
+                StartCoroutine(RecordIEnumeratorCamraFollowing);
+
+                bCameraTurn2 = true;
+            }
+            
+            
 
         }
 
-
+        
         
         //Bear jump down after player over checkpoint
         else if (BearStage == BearStageNUM.RestartBearAnimation )
@@ -463,7 +501,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<Animator>().enabled = true;
 
             //camera shake when bear jump down
-            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 1.0f, 0.1f, false, true));
+            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 0.8f, 0.1f, false, true));
 
             
 
@@ -480,7 +518,17 @@ public class SceneManager_Level2Final : MonoBehaviour
 
             //Bear start Roar
             Bear.GetComponent<BearMovement>().Howl(); 
-            StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 2.0f, 0.15f));
+            //StartCoroutine(this.gameObject.GetComponent<CameraManager>().Shake(1.0f, 2.0f, 0.05f));
+
+
+            //camera setting
+            //set camera projection
+            if (RecordIEnumeratorCamraFollowing != null)
+                StopCoroutine(RecordIEnumeratorCamraFollowing);
+            RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().SetCameraBetweenPlayerBearIEnumerator(2.0f, false, true, 0.5f);
+            StartCoroutine(RecordIEnumeratorCamraFollowing);
+
+
 
             //Wait for next stage
             StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearHowlTime - 1));
@@ -546,7 +594,7 @@ public class SceneManager_Level2Final : MonoBehaviour
                 Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(fBearFastSpeed, 0.0f);
 
             else
-                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(8.0f, 0.0f);
+                Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(7.0f, 0.0f);
 
 
             //touch jump check point, and player is on right stair
@@ -601,6 +649,8 @@ public class SceneManager_Level2Final : MonoBehaviour
         {
             BearStage++;
 
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+            this.gameObject.GetComponent<CameraManager>().bCameraFocusOtherObj = false;
             if (RecordIEnumeratorCamraProjectionSize != null)
                 StopCoroutine(RecordIEnumeratorCamraProjectionSize);
             RecordIEnumeratorCamraProjectionSize = this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main, 4f, 0.8f);

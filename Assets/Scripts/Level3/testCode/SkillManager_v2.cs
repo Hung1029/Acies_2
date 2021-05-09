@@ -102,6 +102,8 @@ public class SkillManager_v2 : MonoBehaviour
         SkillNameColorChange = GameObject.Find("SkillName").GetComponent<ColorChange>();
 
         VitaSkillMoveTo = GameObject.Find("VitaSkillMoveTo").GetComponent<Transform>();
+
+        bFinishSkill = false;
     }
 
     private void FixedUpdate()
@@ -113,7 +115,7 @@ public class SkillManager_v2 : MonoBehaviour
 
     void Update()
     {
-       
+        Debug.Log(iPickUpIndex);
         //skill2
         //if it is moveable object give it outline
         ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];

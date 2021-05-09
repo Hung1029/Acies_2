@@ -6,7 +6,7 @@ public class MatchingJigsaw : MonoBehaviour
 {
     public GameObject Matchtemplate;
 
-    private float intervalDistance = 0.5f;
+    private float intervalDistance = 1.0f;
 
     [System.NonSerialized]
     public bool bMatch = false;

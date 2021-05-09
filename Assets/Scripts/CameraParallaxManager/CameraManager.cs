@@ -65,7 +65,8 @@ public class CameraManager : MonoBehaviour
     int lastPlayerArea = 0;
 
     //Camera focus On different object
-    bool bCameraFocusOtherObj = false;
+    [System.NonSerialized]
+    public bool bCameraFocusOtherObj = false;
 
 
     // Start is called before the first frame update
@@ -112,14 +113,14 @@ public class CameraManager : MonoBehaviour
             //disable last enable parallax script
             for (int j = 0; j < CheckPointInfo[lastPlayerArea].ParallaxSprite.Length; j++)
             {
-                Debug.Log("Disable : " + lastPlayerArea);
+                //Debug.Log("Disable : " + lastPlayerArea);
                 CheckPointInfo[lastPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = false;
             }
 
             //enable parallax script
             for (int j = 0; j < CheckPointInfo[currentPlayerArea].ParallaxSprite.Length; j++)
             {
-                Debug.Log("Enable : " + currentPlayerArea);
+                //Debug.Log("Enable : " + currentPlayerArea);
                 CheckPointInfo[currentPlayerArea].ParallaxSprite[j].GetComponent<ParallaxBackground>().enabled = true;
             }
 
@@ -194,13 +195,11 @@ public class CameraManager : MonoBehaviour
             //Debug.Log(Follow_Y);
         }
 
-        else
+       /* else
         {
             //when Camera focuse player can't move
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
-        }
-
-        Debug.Log(currentPlayerArea);
+        }*/
 
 
     }
@@ -245,6 +244,7 @@ public class CameraManager : MonoBehaviour
 
     public IEnumerator ChangeCamraFollowingTargetPositionIEnumerator(float x, float y, float fTransformTime, bool KeepXFollow , bool KeepYFollow)
     {
+        //yield return new WaitForSeconds(fPreWaitTime);
 
         //Debug.Log("start ChangeCamraFollowingTargetPositionIEnumerator ");
         Follow_X = true;
@@ -332,6 +332,9 @@ public class CameraManager : MonoBehaviour
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
 
         bCameraFocusOtherObj = true;
+        //when Camera focuse player can't move
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+
         StartCoroutine(ShortFollowingIEnumerator(time, ObjPosition));
 
 
@@ -372,11 +375,14 @@ public class CameraManager : MonoBehaviour
     }
 
 
-    public IEnumerator ChangeCameraFollowingPosition(float fPreWaitTime, float duration, Vector2 TargetPosition)
+    public IEnumerator ChangeCameraFollowingPosition(float fPreWaitTime, float duration, Vector2 TargetPosition, bool bPlayerCanMove = false)
     {
         yield return new WaitForSeconds(fPreWaitTime);
 
         bCameraFocusOtherObj = true;
+
+        if(!bPlayerCanMove)
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
 
 
         float fTimer = 0.0f;
@@ -399,11 +405,15 @@ public class CameraManager : MonoBehaviour
     public void ResetCamera()
     {
         bCameraFocusOtherObj = false;
+
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
     }
 
     public void BackToFollowPlayer()
     {
         bCameraFocusOtherObj = true;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+
         TargetTransformAdjust_X = 0;
         TargetTransformAdjust_Y = 0;
         Follow_X = true;
@@ -443,4 +453,49 @@ public class CameraManager : MonoBehaviour
 
         MainCamera.localPosition = originalPos;
     }
+
+    public IEnumerator SetCameraBetweenPlayerBearIEnumerator(float OffsetValue, bool bfreezeX, bool bfreezeY, float fPreWaitTime = 0.0f)
+    {
+
+        yield return new WaitForSeconds(fPreWaitTime);
+
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+
+        bCameraFocusOtherObj = true;
+
+        //float fTimer = 0.0f;
+        //Vector3 originalVector3 = MainCamera.transform.position;
+        Vector3 TargetPosition;
+
+        while (true)
+        {
+            if (bfreezeX)
+            {
+                TargetPosition = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y, MainCamera.transform.position.z);
+            }
+            else
+            {
+
+                TargetPosition = new Vector3((PlayerTransform.position.x + GameObject.Find("Bear").transform.position.x) / 2.0f + OffsetValue, MainCamera.transform.position.y, MainCamera.transform.position.z);
+
+            }
+
+            if (bfreezeY)
+            {
+                TargetPosition = new Vector3(TargetPosition.x, MainCamera.transform.position.y, MainCamera.transform.position.z);
+            }
+            else
+            {
+                TargetPosition = new Vector3(TargetPosition.x, (PlayerTransform.position.y + GameObject.Find("Bear").transform.position.y) / 2.0f, MainCamera.transform.position.z);
+            }
+
+            MainCamera.transform.position = Vector3.SmoothDamp(MainCamera.transform.position, TargetPosition, ref velocity, smoothTime * 2f);
+
+            yield return null;
+        }
+
+    }
+
+
+
 }
