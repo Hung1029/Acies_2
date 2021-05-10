@@ -120,7 +120,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
     //Skill 1 description
     SkillDiscription SkillDescription_1;
-    bool bSkill1Des_open = true;
+    bool bSkill1Des_open = false;
     bool bSkill1Des_finish = false;
 
     public SpriteRenderer[] StatusMaterial;
@@ -232,21 +232,9 @@ public class SceneManager_Level3 : MonoBehaviour
         //skill 1 description
         if (bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
         {
-            StartCoroutine(SkillDescription_1.FadeIn());
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
-            GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+            StartCoroutine(SkillDescription_1.FadeIn1());
             bSkill1Des_open = true;
         }
-        else if (bSkill1Des_open == true && bSkill1Des_finish　== false && Input.GetButtonDown("Submit") && SkillDescription_1.SkillDiscriptionSet[SkillDescription_1.SkillDiscriptionSet.Length -1].image.color.a ==1)
-        {
-
-            StopCoroutine(SkillDescription_1.FadeIn());
-            StartCoroutine(SkillDescription_1.FadeOut());
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
-            bSkill1Des_finish = true;
-        }
-
-
 
         //move platform
         PlatformTrigger.DetectFinish();
