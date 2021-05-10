@@ -21,7 +21,8 @@ public class VitaTriggerDetect : MonoBehaviour
 
         if (other.name == "VitaSoul" && PlayerSkill.CURRENTSKILL == _iSkillNumToDetect && bCanTrigger)
         {
-            //注視到技能符號
+            //注視到技能符號 add music
+            FindObjectOfType<AudioManager>().Play("PlayerUseSkill");
 
             _bSkillTrigger = true;
 

@@ -270,9 +270,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             //Wait for 1.0f second turn to "Run" stage
             StartCoroutine(BearNextStageWait(1.0f));
 
-            //add music bg2
-            FindObjectOfType<AudioManager>().Pause("Scenebg");
-            FindObjectOfType<AudioManager>().Play("bg2_Run");
+            
 
         }
 

@@ -1,6 +1,7 @@
 ﻿using UnityEditor.Audio;
 using System;
 using UnityEngine;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -54,7 +55,26 @@ public class AudioManager : MonoBehaviour
         }
         return s.source.isPlaying;
     }
-    public void linerout(string name) { 
-    
+    public void FadeIn(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.volume = 0;
+        float speed = 0.1f;
+
+        for (float i = 0; i < 1; i += speed)
+        {
+            s.source.volume = i;
+        }
+    }
+
+    public void FadeOut(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        float speed = 0.1f;
+
+        for (float i = 0; i < 1; i -= speed)
+        {
+            s.source.volume = i;
+        }
     }
 }

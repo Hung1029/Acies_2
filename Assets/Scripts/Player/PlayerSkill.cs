@@ -76,16 +76,10 @@ public class PlayerSkill : MonoBehaviour
         {
             SkillNUM = 1;
 
-            //add music
-            FindObjectOfType<AudioManager>().Play("PlayerUseSkill");
-
-
-
         }
         else if (Input.GetButtonDown("skillTwo") && CanUseSkill2 && bCanTriggerSkill)
         {
             SkillNUM = 2;
-
 
         }
 

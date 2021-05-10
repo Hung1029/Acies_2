@@ -31921,7 +31921,7 @@ MonoBehaviour:
   - name: BearStay
     clip: {fileID: 8300000, guid: e738733e78471414a9350d5d96d6c1ef, type: 3}
     volume: 1
-    pitch: 1.81
+    pitch: 1
     loop: 1
     onAwake: 0
     source: {fileID: 0}
@@ -31962,6 +31962,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerUseSkill
     clip: {fileID: 8300000, guid: 2673cc550bb16524e8409c4efc397d82, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    onAwake: 1
+    source: {fileID: 0}
+  - name: SkillSuccess
+    clip: {fileID: 8300000, guid: e2f77344220df224c8bfcc6e9ddcb229, type: 3}
     volume: 1
     pitch: 1
     loop: 0

@@ -49,6 +49,14 @@ public class BearMovement : MonoBehaviour
        
         //add music
         if(FindObjectOfType<AudioManager>().isPlaying("BearStay")) FindObjectOfType<AudioManager>().Pause("BearStay");
+
+        //add music bg2
+        if (FindObjectOfType<AudioManager>().isPlaying("Scenebg"))
+        {
+            FindObjectOfType<AudioManager>().Pause("Scenebg");
+            FindObjectOfType<AudioManager>().Play("bg2_Run");
+        }
+        
         FindObjectOfType<AudioManager>().Play("BearHowl");
         
         StopCoroutine(HowlRippleIEnumerator(0.8f));
