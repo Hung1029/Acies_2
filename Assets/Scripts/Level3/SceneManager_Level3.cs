@@ -209,7 +209,7 @@ public class SceneManager_Level3 : MonoBehaviour
             StopAllCoroutines();
 
             //player rigibody edit
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
             GameObject.Find("Player").GetComponent<Rigidbody2D>().gravityScale = 0.5f;
             GameObject.Find("Player").GetComponent<Rigidbody2D>().drag = 8.0f;
             GameObject.Find("Player").GetComponent<Animator>().SetTrigger("tDrowing");
@@ -233,7 +233,7 @@ public class SceneManager_Level3 : MonoBehaviour
         if (bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
         {
             StartCoroutine(SkillDescription_1.FadeIn());
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
             GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
             bSkill1Des_open = true;
         }
@@ -242,7 +242,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
             StopCoroutine(SkillDescription_1.FadeIn());
             StartCoroutine(SkillDescription_1.FadeOut());
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
             bSkill1Des_finish = true;
         }
 
@@ -324,7 +324,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
 
             //set player movement, disable trigger skill
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
             GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
             PlayerSkill.bCanTriggerSkill = false;
 
@@ -655,7 +655,7 @@ public class SceneManager_Level3 : MonoBehaviour
                 */
 
                 //set player movement, disable trigger skill
-                GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
 
                 //reset camera
                 this.gameObject.GetComponent<CameraManager>().ResetCamera();

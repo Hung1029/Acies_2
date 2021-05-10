@@ -184,7 +184,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
             //player stop
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
             GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
 
             //set player animation
@@ -616,7 +616,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
             //////////////////////////////////////////////////////////////////player hurt, level reload
             //player stop
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
             GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
 
             //set animate to idle
@@ -649,7 +649,7 @@ public class SceneManager_Level2Final : MonoBehaviour
         {
             BearStage++;
 
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
             this.gameObject.GetComponent<CameraManager>().bCameraFocusOtherObj = false;
             if (RecordIEnumeratorCamraProjectionSize != null)
                 StopCoroutine(RecordIEnumeratorCamraProjectionSize);

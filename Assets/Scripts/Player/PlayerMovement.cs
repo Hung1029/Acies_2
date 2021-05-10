@@ -21,7 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     //can move or not
     [System.NonSerialized]
-    public bool canMove = true;
+    public bool canMove_skill = true;
+    public bool canMove_camera = true;
 
     //Animator
     public Animator animator;
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
 
-        if (canMove && canMoveX)
+        if (canMove_skill && canMoveX && canMove_camera)
         {
             moveInput = Input.GetAxis("Horizontal");
             Movement_x();
@@ -109,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         //get how fast we are moving up or down from the rigid
         animator.SetFloat("Speed_Y", GetComponent<Rigidbody2D>().velocity.y);
 
-        if (canMove)
+        if (canMove_skill && canMove_camera)
         {
             Movement_y();
         }
@@ -164,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("JumpState = " + JumpState);
 
         //press jump
-        if (isGrounded && Input.GetButtonDown("Jump") && canMove && (JumpState == -1 || JumpState > 2) && bCanJump)
+        if (isGrounded && Input.GetButtonDown("Jump") && canMove_skill && canMove_camera && (JumpState == -1 || JumpState > 2) && bCanJump)
         {
             //Debug.Log("Jump_1");
             

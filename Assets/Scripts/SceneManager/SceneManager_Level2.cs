@@ -77,7 +77,7 @@ public class SceneManager_Level2 : MonoBehaviour
                 //SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeInTextMainTitleIEnumerator());
 
                 //player can't move
-                GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
                 GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
 
                 bRead = true;
@@ -90,7 +90,7 @@ public class SceneManager_Level2 : MonoBehaviour
             SkillDirectionUI.StartCoroutine(SkillDirectionUI.FadeOutTextMainTitleIEnumerator());
 
             //player can move
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
 
             //reset Reading bool if need to read again
             //bRead = false;

@@ -84,7 +84,7 @@ public class SceneManager_StudyRoomStory : MonoBehaviour
         if (AnimatorCount == 0)
         {
             //play the book case animator at the first time enter           
-            PlayerMovementScript.canMove = false;
+            PlayerMovementScript.canMove_skill = false;
             StartCoroutine(BookCaseSwap(3.0f));
             
             AnimatorCount++;
@@ -108,7 +108,7 @@ public class SceneManager_StudyRoomStory : MonoBehaviour
         {
             ClueScript.SetText("左右移動蘑菇頭，移動莉妲");
             ClueScript.FadeIn();
-            PlayerMovementScript.canMove = true;
+            PlayerMovementScript.canMove_skill = true;
             AnimatorCount++;
         }
         

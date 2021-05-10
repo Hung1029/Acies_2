@@ -198,7 +198,7 @@ public class CameraManager : MonoBehaviour
        /* else
         {
             //when Camera focuse player can't move
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
         }*/
 
 
@@ -324,23 +324,22 @@ public class CameraManager : MonoBehaviour
     }
 
 
-    public void ShortFollowing(float time, Vector3 ObjPosition)
+    public void ShortFollowing(float time, Vector3 ObjPosition, float duration = 0.5f)
     {
-       // Debug.Log("ShortFollowing");
+        Debug.Log("ShortFollowing");
+
         //set Player can't
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
 
         bCameraFocusOtherObj = true;
-        //when Camera focuse player can't move
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
 
-        StartCoroutine(ShortFollowingIEnumerator(time, ObjPosition));
+        StartCoroutine(ShortFollowingIEnumerator(time, ObjPosition,  duration));
 
 
     }
 
-    IEnumerator ShortFollowingIEnumerator(float time, Vector3 ObjPosition)
+    IEnumerator ShortFollowingIEnumerator(float time, Vector3 ObjPosition, float duration = 0.8f)
     {
         ObjPosition.z = MainCamera.position.z;
 
@@ -351,11 +350,38 @@ public class CameraManager : MonoBehaviour
             ObjPosition.y = CheckPointInfo[currentPlayerArea].YMinValue;
         }
 
-        //go to object position 
-        while (Vector3.Distance(MainCamera.position, ObjPosition) >= 1.0f)
+        //avoid camera lower then restriced range
+        if (ObjPosition.x < CheckPointInfo[currentPlayerArea].XMinValue)
         {
-            MainCamera.position = Vector3.SmoothDamp(MainCamera.position, ObjPosition, ref velocity, 0.5f);
+            ObjPosition.x = CheckPointInfo[currentPlayerArea].XMinValue;
+        }
+
+        //avoid camera bigger then restriced range
+        if (ObjPosition.y > CheckPointInfo[currentPlayerArea].YMaxValue)
+        {
+            ObjPosition.y = CheckPointInfo[currentPlayerArea].YMaxValue;
+        }
+
+        //avoid camera bigger then restriced range
+        if (ObjPosition.x > CheckPointInfo[currentPlayerArea].XMaxValue)
+        {
+            ObjPosition.x = CheckPointInfo[currentPlayerArea].XMaxValue;
+        }
+
+
+        float fTimer = 0.0f;
+        Vector3 v3Original = MainCamera.position;
+
+
+        //go to object position 
+        while (Vector3.Distance(MainCamera.position, ObjPosition) != 0.0f)
+        {
+            MainCamera.position = Vector3.Lerp(v3Original, ObjPosition, fTimer);
+
+            fTimer += Time.deltaTime / duration;
+
             yield return null;
+
         }
 
         yield return new WaitForSeconds(time);
@@ -364,8 +390,8 @@ public class CameraManager : MonoBehaviour
         bCameraFocusOtherObj = false;
 
         //reset Player move bool
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
-        //Debug.Log("ShortFollowing finish");
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+        Debug.Log("ShortFollowing finish");
     }
 
     public void SetXYFollowing(bool KeepXFollow , bool KeepYFollow )
@@ -382,7 +408,7 @@ public class CameraManager : MonoBehaviour
         bCameraFocusOtherObj = true;
 
         if(!bPlayerCanMove)
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
 
 
         float fTimer = 0.0f;
@@ -406,13 +432,13 @@ public class CameraManager : MonoBehaviour
     {
         bCameraFocusOtherObj = false;
 
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
     }
 
     public void BackToFollowPlayer()
     {
         bCameraFocusOtherObj = true;
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
 
         TargetTransformAdjust_X = 0;
         TargetTransformAdjust_Y = 0;
@@ -459,7 +485,7 @@ public class CameraManager : MonoBehaviour
 
         yield return new WaitForSeconds(fPreWaitTime);
 
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
 
         bCameraFocusOtherObj = true;
 

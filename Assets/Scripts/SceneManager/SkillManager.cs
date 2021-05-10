@@ -196,7 +196,7 @@ public class SkillManager : MonoBehaviour
                     VitaSoulgGatheringTimer = 0.0f;
 
                     //player can't move
-                    PlayerMovementScript.canMove = false;
+                    PlayerMovementScript.canMove_skill = false;
 
                     //next stage
                     SkillStage++;
@@ -288,7 +288,7 @@ public class SkillManager : MonoBehaviour
                     VitaParticleScript.PromptFadeOut();
 
                 //player can't move
-                PlayerMovementScript.canMove = true;
+                PlayerMovementScript.canMove_skill = true;
 
                 VitaParticleGazeScript.bVitaSoulCanGaze = false;
                 FadeOutUI();
@@ -374,7 +374,7 @@ public class SkillManager : MonoBehaviour
             if (bAllColorOn || VitaSoulCanGazeTimer > 7.0f || SkillNUM != 0) //when time up or push the button again or finish skill2
             {
                 //player can move
-                PlayerMovementScript.canMove = true; 
+                PlayerMovementScript.canMove_skill = true; 
 
                VitaParticleGazeScript.bVitaSoulCanGaze = false;
 

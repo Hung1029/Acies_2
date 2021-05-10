@@ -751,6 +751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerGate1
       objectReference: {fileID: 0}
+    - target: {fileID: 1837206289173700620, guid: a5f18335eec7d4a4bbdd4d26c79db930,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 1837206289173700621, guid: a5f18335eec7d4a4bbdd4d26c79db930,
         type: 3}
       propertyPath: m_Color.a
@@ -1703,6 +1708,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerGate
       objectReference: {fileID: 0}
+    - target: {fileID: 1837206289173700620, guid: a5f18335eec7d4a4bbdd4d26c79db930,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 1837206289173700621, guid: a5f18335eec7d4a4bbdd4d26c79db930,
         type: 3}
       propertyPath: m_Color.a
@@ -1882,6 +1892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerGate2
       objectReference: {fileID: 0}
+    - target: {fileID: 1837206289173700620, guid: a5f18335eec7d4a4bbdd4d26c79db930,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 1837206289173700621, guid: a5f18335eec7d4a4bbdd4d26c79db930,
         type: 3}
       propertyPath: m_Color.a
@@ -2030,6 +2045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TriggerGate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837206289173700620, guid: a5f18335eec7d4a4bbdd4d26c79db930,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanSkill
       objectReference: {fileID: 0}
     - target: {fileID: 1837206289173700621, guid: a5f18335eec7d4a4bbdd4d26c79db930,
         type: 3}
@@ -3875,7 +3895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822950527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.53, y: 0.24, z: -10}
+  m_LocalPosition: {x: -3.74, y: -0.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4368,6 +4388,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152251820146173728, guid: 4680912b686d8134b8407d9b6318149f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1021863969
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152251820146173728, guid: 4680912b686d8134b8407d9b6318149f,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1152251820146173731, guid: 4680912b686d8134b8407d9b6318149f,
         type: 3}

@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 143410969}
   m_Layer: 16
   m_Name: Box_moveable (14)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3627,7 +3627,7 @@ GameObject:
   - component: {fileID: 350685980}
   m_Layer: 16
   m_Name: Box_moveable (9)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3988,7 +3988,7 @@ GameObject:
   - component: {fileID: 415647830}
   m_Layer: 16
   m_Name: Box_moveable (7)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4224,7 +4224,7 @@ GameObject:
   - component: {fileID: 430321833}
   m_Layer: 16
   m_Name: Box_moveable (14)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4615,7 +4615,7 @@ GameObject:
   - component: {fileID: 452803276}
   m_Layer: 16
   m_Name: Box_moveable (11)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5053,7 +5053,7 @@ GameObject:
   - component: {fileID: 486200122}
   m_Layer: 16
   m_Name: Box_moveable (5)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5961,7 +5961,7 @@ GameObject:
   - component: {fileID: 627835297}
   m_Layer: 16
   m_Name: candle_jigsaw
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6674,7 +6674,7 @@ GameObject:
   - component: {fileID: 672949149}
   m_Layer: 16
   m_Name: Box_moveable (9)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8674,7 +8674,7 @@ GameObject:
   - component: {fileID: 837510275}
   m_Layer: 16
   m_Name: Box_moveable (3)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9465,7 +9465,7 @@ GameObject:
   - component: {fileID: 903554560}
   m_Layer: 16
   m_Name: Box_moveable (12)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11039,7 +11039,7 @@ GameObject:
   - component: {fileID: 1157410989}
   m_Layer: 16
   m_Name: Box_moveable (11)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11350,7 +11350,7 @@ GameObject:
   - component: {fileID: 1163524717}
   m_Layer: 16
   m_Name: Box_moveable (4)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11691,7 +11691,7 @@ GameObject:
   - component: {fileID: 1194489405}
   m_Layer: 16
   m_Name: Box_moveable (3)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12361,7 +12361,7 @@ GameObject:
   - component: {fileID: 1302692570}
   m_Layer: 16
   m_Name: Box_moveable (6)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14083,7 +14083,7 @@ GameObject:
   - component: {fileID: 1586899434}
   m_Layer: 16
   m_Name: Box_moveable (13)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14727,7 +14727,7 @@ GameObject:
   - component: {fileID: 1639536468}
   m_Layer: 16
   m_Name: Box_moveable (13)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20531,7 +20531,7 @@ GameObject:
   - component: {fileID: 1778869160}
   m_Layer: 16
   m_Name: Box_moveable (10)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21180,7 +21180,7 @@ GameObject:
   - component: {fileID: 1828043561}
   m_Layer: 16
   m_Name: Box_moveable (8)
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32404,7 +32404,7 @@ GameObject:
   - component: {fileID: 1365295881466636632}
   m_Layer: 0
   m_Name: 'TriggerGate '
-  m_TagString: Untagged
+  m_TagString: CanSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

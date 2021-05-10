@@ -85,7 +85,11 @@ public class SceneManagerLevel3_final : MonoBehaviour
 
             //set camera
             this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(-3.5f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+            this.gameObject.GetComponent<CameraManager>().BackToFollowPlayer();
 
+            //stop skill
+            SkillManager_v2.bFinishSkill = true;
+            StartCoroutine(ReverseSkillFinish(1.0f));
 
             //MuralSprite1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f) , 3.0f );
             StoryMaterialSprite1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
@@ -109,12 +113,16 @@ public class SceneManagerLevel3_final : MonoBehaviour
         if (MuralTrigger2_1.bTriggerFinish && MuralTrigger2_2.bTriggerFinish && bTriggerMurl2 == false  && bTriggerMurl1)
         {
             //set camera
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(3.6f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(3.47f, Camera.main.transform.position.y, Camera.main.transform.position.z));
 
             //MuralSprite2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
             StoryMaterialSprite2_1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
             StoryMaterialSprite2_2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
             StoryMaterialSprite2_3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
+
+            //stop skill
+            SkillManager_v2.bFinishSkill = true;
+            StartCoroutine(ReverseSkillFinish(1.0f));
 
             //light setting
             for (int i = 0; i < Mural2LightSetting.Length; i++)
@@ -134,7 +142,11 @@ public class SceneManagerLevel3_final : MonoBehaviour
         {
             
             //set camera
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(19.4f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(19.46f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+
+            //stop skill
+            SkillManager_v2.bFinishSkill = true;
+            StartCoroutine(ReverseSkillFinish(1.0f));
 
             //MuralSprite4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
             StoryMaterialSprite4_1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
@@ -171,6 +183,14 @@ public class SceneManagerLevel3_final : MonoBehaviour
         }
     }
 
+    IEnumerator ReverseSkillFinish( float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        //stop skill
+        SkillManager_v2.bFinishSkill = false;
+
+    }
 
 
 }

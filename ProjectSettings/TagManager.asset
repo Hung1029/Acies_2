@@ -9,6 +9,7 @@ TagManager:
   - vita
   - invalidAreaForMovableObj
   - BackgroundMusic
+  - CanSkill
   layers:
   - Default
   - TransparentFX

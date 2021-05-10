@@ -75,7 +75,7 @@ public class FollowingTarget : MonoBehaviour
         else
         {
             //when Camera focuse player can't move
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
         }
 
     }
@@ -110,7 +110,7 @@ public class FollowingTarget : MonoBehaviour
         bCameraFocusOtherObj = false;
 
         //reset Player move bool
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
     }
 
     public IEnumerator Shake(float duration, float magnitude) // during time and strength of shake

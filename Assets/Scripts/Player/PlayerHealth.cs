@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator PlayerGetHurt()
     {
         //stop Player moving
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
 
         //set animate to idle
@@ -103,7 +103,7 @@ public class PlayerHealth : MonoBehaviour
         GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f);
 
         //Player can moving
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
         bHurrting = false;
 
     }

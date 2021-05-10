@@ -13,6 +13,10 @@ public class GazeMovement : MonoBehaviour
     [System.NonSerialized]
     public bool bVitaSoulCanGaze = false;
 
+    //find object with tag can skill
+    GameObject[] ObjectCanSkill;
+    int iNearCanSkillObjNUM = -1;
+    float fNearDistance = 0.375f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,9 @@ public class GazeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ObjectCanSkill = GameObject.FindGameObjectsWithTag("CanSkill");
+
+
         fGaze_timer += Time.deltaTime;
         gazePoint = TobiiAPI.GetGazePoint();
 
@@ -37,7 +44,29 @@ public class GazeMovement : MonoBehaviour
             
             //check if updat point    
             if (((gazeOnScreen.x - lastGazePoint.x) * (gazeOnScreen.x - lastGazePoint.x) + (gazeOnScreen.y - lastGazePoint.y) * (gazeOnScreen.y - lastGazePoint.y)) > gazePointCanMoveRange * gazePointCanMoveRange)
-                transform.position = new Vector2(gazeOnScreen.x, gazeOnScreen.y);
+            {
+                //if gaze point near can skill object, change it position                 
+                for (int i = 0; i < ObjectCanSkill.Length; i++)
+                {
+                    if (Vector2.Distance(gazeOnScreen, ObjectCanSkill[i].GetComponent<Transform>().position) < fNearDistance)
+                    {
+                        iNearCanSkillObjNUM = i;
+                        break;
+                    }
+                }
+
+                //change transform position
+                if (iNearCanSkillObjNUM != -1)
+                {
+                    transform.position = new Vector2(ObjectCanSkill[iNearCanSkillObjNUM].GetComponent<Transform>().position.x, ObjectCanSkill[iNearCanSkillObjNUM].GetComponent<Transform>().position.y);
+                }
+
+                else
+                    transform.position = new Vector2(gazeOnScreen.x, gazeOnScreen.y);
+
+                iNearCanSkillObjNUM = -1;
+            }
+                
             lastGazePoint = gazeOnScreen;
 
             //clear timer
@@ -53,7 +82,7 @@ public class GazeMovement : MonoBehaviour
         return low2 + (s - low1) * (high2 - low2) / (high1 - low1);
     }
 
-
+   
 
 
 }

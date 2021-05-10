@@ -115,7 +115,7 @@ public class SkillManager_v2 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(iPickUpIndex);
+        //Debug.Log(iPickUpIndex);
         //skill2
         //if it is moveable object give it outline
         ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];
@@ -126,7 +126,7 @@ public class SkillManager_v2 : MonoBehaviour
         if (SkillNUM != 0 && SkillStage == SkillStageNUM.DetectSkillButton ) //detect start skill
         {
             //set player movement
-            PlayerMovementScript.canMove = false;
+            PlayerMovementScript.canMove_skill = false;
             PlayerMovementScript.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
             PlayerMovementScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f,0.0f);
 
@@ -208,7 +208,7 @@ public class SkillManager_v2 : MonoBehaviour
                 VitaSoulGatheringTimer += Time.deltaTime;
                 VitaParticleScript.animator.SetBool("isGazeing", true);
                 VitaSoulBG.SetBool("isGazeing", true);
-                PlayerMovementScript.canMove = false;
+                PlayerMovementScript.canMove_skill = false;
 
                 if (VitaSoulGatheringTimer >= fNeedGatheringTime) //gathering for 2s
                 {
@@ -231,7 +231,7 @@ public class SkillManager_v2 : MonoBehaviour
                     VitaSoulGatheringTimer = 0.0f;
 
                     //player can't move
-                    PlayerMovementScript.canMove = false;
+                    PlayerMovementScript.canMove_skill = false;
 
 
                     //set currentSkill
@@ -443,7 +443,7 @@ public class SkillManager_v2 : MonoBehaviour
 
             if (VitaSoulCanGazeTimer > fCanGazeTime || Input.GetButtonDown("Cancel") || bFinishSkill) 
             {
-                //Debug.Log("in!!!!!!!!!!! : " + PlayerMovementScript.canMove);
+                //Debug.Log("in!!!!!!!!!!! : " + PlayerMovementScript.canMove_skill);
 
                 //set prompt
                 VitaParticleScript.PromptFadeOut();
@@ -522,7 +522,7 @@ public class SkillManager_v2 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         //player can move
-        PlayerMovementScript.canMove = true;
+        PlayerMovementScript.canMove_skill = true;
     }
 
 

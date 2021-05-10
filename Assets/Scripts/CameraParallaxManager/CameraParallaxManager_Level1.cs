@@ -193,7 +193,7 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
         else
         {
             //when Camera focuse player can't move
-            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
         }
     }
 
@@ -248,7 +248,7 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
     public void ShortFollowing(float time, Vector3 ObjPosition)
     {
         //set Player can't
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false ;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false ;
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
 
         bCameraFocusOtherObj = true;
@@ -281,7 +281,7 @@ public class CameraParallaxManager_Level1 : MonoBehaviour
         bCameraFocusOtherObj = false;
 
         //reset Player move bool
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = true;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = true;
     }
 
     public IEnumerator Shake(float fPreWaitTime ,float duration, float magnitude) // during time and strength of shake

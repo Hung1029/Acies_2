@@ -96,7 +96,7 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
         if (AnimatorCount == 0)
         {
            StartCoroutine(AfterSceneTransistion());
-           PlayerMovementScript.canMove = false;
+           PlayerMovementScript.canMove_skill = false;
         }
        
         //player move in scene
@@ -122,7 +122,7 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
         else if (AnimatorCount == 3)
         {
             
-            PlayerMovementScript.canMove = false;
+            PlayerMovementScript.canMove_skill = false;
             PlayerTrans.position = PlayerTrans.position + new Vector3(TransSpeed * Time.deltaTime, 0.0f, 0.0f);
             if(VitaTrans.position.x<= -2.35f)
                 VitaTrans.position = VitaTrans.position + new Vector3(TransSpeed * Time.deltaTime, 0.0f, 0.0f);
@@ -426,7 +426,7 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
 
         else if (AnimatorCount >= 32 && DialogueManager.bFinishDialogue)
         {
-            PlayerMovementScript.canMove = true;
+            PlayerMovementScript.canMove_skill = true;
             VitaSoulScript.FollowObj();
             if (PlayerTriggerScript.bTrigger)
             {
@@ -451,7 +451,7 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
         AnimatorCount++;
-        PlayerMovementScript.canMove = true;
+        PlayerMovementScript.canMove_skill = true;
         PlayerTriggerScript.TriggerName = "StoryTrigger"; //player wait for trigger's name
         StopAllCoroutines();
     }
