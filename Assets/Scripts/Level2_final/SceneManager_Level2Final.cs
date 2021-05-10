@@ -678,6 +678,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             RecordIEnumeratorCamraProjectionSize = this.gameObject.GetComponent<CameraManager>().ChangeCameraProjectionSizeIEnumerator(Camera.main, 4f, 0.8f);
             StartCoroutine(RecordIEnumeratorCamraProjectionSize);
 
+
             if (RecordIEnumeratorCamraFollowing != null)
                 StopCoroutine(RecordIEnumeratorCamraFollowing);
             RecordIEnumeratorCamraFollowing = this.gameObject.GetComponent<CameraManager>().ChangeCamraFollowingTargetPositionIEnumerator(0.0f, 7.804268f, 0.8f, true, true);

@@ -87,6 +87,8 @@ public class SceneManager_Level3 : MonoBehaviour
         Finish = 29,
         RisingDown = 31,
 
+        ResetLight = 33
+
     }
     BuddhaCandleStateNUM BuddhaCandleState = BuddhaCandleStateNUM.Start;
     bool bBuddhaRestart = false;
@@ -113,14 +115,14 @@ public class SceneManager_Level3 : MonoBehaviour
     private float[] ftimer_statusLightUp = { 0, 0, 0 };
     int iCountOrder = 0;
     bool bStatusLightUpCorrect = false;
-
+    bool bGateOpen = false;
 
     //status gate open
     public GameObject StatusGate;
 
     //Skill 1 description
     SkillDiscription SkillDescription_1;
-    bool bSkill1Des_open = false;
+    bool bSkill1Des_open = true;
     bool bSkill1Des_finish = false;
 
     public SpriteRenderer[] StatusMaterial;
@@ -193,11 +195,11 @@ public class SceneManager_Level3 : MonoBehaviour
     void Update()
     {
         //test
-        if (Input.GetKeyDown(KeyCode.T))
+        /*if (Input.GetKeyDown(KeyCode.T))
         {
             Skill2Token.SetActive(true);
             StartCoroutine(skillTokenTrigger());
-        }
+        }*/
 
 
 
@@ -651,6 +653,8 @@ public class SceneManager_Level3 : MonoBehaviour
                 Skill2Token.SetActive(true);
 
                 BuddhaCandleState++;
+
+                StartCoroutine(BuddhaLevelDelayIEnumerator(2.5f));
             /*
             }*/
 
@@ -658,7 +662,17 @@ public class SceneManager_Level3 : MonoBehaviour
 
         }
 
+        //fade out 
+        /*else if (BuddhaCandleState == BuddhaCandleStateNUM.ResetLight)
+        {
+            Debug.Log("in!!!!!!!!!!!");
+            GameCandle[array[0]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
+            GameCandle[array[1]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
+            GameCandle[array[2]].GetComponent<BuddhaCandle>().ChangeBackCandleColorIEnumerator(1.0f);
 
+            BuddhaCandleState++;
+
+        }*/
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// status keep check trigger
         ///
 
@@ -741,6 +755,9 @@ public class SceneManager_Level3 : MonoBehaviour
             {
                 playerSkillScript.CanUseSkill2 = true;
                 StartCoroutine(skillTokenTrigger());
+
+                //start fade in description
+                StartCoroutine(SkillDescription_1.FadeIn2());
             }
 
 
@@ -806,13 +823,30 @@ public class SceneManager_Level3 : MonoBehaviour
             
         }
         
-        if (StatusGate && bStatusLightUpCorrect)
+        if ( bStatusLightUpCorrect && !bGateOpen)
         {
-            Destroy(StatusGate);
+            Debug.Log("in");
+            //set camera 
+            this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, StatusGate.GetComponentInParent<Transform>().position);
+            StartCoroutine(StatusGateUp());
+            bGateOpen = true;
         }
 
 
     }
+
+    //status gate
+    IEnumerator StatusGateUp()
+    {
+        while (StatusGate.transform.localPosition.y < 16.06f)
+        //while (DogGate.transform.localPosition.y > 0.1f)
+        {
+            StatusGate.transform.position = new Vector2(StatusGate.transform.position.x, StatusGate.transform.position.y + 0.05f);
+            yield return new WaitForSeconds(0.005f);
+        }
+    }
+
+
 
     //skill 2 token trigger
     IEnumerator skillTokenTrigger()

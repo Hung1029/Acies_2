@@ -331,6 +331,7 @@ public class CameraManager : MonoBehaviour
         //set Player can't
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
+        PlayerSkill.bCanTriggerSkill = false;
 
         bCameraFocusOtherObj = true;
 
@@ -391,6 +392,7 @@ public class CameraManager : MonoBehaviour
 
         //reset Player move bool
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+        PlayerSkill.bCanTriggerSkill = true;
         //Debug.Log("ShortFollowing finish");
     }
 
@@ -407,8 +409,12 @@ public class CameraManager : MonoBehaviour
 
         bCameraFocusOtherObj = true;
 
-        if(!bPlayerCanMove)
+        if (!bPlayerCanMove)
+        {
+            
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
+        }
+            
 
 
         float fTimer = 0.0f;
@@ -424,7 +430,7 @@ public class CameraManager : MonoBehaviour
             yield return null;
         }
 
-
+        
 
     }
 
