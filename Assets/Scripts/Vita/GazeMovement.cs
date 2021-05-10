@@ -48,7 +48,7 @@ public class GazeMovement : MonoBehaviour
                 //if gaze point near can skill object, change it position                 
                 for (int i = 0; i < ObjectCanSkill.Length; i++)
                 {
-                    if (Vector2.Distance(gazeOnScreen, ObjectCanSkill[i].GetComponent<Transform>().position) < fNearDistance)
+                    if (Vector2.Distance(gazeOnScreen, ObjectCanSkill[i].GetComponent<Transform>().position) < fNearDistance && ObjectCanSkill[i].GetComponentInChildren<VitaTriggerDetect>().bCanBeDetect)
                     {
                         iNearCanSkillObjNUM = i;
                         break;
@@ -56,9 +56,9 @@ public class GazeMovement : MonoBehaviour
                 }
 
                 //change transform position
-                if (iNearCanSkillObjNUM != -1)
+                if (iNearCanSkillObjNUM != -1 )
                 {
-                    transform.position = new Vector2(ObjectCanSkill[iNearCanSkillObjNUM].GetComponent<Transform>().position.x, ObjectCanSkill[iNearCanSkillObjNUM].GetComponent<Transform>().position.y);
+                     transform.position = new Vector2(ObjectCanSkill[iNearCanSkillObjNUM].GetComponent<Transform>().position.x, ObjectCanSkill[iNearCanSkillObjNUM].GetComponent<Transform>().position.y);
                 }
 
                 else

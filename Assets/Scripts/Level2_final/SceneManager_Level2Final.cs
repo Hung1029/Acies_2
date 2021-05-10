@@ -49,11 +49,13 @@ public class SceneManager_Level2Final : MonoBehaviour
     public GameObject Gate2;
     public GameObject GateMatchJigsaw;
     bool bGate2Down = false;
+    bool bStandAndWaitForBear = false;
+
 
     //scene check point
     public GameObject Point2;
     public GameObject Point3;
-
+    public GameObject Point4;
 
     //bear stage
     enum BearStageNUM
@@ -116,6 +118,9 @@ public class SceneManager_Level2Final : MonoBehaviour
     private PlayerDeadLoader PlayerDeadLoaderScript;
 
     private static SceneManager_Level2Final instance;
+
+    //right boundary
+    public GameObject rightBoundary; 
 
 
     //if gate not down bear speed
@@ -462,7 +467,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             //time up bear jump down
             if (fBearRockTimer > fBearJumpDownTime || GameObject.Find("Player").transform.position.x >= BearRestartClimbCheckPoint.transform.position.x)
             {
-                Debug.Log("Time Up Bear jump down");
+                //Debug.Log("Time Up Bear jump down");
 
                 //set camera projection
                if (RecordIEnumeratorCamraFollowing != null)
@@ -665,6 +670,43 @@ public class SceneManager_Level2Final : MonoBehaviour
         }
 
 
+        //if Bear can't climb up and player stand still
+        if (bStandAndWaitForBear == false && bGate2Down && GameObject.Find("Player").transform.position.x > 75 )
+        {
+            
+
+            if (GameObject.Find("Player").transform.localScale.x < 0.0f)
+                GameObject.Find("Player").transform.localScale = new Vector2(GameObject.Find("Player").transform.localScale.x * -1, GameObject.Find("Player").transform.localScale.y);
+
+
+
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
+            GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
+            SkillManager_v2.bFinishSkill = true;
+            StartCoroutine(ReverseSkillFinish(1.0f));
+
+           bStandAndWaitForBear = true;
+        }
+
+        //after camera setting
+        else if (BearStage == BearStageNUM.CameraSettingAfterJump + 1  && bStandAndWaitForBear)
+        {
+            if (GameObject.Find("Player").transform.localScale.x > 0.0f)
+                GameObject.Find("Player").transform.localScale = new Vector2(GameObject.Find("Player").transform.localScale.x * -1, GameObject.Find("Player").transform.localScale.y);
+
+            GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+
+            Point4.transform.position = new Vector2(52.3f, Point4.transform.position.y);
+
+
+            rightBoundary.transform.position = new Vector2(106.4f , rightBoundary.transform.position.y);
+            rightBoundary.GetComponent<Collider2D>().isTrigger = true;
+
+            BearStage++;
+
+        }
+
+
         //Bear gate2, jigsaw is match, gate goes down
         if (GateMatchJigsaw.GetComponent<MatchingJigsaw>().bMatch && bGate2Down == false)
         {
@@ -672,6 +714,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             bGate2Down = true;
             StartCoroutine(Gate2Down());
         }
+
+      
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Detect dog gate
@@ -700,11 +744,11 @@ public class SceneManager_Level2Final : MonoBehaviour
     //dog gate
     IEnumerator GateDown()
     {
-        while (DogGate.transform.localPosition.y >23f)
+        while (DogGate.transform.localPosition.y > 23.7f)
         //while (DogGate.transform.localPosition.y > 0.1f)
         {
             DogGate.transform.position = new Vector2(DogGate.transform.position.x, DogGate.transform.position.y - 0.05f);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.005f);
         }
     }
 
@@ -713,10 +757,10 @@ public class SceneManager_Level2Final : MonoBehaviour
     IEnumerator Gate2Down()
     {
         yield return new WaitForSeconds(1f);
-        while (Gate2.transform.localPosition.y > 24.17f)
+        while (Gate2.transform.localPosition.y > 27.32)
         {
             Gate2.transform.position = new Vector2(Gate2.transform.position.x, Gate2.transform.position.y - 0.05f);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.005f);
         }
     }
 
@@ -726,5 +770,12 @@ public class SceneManager_Level2Final : MonoBehaviour
         //reload scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    IEnumerator ReverseSkillFinish(float time)
+    {
+        yield return new WaitForSeconds(time);
 
+        //stop skill
+        SkillManager_v2.bFinishSkill = false;
+
+    }
 }

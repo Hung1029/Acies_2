@@ -224,7 +224,7 @@ public class VitaSoul_particle : MonoBehaviour
         {
             float moveInput = Input.GetAxis("Horizontal");
 
-            if (GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill)
+            if (GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill && GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera)
             {
                 //change Scale
                 if ((moveInput > 0 && transform.localScale.x < 0.0f) || (moveInput < 0 && transform.localScale.x > 0.0f))

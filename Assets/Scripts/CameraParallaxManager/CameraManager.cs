@@ -326,7 +326,7 @@ public class CameraManager : MonoBehaviour
 
     public void ShortFollowing(float time, Vector3 ObjPosition, float duration = 0.5f)
     {
-        Debug.Log("ShortFollowing");
+        //Debug.Log("ShortFollowing");
 
         //set Player can't
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
@@ -391,7 +391,7 @@ public class CameraManager : MonoBehaviour
 
         //reset Player move bool
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
-        Debug.Log("ShortFollowing finish");
+        //Debug.Log("ShortFollowing finish");
     }
 
     public void SetXYFollowing(bool KeepXFollow , bool KeepYFollow )

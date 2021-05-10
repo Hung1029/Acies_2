@@ -60,6 +60,13 @@ public class SkillManager_v2 : MonoBehaviour
 
     public static bool bFinishSkill = false;
 
+    //vita trigger detect
+    bool bLastVitaSoulCoreState = false;
+    bool bCanChangeVitaSoulCore = true;
+    VitaTriggerDetect[] ObjVitaTriggerDetect;
+    bool bVitaCanFadeOut = false;
+    IEnumerator RecordFadeOut = null;
+
     enum SkillStageNUM
     {
         DetectSkillButton,
@@ -115,8 +122,50 @@ public class SkillManager_v2 : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(iPickUpIndex);
-        //skill2
+        /////////////////////////////////////////////////////////////////////////////////////Vita Soul Core fade in detect
+        ObjVitaTriggerDetect = FindObjectsOfType(typeof(VitaTriggerDetect)) as VitaTriggerDetect[];
+
+        bVitaCanFadeOut = false;
+        foreach (var item in ObjVitaTriggerDetect)
+        {
+            if (item._bSkillTrigger && item.bCanBeDetect && PlayerSkill.CURRENTSKILL == 1)
+            {
+                bVitaCanFadeOut = true;
+                break;
+            }
+        }
+
+
+        if (bLastVitaSoulCoreState != bVitaCanFadeOut)
+        {
+            bCanChangeVitaSoulCore = true;
+        }
+
+        //if is skill one and is triggered => fade in 
+        if ( !bVitaCanFadeOut && bCanChangeVitaSoulCore )
+        {
+            if (RecordFadeOut != null)
+                StopCoroutine(RecordFadeOut);
+            RecordFadeOut = GameObject.Find("VitaSoul").GetComponent<VitaSoul_particle>().VitaSoulCoreFadeIn();
+            StartCoroutine(RecordFadeOut);
+
+            bCanChangeVitaSoulCore = false;
+        }
+        else if ( bVitaCanFadeOut && bCanChangeVitaSoulCore )
+        {
+            if (RecordFadeOut != null)
+                StopCoroutine(RecordFadeOut);
+            RecordFadeOut = GameObject.Find("VitaSoul").GetComponent<VitaSoul_particle>().VitaSoulCoreFadeOut();
+            StartCoroutine(RecordFadeOut);
+
+            bCanChangeVitaSoulCore = false;
+        }
+
+
+        bLastVitaSoulCoreState = bVitaCanFadeOut;
+
+        //Debug.Log(bVitaCanFadeOut);
+
         //if it is moveable object give it outline
         ObjectsMoveable = FindObjectsOfType(typeof(Skill2Moveable)) as Skill2Moveable[];
 
