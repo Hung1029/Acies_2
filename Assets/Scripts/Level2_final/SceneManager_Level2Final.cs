@@ -163,6 +163,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
         PlayerDeadLoaderScript = GameObject.Find("PlayerDeadLoaderCanvas").GetComponent<PlayerDeadLoader>();
 
+        FindObjectOfType<AudioManager>().Play("BearStay");
     }
 
     private void FixedUpdate()
@@ -269,11 +270,16 @@ public class SceneManager_Level2Final : MonoBehaviour
             //Wait for 1.0f second turn to "Run" stage
             StartCoroutine(BearNextStageWait(1.0f));
 
+            //add music bg2
+            FindObjectOfType<AudioManager>().Pause("Scenebg");
+            FindObjectOfType<AudioManager>().Play("bg2_Run");
+
         }
 
 
         else if (BearStage == BearStageNUM.Run)
         {
+            
 
             //set scene check point
             Point2.transform.position = new Vector2(GameObject.Find("Player").transform.position.x, Point2.transform.position.y);
@@ -291,7 +297,6 @@ public class SceneManager_Level2Final : MonoBehaviour
                 Bear.GetComponent<Animator>().SetTrigger("tAttack");
 
 
-
                 BearStage = BearStageNUM.BearTouchRock;
 
                 //wait for bear animation to damage
@@ -304,6 +309,10 @@ public class SceneManager_Level2Final : MonoBehaviour
         if (BearStage == BearStageNUM.BearDamageRock)
         {
             RockDamageParticle.Play();
+            
+            //add music
+            FindObjectOfType<AudioManager>().Play("BearAttack");
+            
             Destroy(RockDamage);
 
             //start next stage 
@@ -361,7 +370,9 @@ public class SceneManager_Level2Final : MonoBehaviour
                 else
                     Debug.Log("Not on time");
 
-                Bear.GetComponent<Animator>().SetTrigger("tAttackRight");
+               
+               
+               
                 BearStage++;
                 StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearAttackRightTime));
 
@@ -571,6 +582,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             if (RockDamage2.GetComponent<RockBearDamage_Level2>()._bSkillOneTrigger)
             {
                 Bear.GetComponent<Animator>().SetTrigger("tAttack");
+                
+               
 
                 BearStage = BearStageNUM.BearTouchRock2;
 
@@ -585,6 +598,10 @@ public class SceneManager_Level2Final : MonoBehaviour
         if (BearStage == BearStageNUM.BearDamageRock2)
         {
             RockDamageParticle2.Play();
+
+            //add music
+            FindObjectOfType<AudioManager>().Play("BearAttack");
+            
             Destroy(RockDamage2);
 
             //start next stage 

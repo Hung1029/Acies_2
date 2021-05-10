@@ -27,6 +27,7 @@ public class BearMovement : MonoBehaviour
     void Start()
     {
         animator = this.gameObject.GetComponent<Animator>();
+        
         ps = this.gameObject.GetComponentInChildren<ParticleSystem>();
 
         //camera = Camera.main;
@@ -45,7 +46,11 @@ public class BearMovement : MonoBehaviour
     public void Howl()
     {
         animator.SetTrigger("tHowl");
-
+       
+        //add music
+        if(FindObjectOfType<AudioManager>().isPlaying("BearStay")) FindObjectOfType<AudioManager>().Pause("BearStay");
+        FindObjectOfType<AudioManager>().Play("BearHowl");
+        
         StopCoroutine(HowlRippleIEnumerator(0.8f));
         StartCoroutine(HowlRippleIEnumerator(0.8f));
     }
@@ -80,6 +85,9 @@ public class BearMovement : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.1f, 0.1f);
         animator.SetTrigger("tHurt");
 
+        //add music
+        FindObjectOfType<AudioManager>().Play("BearHowl");
+
         StartCoroutine(resetHurtIEnumerator());
     }
 
@@ -93,12 +101,17 @@ public class BearMovement : MonoBehaviour
     public void Attack(ParticleSystem DamageParticle, GameObject DestoryGameObject)
     {
         this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+        
         StartCoroutine(AttackIEnumerator( DamageParticle,  DestoryGameObject));
+       
+        
     }
 
     IEnumerator AttackIEnumerator(ParticleSystem DamageParticle, GameObject DestoryGameObject)
     {
         this.gameObject.GetComponent<Animator>().SetTrigger("tAttack");
+
+
         yield return new WaitForSeconds(0.9f);
         DamageParticle.Play();
         Destroy(DestoryGameObject);

@@ -175,7 +175,10 @@ public class PlayerMovement : MonoBehaviour
             WaitJumpState(0.15f);
 
             animator.Play("ReadyJump");
-            
+
+            //add music
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
+
             extraJumps = extraJumpsValue;
 
             canMoveX = false;
@@ -188,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         if (JumpState == 1)
         {
             //Debug.Log("Jump");
-            //FindObjectOfType<AudioManager>().Play("PlayerJump");
+            
             //not on the ground
             animator.SetBool("Ground", false);
 
@@ -207,7 +210,9 @@ public class PlayerMovement : MonoBehaviour
             JumpState = 1;
 
             animator.Play("ReadyJump");
-            //FindObjectOfType<AudioManager>().Play("PlayerJump");
+           
+            //add music
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             extraJumps--;
 
             bCanJump = false;

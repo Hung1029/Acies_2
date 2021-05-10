@@ -174,6 +174,8 @@ public class SkillManager_v2 : MonoBehaviour
 
         if (SkillNUM != 0 && SkillStage == SkillStageNUM.DetectSkillButton ) //detect start skill
         {
+            //技能按下按鈕
+
             //set player movement
             PlayerMovementScript.canMove_skill = false;
             PlayerMovementScript.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
@@ -254,13 +256,17 @@ public class SkillManager_v2 : MonoBehaviour
             //gathering 
             if (Distance < 2.0f)
             {
+                //注視到
+                
                 VitaSoulGatheringTimer += Time.deltaTime;
                 VitaParticleScript.animator.SetBool("isGazeing", true);
                 VitaSoulBG.SetBool("isGazeing", true);
                 PlayerMovementScript.canMove_skill = false;
 
                 if (VitaSoulGatheringTimer >= fNeedGatheringTime) //gathering for 2s
-                {
+                {   //注視完成
+
+
                     //set prompt
                     VitaParticleScript.PromptFadeOut();
 

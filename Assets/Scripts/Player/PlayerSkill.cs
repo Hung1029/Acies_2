@@ -57,7 +57,8 @@ public class PlayerSkill : MonoBehaviour
     public void StartSkillAnimate()
     {
         animator.SetTrigger("isSkill");
-     
+        
+
     }
 
 
@@ -74,11 +75,20 @@ public class PlayerSkill : MonoBehaviour
         if (Input.GetButtonDown("skillOne") && bCanTriggerSkill)
         {
             SkillNUM = 1;
+
+            //add music
+            FindObjectOfType<AudioManager>().Play("PlayerUseSkill");
+
+
+
         }
         else if (Input.GetButtonDown("skillTwo") && CanUseSkill2 && bCanTriggerSkill)
         {
             SkillNUM = 2;
+
+
         }
+
 
         return SkillNUM;
     }
