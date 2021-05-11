@@ -81,7 +81,14 @@ public class SkillOneTriggerIcon : MonoBehaviour
             yield return new WaitForSeconds(3.0f / SpriteNUM);
 
             if (SpriteCount == 34)
+            {
                 bTriggerFinish = true;
+
+                //add music skil finish
+                FindObjectOfType<AudioManager>().Play("SkillSucc");
+
+            }
+                
 
         }
         SpriteCount = SpriteNUM -1;
