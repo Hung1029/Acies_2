@@ -175,7 +175,9 @@ public class SkillManager_v2 : MonoBehaviour
         if (SkillNUM != 0 && SkillStage == SkillStageNUM.DetectSkillButton ) //detect start skill
         {
             //技能按下按鈕 add music
-            FindObjectOfType<AudioManager>().Play("PlayerSkill");
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("PlayerSkill"); 
+
 
             //set player movement
             PlayerMovementScript.canMove_skill = false;
@@ -258,7 +260,8 @@ public class SkillManager_v2 : MonoBehaviour
             if (Distance < 2.0f)
             {
                 //注視到 add music
-                FindObjectOfType<AudioManager>().Play("PlayerSkill");
+                if(FindObjectOfType<AudioManager>() != null)
+                    FindObjectOfType<AudioManager>().Play("PlayerSkill");
 
                 VitaSoulGatheringTimer += Time.deltaTime;
                 VitaParticleScript.animator.SetBool("isGazeing", true);

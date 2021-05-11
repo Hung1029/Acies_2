@@ -43,6 +43,35 @@ public class SceneManagerLevel3_final : MonoBehaviour
     public ColorChange StoryMaterialSprite4_2;
     bool bTriggerMurl3 = false;
 
+
+    //light up description
+    public ColorChange Description1;
+    public ColorChange title1;
+    public ColorChange text1;
+    public ColorChange continueA1;
+
+    public ColorChange Description2;
+    public ColorChange title2;
+    public ColorChange text2;
+    public ColorChange continueA2;
+
+    public ColorChange Description3;
+    public ColorChange title3;
+    public ColorChange text3_1;
+    public ColorChange text3_2;
+    public ColorChange continueA3;
+
+    public ColorChange Description4;
+    public ColorChange title4;
+    public ColorChange text4;
+    public ColorChange continueA4;
+
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +81,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         MuralTrigger2_1.VitaDetect.bCanBeDetect = false;
         MuralTrigger2_2.VitaDetect.bCanBeDetect = false;
         MuralTrigger4.VitaDetect.bCanBeDetect = false;
+
     }
 
     private void FixedUpdate()
@@ -83,10 +113,6 @@ public class SceneManagerLevel3_final : MonoBehaviour
         if (MuralTrigger1_1.bTriggerFinish && bTriggerMurl1 == false)
         {
 
-            //set camera
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(-3.5f, Camera.main.transform.position.y, Camera.main.transform.position.z));
-            this.gameObject.GetComponent<CameraManager>().BackToFollowPlayer();
-
             //stop skill
             SkillManager_v2.bFinishSkill = true;
             StartCoroutine(ReverseSkillFinish(1.0f));
@@ -106,6 +132,9 @@ public class SceneManagerLevel3_final : MonoBehaviour
             MuralTrigger2_1.VitaDetect.bCanBeDetect = true;
             MuralTrigger2_2.VitaDetect.bCanBeDetect = true;
 
+            //start story
+            StartCoroutine(Story1());
+
             bTriggerMurl1 = true;
         }
 
@@ -113,7 +142,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         if (MuralTrigger2_1.bTriggerFinish && MuralTrigger2_2.bTriggerFinish && bTriggerMurl2 == false  && bTriggerMurl1)
         {
             //set camera
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(3.47f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+            //this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(3.47f, Camera.main.transform.position.y, Camera.main.transform.position.z));
 
             //MuralSprite2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
             StoryMaterialSprite2_1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
@@ -134,6 +163,10 @@ public class SceneManagerLevel3_final : MonoBehaviour
             TriggerCircle4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f, 3.0f);
             MuralTrigger4.VitaDetect.bCanBeDetect = true;
 
+            //start story
+            StartCoroutine(Story2());
+
+
             bTriggerMurl2 = true;
         }
 
@@ -142,7 +175,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         {
             
             //set camera
-            this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(19.46f, Camera.main.transform.position.y, Camera.main.transform.position.z));
+            //this.gameObject.GetComponent<CameraManager>().ShortFollowing(5.0f, new Vector3(19.46f, Camera.main.transform.position.y, Camera.main.transform.position.z));
 
             //stop skill
             SkillManager_v2.bFinishSkill = true;
@@ -157,6 +190,10 @@ public class SceneManagerLevel3_final : MonoBehaviour
             {
                 StartCoroutine(LightIntensity(Mural4LightSetting[i]));
             }
+
+            //start story
+            StartCoroutine(Story4());
+
 
             bTriggerMurl3 = true;
         }
@@ -191,6 +228,143 @@ public class SceneManagerLevel3_final : MonoBehaviour
         SkillManager_v2.bFinishSkill = false;
 
     }
+
+    IEnumerator Story1()
+    {
+        StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f, 0.5f, new Vector2(-3.5f, Camera.main.transform.position.y))) ;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
+        GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
+        PlayerSkill.bCanTriggerSkill = false;
+        Debug.Log("in");
+
+        Description1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f) , 0.5f);
+        title1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f,0.5f);
+        text1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        continueA1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+
+        yield return null;
+        
+        while (!Input.GetButtonDown("Submit"))
+        {
+            yield return null;
+        }
+
+
+
+        Description1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        title1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f );
+        text1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        continueA1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+
+
+        this.gameObject.GetComponent<CameraManager>().ResetCamera();
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+        PlayerSkill.bCanTriggerSkill = true;
+
+    }
+
+    IEnumerator Story2()
+    {
+
+        StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f, 0.5f, new Vector2(3.47f, Camera.main.transform.position.y)));
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
+        GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
+        PlayerSkill.bCanTriggerSkill = false;
+
+        Description2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f);
+        title2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        text2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        continueA2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+
+        while (!Input.GetButtonDown("Submit"))
+        {
+            yield return null;
+        }
+
+
+
+        Description2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        title2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        text2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        continueA2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+
+        this.gameObject.GetComponent<CameraManager>().ResetCamera();
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+        PlayerSkill.bCanTriggerSkill = true;
+    }
+
+
+    IEnumerator Story3()
+    {
+        StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f, 0.5f, new Vector2(-3.5f, Camera.main.transform.position.y)));
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
+        GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
+
+
+        Description3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f);
+        title3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        text3_1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        continueA3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+
+        while (!Input.GetButtonDown("Submit"))
+        {
+            yield return null;
+        }
+
+        text3_1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        text3_2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+
+
+        while (!Input.GetButtonDown("Submit"))
+        {
+            yield return null;
+        }
+
+        Description3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f );
+        title3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f );
+        text3_2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f),0.5f );
+        continueA3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+
+
+        this.gameObject.GetComponent<CameraManager>().ResetCamera();
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+        PlayerSkill.bCanTriggerSkill = true;
+
+    }
+
+
+    IEnumerator Story4()
+    {
+        StartCoroutine(this.gameObject.GetComponent<CameraManager>().ChangeCameraFollowingPosition(0.0f, 0.5f, new Vector2(19.46f, Camera.main.transform.position.y)));
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
+        GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
+
+
+        Description4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f);
+        title4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        text4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+        continueA4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f, 0.5f);
+
+        while (!Input.GetButtonDown("Submit"))
+        {
+            yield return null;
+        }
+
+
+
+        Description4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        title4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        text4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
+        continueA1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+
+
+
+        this.gameObject.GetComponent<CameraManager>().ResetCamera();
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
+        PlayerSkill.bCanTriggerSkill = true;
+    }
+
+
 
 
 }

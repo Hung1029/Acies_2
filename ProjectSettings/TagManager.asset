@@ -80,3 +80,6 @@ TagManager:
   - name: Vita
     uniqueID: 1021863969
     locked: 0
+  - name: Description
+    uniqueID: 806189757
+    locked: 0

@@ -85,7 +85,8 @@ public class SkillOneTriggerIcon : MonoBehaviour
                 bTriggerFinish = true;
 
                 //add music skil finish
-                FindObjectOfType<AudioManager>().Play("SkillSucc");
+                if(FindObjectOfType<AudioManager>() != null)
+                    FindObjectOfType<AudioManager>().Play("SkillSucc");
 
             }
                 

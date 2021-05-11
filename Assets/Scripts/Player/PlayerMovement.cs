@@ -176,8 +176,9 @@ public class PlayerMovement : MonoBehaviour
 
             animator.Play("ReadyJump");
 
-            //add music
-            FindObjectOfType<AudioManager>().Play("PlayerJump");
+            //add music'
+            if(FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
 
             extraJumps = extraJumpsValue;
 
@@ -210,9 +211,10 @@ public class PlayerMovement : MonoBehaviour
             JumpState = 1;
 
             animator.Play("ReadyJump");
-           
+
             //add music
-            FindObjectOfType<AudioManager>().Play("PlayerJump");
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
             extraJumps--;
 
             bCanJump = false;
