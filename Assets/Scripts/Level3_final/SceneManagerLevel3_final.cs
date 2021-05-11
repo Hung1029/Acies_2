@@ -235,7 +235,6 @@ public class SceneManagerLevel3_final : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
         GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", 0.0f);
         PlayerSkill.bCanTriggerSkill = false;
-        Debug.Log("in");
 
         Description1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f) , 0.5f);
         title1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 0.5f,0.5f);
@@ -254,7 +253,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         Description1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
         title1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f );
         text1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
-        continueA1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+        continueA1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
 
         this.gameObject.GetComponent<CameraManager>().ResetCamera();
@@ -286,7 +285,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         Description2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
         title2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
         text2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
-        continueA2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+        continueA2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
         this.gameObject.GetComponent<CameraManager>().ResetCamera();
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
@@ -323,7 +322,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         Description3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f );
         title3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f );
         text3_2.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f),0.5f );
-        continueA3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+        continueA3.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
 
         this.gameObject.GetComponent<CameraManager>().ResetCamera();
@@ -355,7 +354,7 @@ public class SceneManagerLevel3_final : MonoBehaviour
         Description4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
         title4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
         text4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
-        continueA1.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f, 0.5f);
+        continueA4.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 0.5f);
 
 
 
