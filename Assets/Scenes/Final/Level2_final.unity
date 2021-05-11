@@ -2245,6 +2245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7652469208789815982, guid: 9e56e09a5a82432499cf830867041bba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7826c16386448c46b6a78e6f8bb3d32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e56e09a5a82432499cf830867041bba, type: 3}
 --- !u!4 &221354013 stripped
@@ -31968,7 +31973,14 @@ MonoBehaviour:
     onAwake: 1
     source: {fileID: 0}
   - name: SkillSuccess
-    clip: {fileID: 8300000, guid: e2f77344220df224c8bfcc6e9ddcb229, type: 3}
+    clip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    onAwake: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: a0ca8964c08d54c5dbebf245bdc474ca, type: 3}
     volume: 1
     pitch: 1
     loop: 0
