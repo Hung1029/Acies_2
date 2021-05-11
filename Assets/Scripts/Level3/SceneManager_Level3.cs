@@ -210,11 +210,18 @@ public class SceneManager_Level3 : MonoBehaviour
 
             StopAllCoroutines();
 
+            //add music splash
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("JumpSplash");
+
             //player rigibody edit
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_skill = false;
             GameObject.Find("Player").GetComponent<Rigidbody2D>().gravityScale = 0.5f;
             GameObject.Find("Player").GetComponent<Rigidbody2D>().drag = 8.0f;
             GameObject.Find("Player").GetComponent<Animator>().SetTrigger("tDrowing");
+
+            
+
 
             //create bubble
             GameObject.Find("Bubble").GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
