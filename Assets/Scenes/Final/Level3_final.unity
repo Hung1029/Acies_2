@@ -440,7 +440,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.15
+  m_Intensity: 0.3
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 1fa2ec437768eed100000000
   m_LightCookieSprite: {fileID: 0}
@@ -770,7 +770,7 @@ MonoBehaviour:
   isGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0.63
   sharedProfile: {fileID: 11400000, guid: 885b61ecd9a8200488199c5dc4ed16d5, type: 2}
 --- !u!4 &318636643
 Transform:
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.55
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 1fa2ec43000000002de2c08e679b43847768eed1a35c137fe35cddfa95bc1f97b54fa68d57d5c358df6cc3aa2168e83c
   m_LightCookieSprite: {fileID: 0}
@@ -1774,6 +1774,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7652469208789815982, guid: 9e56e09a5a82432499cf830867041bba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d0011319a7df864787af087af5719d3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e56e09a5a82432499cf830867041bba, type: 3}
 --- !u!1 &599595013 stripped
@@ -3041,7 +3046,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.9056604, g: 0.5980389, b: 0.36739054, a: 1}
-  m_Intensity: 1.31
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 7768eed100000000
   m_LightCookieSprite: {fileID: 0}
@@ -3581,7 +3586,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.55
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.3
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 1fa2ec43000000002de2c08e679b43847768eed1a35c137fe35cddfa95bc1f97b54fa68d57d5c358df6cc3aa2168e83c
   m_LightCookieSprite: {fileID: 0}
@@ -3703,20 +3708,44 @@ MonoBehaviour:
   MuralTrigger1_1: {fileID: 955981854}
   StoryMaterialSprite1: {fileID: 1888111020}
   Mural1LightSetting:
+  - light: {fileID: 1695873054}
+    targetIntensity: 0.5
+    preTime: 0
+    duration: 2
   - light: {fileID: 132208739}
     targetIntensity: 0.3
-    preTime: 0
+    preTime: 1
     duration: 2
   MuralTrigger2_1: {fileID: 423324067}
   MuralTrigger2_2: {fileID: 1060912717}
   TriggerCircle2_1: {fileID: 411380675}
   TriggerCircle2_2: {fileID: 599595017}
-  Mural2LightSetting: []
+  Mural2LightSetting:
+  - light: {fileID: 1053968508}
+    targetIntensity: 1.2
+    preTime: 0
+    duration: 2
   StoryMaterialSprite2_1: {fileID: 729085111}
   StoryMaterialSprite2_2: {fileID: 1605059735}
   StoryMaterialSprite2_3: {fileID: 1374281127}
   MuralTrigger4: {fileID: 1136615178}
-  Mural4LightSetting: []
+  Mural4LightSetting:
+  - light: {fileID: 442755944}
+    targetIntensity: 1
+    preTime: 0
+    duration: 2
+  - light: {fileID: 1269256900}
+    targetIntensity: 0.5
+    preTime: 0
+    duration: 2
+  - light: {fileID: 1225656919}
+    targetIntensity: 0.8
+    preTime: 1
+    duration: 2
+  - light: {fileID: 1500868472}
+    targetIntensity: 0.3
+    preTime: 0
+    duration: 2.5
   TriggerCircle4: {fileID: 1555666043}
   StoryMaterialSprite4_1: {fileID: 1231872415}
   StoryMaterialSprite4_2: {fileID: 591371691}
