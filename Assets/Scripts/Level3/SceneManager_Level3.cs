@@ -122,7 +122,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
     //Skill 1 description
     SkillDiscription SkillDescription_1;
-    bool bSkill1Des_open = true;
+    bool bSkill1Des_open = false;
     bool bSkill1Des_finish = false;
 
     public SpriteRenderer[] StatusMaterial;
@@ -149,6 +149,7 @@ public class SceneManager_Level3 : MonoBehaviour
     private GameObject CGMove;
     private VitaCGMovement CGMoveScript;
 
+    public ColorChange GodPrompt;
     void Start()
     {
         VitaParticleScript = Vita.GetComponent<VitaSoul_particle>();
@@ -779,6 +780,8 @@ public class SceneManager_Level3 : MonoBehaviour
             }
             if (count == 4)
             {
+
+                GodPrompt.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f) , 2.0f);
                 MatchingJigsawFinish = true;
 
                 //run light up buddha clue
@@ -798,6 +801,7 @@ public class SceneManager_Level3 : MonoBehaviour
         //light up status after jigsaw is all match 
         if (!bStatusLightUpCorrect && MatchingJigsawFinish)
         {
+            
             //if all status is light up
             if (iLightUpOrder[0] > -1 && iLightUpOrder[1] > -1 && iLightUpOrder[2] > -1)
             {
@@ -998,7 +1002,9 @@ public class SceneManager_Level3 : MonoBehaviour
         StartCoroutine(MainStatusTrigger.GetComponent<SkillOneTriggerIcon>().reset(1.5f));
 
         CanReStart = true;
-        
+
+        GodPrompt.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 3.0f, 3.0f);
+
     }
 
     IEnumerator resetStatusIEnumerator()

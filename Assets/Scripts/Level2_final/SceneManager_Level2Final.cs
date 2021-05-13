@@ -132,6 +132,10 @@ public class SceneManager_Level2Final : MonoBehaviour
 
     public Transform Part2CameraTurnPos;
 
+    //bear UI
+    public ColorChange BearPrompt;
+
+
 
     private void Awake()
     {
@@ -174,7 +178,7 @@ public class SceneManager_Level2Final : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(BearStage);
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////If bear catch player
 
         if (GameObject.Find("Player").GetComponent<PlayerMovement>().bBearCatchPlayer && BearStage > BearStageNUM.CameraSetting && BearStage < BearStageNUM.Jump && !bCatchPlayer)
@@ -234,6 +238,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             //Wait for 1.0f second turn to "Run" stage
             StartCoroutine(BearNextStageWait(1.0f));
 
+            
+
         }
 
         //Bear roar
@@ -245,6 +251,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             //Wait for next stage
             StartCoroutine(BearNextStageWait(1.0f));
             BearStage++;
+
+            BearPrompt.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 1.0f), 3.0f);
         }
 
         else if (BearStage == BearStageNUM.FogBlow)
@@ -270,7 +278,7 @@ public class SceneManager_Level2Final : MonoBehaviour
             //Wait for 1.0f second turn to "Run" stage
             StartCoroutine(BearNextStageWait(1.0f));
 
-            
+            BearPrompt.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
 
         }
 
@@ -368,9 +376,9 @@ public class SceneManager_Level2Final : MonoBehaviour
                 else
                     Debug.Log("Not on time");
 
-               
-               
-               
+
+                Bear.GetComponent<Animator>().SetTrigger("tAttackRight");
+
                 BearStage++;
                 StartCoroutine(BearNextStageWait(Bear.GetComponent<BearMovement>().fBearAttackRightTime));
 
@@ -632,7 +640,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<Animator>().SetTrigger("tJump");
             BearStage++;
 
-
+            //set player animation
+            GameObject.Find("Player").GetComponent<PlayerMovement>().PlayerHurtAni(0.75f);
 
             //////////////////////////////////////////////////////////////////player hurt, level reload
             //player stop
@@ -687,7 +696,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
         //if Bear can't climb up and player stand still
-        if (bStandAndWaitForBear == false && bGate2Down && GameObject.Find("Player").transform.position.x > 75 )
+        if (bStandAndWaitForBear == false && bGate2Down && GameObject.Find("Player").transform.position.x > 75 && BearStage <= BearStageNUM.Jump)
         {
             
 

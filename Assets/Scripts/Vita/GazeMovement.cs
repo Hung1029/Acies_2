@@ -16,7 +16,7 @@ public class GazeMovement : MonoBehaviour
     //find object with tag can skill
     GameObject[] ObjectCanSkill;
     int iNearCanSkillObjNUM = -1;
-    float fNearDistance = 0.375f;
+    float fNearDistance = 0.75f;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class GazeMovement : MonoBehaviour
             if (((gazeOnScreen.x - lastGazePoint.x) * (gazeOnScreen.x - lastGazePoint.x) + (gazeOnScreen.y - lastGazePoint.y) * (gazeOnScreen.y - lastGazePoint.y)) > gazePointCanMoveRange * gazePointCanMoveRange)
             {
                 //if gaze point near can skill object, change it position                 
-                for (int i = 0; i < ObjectCanSkill.Length; i++)
+                for (int i = 0; i < ObjectCanSkill.Length && PlayerSkill.CURRENTSKILL == 1; i++)
                 {
                     if (Vector2.Distance(gazeOnScreen, ObjectCanSkill[i].GetComponent<Transform>().position) < fNearDistance && ObjectCanSkill[i].GetComponentInChildren<VitaTriggerDetect>().bCanBeDetect)
                     {
