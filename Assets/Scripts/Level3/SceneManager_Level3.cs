@@ -23,6 +23,7 @@ public class SceneManager_Level3 : MonoBehaviour
     [SerializeField]
     private GameObject WaterWheel;
     private WaterWheel WaterWheelScript;
+    public Animator WaterFlowAnimator;
 
     [SerializeField]
     public SkillOneTriggerIcon WaterWheelTrigger;
@@ -263,6 +264,8 @@ public class SceneManager_Level3 : MonoBehaviour
             Splash.Play();
             WaterWheelScript.PlayWaterWheelRotate();
             PlantScript.GrowUp();
+
+            WaterFlowAnimator.SetTrigger("tTrigger");
 
             //set camera 
             this.gameObject.GetComponent<CameraManager>().ShortFollowing(2.0f, PlantScript.GetComponentInParent<Transform>().position);

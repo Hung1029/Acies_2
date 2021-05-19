@@ -13,9 +13,10 @@ public class WaterWheel : MonoBehaviour
     [System.NonSerialized]
     public bool _bLightBlowEnable = true;
 
+    [SerializeField]
+    private ParticleSystem Splash;
 
 
-   
 
     void Update()
     {
@@ -44,8 +45,8 @@ public class WaterWheel : MonoBehaviour
              }
          }
         //_bIsRotate = false;
-       
 
+        Splash.Stop();
 
     }
 
