@@ -124,7 +124,7 @@ public class SceneManager_StudyRoomStory : MonoBehaviour
         //Vita follow Rita 
         if (AnimatorCount >= 4)
         {
-            VitaMovementScript.FollowObj();
+            VitaMovementScript.DetectTurnFace();
             
         }
 

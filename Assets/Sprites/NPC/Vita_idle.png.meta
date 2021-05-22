@@ -1,0 +1,1064 @@
+fileFormatVersion: 2
+guid: fcf1763eb2a302d4d93c5e2c8818a8fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7306731527682690582
+    second: Vita_idle_0
+  - first:
+      213: 3638718482880147793
+    second: Vita_idle_1
+  - first:
+      213: -5945299575286779783
+    second: Vita_idle_2
+  - first:
+      213: -8612260474246998359
+    second: Vita_idle_3
+  - first:
+      213: -8107586660008881429
+    second: Vita_idle_4
+  - first:
+      213: 7076811159714678342
+    second: Vita_idle_5
+  - first:
+      213: -8393080147510129116
+    second: Vita_idle_6
+  - first:
+      213: 2125507813559593773
+    second: Vita_idle_7
+  - first:
+      213: -5849911193549775384
+    second: Vita_idle_8
+  - first:
+      213: -2900348013642306715
+    second: Vita_idle_9
+  - first:
+      213: 4614475944735186203
+    second: Vita_idle_10
+  - first:
+      213: 2099326100186765083
+    second: Vita_idle_11
+  - first:
+      213: 4303004854353295904
+    second: Vita_idle_12
+  - first:
+      213: -5022347961302792000
+    second: Vita_idle_13
+  - first:
+      213: -8317675132054756453
+    second: Vita_idle_14
+  - first:
+      213: 2947928179961174281
+    second: Vita_idle_15
+  - first:
+      213: -259405237208582505
+    second: Vita_idle_16
+  - first:
+      213: -9052510098342518826
+    second: Vita_idle_17
+  - first:
+      213: -4327608523064250304
+    second: Vita_idle_18
+  - first:
+      213: 8272383150138866811
+    second: Vita_idle_19
+  - first:
+      213: 6590313347228821604
+    second: Vita_idle_20
+  - first:
+      213: 684791597969495976
+    second: Vita_idle_21
+  - first:
+      213: 9077837319844706202
+    second: Vita_idle_22
+  - first:
+      213: -8050739862826889812
+    second: Vita_idle_23
+  - first:
+      213: -3261795756852695871
+    second: Vita_idle_24
+  - first:
+      213: -119468542410708114
+    second: Vita_idle_25
+  - first:
+      213: -1060398502517688276
+    second: Vita_idle_26
+  - first:
+      213: 4308022627380154087
+    second: Vita_idle_27
+  - first:
+      213: 7728722717676035284
+    second: Vita_idle_28
+  - first:
+      213: -1202522253217698823
+    second: Vita_idle_29
+  - first:
+      213: 469494665709424585
+    second: Vita_idle_30
+  - first:
+      213: -1354346275881689211
+    second: Vita_idle_31
+  - first:
+      213: 1637490806699547174
+    second: Vita_idle_32
+  - first:
+      213: 6672873622915381309
+    second: Vita_idle_33
+  - first:
+      213: -1351905042815718287
+    second: Vita_idle_34
+  - first:
+      213: 3855384917137514290
+    second: Vita_idle_35
+  - first:
+      213: -6538127936765210656
+    second: Vita_idle_36
+  - first:
+      213: -342025456400379026
+    second: Vita_idle_37
+  - first:
+      213: 4801022775111300100
+    second: Vita_idle_38
+  - first:
+      213: 238627894277968468
+    second: Vita_idle_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vita_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2583
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e8ca89c99b66560800000000000000
+      internalID: 7306731527682690582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2583
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15138b17e235f7230800000000000000
+      internalID: 3638718482880147793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2583
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97030cb298d0e7da0800000000000000
+      internalID: -5945299575286779783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2583
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6de577aba1b7880800000000000000
+      internalID: -8612260474246998359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2583
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2997873e01c7f80800000000000000
+      internalID: -8107586660008881429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2214
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64640555142e53260800000000000000
+      internalID: 7076811159714678342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_6
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2214
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e8644031ac58b80800000000000000
+      internalID: -8393080147510129116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2214
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b698258125f7d10800000000000000
+      internalID: 2125507813559593773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2214
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed52ec73c0f0dea0800000000000000
+      internalID: -5849911193549775384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_9
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2214
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b27d929d4efb7d0800000000000000
+      internalID: -2900348013642306715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1845
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d96865c69e90040800000000000000
+      internalID: 4614475944735186203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_11
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1845
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17965527fd422d10800000000000000
+      internalID: 2099326100186765083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_12
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1845
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a7282ed1857bb30800000000000000
+      internalID: 4303004854353295904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_13
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1845
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8c32483290d4ab0800000000000000
+      internalID: -5022347961302792000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_14
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1845
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93a6cc498ea19c80800000000000000
+      internalID: -8317675132054756453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1476
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90913f59f0529e820800000000000000
+      internalID: 2947928179961174281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1476
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7967e47af48666cf0800000000000000
+      internalID: -259405237208582505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_17
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1476
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df58ae17060f5280800000000000000
+      internalID: -9052510098342518826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_18
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1476
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0407dc71afe31f3c0800000000000000
+      internalID: -4327608523064250304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_19
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1476
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c34f565a86dc270800000000000000
+      internalID: 8272383150138866811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1107
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468e614821f757b50800000000000000
+      internalID: 6590313347228821604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_21
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1107
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7d426845ed08900800000000000000
+      internalID: 684791597969495976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_22
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1107
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97b02a22f4fafd70800000000000000
+      internalID: 9077837319844706202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_23
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1107
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad4029dfb6064090800000000000000
+      internalID: -8050739862826889812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_24
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1107
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc2be67a06cbb2d0800000000000000
+      internalID: -3261795756852695871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 738
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ba6cf5eff875ef0800000000000000
+      internalID: -119468542410708114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 738
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28b3112e25b841f0800000000000000
+      internalID: -1060398502517688276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_27
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 738
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eec65531cb29cb30800000000000000
+      internalID: 4308022627380154087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_28
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 738
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc529afc50f14b60800000000000000
+      internalID: 7728722717676035284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_29
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 738
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbe476c168cf4fe0800000000000000
+      internalID: -1202522253217698823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 369
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf0d8539eaf38600800000000000000
+      internalID: 469494665709424585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_31
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 369
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fd23bdc35643de0800000000000000
+      internalID: -1354346275881689211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_32
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 369
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a5b40863989b610800000000000000
+      internalID: 1637490806699547174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_33
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 369
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38f1f4a43fca9c50800000000000000
+      internalID: 6672873622915381309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_34
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 369
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ce8e8b6811d3de0800000000000000
+      internalID: -1351905042815718287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f516ac724118530800000000000000
+      internalID: 3855384917137514290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_36
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef4d013847e345a0800000000000000
+      internalID: -6538127936765210656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_37
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e635d17d8a1e04bf0800000000000000
+      internalID: -342025456400379026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_38
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404b11de6c8a0a240800000000000000
+      internalID: 4801022775111300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vita_idle_39
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 133
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45210f73ec6cf4300800000000000000
+      internalID: 238627894277968468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

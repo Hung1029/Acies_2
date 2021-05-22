@@ -15,12 +15,12 @@ public class Vita_Movement : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-   public void FollowObj()
+    public void FollowObj()
     {
         if (Mathf.Abs(transform.position.x - target.position.x) > stoppingDistance)
         {
-            
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x , transform.position.y), speed * Time.deltaTime); //only move x
+
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x, transform.position.y), speed * Time.deltaTime); //only move x
         }
 
         if ((transform.position.x - target.position.x) > 0 && bFaceRight)
@@ -28,11 +28,26 @@ public class Vita_Movement : MonoBehaviour
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
             bFaceRight = false;
         }
-        else if((transform.position.x - target.position.x) < 0 && !bFaceRight)
+        else if ((transform.position.x - target.position.x) < 0 && !bFaceRight)
         {
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
             bFaceRight = true;
         }
 
     }
+
+    public void DetectTurnFace()
+    {
+        if ((transform.position.x - target.position.x) > 0 && bFaceRight)
+        {
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+            bFaceRight = false;
+        }
+        else if ((transform.position.x - target.position.x) < 0 && !bFaceRight)
+        {
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+            bFaceRight = true;
+        }
+    }
+
 }

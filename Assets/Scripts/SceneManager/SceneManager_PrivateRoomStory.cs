@@ -89,8 +89,8 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+        if(AnimatorCount <=5)
+            VitaMovementScript.DetectTurnFace();
 
         //wait for scene transition
         if (AnimatorCount == 0)
@@ -102,7 +102,6 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
         //player move in scene
         if(AnimatorCount == 1)
         {
-            VitaMovementScript.FollowObj();
             PlayerTrans.position = PlayerTrans.position + new Vector3(5.0f * Time.deltaTime, 0.0f,0.0f);
             PlayerAni.SetFloat("Speed", 1.0f);
             StartCoroutine(PlayerMoveInScene());
@@ -111,7 +110,6 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
         //player can move and wait to trigger
         else if (AnimatorCount == 2)
         {
-            VitaMovementScript.FollowObj();
             if (PlayerTriggerScript.bTrigger) //if trigger StoryTrigger
             {
                 AnimatorCount++;
@@ -124,9 +122,7 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
             
             PlayerMovementScript.canMove_skill = false;
             PlayerTrans.position = PlayerTrans.position + new Vector3(TransSpeed * Time.deltaTime, 0.0f, 0.0f);
-            if(VitaTrans.position.x<= -2.35f)
-                VitaTrans.position = VitaTrans.position + new Vector3(TransSpeed * Time.deltaTime, 0.0f, 0.0f);
-
+           
             if (PlayerTrans.position.x >= 1.29f)
             {
                 PlayerMovementScript.TurnFace();
