@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //Horizontal move
     private float moveInput;
 
-    private float speed = 5.0f;
+    public float speed = 5.0f;
     private Rigidbody2D rb;
     private bool faceRight = false;
 

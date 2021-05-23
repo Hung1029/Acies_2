@@ -28,6 +28,12 @@ public class SceneManager_OutDoorStory : MonoBehaviour
     private GameObject CGMove;
     private VitaCGMovement CGMoveScript;
 
+    public PlayerTriggerDetect rightBoundary;
+
+    private LevelLoader levelLoaderScript;
+    [SerializeField]
+    private GameObject levelLoader;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +48,9 @@ public class SceneManager_OutDoorStory : MonoBehaviour
         CGMoveScript = CGMove.GetComponent<VitaCGMovement>();
 
         VitaSoulScript.VitaSpriteFadeIn();
+
+        //controlChangeScene
+        levelLoaderScript = levelLoader.GetComponent<LevelLoader>();
     }
 
     // Update is called once per frame
@@ -163,6 +172,12 @@ public class SceneManager_OutDoorStory : MonoBehaviour
 
             AnimatorCount++;
         }
+
+        if (rightBoundary.bTrigger)
+        {
+            levelLoaderScript.LoadNextLevel("Level1_final");
+        }
+
 
     }
 }

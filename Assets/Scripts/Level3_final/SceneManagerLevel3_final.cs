@@ -99,7 +99,12 @@ public class SceneManagerLevel3_final : MonoBehaviour
 
     public GameObject door;
 
+    public PlayerTriggerDetect rightBoundary;
 
+    private LevelLoader levelLoaderScript;
+
+    [SerializeField]
+    private GameObject levelLoader;
     // Start is called before the first frame update
     void Start()
     {
@@ -109,6 +114,9 @@ public class SceneManagerLevel3_final : MonoBehaviour
         MuralTrigger2_1.VitaDetect.bCanBeDetect = false;
         MuralTrigger2_2.VitaDetect.bCanBeDetect = false;
         MuralTrigger4.VitaDetect.bCanBeDetect = false;
+
+        //controlChangeScene
+        levelLoaderScript = levelLoader.GetComponent<LevelLoader>();
 
     }
 
@@ -376,7 +384,12 @@ public class SceneManagerLevel3_final : MonoBehaviour
         }
 
 
-        
+        if (rightBoundary.bTrigger)
+        {
+            levelLoaderScript.LoadNextLevel("StudyRoom");
+        }
+
+
     }
 
 

@@ -136,6 +136,10 @@ public class SceneManager_Level2Final : MonoBehaviour
     public ColorChange BearPrompt;
 
 
+    private LevelLoader levelLoaderScript;
+
+    [SerializeField]
+    private GameObject levelLoader;
 
     private void Awake()
     {
@@ -168,6 +172,8 @@ public class SceneManager_Level2Final : MonoBehaviour
         PlayerDeadLoaderScript = GameObject.Find("PlayerDeadLoaderCanvas").GetComponent<PlayerDeadLoader>();
 
         FindObjectOfType<AudioManager>().Play("BearStay");
+        //controlChangeScene
+        levelLoaderScript = levelLoader.GetComponent<LevelLoader>();
     }
 
     private void FixedUpdate()
@@ -725,7 +731,7 @@ public class SceneManager_Level2Final : MonoBehaviour
 
 
             rightBoundary.transform.position = new Vector2(106.4f , rightBoundary.transform.position.y);
-            rightBoundary.GetComponent<Collider2D>().isTrigger = true;
+            rightBoundary.GetComponent<BoxCollider2D>().isTrigger = true;
 
             BearStage++;
 
@@ -750,6 +756,11 @@ public class SceneManager_Level2Final : MonoBehaviour
         {
             StartCoroutine(GateDown());
             bGateDown = true;
+        }
+
+        if (rightBoundary.GetComponent<PlayerTriggerDetect>().bTrigger)
+        {
+            levelLoaderScript.LoadNextLevel("Level3_final");
         }
 
     }

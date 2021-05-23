@@ -56,6 +56,14 @@ public class SceneManager_Level3 : MonoBehaviour
     IEnumerator StartCandleIEnumerator;
     IEnumerator ReverseCandleIEnumerator;
 
+    public PlayerTriggerDetect rightBoundary;
+
+    private LevelLoader levelLoaderScript;
+
+    [SerializeField]
+    private GameObject levelLoader;
+
+
     enum BuddhaCandleStateNUM
     {
 
@@ -185,6 +193,9 @@ public class SceneManager_Level3 : MonoBehaviour
         }
 
         SkillDescription_1 = GameObject.Find("SkillDirection").GetComponent<SkillDiscription>();
+
+        //controlChangeScene
+        levelLoaderScript = levelLoader.GetComponent<LevelLoader>();
     }
 
     private void FixedUpdate()
@@ -847,6 +858,11 @@ public class SceneManager_Level3 : MonoBehaviour
         }
 
 
+        if (rightBoundary.bTrigger)
+        {
+            levelLoaderScript.LoadNextLevel("Level2_final");
+        }
+
     }
 
     //status gate
@@ -1007,6 +1023,9 @@ public class SceneManager_Level3 : MonoBehaviour
         CanReStart = true;
 
         GodPrompt.ColorChanging(new Color(1.0f, 1.0f, 1.0f, 0.0f), 3.0f, 3.0f);
+
+
+
 
     }
 
