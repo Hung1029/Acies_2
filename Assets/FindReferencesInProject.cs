@@ -9,7 +9,7 @@ public class FindReferencesInProject
 
     //[MenuItem(MenuItemText, false, 25)]
     public static void Find()
-    {
+    {/*
         var sw = new System.Diagnostics.Stopwatch();
         sw.Start();
 
@@ -53,17 +53,17 @@ public class FindReferencesInProject
             Debug.LogWarning("No references");
         }
 
-        referenceCache.Clear();
+        referenceCache.Clear();*/
     }
 
-    [MenuItem(MenuItemText, true)]
+    //[MenuItem(MenuItemText, true)]
     public static bool Validate()
-    {
+    {/*
         if (Selection.activeObject)
         {
             string path = AssetDatabase.GetAssetPath(Selection.activeObject);
             return !AssetDatabase.IsValidFolder(path);
-        }
+        }*/
 
         return false;
     }

@@ -14,6 +14,8 @@ public class Skill2Moveable : MonoBehaviour
 
     public Quaternion v2LastRotation;
 
+    //public Animator SmokeAniControllor;
+
     public bool bIsAJigsaw  = false;
 
     bool bObjectNotEffective = false;
@@ -57,7 +59,15 @@ public class Skill2Moveable : MonoBehaviour
         smoke.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f,1.0f);
         smoke.GetComponent<SpriteRenderer>().sortingLayerName = "PlayItem";
         smoke.AddComponent<Animator>();
+        //smoke.GetComponent<Animator>().runtimeAnimatorController = < UnityEditor.Animations.AnimatorController > SmokeAniControllor;
+
+#if UNITY_EDITOR
         smoke.GetComponent<Animator>().runtimeAnimatorController = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.Animations.AnimatorController>("Assets/Sprites/Skill2_final/Smoke.controller");
+#endif
+        //smoke.GetComponent<Animator>().runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Sprites/Skill2_final/Smoke.controller");
+
+
+
         smoke.transform.localPosition = new Vector2(0.0f, 0.0f);
 
     }

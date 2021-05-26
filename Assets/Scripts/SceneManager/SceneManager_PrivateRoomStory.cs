@@ -426,7 +426,7 @@ public class SceneManager_PrivateRoomStory : MonoBehaviour
             VitaSoulScript.FollowObj();
             if (PlayerTriggerScript.bTrigger)
             {
-                levelLoaderScript.LoadNextLevel("StudyRoom");
+                levelLoaderScript.LoadNextLevel("StudyRoom2");
             }
             
         }

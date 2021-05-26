@@ -33,8 +33,8 @@ public class SceneManager_StudyRoomDefault : MonoBehaviour
     void Awake()
     {
         //If never enter Study Room, don't use this script
-        if (GameDataManager.instance.bEnterStudyRoom)
-            this.enabled = true;
+        /*if (GameDataManager.instance.bEnterStudyRoom)
+            this.enabled = true;*/
         
 
     }

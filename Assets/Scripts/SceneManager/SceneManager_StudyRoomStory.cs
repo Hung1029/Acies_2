@@ -44,8 +44,8 @@ public class SceneManager_StudyRoomStory : MonoBehaviour
     {
         
         //If ever enter Study Room, BaseCase don't move
-        if (!GameDataManager.instance.bEnterStudyRoom)
-            this.enabled = true;
+       /* if (!GameDataManager.instance.bEnterStudyRoom)
+            this.enabled = true;*/
         
 
     }
