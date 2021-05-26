@@ -7,7 +7,7 @@ public class FindReferencesInProject
 {
     private const string MenuItemText = "Assets/Find References In Project";
 
-    [MenuItem(MenuItemText, false, 25)]
+    //[MenuItem(MenuItemText, false, 25)]
     public static void Find()
     {
         var sw = new System.Diagnostics.Stopwatch();
