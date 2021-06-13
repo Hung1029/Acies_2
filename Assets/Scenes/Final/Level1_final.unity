@@ -10652,7 +10652,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572611984}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7a186673fa9f79c4eba9d0f1d6e563cb, type: 3}
@@ -10821,7 +10821,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2673cc550bb16524e8409c4efc397d82, type: 3}
     volume: 0.1
     pitch: 1
-    loop: 1
+    loop: 0
     onAwake: 0
     source: {fileID: 0}
   - name: Scenebg
