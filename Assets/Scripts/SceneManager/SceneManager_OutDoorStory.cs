@@ -58,7 +58,7 @@ public class SceneManager_OutDoorStory : MonoBehaviour
     {
         VitaSoulScript.FollowObj();
 
-        if (AnimatorCount == 0 && GandpaScript.bTouchPlayer && Input.GetKeyDown(KeyCode.A))
+        if (AnimatorCount == 0 && GandpaScript.bTouchPlayer && Input.GetButtonDown("NPC_trigger"))
         {
             dialogue.name = "莉妲";
             dialogue.sentences = new string[1];

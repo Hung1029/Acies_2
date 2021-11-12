@@ -120,7 +120,8 @@ public class SceneManager_Level2Final : MonoBehaviour
     private static SceneManager_Level2Final instance;
 
     //right boundary
-    public GameObject rightBoundary; 
+    public GameObject rightBoundary;
+    private bool bBearStartCantJumpHowl = false;
 
 
     //if gate not down bear speed
@@ -184,7 +185,7 @@ public class SceneManager_Level2Final : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(BearStage);
+        //Debug.Log(BearStage);
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////If bear catch player
 
         if (GameObject.Find("Player").GetComponent<PlayerMovement>().bBearCatchPlayer && BearStage > BearStageNUM.CameraSetting && BearStage < BearStageNUM.Jump && !bCatchPlayer)
@@ -674,6 +675,8 @@ public class SceneManager_Level2Final : MonoBehaviour
             Bear.GetComponent<BearMovement>().Howl();
             BearStage++;
 
+            //Trigger for player pose
+            bBearStartCantJumpHowl = true;
 
             //start next stage 
             StartCoroutine(BearNextStageWait(3.0f));
@@ -700,37 +703,42 @@ public class SceneManager_Level2Final : MonoBehaviour
 
         }
 
-
-        //if Bear can't climb up and player stand still
-        if (bStandAndWaitForBear == false && bGate2Down && GameObject.Find("Player").transform.position.x > 75 && BearStage <= BearStageNUM.Jump)
+        //if Bear can't climb up and player touch right boundary
+        if (bStandAndWaitForBear == false && bGate2Down &&( GameObject.Find("Player").transform.position.x > 75 || bBearStartCantJumpHowl))
         {
-            
 
             if (GameObject.Find("Player").transform.localScale.x < 0.0f)
                 GameObject.Find("Player").transform.localScale = new Vector2(GameObject.Find("Player").transform.localScale.x * -1, GameObject.Find("Player").transform.localScale.y);
 
-
-
+            
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = false;
             GameObject.Find("Player").GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(0));
             SkillManager_v2.bFinishSkill = true;
+
+            //player can't start trigger
+            PlayerSkill.bCanTriggerSkill = false;
+
             StartCoroutine(ReverseSkillFinish(1.0f));
 
            bStandAndWaitForBear = true;
         }
 
+        
         //after camera setting
-        else if (BearStage == BearStageNUM.CameraSettingAfterJump + 1  && bStandAndWaitForBear)
+        else if (BearStage == BearStageNUM.CameraSettingAfterJump + 1 && bStandAndWaitForBear)
         {
+
             if (GameObject.Find("Player").transform.localScale.x > 0.0f)
                 GameObject.Find("Player").transform.localScale = new Vector2(GameObject.Find("Player").transform.localScale.x * -1, GameObject.Find("Player").transform.localScale.y);
+
 
             GameObject.Find("Player").GetComponent<PlayerMovement>().canMove_camera = true;
 
             Point4.transform.position = new Vector2(52.3f, Point4.transform.position.y);
 
+            PlayerSkill.bCanTriggerSkill = true;
 
-            rightBoundary.transform.position = new Vector2(106.4f , rightBoundary.transform.position.y);
+            rightBoundary.transform.position = new Vector2(106.4f, rightBoundary.transform.position.y);
             rightBoundary.GetComponent<BoxCollider2D>().isTrigger = true;
 
             BearStage++;

@@ -30,7 +30,7 @@ public class DoorDetectButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bEnter&& Input.GetKeyDown(KeyCode.B))
+        if (bEnter&& Input.GetButtonDown("NPC_trigger"))
         {
             ClueScript.ImmediateOut();
             levelLoaderScript.LoadNextLevel(NextLevelName);

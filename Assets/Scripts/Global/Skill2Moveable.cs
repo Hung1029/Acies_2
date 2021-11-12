@@ -25,6 +25,7 @@ public class Skill2Moveable : MonoBehaviour
     bool bCanCheckInEffective =true;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class Skill2Moveable : MonoBehaviour
         v2LastRotation = this.transform.localRotation;
 
         VitaSoulTrans = GameObject.Find("VitaSoul").GetComponent<Transform>();
+
 
         //create outline
         Skill2PickedOutLine = new GameObject();
@@ -43,12 +45,13 @@ public class Skill2Moveable : MonoBehaviour
         Skill2PickedOutLine.transform.localRotation = Quaternion.identity;
         PickedOut =  Skill2PickedOutLine.AddComponent<SpriteRenderer>();
         PickedOut.sortingLayerName = "PlayItem";
-        this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = PickedOut.sortingOrder + 1;
+        
         PickedOut.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
+        PickedOut.sortingOrder = 2;
         PickedOut.material.shader = Shader.Find("GUI/Text Shader");
         PickedOut.color = Color.white;
         PickedOut.color = new Color(PickedOut.color.r, PickedOut.color.g, PickedOut.color.b,0.0f);
-
+        this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = PickedOut.sortingOrder + 1;
 
 
         //create smoke 

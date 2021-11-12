@@ -131,8 +131,7 @@ public class SceneManager_Level3 : MonoBehaviour
 
     //Skill 1 description
     SkillDiscription SkillDescription_1;
-    bool bSkill1Des_open = false;
-    bool bSkill1Des_finish = false;
+
 
     public SpriteRenderer[] StatusMaterial;
 
@@ -252,10 +251,10 @@ public class SceneManager_Level3 : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////////////////
         //skill 1 description
-        if (bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
+        if (GameObject.FindObjectOfType<DontDistory>().bSkill1Des_open == false && GameObject.Find("Player").transform.position.x >= -7.35f)
         {
             StartCoroutine(SkillDescription_1.FadeIn1());
-            bSkill1Des_open = true;
+            GameObject.FindObjectOfType<DontDistory>().bSkill1Des_open = true;
         }
 
         //move platform
@@ -862,7 +861,7 @@ public class SceneManager_Level3 : MonoBehaviour
         {
             levelLoaderScript.LoadNextLevel("Level2_final");
         }
-
+        
     }
 
     //status gate
